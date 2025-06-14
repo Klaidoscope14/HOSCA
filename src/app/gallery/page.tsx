@@ -56,14 +56,14 @@ const festPhotos = [
 
 export default function GalleryPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-200 to-gray-900 dark:from-slate-900 dark:via-blue-950 dark:to-slate-800 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-red-900 py-12">
       <div className="container mx-auto px-4">
         <div className="mb-12">
-          <h2 className="mt-10 text-3xl md:text-4xl font-bold text-center mb-2">
+          <h2 className="text-4xl font-bold text-center text-neutral-200 mt-10 transition-colors duration-300 hover:text-yellow-300">
             <Cover>Gallery</Cover>
           </h2>
-          <p className="text-lg mt-10 text-center mb-8 max-w-3xl mx-auto bg-gradient-to-r from-gray-900 via-orange-600 to-red-700 bg-clip-text text-transparent">
-            Relive the vibrant moments and memories from our festivals and events at HOSCA, IIT Patna.
+          <p className="text-lg mt-10 text-center mb-8 max-w-3xl mx-auto bg-gradient-to-r from-pink-400 via-amber-400 to-red-500 bg-clip-text text-transparent drop-shadow-[0_0_6px_rgba(255,146,140,0.4)]">
+            Step into the rhythm, color, and joy of HOSCA’s most unforgettable moments — a timeless celebration of unity, culture, and spirit.
           </p>
         </div>
         <FocusCards cards={festPhotos} />

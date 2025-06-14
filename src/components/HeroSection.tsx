@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FlipText } from "@/components/magicui/flip-text";
+import { VideoText } from "@/components/magicui/video-text";
 
 export default function HeroSection() {
   return (
@@ -21,22 +22,27 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer" />
       </div>
       
-      <div className="relative h-full flex flex-col items-center justify-center text-white px-4">
-        <motion.div 
-          className="max-w-4xl mx-auto text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <motion.h1 
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-grey-200 via-white to-grey-300 bg-clip-text text-transparent animate-gradient-x"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+      <div className=" min-h-screen w-full flex flex-col items-center justify-center text-white px-4 space-y-1">
+        
+           <div className="w-full max-w-[90vw] flex justify-center pointer-events-none items-center mb-1">
+           <VideoText
+            className="w-full h-[160px] sm:h-[200px] md:h-[250px] lg:h-[280px] font-bold bg-gradient-to-r from-white via-white to-white bg-clip-text text-transparent animate-gradient-x "
+           src="/video/hosca-bg.mp4"
+           fontSize="clamp(30px, 25vw, 200px)"
           >
-            Welcome to HOSCA
-          </motion.h1>
-            <FlipText className="text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-grey-300 via-white to-grey-300 font-medium mb-12 max-w-3xl mx-auto animate-gradient-x-slow">The House Of Socio-Cultural Affairs</FlipText>
+             HOSCA
+          </VideoText>
+          </div>
+          <div className="w-full flex justify-center px-1">
+              <div className="w-full max-w-[90vw] text-center leading-tight space-y-1 sm:space-y-3 md:space-y-4  mb-5 sm:mb-8 md:mb-10 mt-[-4px]">
+                 <FlipText className="text-sm sm:text-xl md:text-2xl lg:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-grey-300 via-white to-grey-300 font-medium animate-gradient-x-slow tracking-normal">
+    {"The House Of Socio-Cultural"}
+  </FlipText>
+  <FlipText className="text-sm sm:text-xl md:text-2xl lg:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-grey-300 via-white to-grey-300 font-medium animate-gradient-x-slow tracking-normal">
+    {"Affairs"}
+  </FlipText>
+           </div>
+           </div>
           <motion.div 
             className="flex flex-col sm:flex-row justify-center gap-6"
             initial={{ opacity: 0, y: 20 }}
@@ -58,7 +64,7 @@ export default function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </Link>
           </motion.div>
-        </motion.div>
+        
       </div>
     </section>
   );

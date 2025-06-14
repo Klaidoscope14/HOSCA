@@ -270,7 +270,7 @@ const cards = [
   {
     description: "1.",
     title: "Yavanika",
-    src: "/club/yavanika.png",
+    src: "/ClubLogo/yavanika.png",
     ctaText: "Learn More",
     ctaLink: "/club/yavanika",
     facebookLink: "https://www.facebook.com/yavanika.iitp/",
@@ -284,7 +284,7 @@ const cards = [
   {
     description: "2.",
     title: "Exousia",
-    src: "/club/exousia.jpg",
+    src: "/ClubLogo/exousia.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/exousia",
     facebookLink: "https://www.facebook.com/DanceClubIITPatna/",
@@ -298,7 +298,7 @@ const cards = [
   {
     description: "3.",
     title: "Aria",
-    src: "/club/aria.jpg",
+    src: "/ClubLogo/aria.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/aria",
     facebookLink: "https://www.facebook.com/musicclubiitpatna/",
@@ -312,7 +312,7 @@ const cards = [
   {
     description: "4.",
     title: "Pixxel",
-    src: "/club/Pixxel.jpeg",
+    src: "/ClubLogo/Pixxel.jpeg",
     ctaText: "Learn More",
     ctaLink: "/club/pixxel",
     facebookLink: "https://www.facebook.com/pixxeliitp/",
@@ -326,7 +326,7 @@ const cards = [
   {
     description: "5.",
     title: "HOOT",
-    src: "/club/hoot.jpg",
+    src: "/ClubLogo/hoot.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/hoot",
     facebookLink: "https://www.facebook.com/hootiitp/",
@@ -340,7 +340,7 @@ const cards = [
   {
     description: "6.",
     title: "Quiz Club",
-    src: "/club/quiz.jpg",
+    src: "/ClubLogo/quiz.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/quiz",
     facebookLink: "https://www.facebook.com/quizclubTO/",
@@ -356,6 +356,7 @@ const cards = [
     title: "Syahi",
     src: "/club/syahi.jpg",
     ctaText: "Learn More",
+
     ctaLink: "/club/syahi",
     facebookLink: "https://hi-in.facebook.com/watch/syahi_iitp/",
     instagramLink: "https://www.instagram.com/syahi.iitp/",
@@ -364,11 +365,19 @@ const cards = [
         Words, emotions, stories—Syahi turns them all into magic. Whether you’re into poetry, stories, or Instagram-worthy prose, this club is your writing playground. Express, connect, and maybe cry (just a little).
       </p>
     ),
+    ctaLink: "/ClubLogo/syahi",
+    content: () => {
+      return (
+        <p>
+          Syahi is the literary club of IIT Patna. Syahi aims to provide a platform to nurture the writing talents of people and help them to grown in their journies.It organizes various on-campus as well as inter-college Compitions for people to connect through their writing talents with a major audience.The main motto of the club is to express what one feels, introspect it and grow as a human in the process.
+        </p>
+      );
+    },
   },
   {
     description: "8.",
     title: "Epicurean",
-    src: "/club/epicurean.png",
+    src: "/ClubLogo/epicurean.png",
     ctaText: "Learn More",
     ctaLink: "/club/epicurean",
     facebookLink: "https://hi-in.facebook.com/watch/syahi_iitp/",
@@ -382,7 +391,7 @@ const cards = [
   {
     description: "9.",
     title: "HexaChrome",
-    src: "/club/HexaChrome.jpg",
+    src: "/ClubLogo/HexaChrome.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/hexachrome",
     facebookLink: "https://instagram.com/hexachrome_official?igshid=NTc4MTIwNjQ2YQ==",
@@ -396,7 +405,7 @@ const cards = [
   {
     description: "10.",
     title: "Vincetroke",
-    src: "/club/Vincetroke.jpg",
+    src: "/ClubLogo/Vincetroke.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/vincetroke",
     facebookLink: "https://www.facebook.com/vincetroke.iitp/community/",
@@ -410,7 +419,7 @@ const cards = [
   {
     description: "11.",
     title: "Anime Club",
-    src: "/club/anime.png",
+    src: "/ClubLogo/anime.png",
     ctaText: "Learn More",
     ctaLink: "/club/anime",
     facebookLink: "https://www.instagram.com/animeclub_iitp/",

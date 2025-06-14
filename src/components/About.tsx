@@ -46,9 +46,9 @@ const About = () => {
 
           <div className="p-9 w-full max-w-7xl"> 
             <div className="flex flex-col md:flex-row items-center md:items-start gap-4 gap-8 w-full">
-              <div className="relative w-24 h-24 md:w-32 md:h-32 flex-shrink-0">
+              <div className="relative w-24 h-24 md:w-35 md:h-35 flex-shrink-0">
                 <Image
-                  src="/hosca.jpg"
+                  src="/home/hosca.png"
                   alt="Hoscaa Logo"
                   fill
                   className="object-contain"

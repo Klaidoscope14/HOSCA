@@ -26,9 +26,9 @@ export function MobileNavToggle({
   return (
     <button onClick={onClick} aria-label="Toggle Menu">
       <div className="space-y-1.5">
-        <span className="block w-6 h-0.5 bg-white"></span>
-        <span className="block w-6 h-0.5 bg-white"></span>
-        <span className="block w-6 h-0.5 bg-white"></span>
+        <span className="block w-6 h-0.5 bg-white" />
+        <span className="block w-6 h-0.5 bg-white" />
+        <span className="block w-6 h-0.5 bg-white" />
       </div>
     </button>
   );
@@ -37,16 +37,13 @@ export function MobileNavToggle({
 export function MobileNavMenu({
   isOpen,
   children,
-  onClose,
 }: {
   isOpen: boolean;
-  children: React.ReactNode;
-  onClose?: () => void;
+  children: ReactNode;
 }) {
   return (
-    <AnimatePresence initial={false} mode="sync">
+    <AnimatePresence initial={false}>
       {isOpen && (
-        
         <motion.div
           key="mobile-nav"
           initial={{ opacity: 0, y: -10 }}
@@ -55,11 +52,8 @@ export function MobileNavMenu({
           transition={{ duration: 0.3 }}
           className="w-full px-4 pb-4"
         >
-         
-            <div className="space-y-2">{children}</div>
-          
+          {children}
         </motion.div>
-        
       )}
     </AnimatePresence>
   );
@@ -79,5 +73,5 @@ export function MobileNav({ children, className }: { children: ReactNode; classN
 }
 
 export function Navbar({ children, className }: { children: ReactNode; className?: string }) {
-  return <header className={cn("fixed z-50 w-full", className)}>{children}</header>;
+  return <header className={cn("fixed z-50 w-full top-0", className)}>{children}</header>;
 }

@@ -16,7 +16,7 @@ const SocialLinks = React.memo(({ socialLinks }: { socialLinks: Array<{ icon: an
           social.label === 'Facebook' 
             ? 'hover:text-[#0077b5]' 
             : social.label === 'Youtube' 
-            ? 'hover:text-[#1DA1F2]'
+            ? 'hover:text-[#FF0000]'
             : 'hover:text-[#E1306C]'
         }`}
         aria-label={social.label}

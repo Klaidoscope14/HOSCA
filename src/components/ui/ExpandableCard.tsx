@@ -354,25 +354,16 @@ const cards = [
   {
     description: "7.",
     title: "Syahi",
-    src: "/club/syahi.jpg",
+    src: "/ClubLogo/Syahi.jpg",
     ctaText: "Learn More",
-
-    ctaLink: "/club/syahi",
-    facebookLink: "https://hi-in.facebook.com/watch/syahi_iitp/",
-    instagramLink: "https://www.instagram.com/syahi.iitp/",
+    ctaLink: "/club/quiz",
+    facebookLink: "https://www.facebook.com/quizclubTO/",
+    instagramLink: "https://www.instagram.com/qc_iitp/",
     content: () => (
       <p>
-        Words, emotions, stories—Syahi turns them all into magic. Whether you’re into poetry, stories, or Instagram-worthy prose, this club is your writing playground. Express, connect, and maybe cry (just a little).
+        Forget mugging facts. Quiz Club is about curiosity, deduction, and that sweet feeling of yelling the right answer before anyone else. With quizzes like Parakh and Knockout, it’s where trivia gets thrilling.
       </p>
     ),
-    ctaLink: "/ClubLogo/syahi",
-    content: () => {
-      return (
-        <p>
-          Syahi is the literary club of IIT Patna. Syahi aims to provide a platform to nurture the writing talents of people and help them to grown in their journies.It organizes various on-campus as well as inter-college Compitions for people to connect through their writing talents with a major audience.The main motto of the club is to express what one feels, introspect it and grow as a human in the process.
-        </p>
-      );
-    },
   },
   {
     description: "8.",
@@ -433,7 +424,7 @@ const cards = [
   {
     description: "12.",
     title: "Ikkatt",
-    src: "/club/ikkatt.png",
+    src: "/ClubLogo/ikkatt.png",
     ctaText: "Learn More",
     ctaLink: "/club/ikkatt",
     facebookLink: "https://www.instagram.com/ikkatt_iitp/",
@@ -447,7 +438,7 @@ const cards = [
   {
     description: "13.",
     title: "STD",
-    src: "/club/std.png",
+    src: "/ClubLogo/std.png",
     ctaText: "Learn More",
     ctaLink: "/club/std",
     facebookLink: "https://www.instagram.com/standup_club.iitp/",

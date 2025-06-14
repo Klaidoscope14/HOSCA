@@ -1,5 +1,4 @@
 import React, { Suspense } from 'react';
-import { MagicCard } from '@/components/magicui/magic-card';
 import Image from 'next/image';
 import { FaFacebook, FaYoutube, FaInstagram } from 'react-icons/fa';
 import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";

@@ -17,7 +17,7 @@ interface ClubMember {
   instagramUrl?: string;
 }
 
-const ExousiaMembers: ClubMember[] = [
+const PixxelMembers: ClubMember[] = [
   {
     id: 1,
     name: 'Rajesh Kumar',
@@ -108,7 +108,7 @@ const ExousiaMembers: ClubMember[] = [
   }
 ];
 
-export default function YavanikaPage() {
+export default function PixxelPage() {
 const renderMemberCard = (member: ClubMember) => (
   <div key={member.id} className="flex justify-center w-full">
     <CardContainer className="w-[320px] h-[520px]">
@@ -289,13 +289,13 @@ const renderMemberCard = (member: ClubMember) => (
           {/* Coordinators Section */}
           <h2 className="text-3xl font-semibold text-left mb-6 text-black-300 px-2 md:px-0">Coordinators</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 md:px-0">
-            {ExousiaMembers.slice(0, 4).map((member) => renderMemberCard(member))}
+            {PixxelMembers.slice(0, 4).map((member) => renderMemberCard(member))}
           </div>
 
           {/* Sub Coordinators Section */}
           <h2 className="text-3xl font-semibold text-left mt-12 mb-6 text-black-300 px-4 md:px-0">Sub Coordinators</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto items-stretch">
-            {ExousiaMembers.slice(4).map((member) => renderMemberCard(member))}
+            {PixxelMembers.slice(4).map((member) => renderMemberCard(member))}
           </div>
         </section>
         {/* Social Media Links */}

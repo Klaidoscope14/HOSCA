@@ -108,7 +108,7 @@ const ExousiaMembers: ClubMember[] = [
   }
 ];
 
-export default function YavanikaPage() {
+export default function ExousiaPage() {
 const renderMemberCard = (member: ClubMember) => (
   <div key={member.id} className="flex justify-center w-full">
     <CardContainer className="w-[320px] h-[520px]">

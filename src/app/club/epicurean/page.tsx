@@ -112,7 +112,9 @@ export default function YavanikaPage() {
 const renderMemberCard = (member: ClubMember) => (
   <div key={member.id} className="flex justify-center w-full">
     <CardContainer className="w-[320px] h-[520px]">
-      <CardBody className="bg-orange-400 relative group/card border-white border w-[280px] h-[450px] rounded-xl p-6 flex flex-col justify-between">
+      <CardBody className="bg-[#E5AD01] text-black border-white border w-[280px] h-[450px] rounded-xl p-6 flex flex-col justify-between">
+
+
         <CardItem translateZ="100" className="w-full mt-4">
           <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-2 border-white bg-white flex items-center justify-center">
             {member.imageUrl ? (
@@ -133,7 +135,7 @@ const renderMemberCard = (member: ClubMember) => (
 
         <CardItem
           translateZ="50"
-          className="text-xl font-bold text-black px-2 h-[3em] flex items-center justify-center"
+          className="text-xl font-bold text-indigo-950 px-2 h-[3em] flex items-center justify-center"
         >
           <div className="line-clamp-2 leading-tight text-center">
             {member.name}
@@ -154,7 +156,7 @@ const renderMemberCard = (member: ClubMember) => (
           <CardItem
             as="p"
             translateZ="60"
-            className="text-black text-sm px-2 h-[3em] flex items-center justify-center"
+            className="text-indigo-950 text-sm px-2 h-[3em] flex items-center justify-center"
           >
             <div className="line-clamp-2 leading-tight text-center">
               {member.year} - {member.branch}
@@ -205,7 +207,6 @@ const renderMemberCard = (member: ClubMember) => (
     </CardContainer>
   </div>
 );
-
   return (
     <div className="relative min-h-screen w-full bg-[url('/club/aria_background.jpeg')] bg-cover bg-center bg-no-repeat">
 
@@ -220,8 +221,8 @@ const renderMemberCard = (member: ClubMember) => (
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
               <img 
-                src="/club/exousia.jpg" 
-                alt="Exousia Dance Society" 
+                src="/club/epicurean.png" 
+                alt="Litracy Society" 
                 className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
@@ -230,11 +231,11 @@ const renderMemberCard = (member: ClubMember) => (
           
           {/* Content Section - Right on desktop, bottom on mobile */}
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-orange-400 mb-6">
-              Exousia
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-300 mb-6">
+              Epicurean 
             </h1>
-            <p className="text-lg md:text-xl text-orange max-w-2xl mx-auto lg:mx-0">
-              The Official Dance Club of IIT Patna - Where rhythm meets passion and movement tells stories.
+            <p className="text-lg md:text-xl text-black max-w-2xl mx-auto lg:mx-0">
+              the art of articulation and this is where team bonding is celebrated.
             </p>
           </div>
         </div>
@@ -244,28 +245,28 @@ const renderMemberCard = (member: ClubMember) => (
           {/* About Section */}
           <CardContainer className="w-full">
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">About Exousia</h2>
-              <p className="text-neutral-600 dark:text-neutral-300">
-                Exousia is the official dance club of IIT Patna. Initiated as a platform to promote dance culture in students, it has bloomed into a full-fledged society of dancers skilled in various dance styles ranging from classical to fusion to western.
+              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">About Epicurean</h2>
+              <p className="text-black-700 dark:text-neutral-300">
+                  The House of Oratory Talents is the speaking arts club of IIT Patna.The club practices the art of articulation and this is where team bonding is celebrated.
               </p>
               <div className="mt-6">
-                <h3 className="text-xl font-semibold text-neutral-700 dark:text-white mb-3">What We Do</h3>
+                <h3 className="text-xl font-bold text-black-700 dark:text-white mb-3">What We Do</h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li>Classical dance performances</li>
-                  <li>Western dance competitions</li>
-                  <li>Fusion dance events</li>
-                  <li>Street dance battles</li>
-                  <li>Dance workshops and training</li>
+                  <li>The club conducts events running from PD,MUN,JAM and lots more to allow the young minds to see the world through a better perspective</li>
+                  <li>Essay Writting (MUN)</li>
+                  <li>Quest-ion</li>
+                  <li>Pan India Quizzing fest PARAKH annually</li>
+                  <li>Group discussions</li>
                 </ul>
               </div>
               <div className="mt-6">
-                <h3 className="text-xl font-semibold text-neutral-700 dark:text-white mb-3">Our Events</h3>
+                <h3 className="text-xl font-bold text-black-700 dark:text-white mb-3">Our Events</h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li>FlipToe</li>
-                  <li>HeelTurn</li>
-                  <li>Beat It Off</li>
-                  <li>Hookstep</li>
-                  <li>Rhythm</li>
+                  <li>PD (Public Debate)</li>
+                  <li>MUN (Model United Nations)</li>
+                  <li>JAM (Just A Minute)</li>
+                  <li>Group Discussions</li>
+                  <li>Speaking Workshops</li>
                 </ul>
               </div>
             </CardBody>
@@ -276,26 +277,27 @@ const renderMemberCard = (member: ClubMember) => (
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
               <div className="grid grid-cols-2 gap-4">
-                <img src="/club/exousia.jpg" alt="Exousia Performance" className="rounded-lg w-full h-48 object-cover" />
-                <img src="/club/exousia.jpg" alt="Exousia Workshop" className="rounded-lg w-full h-48 object-cover" />
-                <img src="/club/exousia.jpg" alt="Exousia Event" className="rounded-lg w-full h-48 object-cover" />
-                <img src="/club/exousia.jpg" alt="Exousia Team" className="rounded-lg w-full h-48 object-cover" />
+                <img src="/club/epicurean.png" alt="quiz Debate" className="rounded-lg w-full h-48 object-cover" />
+                <img src="/club/epicurean.png" alt="quiz MUN" className="rounded-lg w-full h-48 object-cover" />
+                <img src="/club/epicurean.png" alt="quiz Event" className="rounded-lg w-full h-48 object-cover" />
+                <img src="/club/epicurean.png" alt="quiz Team" className="rounded-lg w-full h-48 object-cover" />
               </div>
             </CardBody>
           </CardContainer>
         </div>
         {/* Members Section */}
         <section className="mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12 text-orange-500">Our Team</h2>
+          <h2 className="text-4xl font-bold text-center mb-12" style={{ color: "#FFDB58" }}>Our Team</h2>
+
 
           {/* Coordinators Section */}
-          <h2 className="text-3xl font-semibold text-left mb-6 text-black-300 px-2 md:px-0">Coordinators</h2>
+          <h2 className="text-3xl font-semibold text-left mb-6 text-orange-300 px-2 md:px-0">Coordinators</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 md:px-0">
             {ExousiaMembers.slice(0, 4).map((member) => renderMemberCard(member))}
           </div>
 
           {/* Sub Coordinators Section */}
-          <h2 className="text-3xl font-semibold text-left mt-12 mb-6 text-black-300 px-4 md:px-0">Sub Coordinators</h2>
+          <h2 className="text-3xl font-semibold text-left mt-12 mb-6 text-orange-300 px-4 md:px-0">Sub Coordinators</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto items-stretch">
             {ExousiaMembers.slice(4).map((member) => renderMemberCard(member))}
           </div>

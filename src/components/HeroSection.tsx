@@ -28,7 +28,7 @@ export default function HeroSection() {
            <VideoText
             className="w-full h-[160px] sm:h-[200px] md:h-[250px] lg:h-[280px] font-bold bg-gradient-to-r from-white via-white to-white bg-clip-text text-transparent animate-gradient-x "
            src="/video/hosca-bg.mp4"
-           fontSize="clamp(30px, 25vw, 100px)"
+           fontSize="clamp(30px, 25vw, 200px)"
           >
              HOSCA
           </VideoText>

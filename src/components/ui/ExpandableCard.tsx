@@ -255,7 +255,7 @@ const cards = [
   {
     description: "1.",
     title: "Yavanika",
-    src: "/club/yavanika.png",
+    src: "/ClubLogo/yavanika.png",
     ctaText: "Learn More",
     ctaLink: "/club/yavanika",
     content: () => {
@@ -269,7 +269,7 @@ const cards = [
   {
     description: "2.",
     title: "Exousia",
-    src: "/club/exousia.jpg",
+    src: "/ClubLogo/exousia.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/exousia",
     content: () => {
@@ -284,7 +284,7 @@ const cards = [
   {
     description: "3.",
     title: "Aria",
-    src: "/club/aria.jpg",
+    src: "/ClubLogo/aria.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/aria",
     content: () => {
@@ -298,7 +298,7 @@ const cards = [
   {
     description: "4.",
     title: "Pixxel",
-    src: "/club/Pixxel.jpeg",
+    src: "/ClubLogo/Pixxel.jpeg",
     ctaText: "Learn More",
     ctaLink: "/club/pixxel",
     content: () => {
@@ -312,7 +312,7 @@ const cards = [
   {
     description: "5.",
     title: "HOOT",
-    src: "/club/hoot.jpg",
+    src: "/ClubLogo/hoot.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/hoot",
     content: () => {
@@ -326,7 +326,7 @@ const cards = [
   {
     description: "6.",
     title: "Quiz Club",
-    src: "/club/quiz.jpg",
+    src: "/ClubLogo/quiz.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/quiz",
     content: () => {
@@ -342,7 +342,7 @@ const cards = [
     title: "Syahi",
     src: "/club/syahi.jpg",
     ctaText: "Learn More",
-    ctaLink: "/club/syahi",
+    ctaLink: "/ClubLogo/syahi",
     content: () => {
       return (
         <p>
@@ -354,7 +354,7 @@ const cards = [
   {
     description: "8.",
     title: "Epicurean",
-    src: "/club/epicurean.png",
+    src: "/ClubLogo/epicurean.png",
     ctaText: "Learn More",
     ctaLink: "/club/epicurean",
     content: () => {
@@ -368,7 +368,7 @@ const cards = [
   {
     description: "9.",
     title: "HexaChrome",
-    src: "/club/HexaChrome.jpg",
+    src: "/ClubLogo/HexaChrome.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/hexachrome",
     content: () => {
@@ -382,7 +382,7 @@ const cards = [
   {
     description: "10.",
     title: "Vincetroke",
-    src: "/club/Vincetroke.jpg",
+    src: "/ClubLogo/Vincetroke.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/vincetroke",
     content: () => {
@@ -396,7 +396,7 @@ const cards = [
   {
     description: "11.",
     title: "Anime Club",
-    src: "/club/anime.png",
+    src: "/ClubLogo/anime.png",
     ctaText: "Learn More",
     ctaLink: "/club/anime",
     content: () => {

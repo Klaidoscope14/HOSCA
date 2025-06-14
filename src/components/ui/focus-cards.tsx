@@ -27,10 +27,11 @@ export const Card = React.memo(
         src={card.src}
         alt={card.title}
         className={cn(
-          "object-cover absolute inset-0 w-full h-full transition-all duration-300",
-          hovered === index ? "brightness-110 scale-105" : "brightness-100"
+          "object-cover absolute inset-0 w-full h-full transition-transform duration-500 ease-in-out",
+          hovered === index ? "scale-110 brightness-110" : "scale-100 brightness-100"
         )}
       />
+
     </div>
   )
 );

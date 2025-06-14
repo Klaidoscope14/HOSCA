@@ -17,8 +17,8 @@ const Footer = () => {
 
   const socialLinks = {
     hosca: [
-      { icon: FaFacebook, href: 'https://www.facebook.com/iitp.sociocultural/', label: 'HOSCA Facebook' },
-      { icon: FaInstagram, href: 'https://www.instagram.com/hosca_iitp_official/', label: 'HOSCA Instagram' },
+      { icon: FaFacebook, href: 'https://www.facebook.com/hosca.iitp', label: 'HOSCA Facebook' },
+      { icon: FaInstagram, href: 'https://www.instagram.com/iitpatna_hosca/', label: 'HOSCA Instagram' },
       { icon: FaYoutube, href: 'https://www.youtube.com/user/CULTatIITP', label: 'HOSCA YouTube' },
     ],
     iitp: [

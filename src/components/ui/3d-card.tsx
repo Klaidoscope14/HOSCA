@@ -41,7 +41,7 @@ export const CardContainer = ({
   return (
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
-        className={`py-20 flex items-center justify-center ${containerClassName}`}
+        className={`py-1 flex items-center justify-center ${containerClassName}`}
         style={{
           perspective: "1000px",
         }}
@@ -52,12 +52,12 @@ export const CardContainer = ({
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
           animate={{
-            scale: isMouseEntered ? 1.05 : 1,
+            scale: isMouseEntered ? 1.1 : 1,
           }}
           transition={{
             duration: 0.2,
           }}
-          className={`flex items-center justify-center relative w-full h-full ${className}`}
+          className={`flex items-center justify-center relative w-70 h-full ${className}`}
           style={{
             transformStyle: "preserve-3d",
           }}
@@ -78,7 +78,7 @@ export const CardBody = ({
 }) => {
   return (
     <div
-      className={`h-96 w-96 [transform-style:preserve-3d] ${className}`}
+      className={`h-96 w-80 [transform-style:preserve-3d] ${className}`}
     >
       {children}
     </div>

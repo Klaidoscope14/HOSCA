@@ -97,11 +97,12 @@ export default function GymkhanaCommitteePage() {
   );
 
   const renderMemberCard = (member: CommitteeMember) => (
-    <div key={member.id} className="flex justify-center">
-      <CardContainer className="w-full">
-        <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border">
+    <div key={member.id} className="flex justify-center w-full">
+      <CardContainer className="w-50">
+        <CardBody className="bg-gray-50 relative group/card hover:shadow-[0_0_20px_5px_rgba(234,179,8,0.5)] dark:hover:shadow-[0_0_25px_7px_rgba(234,179,8,0.2)] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border transition-all duration-300">
           <CardItem translateZ="100" className="w-full mt-4">
-            <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-2 border-emerald-500">
+            <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-3 border-[#768686] ">
+              
               {member.imageUrl ? (
                 <img
                   src={member.imageUrl}
@@ -193,14 +194,14 @@ export default function GymkhanaCommitteePage() {
           )}
 
           {generalSecretary && (
-            <div className="max-w-md mx-auto">
+            <div className="max-full mx-auto">
               {renderMemberCard(generalSecretary)}
             </div>
           )}
 
-          <div className="space-y-12">
+          <div className="space-y-8">
             {Array.from({ length: Math.ceil(otherMembers.length / 2) }).map((_, rowIndex) => (
-              <div key={rowIndex} className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div key={rowIndex} className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto ">
                 {otherMembers.slice(rowIndex * 2, (rowIndex + 1) * 2).map(member => renderMemberCard(member))}
               </div>
             ))}

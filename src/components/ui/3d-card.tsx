@@ -52,7 +52,7 @@ export const CardContainer = ({
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
           animate={{
-            scale: isMouseEntered ? 1.1 : 1,
+            scale: isMouseEntered ? 1.05 : 1,
           }}
           transition={{
             duration: 0.2,
@@ -78,7 +78,7 @@ export const CardBody = ({
 }) => {
   return (
     <div
-      className={`h-96 w-80 [transform-style:preserve-3d] ${className}`}
+      className={`h-96 w-96 [transform-style:preserve-3d] ${className}`}
     >
       {children}
     </div>

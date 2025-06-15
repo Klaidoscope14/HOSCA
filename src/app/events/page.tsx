@@ -25,7 +25,7 @@ const events: Event[] = [
     id: 1,
     title: 'Anwesha',
     date: 'February 15-17, 2024',
-    description: 'Anwesha is the Annual Techno-Cultural festival of the Indian Institute of Technology Patna. Anwesha, the quest for grandeur, opulence, creativity and perfection, since its inception in 2010 has turned out to be one of east India\'s biggest and most awaited youth festivals, witnessing participation from all over the country. The previous editions have been a memorable experience to the crowd, with an escalating footfall every year.',
+    description: 'Anwesha, the annual Techno-Cultural extravaganza of the Indian Institute of Technology Patna, is a celebration of innovation, artistry, and excellence. Since its inception in 2010, Anwesha has grown into one of the most anticipated youth festivals in East India, drawing vibrant participation from across the nation. With each passing year, it continues to surpass expectations, enchanting audiences with its grandeur and creativity, and setting new benchmarks in cultural and technical brilliance.',
     images: [
       { src: '/events/anwesha/unnamed (13).jpg', width: 800, height: 600, quality: 75 },
       { src: '/events/anwesha/unnamed (9).png', width: 800, height: 600, quality: 75 },
@@ -39,7 +39,7 @@ const events: Event[] = [
     id: 2,
     title: 'Reverberance',
     date: 'October 20, 2023',
-    description: 'Diwali is one among those festivals which is most awaited at IIT Patna. To mark and celebrate the festive spirit of Diwali, House of Socio-Cultural Affairs and House of Literature and Fine Arts presents Reverberance, the Inter-Year Cultural Tournament.',
+    description: 'Diwali is one of the most eagerly awaited festivals at IIT Patna, celebrated with great enthusiasm and joy. Embracing the spirit of lights, tradition, and togetherness, the House of Socio-Cultural Affairs and the House of Literature and Fine Arts proudly present Reverberance — the Inter-Year Cultural Tournament that brings the campus alive with talent, passion, and festive fervor.',
     images: [
       { src: '/events/reverberance/45761428_1923729217747212_3862406545320968192_n.jpg', width: 800, height: 600, quality: 75 },
       { src: '/events/reverberance/1412367_616054415103208_2119809909_o.jpg', width: 800, height: 600, quality: 75 },
@@ -52,7 +52,7 @@ const events: Event[] = [
     id: 3,
     title: 'Nebula',
     date: 'August 5, 2023',
-    description: 'The annual freshers welcome party, where new students are introduced to the vibrant cultural life of IIT Patna. A night filled with performances, games, and cultural activities.',
+    description: 'The Annual Freshers’ Welcome Party at IIT Patna is a lively celebration that marks the beginning of a new chapter for incoming students. Designed to introduce them to the vibrant cultural fabric of the institute, the evening comes alive with captivating performances, interactive games, and spirited cultural activities—setting the perfect tone for their journey ahead.',
     images: [
       { src: '/events/nebula/_DSC7630.JPG', width: 800, height: 600, quality: 75 },
       { src: '/events/nebula/_DSC7649.JPG', width: 800, height: 600, quality: 75 },
@@ -117,7 +117,7 @@ export default function EventsPage() {
   const pastEvents = events.filter(event => event.category === 'past');
 
   return (
-    <div className="min-h-screen w-full bg-gray-50">
+    <div className="min-h-screen w-full animated-gradient">
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[#fa8a57] font-['Poppins'] mt-20">
           Our Events

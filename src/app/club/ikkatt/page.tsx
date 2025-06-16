@@ -17,7 +17,7 @@ interface ClubMember {
   instagramUrl?: string;
 }
 
-const QuizMembers: ClubMember[] = [
+const AnimeMembers: ClubMember[] = [
   {
     id: 1,
     name: 'Rajesh Kumar',
@@ -108,15 +108,15 @@ const QuizMembers: ClubMember[] = [
   }
 ];
 
-export default function QuizPage() {
+export default function AnimePage() {
 const renderMemberCard = (member: ClubMember) => (
   <div key={member.id} className="flex justify-center w-full">
     <CardContainer className="w-[320px] h-[520px]">
-      <CardBody className="bg-[#E6A14C] text-black border-white border w-[280px] h-[450px] rounded-xl p-6 flex flex-col justify-between">
+      <CardBody className="bg-[#F5D7A1] text-black border-white border w-[280px] h-[450px] rounded-xl p-6 flex flex-col justify-between">
 
 
         <CardItem translateZ="100" className="w-full mt-4">
-          <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-2 border-white bg-white flex items-center justify-center">
+          <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-2 border-red-500 bg-white flex items-center justify-center">
             {member.imageUrl ? (
               <img
                 src={member.imageUrl}
@@ -135,9 +135,9 @@ const renderMemberCard = (member: ClubMember) => (
 
         <CardItem
           translateZ="50"
-          className="text-xl font-bold text-blue-950 px-2 h-[3em] flex items-center justify-center"
+          className="text-xl font-bold text-navy-950 px-2 h-[3em] flex items-center justify-center"
         >
-          <div className="line-clamp-2 leading-tight text-center">
+          <div className="line-clamp-2 leading-tight text-center" style={{ color: "#007C91" }}>
             {member.name}
           </div>
         </CardItem>
@@ -147,7 +147,7 @@ const renderMemberCard = (member: ClubMember) => (
           translateZ="60"
           className="text-white text-sm font-bold px-4 h-[3em] flex items-center justify-center"
         >
-          <div className="line-clamp-2 leading-tight text-center">
+          <div className="line-clamp-2 leading-tight text-center" style={{ color: "#660A11" }}>
             {member.position}
           </div>
         </CardItem>
@@ -156,9 +156,9 @@ const renderMemberCard = (member: ClubMember) => (
           <CardItem
             as="p"
             translateZ="60"
-            className="text-blue-950 text-sm px-2 h-[3em] flex items-center justify-center"
+            className="text-black text-sm px-2 h-[3em] flex items-center justify-center"
           >
-            <div className="line-clamp-2 leading-tight text-center">
+            <div className="line-clamp-2 leading-tight text-center" style={{ color: "#1E3A8A" }}>
               {member.year} - {member.branch}
             </div>
           </CardItem>
@@ -208,9 +208,7 @@ const renderMemberCard = (member: ClubMember) => (
   </div>
 );
   return (
-    <div className="relative min-h-screen w-full bg-[url('/club/aria_background.jpeg')] bg-cover bg-center bg-no-repeat">
-
-      <div className="absolute inset-0 bg-white/[0.6]"></div> 
+    <div className="relative min-h-screen w-full bg-white/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <BackgroundBeams className="absolute inset-0" />
       
       <div className="container mx-auto px-4 py-8 relative z-10">
@@ -221,8 +219,8 @@ const renderMemberCard = (member: ClubMember) => (
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
               <img 
-                src="/ClubLogo/quiz.jpg" 
-                alt="Knowledge Society" 
+                src="/ClubLogo/ikkatt.png" 
+                alt="Designing Society" 
                 className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
@@ -231,11 +229,11 @@ const renderMemberCard = (member: ClubMember) => (
           
           {/* Content Section - Right on desktop, bottom on mobile */}
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-600 mb-6">
-              Quiz Club
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-sky-400 mb-6" style={{ color: "#D4AF37" }}>
+              Ikkatt
             </h1>
-            <p className="text-lg md:text-xl text-black max-w-2xl mx-auto lg:mx-0">
-              One doesn't need to mug up random nerdy facts to attend quizzes, all one needs is a keen eye for the things that surround us
+            <p className="text-lg md:text-xl text-black max-w-2xl mx-auto lg:mx-0" >
+              Style isn’t just worn—it’s designed. Ikkatt gives you the ramp and the sketchpad. From fashion shows to DIY workshops, this club turns creativity into couture.
             </p>
           </div>
         </div>
@@ -245,14 +243,15 @@ const renderMemberCard = (member: ClubMember) => (
           {/* About Section */}
           <CardContainer className="w-full">
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">About Quiz Club</h2>
+              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">About Ikkatt Club</h2>
               <p className="text-black-700 dark:text-neutral-300">
-                  The Quiz Club, IIT Patna believes that the most important thing is having fun (and ofc quizzing xd). One doesn't need to mug up random nerdy facts to attend quizzes, all one needs is a keen eye for the things that surround us.              </p>
+               Style isn’t just worn—it’s designed. Ikkatt gives you the ramp and the sketchpad. From fashion shows to DIY workshops, this club turns creativity into couture.
+              </p>
               <div className="mt-6">
                 <h3 className="text-xl font-bold text-black-700 dark:text-white mb-3">What We Do</h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li>weekly quizzes made up of fun and deducible questions</li>
-                  <li>Knockout (MUN)</li>
+                  <li>quirks & gimmicks</li>
+                  <li>critical thinking skills(MUN)</li>
                   <li>Quest-ion</li>
                   <li>Pan India Quizzing fest PARAKH annually</li>
                   <li>Group discussions</li>
@@ -276,29 +275,29 @@ const renderMemberCard = (member: ClubMember) => (
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
               <div className="grid grid-cols-2 gap-4">
-                <img src="/ClubLogo/quiz.jpg" alt="quiz Debate" className="rounded-lg w-full h-48 object-cover" />
-                <img src="/ClubLogo/quiz.jpg" alt="quiz MUN" className="rounded-lg w-full h-48 object-cover" />
-                <img src="/ClubLogo/quiz.jpg" alt="quiz Event" className="rounded-lg w-full h-48 object-cover" />
-                <img src="/ClubLogo/quiz.jpg" alt="quiz Team" className="rounded-lg w-full h-48 object-cover" />
+                <img src="/ClubLogo/ikkatt.png" alt="ikkatt Debate" className="rounded-lg w-full h-54 object-cover" />
+                <img src="/ClubLogo/ikkatt.png" alt="ikkatt MUN" className="rounded-lg w-full h-54 object-cover" />
+                <img src="/ClubLogo/ikkatt.png" alt="ikkatt Event" className="rounded-lg w-full h-54 object-cover" />
+                <img src="/ClubLogo/ikkatt.png" alt="ikkatt Team" className="rounded-lg w-full h-54 object-cover" />
               </div>
             </CardBody>
           </CardContainer>
         </div>
         {/* Members Section */}
         <section className="mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12" style={{ color: "#E6A14C" }}>Our Team</h2>
+          <h2 className="text-5xl font-bold text-center mb-12" style={{ color: "#4169E1" }}>Our Team</h2>
 
 
           {/* Coordinators Section */}
-          <h2 className="text-3xl font-semibold text-left mb-6 text-yellow-400 px-2 md:px-0">Coordinators</h2>
+          <h2 className="text-4xl font-semibold text-center mb-6 text-orange-300 px-2 md:px-0" style={{ color: "#191970" }}>Coordinators</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 md:px-0">
-            {QuizMembers.slice(0, 4).map((member) => renderMemberCard(member))}
+            {AnimeMembers.slice(0, 4).map((member) => renderMemberCard(member))}
           </div>
 
           {/* Sub Coordinators Section */}
-          <h2 className="text-3xl font-semibold text-left mt-12 mb-6 text-yellow-400 px-4 md:px-0">Sub Coordinators</h2>
+          <h2 className="text-4xl font-semibold text-center mt-12 mb-6 text-orange-300 px-4 md:px-0" style={{ color: "#191970" }}>Sub Coordinators</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto items-stretch">
-            {QuizMembers.slice(4).map((member) => renderMemberCard(member))}
+            {AnimeMembers.slice(4).map((member) => renderMemberCard(member))}
           </div>
         </section>
         {/* Social Media Links */}

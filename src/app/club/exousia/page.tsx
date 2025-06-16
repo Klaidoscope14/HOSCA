@@ -220,7 +220,7 @@ const renderMemberCard = (member: ClubMember) => (
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
               <img 
-                src="/club/exousia.jpg" 
+                src="/ClubLogo/exousia.jpg" 
                 alt="Exousia Dance Society" 
                 className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
               />
@@ -276,10 +276,10 @@ const renderMemberCard = (member: ClubMember) => (
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
               <div className="grid grid-cols-2 gap-4">
-                <img src="/club/exousia.jpg" alt="Exousia Performance" className="rounded-lg w-full h-48 object-cover" />
-                <img src="/club/exousia.jpg" alt="Exousia Workshop" className="rounded-lg w-full h-48 object-cover" />
-                <img src="/club/exousia.jpg" alt="Exousia Event" className="rounded-lg w-full h-48 object-cover" />
-                <img src="/club/exousia.jpg" alt="Exousia Team" className="rounded-lg w-full h-48 object-cover" />
+                <img src="/ClubLogo/exousia.jpg" alt="Exousia Performance" className="rounded-lg w-full h-48 object-cover" />
+                <img src="/ClubLogo/exousia.jpg" alt="Exousia Workshop" className="rounded-lg w-full h-48 object-cover" />
+                <img src="/ClubLogo/exousia.jpg" alt="Exousia Event" className="rounded-lg w-full h-48 object-cover" />
+                <img src="/ClubLogo/exousia.jpg" alt="Exousia Team" className="rounded-lg w-full h-48 object-cover" />
               </div>
             </CardBody>
           </CardContainer>

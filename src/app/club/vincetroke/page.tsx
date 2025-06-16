@@ -27,7 +27,7 @@ const VincetrokeMembers: ClubMember[] = [
     email: 'rajesh.civil@iitp.ac.in',
     linkedinUrl: 'https://linkedin.com/in/rajeshkumar',
     instagramUrl: 'https://instagram.com/rajeshkumar',
-    imageUrl: '/club/members/rajesh.jpg',
+    imageUrl: '/clubCmemLogobers/rajesh.jpg',
   },
   {
     id: 2,
@@ -38,7 +38,7 @@ const VincetrokeMembers: ClubMember[] = [
     email: 'priya.cs@iitp.ac.in',
     linkedinUrl: 'https://linkedin.com/in/priyasharma',
     instagramUrl: 'https://instagram.com/priyasharma',
-    imageUrl: '/club/members/priya.jpg',
+    imageUrl: '/cluC/meLogombers/priya.jpg',
   },
   {
     id: 3,
@@ -49,7 +49,7 @@ const VincetrokeMembers: ClubMember[] = [
     email: 'amit.mech@iitp.ac.in',
     linkedinUrl: 'https://linkedin.com/in/amitverma',
     instagramUrl: 'https://instagram.com/amitverma',
-    imageUrl: '/club/members/amit.jpg',
+    imageUrl: '/clCb/mLogoembers/amit.jpg',
   },
   {
     id: 4,
@@ -60,7 +60,7 @@ const VincetrokeMembers: ClubMember[] = [
     email: 'sneha.ee@iitp.ac.in',
     linkedinUrl: 'https://linkedin.com/in/snehapatel',
     instagramUrl: 'https://instagram.com/snehapatel',
-    imageUrl: '/club/members/sneha.jpg',
+    imageUrl: '/cluC/meLogombers/sneha.jpg',
   },
   {
     id: 5,
@@ -71,7 +71,7 @@ const VincetrokeMembers: ClubMember[] = [
     email: 'arjun.chem@iitp.ac.in',
     linkedinUrl: 'https://linkedin.com/in/arjunsingh',
     instagramUrl: 'https://instagram.com/arjunsingh',
-    imageUrl: '/club/members/arjun.jpg',
+    imageUrl: '/cluC/meLogombers/arjun.jpg',
   },
   {
     id: 6,
@@ -82,7 +82,7 @@ const VincetrokeMembers: ClubMember[] = [
     email: 'kavya.bt@iitp.ac.in',
     linkedinUrl: 'https://linkedin.com/in/kavyanair',
     instagramUrl: 'https://instagram.com/kavyanair',
-    imageUrl: '/club/members/kavya.jpg',
+    imageUrl: '/cluC/meLogombers/kavya.jpg',
   },
   {
     id: 7,
@@ -93,7 +93,7 @@ const VincetrokeMembers: ClubMember[] = [
     email: 'rohit.met@iitp.ac.in',
     linkedinUrl: 'https://linkedin.com/in/rohitgupta',
     instagramUrl: 'https://instagram.com/rohitgupta',
-    imageUrl: '/club/members/rohit.jpg',
+    imageUrl: '/cluC/meLogombers/rohit.jpg',
   },
   {
     id: 8,
@@ -104,7 +104,7 @@ const VincetrokeMembers: ClubMember[] = [
     email: 'ananya.phy@iitp.ac.in',
     linkedinUrl: 'https://linkedin.com/in/ananyajoshi',
     instagramUrl: 'https://instagram.com/ananyajoshi',
-    imageUrl: '/club/members/ananya.jpg',
+    imageUrl: '/clubCmemLogobers/ananya.jpg',
   }
 ];
 
@@ -221,7 +221,7 @@ const renderMemberCard = (member: ClubMember) => (
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
               <img 
-                src="/club/Vincetroke.jpg" 
+                src="/ClubLogo/Vincetroke.jpg" 
                 alt="Art Society" 
                 className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
               />
@@ -277,10 +277,10 @@ const renderMemberCard = (member: ClubMember) => (
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
               <div className="grid grid-cols-2 gap-4">
-                <img src="/club/Vincetroke.jpg" alt="quiz Debate" className="rounded-lg w-full h-50 object-cover" />
-                <img src="/club/Vincetroke.jpg" alt="quiz MUN" className="rounded-lg w-full h-50 object-cover" />
-                <img src="/club/Vincetroke.jpg" alt="quiz Event" className="rounded-lg w-full h-50 object-cover" />
-                <img src="/club/Vincetroke.jpg" alt="quiz Team" className="rounded-lg w-full h-50 object-cover" />
+                <img src="/ClubLogo/Vincetroke.jpg" alt="quiz Debate" className="rounded-lg w-full h-50 object-cover" />
+                <img src="/ClubLogo/Vincetroke.jpg" alt="quiz MUN" className="rounded-lg w-full h-50 object-cover" />
+                <img src="/ClubLogo/Vincetroke.jpg" alt="quiz Event" className="rounded-lg w-full h-50 object-cover" />
+                <img src="/ClubLogo/Vincetroke.jpg" alt="quiz Team" className="rounded-lg w-full h-50 object-cover" />
               </div>
             </CardBody>
           </CardContainer>

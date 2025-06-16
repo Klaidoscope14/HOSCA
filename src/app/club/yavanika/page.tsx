@@ -4,6 +4,8 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
+import { ImagesSlider } from "@/components/ui/images-slider";
+import { Suspense } from "react";
 
 interface ClubMember {
   id: number;
@@ -263,18 +265,47 @@ export default function YavanikaPage() {
           <CardContainer className="w-full">
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-              <div className="grid grid-cols-2 gap-4">
-                <img src="/club/yavanika.png" alt="Yavanika Performance" className="rounded-lg w-full h-48 object-cover" />
-                <img src="/club/yavanika.png" alt="Yavanika Workshop" className="rounded-lg w-full h-48 object-cover" />
-                <img src="/club/yavanika.png" alt="Yavanika Event" className="rounded-lg w-full h-48 object-cover" />
-                <img src="/club/yavanika.png" alt="Yavanika Team" className="rounded-lg w-full h-48 object-cover" />
+              <div className="h-[600px] relative rounded-lg overflow-hidden">
+                <Suspense fallback={<div>Loading...</div>}>
+                  <ImagesSlider
+                    className="h-full w-full"
+                    images={[
+                      "/ClubPages/Yavanika/Picture1.jpg",
+                      "/ClubPages/Yavanika/Picture3.jpg",
+                      "/ClubPages/Yavanika/Picture5.jpg",
+                      "/ClubPages/Yavanika/Picture8.jpg",
+                      "/ClubPages/Yavanika/Picture10.jpg",
+                      "/ClubPages/Yavanika/Picture11.jpg",
+                      "/ClubPages/Yavanika/Picture13.png",
+                      "/ClubPages/Yavanika/Picture14.png",
+                      "/ClubPages/Yavanika/Picture15.png",
+                      "/ClubPages/Yavanika/Picture16.jpg",
+                      "/ClubPages/Yavanika/Picture17.jpg",
+                      "/ClubPages/Yavanika/Picture18.jpg",
+                      "/ClubPages/Yavanika/Picture19.jpg",
+                      "/ClubPages/Yavanika/Picture20.jpg",
+                      "/ClubPages/Yavanika/Picture21.jpg",
+                      "/ClubPages/Yavanika/Picture22.jpg",
+                      "/ClubPages/Yavanika/WhatsApp Image 2025-06-13 at 21.13.25_a7e3e9e4.jpg",
+                      "/ClubPages/Yavanika/WhatsApp Image 2025-06-13 at 21.13.24_f47aabd2.jpg",
+                      "/ClubPages/Yavanika/WhatsApp Image 2025-06-13 at 21.13.24_545c13a3.jpg",
+                      "/ClubPages/Yavanika/WhatsApp Image 2025-06-13 at 21.13.23_50f5c902.jpg"
+                    ]}
+                    overlay={true}
+                    overlayClassName="bg-gradient-to-t from-black/60 via-black/0 to-black/60"
+                  >
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <h2 className="text-4xl font-bold text-white">Yavanika Gallery</h2>
+                    </div>
+                  </ImagesSlider>
+                </Suspense>
               </div>
             </CardBody>
           </CardContainer>
         </div>
 
         {/* Members Section */}
-        <section className="mb-16">
+        <section className="mb-16 mt-16">
           <h2 className="text-4xl font-bold text-center mb-12 text-white">Our Team</h2>
 
           {/* Coordinators Section */}

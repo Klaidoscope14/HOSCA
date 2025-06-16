@@ -62,12 +62,21 @@ export function ExpandableCardDemo() {
             ref={ref}
             initial={{ opacity: 0, scale: 0.96, y: 24 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.96, y: 24 }}
+            exit={{ 
+              opacity: 0,
+              scale: 0.96,
+              y: 24,
+              transition: {
+                duration: 0.2,
+                ease: "easeInOut"
+              }
+            }}
             transition={{
               type: "spring",
-              stiffness: 420,
-              damping: 32,
-              mass: 0.9,
+              stiffness: 300,
+              damping: 30,
+              mass: 1,
+              duration: 0.3
             }}
             className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90vh] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden relative min-h-[500px] shadow-2xl"
           >
@@ -75,15 +84,21 @@ export function ExpandableCardDemo() {
             layoutId={`image-${active.title}-${id}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ delay: 0.08, duration: 0.22 }}
+            exit={{ 
+              opacity: 0,
+              transition: {
+                duration: 0.15,
+                ease: "easeInOut"
+              }
+            }}
+            className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg overflow-hidden"
           >
             <img
               width={200}
               height={200}
               src={active.src}
               alt={active.title}
-              className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+              className="w-full h-full object-cover object-top"
             />
           </motion.div>
           <div className="flex flex-col h-full">
@@ -92,12 +107,26 @@ export function ExpandableCardDemo() {
                 <motion.h3
                   layoutId={`title-${active.title}-${id}`}
                   className="font-bold text-neutral-700 dark:text-neutral-200"
+                  exit={{ 
+                    opacity: 0,
+                    transition: {
+                      duration: 0.15,
+                      ease: "easeInOut"
+                    }
+                  }}
                 >
                   {active.title}
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${active.description}-${id}`}
                   className="text-neutral-600 dark:text-neutral-400"
+                  exit={{ 
+                    opacity: 0,
+                    transition: {
+                      duration: 0.15,
+                      ease: "easeInOut"
+                    }
+                  }}
                 >
                   {active.description}
                 </motion.p>
@@ -108,6 +137,14 @@ export function ExpandableCardDemo() {
                 target="_blank"
                 className="p-2 rounded-full bg-green-500 text-white flex-shrink-0 transition-colors duration-300"
                 aria-label="View details"
+                exit={{ 
+                  opacity: 0,
+                  scale: 0.8,
+                  transition: {
+                    duration: 0.15,
+                    ease: "easeInOut"
+                  }
+                }}
               >
                 <IoPlay className="w-4 h-4" />
               </motion.a>
@@ -159,14 +196,33 @@ export function ExpandableCardDemo() {
               onClick={() => setActive(card)}
               whileHover={{
                 y: -8,
-                scale: 1.05,
+                scale: 1.02,
                 boxShadow: "0 8px 32px 0 rgba(168,139,250,0.25), 0 1.5px 8px 0 rgba(244,114,182,0.15)",
               }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              transition={{ 
+                type: "spring", 
+                stiffness: 300, 
+                damping: 20,
+                layout: {
+                  duration: 0.2,
+                  ease: "easeInOut"
+                }
+              }}
               className="p-4 sm:p-6 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer mb-4 md:max-h-[200px] md:overflow-hidden transition-all duration-300"
             >
             <div className="flex gap-4 flex-col md:flex-row w-full">
-              <motion.div layoutId={`image-${card.title}-${id}`} className="flex-shrink-0 mx-auto md:mx-0">
+              <motion.div 
+                layoutId={`image-${card.title}-${id}`} 
+                className="flex-shrink-0 mx-auto md:mx-0"
+                transition={{ 
+                  duration: 0.2,
+                  ease: "easeInOut",
+                  layout: {
+                    duration: 0.2,
+                    ease: "easeInOut"
+                  }
+                }}
+              >
                 <img
                   width={100}
                   height={100}
@@ -179,12 +235,28 @@ export function ExpandableCardDemo() {
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
                   className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left truncate text-lg sm:text-xl md:text-base"
+                  transition={{ 
+                    duration: 0.2,
+                    ease: "easeInOut",
+                    layout: {
+                      duration: 0.2,
+                      ease: "easeInOut"
+                    }
+                  }}
                 >
                   {card.title}
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
                   className="text-neutral-600 dark:text-neutral-400 text-center md:text-left truncate text-sm sm:text-base md:text-sm"
+                  transition={{ 
+                    duration: 0.2,
+                    ease: "easeInOut",
+                    layout: {
+                      duration: 0.2,
+                      ease: "easeInOut"
+                    }
+                  }}
                 >
                   {card.description}
                 </motion.p>
@@ -277,7 +349,7 @@ const cards = [
     instagramLink: "https://www.instagram.com/yavanika_iitp/?hl=en",
     content: () => (
       <p>
-        If life’s a stage, Yavanika brings the spotlight. From street plays that hit hard to full-blown productions that stir the soul, they don’t just act—they <b>live</b> the script. One of the oldest cultural clubs, Yavanika has drama in its DNA (the good kind, promise).
+        If life's a stage, Yavanika brings the spotlight. From street plays that hit hard to full-blown productions that stir the soul, they don't just act—they <b>live</b> the script. One of the oldest cultural clubs, Yavanika has drama in its DNA (the good kind, promise).
       </p>
     ),
   },
@@ -291,7 +363,7 @@ const cards = [
     instagramLink: "https://www.instagram.com/exousia_iitp/",
     content: () => (
       <p>
-        Exousia doesn’t walk—<b>they groove</b>. Whether it’s Bollywood, freestyle, or hip-hop battles, they’ve got rhythm in every step. With iconic events like FlipToe and Beat It Off, they light up stages and hearts alike.
+        Exousia doesn't walk—<b>they groove</b>. Whether it's Bollywood, freestyle, or hip-hop battles, they've got rhythm in every step. With iconic events like FlipToe and Beat It Off, they light up stages and hearts alike.
       </p>
     ),
   },
@@ -305,7 +377,7 @@ const cards = [
     instagramLink: "https://www.instagram.com/aria_iitp/",
     content: () => (
       <p>
-        If your soul has a soundtrack, Aria is probably playing it. From cozy acoustic nights to electrifying concerts, Aria hits the right notes—every time. They don’t just play music; they build a vibe.
+        If your soul has a soundtrack, Aria is probably playing it. From cozy acoustic nights to electrifying concerts, Aria hits the right notes—every time. They don't just play music; they build a vibe.
       </p>
     ),
   },
@@ -319,7 +391,7 @@ const cards = [
     instagramLink: "https://www.instagram.com/pixxel_iitp/?hl=en",
     content: () => (
       <p>
-        The eyes behind every epic IITP memory. Pixxel’s not just about taking pictures—they freeze feelings. From covering fests to capturing candids, they turn every moment into a masterpiece.
+        The eyes behind every epic IITP memory. Pixxel's not just about taking pictures—they freeze feelings. From covering fests to capturing candids, they turn every moment into a masterpiece.
       </p>
     ),
   },
@@ -333,7 +405,7 @@ const cards = [
     instagramLink: "https://www.instagram.com/hoot.iitp/",
     content: () => (
       <p>
-        Got opinions louder than your roommate’s alarm? HOOT gives you the mic. Debate, JAM, MUN—you name it, they talk it. It’s where logic meets flair and your voice finally gets the stage it deserves.
+        Got opinions louder than your roommate's alarm? HOOT gives you the mic. Debate, JAM, MUN—you name it, they talk it. It's where logic meets flair and your voice finally gets the stage it deserves.
       </p>
     ),
   },
@@ -347,7 +419,7 @@ const cards = [
     instagramLink: "https://www.instagram.com/qc_iitp/",
     content: () => (
       <p>
-        Forget mugging facts. Quiz Club is about curiosity, deduction, and that sweet feeling of yelling the right answer before anyone else. With quizzes like Parakh and Knockout, it’s where trivia gets thrilling.
+        Forget mugging facts. Quiz Club is about curiosity, deduction, and that sweet feeling of yelling the right answer before anyone else. With quizzes like Parakh and Knockout, it's where trivia gets thrilling.
       </p>
     ),
   },
@@ -361,7 +433,7 @@ const cards = [
     instagramLink: "https://www.instagram.com/qc_iitp/",
     content: () => (
       <p>
-        Forget mugging facts. Quiz Club is about curiosity, deduction, and that sweet feeling of yelling the right answer before anyone else. With quizzes like Parakh and Knockout, it’s where trivia gets thrilling.
+        Forget mugging facts. Quiz Club is about curiosity, deduction, and that sweet feeling of yelling the right answer before anyone else. With quizzes like Parakh and Knockout, it's where trivia gets thrilling.
       </p>
     ),
   },
@@ -389,7 +461,7 @@ const cards = [
     instagramLink: "https://instagram.com/hexachrome_official?igshid=NTc4MTIwNjQ2YQ==",
     content: () => (
       <p>
-        Rubik’s Cubes, riddles, crosswords—if solving things is your jam, HexaChrome is home. Brains get a proper workout here, minus the sweat. Fun, friendly, and freakishly clever.
+        Rubik's Cubes, riddles, crosswords—if solving things is your jam, HexaChrome is home. Brains get a proper workout here, minus the sweat. Fun, friendly, and freakishly clever.
       </p>
     ),
   },
@@ -431,7 +503,7 @@ const cards = [
     instagramLink: "https://www.instagram.com/ikkatt_iitp/",
     content: () => (
       <p>
-        Style isn’t just worn—it’s designed. Ikkatt gives you the ramp and the sketchpad. From fashion shows to DIY workshops, this club turns creativity into couture.
+        Style isn't just worn—it's designed. Ikkatt gives you the ramp and the sketchpad. From fashion shows to DIY workshops, this club turns creativity into couture.
       </p>
     ),
   },
@@ -445,7 +517,7 @@ const cards = [
     instagramLink: "https://www.instagram.com/standup_club.iitp/",
     content: () => (
       <p>
-        Got jokes? STD’s the stage. IITP’s unofficial therapy session where students turn awkwardness, engineering pain, and hostel horrors into stand-up gold. Laughter guaranteed.
+        Got jokes? STD's the stage. IITP's unofficial therapy session where students turn awkwardness, engineering pain, and hostel horrors into stand-up gold. Laughter guaranteed.
       </p>
     ),
   },

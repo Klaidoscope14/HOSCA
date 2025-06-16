@@ -4,6 +4,8 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
+import { ImagesSlider } from "@/components/ui/images-slider";
+import { Suspense } from "react";
 
 interface ClubMember {
   id: number;
@@ -276,17 +278,35 @@ const renderMemberCard = (member: ClubMember) => (
           <CardContainer className="w-full">
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-              <div className="grid grid-cols-2 gap-4">
-                <img src="/club/syahi.jpg" alt="quiz Debate" className="rounded-lg w-full h-48 object-cover" />
-                <img src="/club/syahi.jpg" alt="quiz MUN" className="rounded-lg w-full h-48 object-cover" />
-                <img src="/club/syahi.jpg" alt="quiz Event" className="rounded-lg w-full h-48 object-cover" />
-                <img src="/club/syahi.jpg" alt="quiz Team" className="rounded-lg w-full h-48 object-cover" />
+              <div className="h-[600px] relative rounded-lg overflow-hidden">
+                <Suspense fallback={<div>Loading...</div>}>
+                  <ImagesSlider
+                    className="h-full w-full"
+                    images={[
+                      "/ClubPages/Syahi/Syahi-1.JPG",
+                      "/ClubPages/Syahi/Syahi-2.JPG",
+                      "/ClubPages/Syahi/Syahi-3.JPG",
+                      "/ClubPages/Syahi/Syahi-4.JPG",
+                      "/ClubPages/Syahi/Syahi-5.JPG",
+                      "/ClubPages/Syahi/Syahi-6.JPG",
+                      "/ClubPages/Syahi/Syahi-7.JPG",
+                      "/ClubPages/Syahi/Syahi-8.JPG",
+                      "/ClubPages/Syahi/Syahi-9.jpg"
+                    ]}
+                    overlay={true}
+                    overlayClassName="bg-gradient-to-t from-black/60 via-black/0 to-black/60"
+                  >
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <h2 className="text-4xl font-bold text-white">Syahi Gallery</h2>
+                    </div>
+                  </ImagesSlider>
+                </Suspense>
               </div>
             </CardBody>
           </CardContainer>
         </div>
         {/* Members Section */}
-        <section className="mb-16">
+        <section className="mb-16 mt-16">
           <h2 className="text-4xl font-bold text-center mb-12" style={{ color: "#E6A14C" }}>Our Team</h2>
 
 

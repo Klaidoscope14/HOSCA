@@ -367,6 +367,7 @@ const renderMemberCard = (member: ClubMember) => (
           <CardContainer className="w-full">
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
+<<<<<<< HEAD
               <div className="h-[400px] relative rounded-lg overflow-hidden">
                 <Suspense fallback={<div className="w-full h-full bg-gray-800 animate-pulse" />}>
                   <ImagesSlider
@@ -395,6 +396,13 @@ const renderMemberCard = (member: ClubMember) => (
                     </div>
                   </ImagesSlider>
                 </Suspense>
+=======
+              <div className="grid grid-cols-2 gap-4">
+                <img src="/ClubLogo/aria.jpg" alt="Aria Performance" className="rounded-lg w-full h-48 object-cover" />
+                <img src="/ClubLogo/aria.jpg" alt="Aria Workshop" className="rounded-lg w-full h-48 object-cover" />
+                <img src="/ClubLogo/aria.jpg" alt="Aria Event" className="rounded-lg w-full h-48 object-cover" />
+                <img src="/ClubLogo/aria.jpg" alt="Aria Team" className="rounded-lg w-full h-48 object-cover" />
+>>>>>>> upstream/main
               </div>
             </CardBody>
           </CardContainer>

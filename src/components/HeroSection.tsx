@@ -8,17 +8,10 @@ import { VideoText } from "@/components/magicui/video-text";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-screen w-full bg-black overflow-hidden">
       <div className="absolute inset-0 w-full h-full">
-        <Image
-          src="/Welcome.jpg"
-          alt="HOSCA Welcome Background"
-          fill
-          priority
-          className="object-cover"
-          quality={100}
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-red-900/30" />
+       
+      
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer" />
       </div>
       

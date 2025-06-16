@@ -4,8 +4,6 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
-import { ImagesSlider } from "@/components/ui/images-slider";
-import { Suspense } from "react";
 
 interface ClubMember {
   id: number;
@@ -19,95 +17,106 @@ interface ClubMember {
   instagramUrl?: string;
 }
 
-const HexachromeMembers: ClubMember[] = [
+const AnimeMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Add Name',
-    position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
-    instagramUrl: '#',
-    imageUrl: '',
+    name: 'Rajesh Kumar',
+    position: 'President',
+    year: '4th Year',
+    branch: 'Civil  Engineering',
+    email: 'rajesh.civil@iitp.ac.in',
+    linkedinUrl: 'https://linkedin.com/in/rajeshkumar',
+    instagramUrl: 'https://instagram.com/rajeshkumar',
+    imageUrl: '/club/members/rajesh.jpg',
   },
   {
     id: 2,
-    name: 'Add Name',
-    position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
-    instagramUrl: '#',
-    imageUrl: '',
+    name: 'Priya Sharma',
+    position: 'Vice President',
+    year: '3rd Year',
+    branch: 'Computer   Science',
+    email: 'priya.cs@iitp.ac.in',
+    linkedinUrl: 'https://linkedin.com/in/priyasharma',
+    instagramUrl: 'https://instagram.com/priyasharma',
+    imageUrl: '/club/members/priya.jpg',
   },
   {
     id: 3,
-    name: 'Add Name',
-    position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
-    instagramUrl: '#',
-    imageUrl: '',
+    name: 'Amit Verma',
+    position: 'Secretary',
+    year: '3rd Year',
+    branch: 'Mechanical Engineering',
+    email: 'amit.mech@iitp.ac.in',
+    linkedinUrl: 'https://linkedin.com/in/amitverma',
+    instagramUrl: 'https://instagram.com/amitverma',
+    imageUrl: '/club/members/amit.jpg',
   },
   {
     id: 4,
-    name: 'Add Name',
-    position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
-    instagramUrl: '#',
-    imageUrl: '',
+    name: 'Sneha Patel',
+    position: 'Creative Head',
+    year: '2nd Year',
+    branch: 'Electrical Engineering',
+    email: 'sneha.ee@iitp.ac.in',
+    linkedinUrl: 'https://linkedin.com/in/snehapatel',
+    instagramUrl: 'https://instagram.com/snehapatel',
+    imageUrl: '/club/members/sneha.jpg',
   },
   {
     id: 5,
-    name: 'Add Name',
-    position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
-    instagramUrl: '#',
-    imageUrl: '',
+    name: 'Arjun Singh',
+    position: 'Script Writer',
+    year: '2nd Year',
+    branch: 'Chemical Engineering',
+    email: 'arjun.chem@iitp.ac.in',
+    linkedinUrl: 'https://linkedin.com/in/arjunsingh',
+    instagramUrl: 'https://instagram.com/arjunsingh',
+    imageUrl: '/club/members/arjun.jpg',
   },
   {
     id: 6,
-    name: 'Add Name',
-    position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
-    instagramUrl: '#',
-    imageUrl: '',
+    name: 'Kavya Nair',
+    position: 'Director',
+    year: '4th Year',
+    branch: ' Bio-technology ',
+    email: 'kavya.bt@iitp.ac.in',
+    linkedinUrl: 'https://linkedin.com/in/kavyanair',
+    instagramUrl: 'https://instagram.com/kavyanair',
+    imageUrl: '/club/members/kavya.jpg',
   },
   {
     id: 7,
-    name: 'Add Name',
-    position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
-    instagramUrl: '#',
-    imageUrl: '',
+    name: 'Rohit Gupta',
+    position: 'Stage Manager',
+    year: '3rd Year',
+    branch: '  Metallurgy  ',
+    email: 'rohit.met@iitp.ac.in',
+    linkedinUrl: 'https://linkedin.com/in/rohitgupta',
+    instagramUrl: 'https://instagram.com/rohitgupta',
+    imageUrl: '/club/members/rohit.jpg',
+  },
+  {
+    id: 8,
+    name: 'Ananya Joshi',
+    position: 'Costume Designer',
+    year: '2nd Year ',
+    branch: 'Physics        ',
+    email: 'ananya.phy@iitp.ac.in',
+    linkedinUrl: 'https://linkedin.com/in/ananyajoshi',
+    instagramUrl: 'https://instagram.com/ananyajoshi',
+    imageUrl: '/club/members/ananya.jpg',
   }
 ];
 
-export default function HexaChromePage() {
+export default function AnimePage() {
 const renderMemberCard = (member: ClubMember) => (
   <div key={member.id} className="flex justify-center w-full">
     <CardContainer className="w-[320px] h-[520px]">
-      <CardBody className="bg-[#ADDAEA] text-black border-white border w-[280px] h-[450px] rounded-xl p-6 flex flex-col justify-between">
+      <CardBody className="bg-[#7AE8E6] text-black border-white border w-[280px] h-[450px] rounded-xl p-6 flex flex-col justify-between">
 
 
         <CardItem translateZ="100" className="w-full mt-4">
-          <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-2 border-white bg-white flex items-center justify-center">
+          <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-2 border-red-500 bg-white flex items-center justify-center">
             {member.imageUrl ? (
               <img
                 src={member.imageUrl}
@@ -128,7 +137,7 @@ const renderMemberCard = (member: ClubMember) => (
           translateZ="50"
           className="text-xl font-bold text-navy-950 px-2 h-[3em] flex items-center justify-center"
         >
-          <div className="line-clamp-2 leading-tight text-center">
+          <div className="line-clamp-2 leading-tight text-center" style={{ color: "#B91C1C" }}>
             {member.name}
           </div>
         </CardItem>
@@ -138,7 +147,7 @@ const renderMemberCard = (member: ClubMember) => (
           translateZ="60"
           className="text-white text-sm font-bold px-4 h-[3em] flex items-center justify-center"
         >
-          <div className="line-clamp-2 leading-tight text-center">
+          <div className="line-clamp-2 leading-tight text-center" style={{ color: "#6A0DAD" }}>
             {member.position}
           </div>
         </CardItem>
@@ -149,7 +158,7 @@ const renderMemberCard = (member: ClubMember) => (
             translateZ="60"
             className="text-black text-sm px-2 h-[3em] flex items-center justify-center"
           >
-            <div className="line-clamp-2 leading-tight text-center">
+            <div className="line-clamp-2 leading-tight text-center" style={{ color: "#1E3A8A" }}>
               {member.year} - {member.branch}
             </div>
           </CardItem>
@@ -199,9 +208,7 @@ const renderMemberCard = (member: ClubMember) => (
   </div>
 );
   return (
-    <div className="relative min-h-screen w-full bg-[url('/club/aria_background.jpeg')] bg-cover bg-center bg-no-repeat">
-
-      <div className="absolute inset-0 bg-white/[0.6]"></div> 
+    <div className="relative min-h-screen w-full bg-white/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <BackgroundBeams className="absolute inset-0" />
       
       <div className="container mx-auto px-4 py-8 relative z-10">
@@ -212,8 +219,8 @@ const renderMemberCard = (member: ClubMember) => (
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
               <img 
-                src="/ClubLogo/Hexachrome.jpg" 
-                alt="Puzzel Society" 
+                src="/ClubLogo/std.png" 
+                alt="Stand Up Comedy Society" 
                 className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
@@ -222,11 +229,11 @@ const renderMemberCard = (member: ClubMember) => (
           
           {/* Content Section - Right on desktop, bottom on mobile */}
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-sky-400 mb-6">
-              HexaChrome 
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-sky-400 mb-6" style={{ color: "#D4AF37" }}>
+              STD
             </h1>
-            <p className="text-lg md:text-xl text-black max-w-2xl mx-auto lg:mx-0">
-              aims to provide a platform for students to learn and improve in solving puzzles such as Rubik's Cube, Cryptograms, Crosswords, Scrabble,
+            <p className="text-lg md:text-xl text-black max-w-2xl mx-auto lg:mx-0" >
+              IITP’s unofficial therapy session where students turn awkwardness, engineering pain, and hostel horrors into stand-up gold. Laughter guaranteed.
             </p>
           </div>
         </div>
@@ -236,14 +243,14 @@ const renderMemberCard = (member: ClubMember) => (
           {/* About Section */}
           <CardContainer className="w-full">
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">About HexaChrome</h2>
+              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">About STD Club</h2>
               <p className="text-black-700 dark:text-neutral-300">
-                  The Hexachrome Club aims to provide a platform for students to learn and improve in solving puzzles such as Rubik's Cube, Cryptograms, Crosswords, Scrabble
+               Got jokes? STD’s the stage. IITP’s unofficial therapy session where students turn awkwardness, engineering pain, and hostel horrors into stand-up gold. Laughter guaranteed.
               </p>
               <div className="mt-6">
                 <h3 className="text-xl font-bold text-black-700 dark:text-white mb-3">What We Do</h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li> Puzzle-solving has many benefits</li>
+                  <li>quirks & gimmicks</li>
                   <li>critical thinking skills(MUN)</li>
                   <li>Quest-ion</li>
                   <li>Pan India Quizzing fest PARAKH annually</li>
@@ -267,67 +274,30 @@ const renderMemberCard = (member: ClubMember) => (
           <CardContainer className="w-full">
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-<<<<<<< HEAD
-              <div className="h-[400px] relative rounded-lg overflow-hidden">
-                <Suspense fallback={<div className="w-full h-full bg-gray-800 animate-pulse" />}>
-                  <ImagesSlider
-                    className="h-[40rem]"
-                    images={[
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0001.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0002.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0003.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0004.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0005.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0006.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0007.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0008.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0009.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0010.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0011.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241019-WA0013.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0058.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0060.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0062.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0069.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0071.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0073.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0075.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0077.jpg"
-                    ]}
-                    overlay={true}
-                    overlayClassName="bg-gradient-to-t from-black/60 via-black/0 to-black/60"
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <h2 className="text-4xl font-bold text-white">Hexachrome Gallery</h2>
-                    </div>
-                  </ImagesSlider>
-                </Suspense>
-=======
               <div className="grid grid-cols-2 gap-4">
-                <img src="/ClubLogo/Hexachrome.jpg" alt="quiz Debate" className="rounded-lg w-full h-50 object-cover" />
-                <img src="/ClubLogo/Hexachrome.jpg" alt="quiz MUN" className="rounded-lg w-full h-50 object-cover" />
-                <img src="/ClubLogo/Hexachrome.jpg" alt="quiz Event" className="rounded-lg w-full h-50 object-cover" />
-                <img src="/ClubLogo/Hexachrome.jpg" alt="quiz Team" className="rounded-lg w-full h-50 object-cover" />
->>>>>>> upstream/main
+                <img src="/ClubLogo/std.png" alt="std Debate" className="rounded-lg w-full h-54 object-cover" />
+                <img src="/ClubLogo/std.png" alt="std MUN" className="rounded-lg w-full h-54 object-cover" />
+                <img src="/ClubLogo/std.png" alt="std Event" className="rounded-lg w-full h-54 object-cover" />
+                <img src="/ClubLogo/std.png" alt="std Team" className="rounded-lg w-full h-54 object-cover" />
               </div>
             </CardBody>
           </CardContainer>
         </div>
         {/* Members Section */}
-        <section className="mb-16 mt-16">
-          <h2 className="text-4xl font-bold text-center mb-12" style={{ color: "#1E90FF" }}>Our Team</h2>
+        <section className="mb-16">
+          <h2 className="text-5xl font-bold text-center mb-12" style={{ color: "#6A0DAD" }}>Our Team</h2>
 
 
           {/* Coordinators Section */}
-          <h2 className="text-3xl font-semibold text-left mb-6 text-orange-300 px-2 md:px-0" style={{ color: "#4169E1" }}>Coordinators</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 md:px-0 justify-items-center">
-            {HexachromeMembers.slice(0, 2).map((member) => renderMemberCard(member))}
+          <h2 className="text-4xl font-semibold text-center mb-6 text-orange-300 px-2 md:px-0" style={{ color: "#191970" }}>Coordinators</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 md:px-0">
+            {AnimeMembers.slice(0, 4).map((member) => renderMemberCard(member))}
           </div>
 
           {/* Sub Coordinators Section */}
-          <h2 className="text-3xl font-semibold text-left mt-12 mb-6 text-orange-300 px-4 md:px-0" style={{ color: "#4169E1" }}>Sub Coordinators</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 md:px-0 justify-items-center">
-            {HexachromeMembers.slice(2).map((member) => renderMemberCard(member))}
+          <h2 className="text-4xl font-semibold text-center mt-12 mb-6 text-orange-300 px-4 md:px-0" style={{ color: "#191970" }}>Sub Coordinators</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto items-stretch">
+            {AnimeMembers.slice(4).map((member) => renderMemberCard(member))}
           </div>
         </section>
         {/* Social Media Links */}

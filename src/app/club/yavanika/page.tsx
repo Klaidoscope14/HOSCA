@@ -265,6 +265,7 @@ export default function YavanikaPage() {
           <CardContainer className="w-full">
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
+<<<<<<< HEAD
               <div className="h-[600px] relative rounded-lg overflow-hidden">
                 <Suspense fallback={<div>Loading...</div>}>
                   <ImagesSlider
@@ -299,6 +300,13 @@ export default function YavanikaPage() {
                     </div>
                   </ImagesSlider>
                 </Suspense>
+=======
+              <div className="grid grid-cols-2 gap-4">
+                <img src="/ClubPages/Yavanika/Picture22.jpg" alt="Yavanika Performance" className="rounded-lg w-full h-48 object-cover" />
+                <img src="/ClubPages/Yavanika/Picture20.jpg" alt="Yavanika Workshop" className="rounded-lg w-full h-48 object-cover" />
+                <img src="/ClubPages/Yavanika/Picture21.jpg" alt="Yavanika Event" className="rounded-lg w-full h-48 object-cover" />
+                <img src="/ClubPages/Yavanika/Picture14.png" alt="Yavanika Team" className="rounded-lg w-full h-48 object-cover" />
+>>>>>>> upstream/main
               </div>
             </CardBody>
           </CardContainer>
@@ -309,13 +317,13 @@ export default function YavanikaPage() {
           <h2 className="text-4xl font-bold text-center mb-12 text-white">Our Team</h2>
 
           {/* Coordinators Section */}
-          <h2 className="text-3xl font-semibold text-left mb-6 text-yellow-300 px-2 md:px-0">Coordinators</h2>
+          <h2 className="text-3xl font-semibold text-center mb-6 text-yellow-300 px-2 md:px-0">Coordinators</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 md:px-0">
             {YavanikaMembers.slice(0, 3).map((member: ClubMember) => renderMemberCard(member))}
           </div>
 
           {/* Sub Coordinators Section */}
-          <h2 className="text-3xl font-semibold text-left mt-12 mb-6 text-yellow-300 px-4 md:px-0">Sub Coordinators</h2>
+          <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-yellow-300 px-4 md:px-0">Sub Coordinators</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto items-stretch">
             {YavanikaMembers.slice(3).map((member: ClubMember) => renderMemberCard(member))}
           </div>

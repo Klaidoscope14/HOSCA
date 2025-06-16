@@ -219,7 +219,7 @@ export default function YavanikaPage() {
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
               <img 
-                src="/club/yavanika.png" 
+                src="/ClubLogo/yavanika.png" 
                 alt="Yavanika Drama Society" 
                 className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
               />

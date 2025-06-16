@@ -428,7 +428,7 @@ const cards = [
     title: "Syahi",
     src: "/ClubLogo/Syahi.jpg",
     ctaText: "Learn More",
-    ctaLink: "/club/quiz",
+    ctaLink: "/club/syahi",
     facebookLink: "https://www.facebook.com/quizclubTO/",
     instagramLink: "https://www.instagram.com/qc_iitp/",
     content: () => (

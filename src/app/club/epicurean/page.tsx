@@ -275,28 +275,21 @@ const renderMemberCard = (member: ClubMember) => (
           </CardContainer>
 
           {/* Image Gallery */}
-          <CardContainer className="w-full">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-              <div className="h-[600px] relative rounded-lg overflow-hidden">
-                <Suspense fallback={<div>Loading...</div>}>
-                  <ImageGrid
-                    images={[
-                      "/ClubPages/Epicurean/IMG-20250126-WA0040.jpg",
-                      "/ClubPages/Epicurean/IMG-20250126-WA0042.jpg",
-                      "/ClubPages/Epicurean/IMG-20250126-WA0045.jpg",
-                      "/ClubPages/Epicurean/IMG-20250126-WA0046.jpg",
-                      "/ClubPages/Epicurean/IMG-20250126-WA0047.jpg",
-                      "/ClubPages/Epicurean/IMG-20250126-WA0049.jpg",
-                      "/ClubPages/Epicurean/IMG-20250126-WA0050.jpg",
-                      "/ClubPages/Epicurean/IMG-20250126-WA0051.jpg"
-                    ]}
-                    className="max-w-4xl mx-auto"
-                  />
-                </Suspense>
-              </div>
-            </CardBody>
-          </CardContainer>
+          <div className="mb-16">
+            <ImageGrid
+              images={[
+                "/ClubPages/Epicurean/IMG-20250126-WA0040.jpg",
+                "/ClubPages/Epicurean/IMG-20250126-WA0042.jpg",
+                "/ClubPages/Epicurean/IMG-20250126-WA0045.jpg",
+                "/ClubPages/Epicurean/IMG-20250126-WA0046.jpg",
+                "/ClubPages/Epicurean/IMG-20250126-WA0047.jpg",
+                "/ClubPages/Epicurean/IMG-20250126-WA0049.jpg",
+                "/ClubPages/Epicurean/IMG-20250126-WA0050.jpg",
+                "/ClubPages/Epicurean/IMG-20250126-WA0051.jpg"
+              ]}
+              className="max-w-4xl mx-auto"
+            />
+          </div>
         </div>
         {/* Members Section */}
         <section className="mb-16 mt-16">

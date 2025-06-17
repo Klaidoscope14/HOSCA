@@ -284,23 +284,26 @@ const renderMemberCard = (member: ClubMember) => (
           </CardContainer>
 
           {/* Image Gallery */}
-          <CardContainer className="w-full">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <div className="relative rounded-lg overflow-hidden">
-                <Suspense fallback={<div className="w-full h-full bg-gray-800 animate-pulse" />}>
-                  <ImageGrid
-                    images={[
-                      '/gallery/clubs/anime.jpg',
-                      '/gallery/clubs/_DSC7630.JPG',
-                      '/gallery/clubs/WhatsApp Image 2022-11-05 at 13.07.53.jpeg',
-                      '/gallery/clubs/IMG_20220815_103327.jpg'
-                    ]}
-                    className="max-w-4xl mx-auto"
-                  />
-                </Suspense>
-              </div>
-            </CardBody>
-          </CardContainer>
+          <div className="mb-16">
+            <ImageGrid
+              images={[
+                '/ClubPages/Anime-club/1.jpg',
+                '/ClubPages/Anime-club/2.jpg',
+                '/ClubPages/Anime-club/3.jpg',
+                '/ClubPages/Anime-club/4.jpg',
+                '/ClubPages/Anime-club/5.jpg',
+                '/ClubPages/Anime-club/6.jpg',
+                '/ClubPages/Anime-club/7.jpg',
+                '/ClubPages/Anime-club/8.jpg',
+                '/ClubPages/Anime-club/9.jpg',
+                '/ClubPages/Anime-club/10.jpg',
+                '/ClubPages/Anime-club/11.jpg',
+                '/ClubPages/Anime-club/12.jpg',
+                '/ClubPages/Anime-club/13.jpg'
+              ]}
+              className="max-w-4xl mx-auto"
+            />
+          </div>
         </div>
         {/* Members Section */}
         <section className="mb-16 mt-16">

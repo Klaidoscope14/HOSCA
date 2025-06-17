@@ -285,39 +285,33 @@ const renderMemberCard = (member: ClubMember) => (
           </CardContainer>
 
           {/* Image Gallery */}
-          <CardContainer className="w-full">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <div className="relative rounded-lg overflow-hidden">
-                <Suspense fallback={<div>Loading...</div>}>
-                  <ImageGrid
-                    images={[
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.08.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.07.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.07 (2).jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.06.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.06 (2).jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.18.07.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.18.06.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.19.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.18.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.17.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.16.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.15.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.14.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.13.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.12.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.11.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.10.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.08.13.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.06.01.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.06.00.jpeg"
-                    ]}
-                    className="max-w-4xl mx-auto"
-                  />
-                </Suspense>
-              </div>
-            </CardBody>
-          </CardContainer>
+          <div className="mb-16">
+            <ImageGrid
+              images={[
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.08.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.07.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.07 (2).jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.06.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.06 (2).jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.18.07.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.18.06.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.19.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.18.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.17.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.16.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.15.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.14.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.13.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.12.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.11.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.10.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.08.13.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.06.01.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.06.00.jpeg"
+              ]}
+              className="max-w-4xl mx-auto"
+            />
+          </div>
         </div>
         {/* Members Section */}
         <section className="mb-16 mt-16">

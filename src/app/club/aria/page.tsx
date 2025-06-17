@@ -273,33 +273,27 @@ const renderMemberCard = (member: ClubMember) => (
           </CardContainer>
 
           {/* Image Gallery */}
-          <CardContainer className="w-full">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <div className="relative rounded-lg overflow-hidden">
-                <Suspense fallback={<div className="w-full h-full bg-gray-800 animate-pulse" />}>
-                  <ImageGrid
-                    images={[
-                      "/ClubPages/Aria/IMG-20250614-WA0146.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0142.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0140.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0136.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0134.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0125.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0119.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0115.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0114.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0113.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0109.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0108.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0107.jpg",
-                      "/ClubPages/Aria/IMG-20250210-WA0018.jpg"
-                    ]}
-                    className="max-w-4xl mx-auto"
-                  />
-                </Suspense>
-              </div>
-            </CardBody>
-          </CardContainer>
+          <div className="mb-16">
+            <ImageGrid
+              images={[
+                "/ClubPages/Aria/IMG-20250614-WA0146.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0142.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0140.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0136.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0134.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0125.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0119.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0115.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0114.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0113.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0109.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0108.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0107.jpg",
+                "/ClubPages/Aria/IMG-20250210-WA0018.jpg"
+              ]}
+              className="max-w-4xl mx-auto"
+            />
+          </div>
         </div>
         {/* Members Section */}
         <section className="mb-16 mt-16">

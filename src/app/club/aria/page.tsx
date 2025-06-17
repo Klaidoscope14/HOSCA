@@ -4,7 +4,7 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
-import { ImagesSlider } from "@/components/ui/images-slider";
+import { ImageGrid } from "@/components/ui/image-grid";
 import { Suspense } from "react";
 
 interface ClubMember {
@@ -19,185 +19,94 @@ interface ClubMember {
   instagramUrl?: string;
 }
 
-const Aria: ClubMember[] = [
-  {
-    id: 1,
-    name: 'Rajesh Kumar',
-    position: 'President',
-    year: '4th Year',
-    branch: 'Civil  Engineering',
-    email: 'rajesh.civil@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/rajeshkumar',
-    instagramUrl: 'https://instagram.com/rajeshkumar',
-    imageUrl: '/club/members/rajesh.jpg',
-  },
-  {
-    id: 2,
-    name: 'Priya Sharma',
-    position: 'Vice President',
-    year: '3rd Year',
-    branch: 'Computer   Science',
-    email: 'priya.cs@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/priyasharma',
-    instagramUrl: 'https://instagram.com/priyasharma',
-    imageUrl: '/club/members/priya.jpg',
-  },
-  {
-    id: 3,
-    name: 'Amit Verma',
-    position: 'Secretary',
-    year: '3rd Year',
-    branch: 'Mechanical Engineering',
-    email: 'amit.mech@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/amitverma',
-    instagramUrl: 'https://instagram.com/amitverma',
-    imageUrl: '/club/members/amit.jpg',
-  },
-  {
-    id: 4,
-    name: 'Sneha Patel',
-    position: 'Creative Head',
-    year: '2nd Year',
-    branch: 'Electrical Engineering',
-    email: 'sneha.ee@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/snehapatel',
-    instagramUrl: 'https://instagram.com/snehapatel',
-    imageUrl: '/club/members/sneha.jpg',
-  },
-  {
-    id: 5,
-    name: 'Arjun Singh',
-    position: 'Script Writer',
-    year: '2nd Year',
-    branch: 'Chemical Engineering',
-    email: 'arjun.chem@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/arjunsingh',
-    instagramUrl: 'https://instagram.com/arjunsingh',
-    imageUrl: '/club/members/arjun.jpg',
-  },
-  {
-    id: 6,
-    name: 'Kavya Nair',
-    position: 'Director',
-    year: '4th Year',
-    branch: ' Bio-technology ',
-    email: 'kavya.bt@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/kavyanair',
-    instagramUrl: 'https://instagram.com/kavyanair',
-    imageUrl: '/club/members/kavya.jpg',
-  },
-  {
-    id: 7,
-    name: 'Rohit Gupta',
-    position: 'Stage Manager',
-    year: '3rd Year',
-    branch: '  Metallurgy  ',
-    email: 'rohit.met@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/rohitgupta',
-    instagramUrl: 'https://instagram.com/rohitgupta',
-    imageUrl: '/club/members/rohit.jpg',
-  },
-  {
-    id: 8,
-    name: 'Ananya Joshi',
-    position: 'Costume Designer',
-    year: '2nd Year ',
-    branch: 'Physics        ',
-    email: 'ananya.phy@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/ananyajoshi',
-    instagramUrl: 'https://instagram.com/ananyajoshi',
-    imageUrl: '/club/members/ananya.jpg',
-  }
-];
-
 const AriaMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Add Name',
+    name: 'Aarsh Sanghavi',
     position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
+    year: '3rd Year',
+    branch: 'Computer Science and Engineering',
+    email: 'aarsh_2301cs01@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/aarsh-sanghavi-b61552280/',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/Aria/aarsh.jpg',
   },
   {
     id: 2,
-    name: 'Add Name',
+    name: 'Rithvik Konidena',
     position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
+    year: '3rd Year',
+    branch: 'Computer Science and Engineering',
+    email: 'rithvik_2302cs09@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/rithvik-konidena-01a637317/',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/Aria/Rithvik.jpeg',
   },
   {
     id: 3,
-    name: 'Add Name',
+    name: 'Dhairya Garg',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Chemical Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/dhairya-garg-32656024b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Aria/Dhairya.jpg',
   },
   {
     id: 4,
-    name: 'Add Name',
+    name: 'Sejal Goel ',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Computer Science and Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/sejal-goel-6ab186314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Aria/Sejal.jpg',
   },
   {
     id: 5,
-    name: 'Add Name',
+    name: 'Sankhanil Chakraborty ',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Artificial Intelligence and Data Science',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/sankhanil-chakraborty-9377a032a/',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Aria/Sankhanil.jpg',
   },
   {
     id: 6,
-    name: 'Add Name',
+    name: 'Shorya Pratap Singh',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Chemical Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/shorya-pratap-singh-7aa29b320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Aria/SHORYA.jpg',
   },
   {
     id: 7,
-    name: 'Add Name',
+    name: 'Abhinav Datta ',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Computer Science and Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/abhinav-datta-54795131a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Aria/AbhinavDatta.jpg',
   },
   {
     id: 8,
-    name: 'Add Name',
+    name: 'Joven Sony',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Chemical Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/joven-sony-aa0862224?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Aria/Joven.jpg',
   }
 ];
 
@@ -364,40 +273,27 @@ const renderMemberCard = (member: ClubMember) => (
           </CardContainer>
 
           {/* Image Gallery */}
-          <CardContainer className="w-full">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-              <div className="h-[400px] relative rounded-lg overflow-hidden">
-                <Suspense fallback={<div className="w-full h-full bg-gray-800 animate-pulse" />}>
-                  <ImagesSlider
-                    className="h-[40rem]"
-                    images={[
-                      "/ClubPages/Aria/IMG-20250614-WA0146.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0142.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0140.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0136.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0134.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0125.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0119.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0115.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0114.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0113.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0109.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0108.jpg",
-                      "/ClubPages/Aria/IMG-20250614-WA0107.jpg",
-                      "/ClubPages/Aria/IMG-20250210-WA0018.jpg"
-                    ]}
-                    overlay={true}
-                    overlayClassName="bg-gradient-to-t from-black/60 via-black/0 to-black/60"
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <h2 className="text-4xl font-bold text-white">Aria Gallery</h2>
-                    </div>
-                  </ImagesSlider>
-                </Suspense>
-              </div>
-            </CardBody>
-          </CardContainer>
+          <div className="mb-16">
+            <ImageGrid
+              images={[
+                "/ClubPages/Aria/IMG-20250614-WA0146.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0142.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0140.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0136.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0134.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0125.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0119.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0115.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0114.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0113.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0109.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0108.jpg",
+                "/ClubPages/Aria/IMG-20250614-WA0107.jpg",
+                "/ClubPages/Aria/IMG-20250210-WA0018.jpg"
+              ]}
+              className="max-w-4xl mx-auto"
+            />
+          </div>
         </div>
         {/* Members Section */}
         <section className="mb-16 mt-16">

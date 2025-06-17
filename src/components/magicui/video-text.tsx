@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import React, { ElementType, ReactNode, useEffect, useState } from "react";
+import React, { ElementType, ReactNode, useEffect, useState,  CSSProperties } from "react";
 
 export interface VideoTextProps {
   /**
@@ -62,6 +62,7 @@ export interface VideoTextProps {
    * @default "div"
    */
   as?: ElementType;
+    style?: React.CSSProperties;
 }
 
 export function VideoText({
@@ -78,6 +79,7 @@ export function VideoText({
   dominantBaseline = "middle",
   fontFamily = "sans-serif",
   as: Component = "div",
+  style = {},
 }: VideoTextProps) {
   const [svgMask, setSvgMask] = useState("");
   const content = React.Children.toArray(children).join("");
@@ -98,7 +100,8 @@ export function VideoText({
   const dataUrlMask = `url("data:image/svg+xml,${encodeURIComponent(svgMask)}")`;
 
   return (
-    <Component className={cn(`relative size-full`, className)}>
+    <Component className={cn(`relative size-full`, className)} style={style}>
+       
       {/* Create a container that masks the video to only show within text */}
       <div
         className="absolute inset-0 flex items-center justify-center"

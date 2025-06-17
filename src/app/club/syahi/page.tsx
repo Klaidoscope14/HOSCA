@@ -4,7 +4,7 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
-import { ImagesSlider } from "@/components/ui/images-slider";
+import { ImageGrid } from "@/components/ui/image-grid";
 import { Suspense } from "react";
 
 interface ClubMember {
@@ -22,91 +22,91 @@ interface ClubMember {
 const SyahiMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Add Name',
+    name: 'Devanshu Kumar',
     position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
+    year: '3rd year',
+    branch: 'Chemical Science and Technology',
+    email: 'devanshu_2301ct22@iitp.ac.in',
+    linkedinUrl: 'https://linkedin.com/in/devanshu-kumar-08139b298',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/Syahi/DevanshuKumar.jpeg',
   },
   {
     id: 2,
-    name: 'Add Name',
+    name: 'Kaustuv Anand ',
     position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
+    year: '3rd year',
+    branch: 'Civil Engineering',
+    email: 'kaustuv_2301ce44@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/kaustuv-anand-1981982a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/Syahi/Kaustuv.jpg',
   },
   {
     id: 3,
-    name: 'Add Name',
+    name: 'Huzaim Zaoraiz ',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Chemical Science and Technology',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/huzaim-zaoraiz-a03216335?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Syahi/huzaimZaoraiz.JPG',
   },
   {
     id: 4,
-    name: 'Add Name',
+    name: 'Choudhary Lucky',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Metallurgical and Materials Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/choudhary-lucky-139484330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Syahi/choudharyLucky.jpg',
   },
   {
     id: 5,
-    name: 'Add Name',
+    name: 'Tanush',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Engineering Physics',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/tanushkumar-yadav-9126812b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Syahi/tanush.jpg',
   },
   {
     id: 6,
-    name: 'Add Name',
+    name: 'Shatadrumi Dey',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Mathematics and Computing',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/shatadrumi-dey-07933031a/',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Syahi/shatadrumiDey.jpg',
   },
   {
     id: 7,
-    name: 'Add Name',
+    name: 'Anshika Singh',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Mechanical Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/anshika-singh-764830365',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Syahi/anshikaSingh.jpg',
   },
   {
     id: 8,
-    name: 'Add Name',
+    name: 'Anand',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Metallurgical and Materials Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/anand-kumar-563523342?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Syahi/anand.jpg',
   }
 ];
 
@@ -274,36 +274,22 @@ const renderMemberCard = (member: ClubMember) => (
             </CardBody>
           </CardContainer>
 
-          {/* Image Gallery */}
-          <CardContainer className="w-full">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-              <div className="h-[600px] relative rounded-lg overflow-hidden">
-                <Suspense fallback={<div>Loading...</div>}>
-                  <ImagesSlider
-                    className="h-full w-full"
-                    images={[
-                      "/ClubPages/Syahi/Syahi-1.JPG",
-                      "/ClubPages/Syahi/Syahi-2.JPG",
-                      "/ClubPages/Syahi/Syahi-3.JPG",
-                      "/ClubPages/Syahi/Syahi-4.JPG",
-                      "/ClubPages/Syahi/Syahi-5.JPG",
-                      "/ClubPages/Syahi/Syahi-6.JPG",
-                      "/ClubPages/Syahi/Syahi-7.JPG",
-                      "/ClubPages/Syahi/Syahi-8.JPG",
-                      "/ClubPages/Syahi/Syahi-9.jpg"
-                    ]}
-                    overlay={true}
-                    overlayClassName="bg-gradient-to-t from-black/60 via-black/0 to-black/60"
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <h2 className="text-4xl font-bold text-white">Syahi Gallery</h2>
-                    </div>
-                  </ImagesSlider>
-                </Suspense>
-              </div>
-            </CardBody>
-          </CardContainer>
+          {/* Gallery Section */}
+          <div className="mb-16">
+            <ImageGrid 
+              images={[
+                "/ClubPages/Syahi/Syahi-1.JPG",
+                "/ClubPages/Syahi/Syahi-2.JPG",
+                "/ClubPages/Syahi/Syahi-3.JPG",
+                "/ClubPages/Syahi/Syahi-4.JPG",
+                "/ClubPages/Syahi/Syahi-5.jpg",
+                "/ClubPages/Syahi/Syahi-6.jpg",
+                "/ClubPages/Syahi/Syahi-7.jpg",
+                "/ClubPages/Syahi/Syahi-8.jpg"
+              ]} 
+              className="max-w-4xl mx-auto"
+            />
+          </div>
         </div>
         {/* Members Section */}
         <section className="mb-16 mt-16">

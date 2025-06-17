@@ -4,7 +4,7 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
-import { ImagesSlider } from "@/components/ui/images-slider";
+import { ImageGrid } from "@/components/ui/image-grid";
 import { Suspense } from "react";
 
 interface ClubMember {
@@ -22,91 +22,91 @@ interface ClubMember {
 const VincetrokeMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Add Name',
+    name: 'Chiranjeeb Debata  ',
     position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
+    year: '3rd Year',
+    branch: 'Mechanical Engineering',
+    email: 'chiranjeeb_2303me04@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/chiranjeeb-debata-a1a891295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/VinceTroke/Chiranjeeb.jpg',
   },
   {
     id: 2,
-    name: 'Add Name',
+    name: 'Ishika Khanagwal ',
     position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
+    year: '3rd Year',
+    branch: 'Mathematics and Computing',
+    email: 'ishika_2301mc09@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/ishika-khanagwal-362432297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/VinceTroke/Ishika.jpg',
   },
   {
     id: 3,
-    name: 'Add Name',
+    name: 'Tanvi Vasoya',
     position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
+    year: '3rd Year',
+    branch: 'Civil Engineering',
+    email: 'tanvi_2301ce30@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/tanvi-vasoya-32732b298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/VinceTroke/Tanvi.jpg',
   },
   {
     id: 4,
-    name: 'Add Name',
+    name: 'Aditi Lohiya',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Chemical Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/aditi-lohiya-395532321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/VinceTroke/Aditi_Vincetroke.jpg',
   },
   {
     id: 5,
-    name: 'Add Name',
+    name: 'Riddhesh Dalal ',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Chemical Science and Technology',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/riddhesh-dalal-704664317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/VinceTroke/Riddhesh.jpg',
   },
   {
     id: 6,
-    name: 'Add Name',
+    name: 'Anand Kumar ',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Metallurgical and Materials Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/anand-kumar-563523342?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/VinceTroke/Anand.jpg',
   },
   {
     id: 7,
-    name: 'Add Name',
+    name: 'Aviral Pratap Singh',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Computer Science and Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/aviral-pratap-singh-a88977319/',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/VinceTroke/Aviral.jpg',
   },
   {
     id: 8,
-    name: 'Add Name',
+    name: 'Richa Chaudhary',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Civil Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/richa-chaudhary-9a2877349?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/VinceTroke/Richa.jpg',
   }
 ];
 
@@ -274,47 +274,22 @@ const renderMemberCard = (member: ClubMember) => (
             </CardBody>
           </CardContainer>
 
-          {/* Image Gallery */}
-          <CardContainer className="w-full">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-              <div className="h-[600px] relative rounded-lg overflow-hidden">
-                <Suspense fallback={<div>Loading...</div>}>
-                  <ImagesSlider
-                    className="h-full w-full"
-                    images={[
-                      "/ClubPages/Vincetroke/im 1.jpg",
-                      "/ClubPages/Vincetroke/im 2.jpg",
-                      "/ClubPages/Vincetroke/im 3.jpg",
-                      "/ClubPages/Vincetroke/im 4.jpg",
-                      "/ClubPages/Vincetroke/im 5.jpg",
-                      "/ClubPages/Vincetroke/im 6.jpg",
-                      "/ClubPages/Vincetroke/im 7.jpg",
-                      "/ClubPages/Vincetroke/im 8.jpg",
-                      "/ClubPages/Vincetroke/im 9.jpg",
-                      "/ClubPages/Vincetroke/im 10.jpg",
-                      "/ClubPages/Vincetroke/im 11.jpg",
-                      "/ClubPages/Vincetroke/im 12.jpg",
-                      "/ClubPages/Vincetroke/im 13.jpg",
-                      "/ClubPages/Vincetroke/im 14.jpg",
-                      "/ClubPages/Vincetroke/im 15.jpg",
-                      "/ClubPages/Vincetroke/im 16.jpg",
-                      "/ClubPages/Vincetroke/im 17.jpg",
-                      "/ClubPages/Vincetroke/im 18.jpg",
-                      "/ClubPages/Vincetroke/im 19.jpg",
-                      "/ClubPages/Vincetroke/im 20.jpg"
-                    ]}
-                    overlay={true}
-                    overlayClassName="bg-gradient-to-t from-black/60 via-black/0 to-black/60"
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <h2 className="text-4xl font-bold text-white">Vincetroke Gallery</h2>
-                    </div>
-                  </ImagesSlider>
-                </Suspense>
-              </div>
-            </CardBody>
-          </CardContainer>
+          {/* Gallery Section */}
+          <div className="mb-16">
+            <ImageGrid 
+              images={[
+                "/ClubPages/Vincetroke/im 1.jpg",
+                "/ClubPages/Vincetroke/im 2.jpg",
+                "/ClubPages/Vincetroke/im 3.jpg",
+                "/ClubPages/Vincetroke/im 4.jpg",
+                "/ClubPages/Vincetroke/im 5.jpg",
+                "/ClubPages/Vincetroke/im 6.jpg",
+                "/ClubPages/Vincetroke/im 7.jpg",
+                "/ClubPages/Vincetroke/im 8.jpg"
+              ]} 
+              className="max-w-4xl mx-auto"
+            />
+          </div>
         </div>
         {/* Members Section */}
         <section className="mb-16 mt-16">

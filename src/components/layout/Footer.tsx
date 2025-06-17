@@ -118,7 +118,7 @@ const Footer = () => {
 
       <div className="bg-gray-950 py-4">
         <div className="max-w-7xl mx-auto px-4 text-center text-gray-400">
-          © {new Date().getFullYear()} IIT Patna. All rights reserved.
+          © {new Date().getFullYear()} Hosca IIT Patna. All rights reserved.
         </div>
       </div>
     </footer>

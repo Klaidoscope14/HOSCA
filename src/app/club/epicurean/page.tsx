@@ -4,7 +4,7 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
-import { ImagesSlider } from "@/components/ui/images-slider";
+import { ImageGrid } from "@/components/ui/image-grid";
 import { Suspense } from "react";
 
 interface ClubMember {
@@ -22,91 +22,91 @@ interface ClubMember {
 const EpicureanMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Add Name',
+    name: 'Ananya Maldyar',
     position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
+    year: '3rd Year',
+    branch: 'Electrical and Electronics Engineering',
+    email: 'ananya_2301ee06@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/ananya-maldyar-132505298/',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/Epicurean/ananya.jpg',
   },
   {
     id: 2,
-    name: 'Add Name',
+    name: 'Shibanshu Soubhagya Das',
     position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
+    year: '3rd Year',
+    branch: 'Civil Engineering',
+    email: 'shibanshu_2302gt08@iitp.ac.in',
+    linkedinUrl: 'https://in.linkedin.com/in/shibanshu-soubhagya-das-46a5342b5',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/Epicurean/Shibhanshu.png',
   },
   {
     id: 3,
-    name: 'Add Name',
+    name: 'Aditi Lohiya',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Chemical Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/aditi-lohiya-395532321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Epicurean/AditiLohiya.jpg',
   },
   {
     id: 4,
-    name: 'Add Name',
+    name: 'Avi Bharti',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Computer Science and Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/avi-bharti-029b1833b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Epicurean/Avi.jpg',
   },
   {
     id: 5,
-    name: 'Add Name',
+    name: 'Shailja Brijendra Mathuria ',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Metallurgical and Materials Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/shailja-mathuria-739834312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Epicurean/ShailjaMathuria.jpg',
   },
   {
     id: 6,
-    name: 'Add Name',
+    name: 'Krittika Kiran Das',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Electronics and Communication Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://in.linkedin.com/in/krittika-das-4704b2327',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Epicurean/Kritika.HEIC',
   },
   {
     id: 7,
-    name: 'Add Name',
+    name: 'Kumari Shikha ',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Electrical and Electronics Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/kumari-shikha-a1506a327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Epicurean/KumariShikha.jpg',
   },
   {
     id: 8,
-    name: 'Add Name',
+    name: 'Shashank Mishra ',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Electronics and Communication Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/shashank-mishra-72b495326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Epicurean/Shashank.jpg',
   }
 ];
 
@@ -275,46 +275,21 @@ const renderMemberCard = (member: ClubMember) => (
           </CardContainer>
 
           {/* Image Gallery */}
-          <CardContainer className="w-full">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-              <div className="h-[600px] relative rounded-lg overflow-hidden">
-                <Suspense fallback={<div>Loading...</div>}>
-                  <ImagesSlider
-                    className="h-full w-full"
-                    images={[
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.31.08.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.31.07.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.31.07 (2).jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.31.06.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.31.06 (2).jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.18.07.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.18.06.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.17.19.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.17.18.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.17.17.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.17.16.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.17.15.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.17.14.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.17.13.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.17.12.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.17.11.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.17.10.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.08.13.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.06.01.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.06.00.jpeg"
-                    ]}
-                    overlay={true}
-                    overlayClassName="bg-gradient-to-t from-black/60 via-black/0 to-black/60"
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <h2 className="text-4xl font-bold text-white">Epicurean Gallery</h2>
-                    </div>
-                  </ImagesSlider>
-                </Suspense>
-              </div>
-            </CardBody>
-          </CardContainer>
+          <div className="mb-16">
+            <ImageGrid
+              images={[
+                "/ClubPages/Epicurean/IMG-20250126-WA0040.jpg",
+                "/ClubPages/Epicurean/IMG-20250126-WA0042.jpg",
+                "/ClubPages/Epicurean/IMG-20250126-WA0045.jpg",
+                "/ClubPages/Epicurean/IMG-20250126-WA0046.jpg",
+                "/ClubPages/Epicurean/IMG-20250126-WA0047.jpg",
+                "/ClubPages/Epicurean/IMG-20250126-WA0049.jpg",
+                "/ClubPages/Epicurean/IMG-20250126-WA0050.jpg",
+                "/ClubPages/Epicurean/IMG-20250126-WA0051.jpg"
+              ]}
+              className="max-w-4xl mx-auto"
+            />
+          </div>
         </div>
         {/* Members Section */}
         <section className="mb-16 mt-16">

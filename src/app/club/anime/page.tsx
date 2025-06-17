@@ -4,7 +4,7 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
-import { ImagesSlider } from "@/components/ui/images-slider";
+import { ImageGrid } from "@/components/ui/image-grid";
 import { Suspense } from "react";
 
 interface ClubMember {
@@ -22,102 +22,102 @@ interface ClubMember {
 const AnimeMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Add Name',
+    name: 'Chandra Shekhar Azad',
     position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
+    year: '3rd Year',
+    branch: 'Electronics and Communication Engineering',
+    email: 'chandra_2301ec09@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/tejavath-chandrashekarazad-7363ab298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/AnimeClub/CSA.jpg',
   },
   {
     id: 2,
-    name: 'Add Name',
+    name: 'Dikshant K.',
     position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
+    year: '3rd Year',
+    branch: 'Civil Engineering',
+    email: 'dikshant_2302st02@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/dikshant-khobragade-1b166727b/',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/AnimeClub/dikshantsk01.jpg',
   },
   {
     id: 3,
-    name: 'Add Name',
+    name: 'Akshat',
     position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
+    year: '3rd Year',
+    branch: 'Civil Engineering',
+    email: 'akshat_2301ce02@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/akshat-kumar-singh-7400b2178?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/AnimeClub/akshat.jpg',
   },
   {
     id: 4,
-    name: 'Add Name',
+    name: 'Tejash Agrawal ',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Electrical and Electronics Engineering',
     email: 'Add Email',
     linkedinUrl: '#',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/AnimeClub/Tejash.jpg',
   },
   {
     id: 5,
-    name: 'Add Name',
+    name: 'Ranveer Gupta',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Mathematics and Computing',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'www.linkedin.com/in/ranveer-g-7544a4232',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/AnimeClub/RanveerGupta.jpg',
   },
   {
     id: 6,
-    name: 'Add Name',
+    name: 'Adil Khan',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Electronics and Communication Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/adil-khan-98501a31a/',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/AnimeClub/AdilKhan.jpg',
   },
   {
     id: 7,
-    name: 'Add Name',
+    name: 'Satyam Sinha',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Engineering Physics',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/satyam-sinha-733801325/',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/AnimeClub/SatyamSinha.jpg',
   },
   {
     id: 8,
-    name: 'Add Name',
+    name: 'Raghav',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Mathematics and Computing',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'www.linkedin.com/in/raghav-singla-885bb0325',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/AnimeClub/Raghav.png',
   },
   {
     id: 9,
-    name: 'Add Name',
+    name: 'Soyam Bais ',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Electronics and Communication Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/soyam-bais-58b024329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/AnimeClub/SoyamBais.jpg',
   }
 ];
 
@@ -284,31 +284,26 @@ const renderMemberCard = (member: ClubMember) => (
           </CardContainer>
 
           {/* Image Gallery */}
-          <CardContainer className="w-full">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-              <div className="h-[400px] relative rounded-lg overflow-hidden">
-                <Suspense fallback={<div className="w-full h-full bg-gray-800 animate-pulse" />}>
-                  <ImagesSlider
-                    images={[
-                      '/gallery/clubs/anime.jpg',
-                      '/gallery/clubs/_DSC7630.JPG',
-                      '/gallery/clubs/WhatsApp Image 2022-11-05 at 13.07.53.jpeg',
-                      '/gallery/clubs/IMG_20220815_103327.jpg'
-                    ]}
-                    className="h-full w-full"
-                    overlay={true}
-                    overlayClassName="bg-gradient-to-t from-black/60 to-transparent"
-                    autoplay={true}
-                  >
-                    <div className="absolute bottom-0 left-0 p-4 text-white z-50">
-                      <p className="text-sm font-medium">Anime Club Gallery</p>
-                    </div>
-                  </ImagesSlider>
-                </Suspense>
-              </div>
-            </CardBody>
-          </CardContainer>
+          <div className="mb-16">
+            <ImageGrid
+              images={[
+                '/ClubPages/Anime-club/1.jpg',
+                '/ClubPages/Anime-club/2.jpg',
+                '/ClubPages/Anime-club/3.jpg',
+                '/ClubPages/Anime-club/4.jpg',
+                '/ClubPages/Anime-club/5.jpg',
+                '/ClubPages/Anime-club/6.jpg',
+                '/ClubPages/Anime-club/7.jpg',
+                '/ClubPages/Anime-club/8.jpg',
+                '/ClubPages/Anime-club/9.jpg',
+                '/ClubPages/Anime-club/10.jpg',
+                '/ClubPages/Anime-club/11.jpg',
+                '/ClubPages/Anime-club/12.jpg',
+                '/ClubPages/Anime-club/13.jpg'
+              ]}
+              className="max-w-4xl mx-auto"
+            />
+          </div>
         </div>
         {/* Members Section */}
         <section className="mb-16 mt-16">

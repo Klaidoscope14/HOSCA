@@ -4,6 +4,8 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
+import { ImageGrid } from "@/components/ui/image-grid";
+import { Suspense } from "react";
 
 interface ClubMember {
   id: number;
@@ -233,7 +235,7 @@ const renderMemberCard = (member: ClubMember) => (
               Ikkatt
             </h1>
             <p className="text-lg md:text-xl text-black max-w-2xl mx-auto lg:mx-0" >
-              Style isn’t just worn—it’s designed. Ikkatt gives you the ramp and the sketchpad. From fashion shows to DIY workshops, this club turns creativity into couture.
+              Style isn't just worn—it's designed. Ikkatt gives you the ramp and the sketchpad. From fashion shows to DIY workshops, this club turns creativity into couture.
             </p>
           </div>
         </div>
@@ -245,7 +247,7 @@ const renderMemberCard = (member: ClubMember) => (
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">About Ikkatt Club</h2>
               <p className="text-black-700 dark:text-neutral-300">
-               Style isn’t just worn—it’s designed. Ikkatt gives you the ramp and the sketchpad. From fashion shows to DIY workshops, this club turns creativity into couture.
+               Style isn't just worn—it's designed. Ikkatt gives you the ramp and the sketchpad. From fashion shows to DIY workshops, this club turns creativity into couture.
               </p>
               <div className="mt-6">
                 <h3 className="text-xl font-bold text-black-700 dark:text-white mb-3">What We Do</h3>
@@ -270,18 +272,22 @@ const renderMemberCard = (member: ClubMember) => (
             </CardBody>
           </CardContainer>
 
-          {/* Image Gallery */}
-          <CardContainer className="w-full">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-              <div className="grid grid-cols-2 gap-4">
-                <img src="/ClubLogo/ikkatt.png" alt="ikkatt Debate" className="rounded-lg w-full h-54 object-cover" />
-                <img src="/ClubLogo/ikkatt.png" alt="ikkatt MUN" className="rounded-lg w-full h-54 object-cover" />
-                <img src="/ClubLogo/ikkatt.png" alt="ikkatt Event" className="rounded-lg w-full h-54 object-cover" />
-                <img src="/ClubLogo/ikkatt.png" alt="ikkatt Team" className="rounded-lg w-full h-54 object-cover" />
-              </div>
-            </CardBody>
-          </CardContainer>
+          {/* Gallery Section */}
+          <div className="mb-16">
+            <ImageGrid 
+              images={[
+                "/ClubPages/Ikkatt/ikkatt-1.jpg",
+                "/ClubPages/Ikkatt/ikkatt-2.jpg",
+                "/ClubPages/Ikkatt/ikkatt-3.jpg",
+                "/ClubPages/Ikkatt/ikkatt-4.jpg",
+                "/ClubPages/Ikkatt/ikkatt-5.jpg",
+                "/ClubPages/Ikkatt/ikkatt-6.jpg",
+                "/ClubPages/Ikkatt/ikkatt-7.jpg",
+                "/ClubPages/Ikkatt/ikkatt-8.jpg"
+              ]} 
+              className="max-w-4xl mx-auto"
+            />
+          </div>
         </div>
         {/* Members Section */}
         <section className="mb-16">

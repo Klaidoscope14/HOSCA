@@ -4,7 +4,7 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
-import { ImagesSlider } from "@/components/ui/images-slider";
+import { ImageGrid } from "@/components/ui/image-grid";
 import { Suspense } from "react";
 
 interface ClubMember {
@@ -22,80 +22,80 @@ interface ClubMember {
 const HexachromeMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Add Name',
+    name: 'Chahat Mahajan',
     position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
+    year: '3rd Year',
+    branch: 'Artificial Intelligence and Data Science',
+    email: 'chahat_2301ai49@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/chahat-mahajan-b80767298/',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/HexaChrome/Chahat.jpg',
   },
   {
     id: 2,
-    name: 'Add Name',
+    name: 'Keshav Mahansaria ',
     position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
+    year: '3rd Year',
+    branch: 'Computer Science and Engineering',
+    email: 'keshav_2301cs23@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/keshav-mahansaria-66979229a',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/HexaChrome/Keshav.jpg',
   },
   {
     id: 3,
-    name: 'Add Name',
+    name: 'Aryan Patil',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Metallurgical and Materials Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/aryan-patil-58393736a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/HexaChrome/AryanPatil.jpg',
   },
   {
     id: 4,
-    name: 'Add Name',
+    name: 'K.Anantha Akash',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Engineering Physics',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/akash-kota-a3538a323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
     imageUrl: '',
   },
   {
     id: 5,
-    name: 'Add Name',
+    name: 'Hrijoy Sikdar',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Electrical and Electronics Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/hrijoy-sikdar-780a28311',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/HexaChrome/HrijoySikdar.webp',
   },
   {
     id: 6,
-    name: 'Add Name',
+    name: 'Lavanya Bhadani',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Artificial Intelligence and Data Science',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/lavanya-bhadani-1834b1313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/HexaChrome/lavanya.jpg',
   },
   {
     id: 7,
-    name: 'Add Name',
+    name: 'Vaibhav Dalmia',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
+    year: '2nd Year',
+    branch: 'Computer Science and Engineering',
+    email: 'http://www.linkedin.com/in/vaibhav-dalmia-2b1b84325',
     linkedinUrl: '#',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/HexaChrome/VaibhavDalmia.jpg',
   }
 ];
 
@@ -263,47 +263,34 @@ const renderMemberCard = (member: ClubMember) => (
             </CardBody>
           </CardContainer>
 
-          {/* Image Gallery */}
-          <CardContainer className="w-full">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-              <div className="h-[400px] relative rounded-lg overflow-hidden">
-                <Suspense fallback={<div className="w-full h-full bg-gray-800 animate-pulse" />}>
-                  <ImagesSlider
-                    className="h-[40rem]"
-                    images={[
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0001.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0002.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0003.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0004.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0005.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0006.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0007.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0008.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0009.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0010.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0011.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241019-WA0013.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0058.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0060.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0062.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0069.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0071.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0073.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0075.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0077.jpg"
-                    ]}
-                    overlay={true}
-                    overlayClassName="bg-gradient-to-t from-black/60 via-black/0 to-black/60"
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <h2 className="text-4xl font-bold text-white">Hexachrome Gallery</h2>
-                    </div>
-                  </ImagesSlider>
-                </Suspense>
-              </div>
-            </CardBody>
-          </CardContainer>
+          {/* Gallery Section */}
+          <div className="mb-16">
+            <ImageGrid 
+              images={[
+                "/ClubPages/Hexachrome/IMG-20241028-WA0001.jpg",
+                "/ClubPages/Hexachrome/IMG-20241028-WA0002.jpg",
+                "/ClubPages/Hexachrome/IMG-20241028-WA0003.jpg",
+                "/ClubPages/Hexachrome/IMG-20241028-WA0004.jpg",
+                "/ClubPages/Hexachrome/IMG-20241028-WA0005.jpg",
+                "/ClubPages/Hexachrome/IMG-20241028-WA0006.jpg",
+                "/ClubPages/Hexachrome/IMG-20241028-WA0007.jpg",
+                "/ClubPages/Hexachrome/IMG-20241028-WA0008.jpg",
+                "/ClubPages/Hexachrome/IMG-20241028-WA0009.jpg",
+                "/ClubPages/Hexachrome/IMG-20241028-WA0010.jpg",
+                "/ClubPages/Hexachrome/IMG-20241028-WA0011.jpg",
+                "/ClubPages/Hexachrome/IMG-20241019-WA0013.jpg",
+                "/ClubPages/Hexachrome/IMG-20241018-WA0058.jpg",
+                "/ClubPages/Hexachrome/IMG-20241018-WA0060.jpg",
+                "/ClubPages/Hexachrome/IMG-20241018-WA0062.jpg",
+                "/ClubPages/Hexachrome/IMG-20241018-WA0069.jpg",
+                "/ClubPages/Hexachrome/IMG-20241018-WA0071.jpg",
+                "/ClubPages/Hexachrome/IMG-20241018-WA0073.jpg",
+                "/ClubPages/Hexachrome/IMG-20241018-WA0075.jpg",
+                "/ClubPages/Hexachrome/IMG-20241018-WA0077.jpg"
+              ]} 
+              className="max-w-4xl mx-auto"
+            />
+          </div>
         </div>
         {/* Members Section */}
         <section className="mb-16 mt-16">

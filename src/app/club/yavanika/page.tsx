@@ -4,7 +4,7 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
-import { ImagesSlider } from "@/components/ui/images-slider";
+import { ImageGrid } from "@/components/ui/image-grid";
 import { Suspense } from "react";
 
 interface ClubMember {
@@ -22,91 +22,91 @@ interface ClubMember {
 const YavanikaMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Add Name',
+    name: 'Viraj Kulkarni ',
     position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
+    year: '3rd year',
+    branch: 'Metallurgical and Materials Engineering',
+    email: 'viraj_2301mm25@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/viraj-kulkarni-097869312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/Yavanika/Viraj.JPG',
   },
   {
     id: 2,
-    name: 'Add Name',
+    name: 'Kumari Nisha',
     position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
+    year: '3rd year',
+    branch: 'Chemical Science and Technology',
+    email: 'kumari_2301ct13@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/kumari-nisha-3209b02a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/Yavanika/Nisha.jpeg',
   },
   {
     id: 3,
-    name: 'Add Name',
+    name: 'Lalit Sen',
     position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
+    year: '3rd year',
+    branch: 'Electronics and Communication Engineering',
+    email: 'lalit_2301ec59@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/lalit-sen-73a2392a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/Yavanika/Lalit.jpg',
   },
   {
     id: 4,
-    name: 'Add Name',
+    name: 'Yahya Dawoodi',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Electrical and Electronics Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/yahya-dawoodi-119dd39239/',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Yavanika/Yahya.jpg',
   },
   {
     id: 5,
-    name: 'Add Name',
+    name: 'Ayush Kumar Gupta',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Civil Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/ayush-gupta-675549320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Yavanika/Ayush.png',
   },
   {
     id: 6,
-    name: 'Add Name',
+    name: 'Priyadeep Jaiswal',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Electronics and Communication Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'http://www.linkedin.com/in/priyadeep-jaiswal-39ab001b5',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Yavanika/Priyadeep.heic',
   },
   {
     id: 7,
-    name: 'Add Name',
+    name: 'Vishmith Shetty',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Mechanical Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/vishmith-shetty-a16873313/',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Yavanika/Vishmith.jpg',
   },
   {
     id: 8,
-    name: 'Add Name',
+    name: 'Vidhi Patel',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Mathematics and Computing',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/vidhi-patel-5a1893310?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Yavanika/vidhiPatel.jpg',
   }
 ];
 
@@ -261,47 +261,34 @@ export default function YavanikaPage() {
             </CardBody>
           </CardContainer>
 
-          {/* Image Gallery */}
-          <CardContainer className="w-full">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-              <div className="h-[600px] relative rounded-lg overflow-hidden">
-                <Suspense fallback={<div>Loading...</div>}>
-                  <ImagesSlider
-                    className="h-full w-full"
-                    images={[
-                      "/ClubPages/Yavanika/Picture1.jpg",
-                      "/ClubPages/Yavanika/Picture3.jpg",
-                      "/ClubPages/Yavanika/Picture5.jpg",
-                      "/ClubPages/Yavanika/Picture8.jpg",
-                      "/ClubPages/Yavanika/Picture10.jpg",
-                      "/ClubPages/Yavanika/Picture11.jpg",
-                      "/ClubPages/Yavanika/Picture13.png",
-                      "/ClubPages/Yavanika/Picture14.png",
-                      "/ClubPages/Yavanika/Picture15.png",
-                      "/ClubPages/Yavanika/Picture16.jpg",
-                      "/ClubPages/Yavanika/Picture17.jpg",
-                      "/ClubPages/Yavanika/Picture18.jpg",
-                      "/ClubPages/Yavanika/Picture19.jpg",
-                      "/ClubPages/Yavanika/Picture20.jpg",
-                      "/ClubPages/Yavanika/Picture21.jpg",
-                      "/ClubPages/Yavanika/Picture22.jpg",
-                      "/ClubPages/Yavanika/WhatsApp Image 2025-06-13 at 21.13.25_a7e3e9e4.jpg",
-                      "/ClubPages/Yavanika/WhatsApp Image 2025-06-13 at 21.13.24_f47aabd2.jpg",
-                      "/ClubPages/Yavanika/WhatsApp Image 2025-06-13 at 21.13.24_545c13a3.jpg",
-                      "/ClubPages/Yavanika/WhatsApp Image 2025-06-13 at 21.13.23_50f5c902.jpg"
-                    ]}
-                    overlay={true}
-                    overlayClassName="bg-gradient-to-t from-black/60 via-black/0 to-black/60"
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <h2 className="text-4xl font-bold text-white">Yavanika Gallery</h2>
-                    </div>
-                  </ImagesSlider>
-                </Suspense>
-              </div>
-            </CardBody>
-          </CardContainer>
+          {/* Gallery Section */}
+          <div className="mb-16">
+            <ImageGrid 
+              images={[
+                "/ClubPages/Yavanika/Picture1.jpg",
+                "/ClubPages/Yavanika/Picture3.jpg",
+                "/ClubPages/Yavanika/Picture5.jpg",
+                "/ClubPages/Yavanika/Picture8.jpg",
+                "/ClubPages/Yavanika/Picture10.jpg",
+                "/ClubPages/Yavanika/Picture11.jpg",
+                "/ClubPages/Yavanika/Picture13.png",
+                "/ClubPages/Yavanika/Picture14.png",
+                "/ClubPages/Yavanika/Picture15.png",
+                "/ClubPages/Yavanika/Picture16.jpg",
+                "/ClubPages/Yavanika/Picture17.jpg",
+                "/ClubPages/Yavanika/Picture18.jpg",
+                "/ClubPages/Yavanika/Picture19.jpg",
+                "/ClubPages/Yavanika/Picture20.jpg",
+                "/ClubPages/Yavanika/Picture21.jpg",
+                "/ClubPages/Yavanika/Picture22.jpg",
+                "/ClubPages/Yavanika/WhatsApp Image 2025-06-13 at 21.13.25_a7e3e9e4.jpg",
+                "/ClubPages/Yavanika/WhatsApp Image 2025-06-13 at 21.13.24_f47aabd2.jpg",
+                "/ClubPages/Yavanika/WhatsApp Image 2025-06-13 at 21.13.24_545c13a3.jpg",
+                "/ClubPages/Yavanika/WhatsApp Image 2025-06-13 at 21.13.23_50f5c902.jpg"
+              ]} 
+              className="max-w-4xl mx-auto"
+            />
+          </div>
         </div>
 
         {/* Members Section */}
@@ -309,13 +296,13 @@ export default function YavanikaPage() {
           <h2 className="text-4xl font-bold text-center mb-12 text-white">Our Team</h2>
 
           {/* Coordinators Section */}
-          <h2 className="text-3xl font-semibold text-left mb-6 text-yellow-300 px-2 md:px-0">Coordinators</h2>
+          <h2 className="text-3xl font-semibold text-center mb-6 text-yellow-300 px-2 md:px-0">Coordinators</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 md:px-0">
             {YavanikaMembers.slice(0, 3).map((member: ClubMember) => renderMemberCard(member))}
           </div>
 
           {/* Sub Coordinators Section */}
-          <h2 className="text-3xl font-semibold text-left mt-12 mb-6 text-yellow-300 px-4 md:px-0">Sub Coordinators</h2>
+          <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-yellow-300 px-4 md:px-0">Sub Coordinators</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto items-stretch">
             {YavanikaMembers.slice(3).map((member: ClubMember) => renderMemberCard(member))}
           </div>

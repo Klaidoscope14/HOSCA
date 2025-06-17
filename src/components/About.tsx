@@ -62,31 +62,21 @@ const About = () => {
                 <h1 className="text-2xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-red-600 via-red-500 to-gray-800 bg-clip-text text-transparent">
                   About Hosca
                 </h1>
-              
- 
 
-  <p className="text-[14px] text-gray-800 leading-snug">
-    Welcome to <span className="font-semibold text-red-700">HoSCA</span> – The Heartbeat of Culture is part of <span className="font-semibold text-red-700">IIT Patna’s Gymkhana</span>.<br />
-
-    From the electric energy of <span className="font-semibold text-red-700">Nebula</span> – our grand fresher’s welcome, to the sparkling hues of <span className="font-semibold text-red-700">Reverberance</span> – our festival of lights and colors, HoSCA brings life to every corner of the institute.<br />
-
-    But that’s not all — we proudly host <span className="font-bold text-red-700">Anwesha</span>, IIT Patna’s biggest and most prestigious cultural fest.<br /><br />
-
-    <span className="font-semibold text-red-700">🎭 Clubs That Spark Passion:</span><br />
-    💃 <span className="font-semibold text-black">Exousia</span> – Dance like nobody's watching<br />
-    🎤 <span className="font-semibold text-black">Aria</span> – Sing your soul out<br />
-    🎭 <span className="font-semibold text-black">Yavanika</span> – Take the stage in dramatic flair<br />
-    🎙️ <span className="font-semibold text-black">Hoot</span> – Let your voice be heard<br />
-    🎨 <span className="font-semibold text-black">Vincetroke</span> – Paint your imagination<br />
-    📸 <span className="font-semibold text-black">Pixxel</span> – Capture stories in a single shot<br /><br />
-
-   
-    ✨ <span className="font-semibold text-red-700">This isn’t just culture — this is HoSCA.</span>
-  </p>
-   
-  </div>
-
-
+                <p className="text-[14px] text-gray-800 leading-snug">
+                  Welcome to <span className="font-semibold text-red-700">HoSCA</span> – The Heartbeat of Culture is part of <span className="font-semibold text-red-700">IIT Patna’s Gymkhana</span>.<br />
+                  From the electric energy of <span className="font-semibold text-red-700">Nebula</span> – our grand fresher’s welcome, to the sparkling hues of <span className="font-semibold text-red-700">Reverberance</span> – our festival of lights and colors, HoSCA brings life to every corner of the institute.<br />
+                  But that’s not all — we proudly host <span className="font-bold text-red-700">Anwesha</span>, IIT Patna’s biggest and most prestigious cultural fest.<br /><br />
+                  <span className="font-semibold text-red-700">🎭 Clubs That Spark Passion:</span><br />
+                  💃 <span className="font-semibold text-black">Exousia</span> – Dance like nobody's watching<br />
+                  🎤 <span className="font-semibold text-black">Aria</span> – Sing your soul out<br />
+                  🎭 <span className="font-semibold text-black">Yavanika</span> – Take the stage in dramatic flair<br />
+                  🎙️ <span className="font-semibold text-black">Hoot</span> – Let your voice be heard<br />
+                  🎨 <span className="font-semibold text-black">Vincetroke</span> – Paint your imagination<br />
+                  📸 <span className="font-semibold text-black">Pixxel</span> – Capture stories in a single shot<br /><br />
+                  ✨ <span className="font-semibold text-red-700">This isn’t just culture — this is HoSCA.</span>
+                </p>
+                </div>
               </div>
             </div>
           </NeonGradientCard>

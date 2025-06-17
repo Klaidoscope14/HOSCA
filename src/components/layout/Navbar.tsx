@@ -3,115 +3,129 @@
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import {
-  Navbar as ResizableNavbar,
-  NavBody,
-  MobileNav,
-  MobileNavHeader,
-  MobileNavMenu,
-  MobileNavToggle,
-  NavbarLogo,
-} from '@/components/ui/resizable-navbar';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
-  const navItems = [
-    { name: 'Home', link: '/' },
-    { name: 'Clubs', link: '/club' },
-    { name: 'Gymkhana Committee', link: '/committee/gymkhana' },
-    { name: 'Gallery', link: '/gallery' },
-    { name: 'Events', link: '/events' },
-  ];
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const dropdownRef = useRef<HTMLLIElement>(null);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsMenuOpen(false);
+    // Close dropdown on any click outside
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    };
+    
+    // Close dropdown on scroll
+    const handleScroll = () => {
+      if (isDropdownOpen) {
+        setIsDropdownOpen(false);
       }
     };
 
+    // Close dropdown on any touch event outside
+    const handleTouchStart = (e: TouchEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    };
+    
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+    document.addEventListener('scroll', handleScroll);
+    document.addEventListener('touchstart', handleTouchStart);
+    
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('touchstart', handleTouchStart);
+    };
+  }, [isDropdownOpen]);
 
   return (
-    <>
-      <ResizableNavbar className="!top-0">
-        {/* Desktop Nav */}
-        <div className="hidden lg:flex w-full">
-          <NavBody className="bg-gradient-to-r from-gray-900 to-gray-950 dark:from-gray-900 dark:via-red-600 dark:to-gray-800">
-            <div className="flex items-center justify-between w-full">
-              <NavbarLogo>
-                <Image
-                  src="/Hosca_logo.png"
-                  alt="HOSCA Logo"
-                  width={50}
-                  height={50}
-                  className="object-contain bg-amber-500 rounded-4xl"
-                  priority
-                />
-                <span className="text-2xl font-bold text-white">HOSCA</span>
-              </NavbarLogo>
+    <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 top-0 sticky w-full z-50">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <Image src="/hosca.jpg" width={0} height={0} sizes="100vw" alt="Logo" className="h-12 w-auto object-contain"/>
+          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">HOSCA</span>
+        </Link>
 
-              <div className="flex items-center space-x-4">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.link}
-                    href={item.link}
-                    className="px-4 py-2 text-white hover:text-gray-100 transition-colors duration-200 rounded-md hover:bg-white/10"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </NavBody>
+        {/* Mobile menu button */}
+        <button
+          type="button"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:hover:bg-gray-700"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 17 14">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+
+        {/* Nav Links */}
+        <div className={`w-full md:block md:w-auto ${isMobileMenuOpen ? '' : 'hidden'}`} id="navbar-dropdown">
+          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            
+            <li>
+              <Link href="/" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500">
+                Home
+              </Link>
+            </li>
+            
+            <li>
+              <Link href="/club" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:p-0 dark:text-white md:dark:hover:text-blue-500">
+                Clubs
+              </Link>
+            </li>
+
+            {/* Dropdown */}
+            <li className="relative" ref={dropdownRef}>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation(); 
+                  setIsDropdownOpen(!isDropdownOpen);
+                }}
+                className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500"
+              >
+                Committee
+                <svg className="w-2.5 h-2.5 ms-2.5" fill="none" viewBox="0 0 10 6">
+                  <path d="M1 1l4 4 4-4" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+                </svg>
+              </button>
+              {isDropdownOpen && (
+                <div
+                  className="absolute z-20 mt-2 w-44 bg-white rounded-lg shadow dark:bg-gray-700"
+                >
+                  <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
+                    <li>
+                      <Link href="/committee/gymkhana" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        Gymkhana
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/committee/hoscaa" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        Hoscaa
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </li>
+
+            <li>
+              <Link href="/gallery" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:p-0 dark:text-white md:dark:hover:text-blue-500">
+                Gallery
+              </Link>
+            </li>
+            <li>
+              <Link href="/events" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:p-0 dark:text-white md:dark:hover:text-blue-500">
+                Events
+              </Link>
+            </li>
+            
+          </ul>
         </div>
-
-        {/* Mobile Nav */}
-        <div className="flex lg:hidden w-full">
-          <MobileNav className="bg-gradient-to-r from-gray-900 to-gray-950 dark:from-gray-800 dark:via-red-600 dark:to-gray-800">
-            <MobileNavHeader>
-              <NavbarLogo>
-                <Image
-                  src="/Hosca_logo.png"
-                  alt="HOSCA Logo"
-                  width={40}
-                  height={40}
-                  className="object-contain"
-                  priority
-                />
-                <span className="font-medium text-white">HOSCA</span>
-              </NavbarLogo>
-              <MobileNavToggle
-                isOpen={isMenuOpen}
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-              />
-            </MobileNavHeader>
-
-            <MobileNavMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
-              <div className="flex flex-col space-y-2">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.link}
-                    href={item.link}
-                    className="block px-4 py-3 text-white hover:text-red-400 hover:bg-white/10 transition-colors duration-150 font-medium rounded-md"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            </MobileNavMenu>
-          </MobileNav>
-        </div>
-      </ResizableNavbar>
-
-      {/* Spacer to push content below fixed navbar */}
-      <div className="h-[80px] lg:h-[72px]" />
-    </>
+      </div>
+    </nav>
   );
 };
 

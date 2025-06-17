@@ -4,6 +4,118 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
+interface ClubMember {
+  id: number;
+  name: string;
+  position: string;
+  year: string;
+  branch: string;
+  imageUrl: string;
+  email: string;
+  linkedinUrl: string;
+  instagramUrl: string;
+}
+
+const renderMemberCard = (member: ClubMember) => (
+  <CardContainer key={member.id} className="w-full">
+    <CardBody className="bg-white dark:bg-black relative border-black/[0.1] w-full sm:w-[30rem] h-auto rounded-xl p-6 shadow-xl">
+      <CardItem translateZ="100" className="w-full mt-4">
+        <div className="flex flex-col items-center">
+          <div className="w-32 h-32 rounded-full overflow-hidden mb-4">
+            <img
+              src={member.imageUrl || '/club/members/default.jpg'}
+              alt={member.name}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white">{member.name}</h3>
+          <p className="text-sm text-gray-500 dark:text-gray-400">{member.position}</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">{member.year} Year</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">{member.branch}</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">{member.email}</p>
+          <div className="flex space-x-4 mt-4">
+            <a href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+              <FaFacebook size={20} />
+            </a>
+            <a href={member.instagramUrl} target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-800">
+              <FaInstagram size={20} />
+            </a>
+          </div>
+        </div>
+      </CardItem>
+    </CardBody>
+  </CardContainer>
+);
+
+const DramaticsMembers: ClubMember[] = [
+  {
+    id: 1,
+    name: 'Add Name',
+    position: 'Coordinator',
+    year: 'Add Year',
+    branch: 'Add Branch',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    instagramUrl: '#',
+    imageUrl: '',
+  },
+  {
+    id: 2,
+    name: 'Add Name',
+    position: 'Coordinator',
+    year: 'Add Year',
+    branch: 'Add Branch',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    instagramUrl: '#',
+    imageUrl: '',
+  },
+  {
+    id: 3,
+    name: 'Add Name',
+    position: 'Sub-Coordinator',
+    year: 'Add Year',
+    branch: 'Add Branch',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    instagramUrl: '#',
+    imageUrl: '',
+  },
+  {
+    id: 4,
+    name: 'Add Name',
+    position: 'Sub-Coordinator',
+    year: 'Add Year',
+    branch: 'Add Branch',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    instagramUrl: '#',
+    imageUrl: '',
+  },
+  {
+    id: 5,
+    name: 'Add Name',
+    position: 'Sub-Coordinator',
+    year: 'Add Year',
+    branch: 'Add Branch',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    instagramUrl: '#',
+    imageUrl: '',
+  },
+  {
+    id: 6,
+    name: 'Add Name',
+    position: 'Sub-Coordinator',
+    year: 'Add Year',
+    branch: 'Add Branch',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    instagramUrl: '#',
+    imageUrl: '',
+  }
+];
+
 export default function DramaticsPage() {
   return (
     <div className="relative min-h-screen w-full bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
@@ -62,6 +174,18 @@ export default function DramaticsPage() {
               </div>
             </CardBody>
           </CardContainer>
+        </div>
+
+        {/* Coordinators Section */}
+        <h2 className="text-3xl font-semibold text-left mb-6 text-orange-300 px-2 md:px-0" style={{ color: "#4169E1" }}>Coordinators</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 md:px-0 justify-items-center">
+          {DramaticsMembers.slice(0, 2).map((member) => renderMemberCard(member))}
+        </div>
+
+        {/* Sub Coordinators Section */}
+        <h2 className="text-3xl font-semibold text-left mt-12 mb-6 text-orange-300 px-4 md:px-0" style={{ color: "#4169E1" }}>Sub Coordinators</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 md:px-0 justify-items-center">
+          {DramaticsMembers.slice(2).map((member) => renderMemberCard(member))}
         </div>
 
         {/* Social Media Links */}

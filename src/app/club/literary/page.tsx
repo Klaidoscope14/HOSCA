@@ -4,6 +4,87 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody} from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
+interface ClubMember {
+  id: number;
+  name: string;
+  position: string;
+  year: string;
+  branch: string;
+  imageUrl: string;
+  email: string;
+  linkedinUrl: string;
+  instagramUrl: string;
+}
+
+const LiteraryMembers: ClubMember[] = [
+  {
+    id: 1,
+    name: 'Add Name',
+    position: 'Coordinator',
+    year: 'Add Year',
+    branch: 'Add Branch',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    instagramUrl: '#',
+    imageUrl: '',
+  },
+  {
+    id: 2,
+    name: 'Add Name',
+    position: 'Coordinator',
+    year: 'Add Year',
+    branch: 'Add Branch',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    instagramUrl: '#',
+    imageUrl: '',
+  },
+  {
+    id: 3,
+    name: 'Add Name',
+    position: 'Sub-Coordinator',
+    year: 'Add Year',
+    branch: 'Add Branch',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    instagramUrl: '#',
+    imageUrl: '',
+  },
+  {
+    id: 4,
+    name: 'Add Name',
+    position: 'Sub-Coordinator',
+    year: 'Add Year',
+    branch: 'Add Branch',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    instagramUrl: '#',
+    imageUrl: '',
+  },
+  {
+    id: 5,
+    name: 'Add Name',
+    position: 'Sub-Coordinator',
+    year: 'Add Year',
+    branch: 'Add Branch',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    instagramUrl: '#',
+    imageUrl: '',
+  },
+  {
+    id: 6,
+    name: 'Add Name',
+    position: 'Sub-Coordinator',
+    year: 'Add Year',
+    branch: 'Add Branch',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    instagramUrl: '#',
+    imageUrl: '',
+  }
+];
+
 export default function LiteraryPage() {
   return (
     <div className="relative min-h-screen w-full bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
@@ -62,6 +143,18 @@ export default function LiteraryPage() {
               </div>
             </CardBody>
           </CardContainer>
+        </div>
+
+        {/* Coordinators Section */}
+        <h2 className="text-3xl font-semibold text-left mb-6 text-orange-300 px-2 md:px-0" style={{ color: "#4169E1" }}>Coordinators</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 md:px-0 justify-items-center">
+          {LiteraryMembers.slice(0, 2).map((member) => renderMemberCard(member))}
+        </div>
+
+        {/* Sub Coordinators Section */}
+        <h2 className="text-3xl font-semibold text-left mt-12 mb-6 text-orange-300 px-4 md:px-0" style={{ color: "#4169E1" }}>Sub Coordinators</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 md:px-0 justify-items-center">
+          {LiteraryMembers.slice(2).map((member) => renderMemberCard(member))}
         </div>
 
         {/* Social Media Links */}

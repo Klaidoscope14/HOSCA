@@ -102,8 +102,8 @@ const Navbar = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/committee/hoscaa" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                        Hoscaa
+                      <Link href="/committee/Developers" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        Developers
                       </Link>
                     </li>
                   </ul>

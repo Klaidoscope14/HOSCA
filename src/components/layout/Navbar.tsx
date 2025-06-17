@@ -6,23 +6,47 @@ import Link from 'next/link';
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const dropdownRef = useRef<HTMLLIElement>(null);
 
   useEffect(() => {
+    // Close dropdown on any click outside
     const handleClickOutside = (e: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setIsDropdownOpen(false);
       }
     };
+    
+    // Close dropdown on scroll
+    const handleScroll = () => {
+      if (isDropdownOpen) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    // Close dropdown on any touch event outside
+    const handleTouchStart = (e: TouchEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    };
+    
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+    document.addEventListener('scroll', handleScroll);
+    document.addEventListener('touchstart', handleTouchStart);
+    
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('touchstart', handleTouchStart);
+    };
+  }, [isDropdownOpen]);
 
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 top-0 sticky w-full z-50">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <Image src="/Hosca_logo.png" width={32} height={32} alt="Logo" className="h-8" />
+          <Image src="/hosca.jpg" width={0} height={0} sizes="100vw" alt="Logo" className="h-12 w-auto object-contain"/>
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">HOSCA</span>
         </Link>
 
@@ -30,7 +54,7 @@ const Navbar = () => {
         <button
           type="button"
           className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:hover:bg-gray-700"
-          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 17 14">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
@@ -38,7 +62,7 @@ const Navbar = () => {
         </button>
 
         {/* Nav Links */}
-        <div className={`w-full md:block md:w-auto ${isDropdownOpen ? '' : 'hidden'}`} id="navbar-dropdown">
+        <div className={`w-full md:block md:w-auto ${isMobileMenuOpen ? '' : 'hidden'}`} id="navbar-dropdown">
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             
             <li>
@@ -56,7 +80,10 @@ const Navbar = () => {
             {/* Dropdown */}
             <li className="relative" ref={dropdownRef}>
               <button
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                onClick={(e) => {
+                  e.stopPropagation(); 
+                  setIsDropdownOpen(!isDropdownOpen);
+                }}
                 className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500"
               >
                 Committee
@@ -65,7 +92,9 @@ const Navbar = () => {
                 </svg>
               </button>
               {isDropdownOpen && (
-                <div className="absolute z-20 mt-2 w-44 bg-white rounded-lg shadow dark:bg-gray-700">
+                <div
+                  className="absolute z-20 mt-2 w-44 bg-white rounded-lg shadow dark:bg-gray-700"
+                >
                   <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
                     <li>
                       <Link href="/committee/gymkhana" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">

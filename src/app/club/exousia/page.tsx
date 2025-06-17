@@ -4,7 +4,7 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
-import { ImagesSlider } from "@/components/ui/images-slider";
+import { ImageGrid } from "@/components/ui/image-grid";
 import { Suspense } from "react";
 
 interface ClubMember {
@@ -273,47 +273,34 @@ const renderMemberCard = (member: ClubMember) => (
             </CardBody>
           </CardContainer>
 
-          {/* Image Gallery */}
-          <CardContainer className="w-full">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-              <div className="h-[600px] relative rounded-lg overflow-hidden">
-                <Suspense fallback={<div>Loading...</div>}>
-                  <ImagesSlider
-                    className="h-full w-full"
-                    images={[
-                      "/ClubPages/Exousia/IMG-20250613-WA0026.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0027.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0029.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0030.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0031.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0032.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0033.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0034.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0035.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0036.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0037.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0038.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0039.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0040.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0041.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0042.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0043.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0044.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0045.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0046.jpg"
-                    ]}
-                    overlay={true}
-                    overlayClassName="bg-gradient-to-t from-black/60 via-black/0 to-black/60"
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <h2 className="text-4xl font-bold text-white">Exousia Gallery</h2>
-                    </div>
-                  </ImagesSlider>
-                </Suspense>
-              </div>
-            </CardBody>
-          </CardContainer>
+          {/* Gallery Section */}
+          <div className="mb-16">
+            <ImageGrid 
+              images={[
+                "/ClubPages/Exousia/IMG-20250613-WA0026.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0027.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0029.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0030.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0031.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0032.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0033.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0034.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0035.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0036.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0037.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0038.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0039.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0040.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0041.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0042.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0043.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0044.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0045.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0046.jpg"
+              ]} 
+              className="max-w-4xl mx-auto"
+            />
+          </div>
         </div>
         {/* Members Section */}
         <section className="mb-16 mt-16">

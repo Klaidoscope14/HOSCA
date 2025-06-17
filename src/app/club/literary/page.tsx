@@ -1,8 +1,11 @@
 'use client';
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
-import { CardContainer, CardBody} from "@/components/ui/3d-card";
+import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import {FaLinkedin,FaEnvelope} from "react-icons/fa";
+import { ImageGrid } from "@/components/ui/image-grid";
+import { Suspense } from "react";
 
 interface ClubMember {
   id: number;
@@ -131,18 +134,22 @@ export default function LiteraryPage() {
             </CardBody>
           </CardContainer>
 
-          {/* Image Gallery */}
-          <CardContainer className="w-full">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-              <div className="grid grid-cols-2 gap-4">
-                <img src="/club/literary.jpg" alt="Literary Event" className="rounded-lg w-full h-48 object-cover" />
-                <img src="/club/literary.jpg" alt="Poetry Reading" className="rounded-lg w-full h-48 object-cover" />
-                <img src="/club/literary.jpg" alt="Book Discussion" className="rounded-lg w-full h-48 object-cover" />
-                <img src="/club/literary.jpg" alt="Literary Team" className="rounded-lg w-full h-48 object-cover" />
-              </div>
-            </CardBody>
-          </CardContainer>
+          {/* Gallery Section */}
+          <div className="mb-16">
+            <ImageGrid 
+              images={[
+                "/ClubPages/Literary/literary-1.jpg",
+                "/ClubPages/Literary/literary-2.jpg",
+                "/ClubPages/Literary/literary-3.jpg",
+                "/ClubPages/Literary/literary-4.jpg",
+                "/ClubPages/Literary/literary-5.jpg",
+                "/ClubPages/Literary/literary-6.jpg",
+                "/ClubPages/Literary/literary-7.jpg",
+                "/ClubPages/Literary/literary-8.jpg"
+              ]} 
+              className="max-w-4xl mx-auto"
+            />
+          </div>
         </div>
 
         {/* Coordinators Section */}

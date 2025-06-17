@@ -4,7 +4,7 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
-import { ImagesSlider } from "@/components/ui/images-slider";
+import { ImageGrid } from "@/components/ui/image-grid";
 import { Suspense } from "react";
 
 interface ClubMember {
@@ -263,47 +263,34 @@ const renderMemberCard = (member: ClubMember) => (
             </CardBody>
           </CardContainer>
 
-          {/* Image Gallery */}
-          <CardContainer className="w-full">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-              <div className="h-[400px] relative rounded-lg overflow-hidden">
-                <Suspense fallback={<div className="w-full h-full bg-gray-800 animate-pulse" />}>
-                  <ImagesSlider
-                    className="h-[40rem]"
-                    images={[
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0001.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0002.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0003.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0004.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0005.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0006.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0007.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0008.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0009.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0010.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241028-WA0011.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241019-WA0013.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0058.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0060.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0062.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0069.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0071.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0073.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0075.jpg",
-                      "/ClubPages/Hexachrome/IMG-20241018-WA0077.jpg"
-                    ]}
-                    overlay={true}
-                    overlayClassName="bg-gradient-to-t from-black/60 via-black/0 to-black/60"
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <h2 className="text-4xl font-bold text-white">Hexachrome Gallery</h2>
-                    </div>
-                  </ImagesSlider>
-                </Suspense>
-              </div>
-            </CardBody>
-          </CardContainer>
+          {/* Gallery Section */}
+          <div className="mb-16">
+            <ImageGrid 
+              images={[
+                "/ClubPages/Hexachrome/IMG-20241028-WA0001.jpg",
+                "/ClubPages/Hexachrome/IMG-20241028-WA0002.jpg",
+                "/ClubPages/Hexachrome/IMG-20241028-WA0003.jpg",
+                "/ClubPages/Hexachrome/IMG-20241028-WA0004.jpg",
+                "/ClubPages/Hexachrome/IMG-20241028-WA0005.jpg",
+                "/ClubPages/Hexachrome/IMG-20241028-WA0006.jpg",
+                "/ClubPages/Hexachrome/IMG-20241028-WA0007.jpg",
+                "/ClubPages/Hexachrome/IMG-20241028-WA0008.jpg",
+                "/ClubPages/Hexachrome/IMG-20241028-WA0009.jpg",
+                "/ClubPages/Hexachrome/IMG-20241028-WA0010.jpg",
+                "/ClubPages/Hexachrome/IMG-20241028-WA0011.jpg",
+                "/ClubPages/Hexachrome/IMG-20241019-WA0013.jpg",
+                "/ClubPages/Hexachrome/IMG-20241018-WA0058.jpg",
+                "/ClubPages/Hexachrome/IMG-20241018-WA0060.jpg",
+                "/ClubPages/Hexachrome/IMG-20241018-WA0062.jpg",
+                "/ClubPages/Hexachrome/IMG-20241018-WA0069.jpg",
+                "/ClubPages/Hexachrome/IMG-20241018-WA0071.jpg",
+                "/ClubPages/Hexachrome/IMG-20241018-WA0073.jpg",
+                "/ClubPages/Hexachrome/IMG-20241018-WA0075.jpg",
+                "/ClubPages/Hexachrome/IMG-20241018-WA0077.jpg"
+              ]} 
+              className="max-w-4xl mx-auto"
+            />
+          </div>
         </div>
         {/* Members Section */}
         <section className="mb-16 mt-16">

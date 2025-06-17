@@ -4,7 +4,7 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
-import { ImagesSlider } from "@/components/ui/images-slider";
+import { ImageGrid } from "@/components/ui/image-grid";
 import { Suspense } from "react";
 
 interface ClubMember {
@@ -280,37 +280,19 @@ const renderMemberCard = (member: ClubMember) => (
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
               <div className="h-[600px] relative rounded-lg overflow-hidden">
                 <Suspense fallback={<div>Loading...</div>}>
-                  <ImagesSlider
-                    className="h-full w-full"
+                  <ImageGrid
                     images={[
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.31.08.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.31.07.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.31.07 (2).jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.31.06.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.31.06 (2).jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.18.07.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.18.06.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.17.19.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.17.18.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.17.17.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.17.16.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.17.15.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.17.14.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.17.13.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.17.12.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.17.11.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.17.10.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.08.13.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.06.01.jpeg",
-                      "/ClubPages/Epicurean/WhatsApp Image 2025-06-14 at 16.06.00.jpeg"
+                      "/ClubPages/Epicurean/IMG-20250126-WA0040.jpg",
+                      "/ClubPages/Epicurean/IMG-20250126-WA0042.jpg",
+                      "/ClubPages/Epicurean/IMG-20250126-WA0045.jpg",
+                      "/ClubPages/Epicurean/IMG-20250126-WA0046.jpg",
+                      "/ClubPages/Epicurean/IMG-20250126-WA0047.jpg",
+                      "/ClubPages/Epicurean/IMG-20250126-WA0049.jpg",
+                      "/ClubPages/Epicurean/IMG-20250126-WA0050.jpg",
+                      "/ClubPages/Epicurean/IMG-20250126-WA0051.jpg"
                     ]}
-                    overlay={true}
-                    overlayClassName="bg-gradient-to-t from-black/60 via-black/0 to-black/60"
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <h2 className="text-4xl font-bold text-white">Epicurean Gallery</h2>
-                    </div>
-                  </ImagesSlider>
+                    className="max-w-4xl mx-auto"
+                  />
                 </Suspense>
               </div>
             </CardBody>

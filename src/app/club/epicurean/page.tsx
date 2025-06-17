@@ -84,7 +84,7 @@ const EpicureanMembers: ClubMember[] = [
     email: 'Add Email',
     linkedinUrl: 'https://in.linkedin.com/in/krittika-das-4704b2327',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Epicurean/Kritika.HEIC',
   },
   {
     id: 7,

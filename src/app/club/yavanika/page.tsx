@@ -106,7 +106,7 @@ const YavanikaMembers: ClubMember[] = [
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/vidhi-patel-5a1893310?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Yavanika/vidhiPatel.jpg',
   }
 ];
 

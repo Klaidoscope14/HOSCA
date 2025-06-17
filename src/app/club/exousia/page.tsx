@@ -95,7 +95,7 @@ const ExousiaMembers: ClubMember[] = [
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/tanvi-begari-30ab1036a/',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Exousia/TanviBegari.jpg',
   },
   {
     id: 8,

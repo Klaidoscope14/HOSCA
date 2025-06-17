@@ -40,7 +40,7 @@ const QuizMembers: ClubMember[] = [
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/amal-biju-5ab486300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/QuizClub/Amal.jpg',
   },
   {
     id: 3,

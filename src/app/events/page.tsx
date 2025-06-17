@@ -117,7 +117,7 @@ export default function EventsPage() {
   const pastEvents = events.filter(event => event.category === 'past');
 
   return (
-    <div className="min-h-screen w-full animated-gradient">
+    <div className="min-h-screen w-full bg-gradient-to-br from-gray-900 via-purple-900 to-red-900">
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[#fa8a57] font-['Poppins'] mt-20">
           Our Events

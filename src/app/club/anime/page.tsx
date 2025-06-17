@@ -4,7 +4,7 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
-import { ImagesSlider } from "@/components/ui/images-slider";
+import { ImageGrid } from "@/components/ui/image-grid";
 import { Suspense } from "react";
 
 interface ClubMember {
@@ -286,25 +286,17 @@ const renderMemberCard = (member: ClubMember) => (
           {/* Image Gallery */}
           <CardContainer className="w-full">
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-              <div className="h-[400px] relative rounded-lg overflow-hidden">
+              <div className="relative rounded-lg overflow-hidden">
                 <Suspense fallback={<div className="w-full h-full bg-gray-800 animate-pulse" />}>
-                  <ImagesSlider
+                  <ImageGrid
                     images={[
                       '/gallery/clubs/anime.jpg',
                       '/gallery/clubs/_DSC7630.JPG',
                       '/gallery/clubs/WhatsApp Image 2022-11-05 at 13.07.53.jpeg',
                       '/gallery/clubs/IMG_20220815_103327.jpg'
                     ]}
-                    className="h-full w-full"
-                    overlay={true}
-                    overlayClassName="bg-gradient-to-t from-black/60 to-transparent"
-                    autoplay={true}
-                  >
-                    <div className="absolute bottom-0 left-0 p-4 text-white z-50">
-                      <p className="text-sm font-medium">Anime Club Gallery</p>
-                    </div>
-                  </ImagesSlider>
+                    className="max-w-4xl mx-auto"
+                  />
                 </Suspense>
               </div>
             </CardBody>

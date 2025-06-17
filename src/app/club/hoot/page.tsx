@@ -4,7 +4,7 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
-import { ImagesSlider } from "@/components/ui/images-slider";
+import { ImageGrid } from "@/components/ui/image-grid";
 import { Suspense } from "react";
 
 interface ClubMember {
@@ -280,40 +280,27 @@ const renderMemberCard = (member: ClubMember) => (
             </CardBody>
           </CardContainer>
 
-          {/* Image Gallery */}
-          <CardContainer className="w-full">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-              <div className="h-[600px] relative rounded-lg overflow-hidden">
-                <Suspense fallback={<div>Loading...</div>}>
-                  <ImagesSlider
-                    className="h-full w-full"
-                    images={[
-                      "/ClubPages/HOOT/HOOT1.jpg",
-                      "/ClubPages/HOOT/HOOT2.jpg",
-                      "/ClubPages/HOOT/HOOT3.jpg",
-                      "/ClubPages/HOOT/HOOT4.jpg",
-                      "/ClubPages/HOOT/HOOT5.jpg",
-                      "/ClubPages/HOOT/HOOT6.jpg",
-                      "/ClubPages/HOOT/HOOT7.jpg",
-                      "/ClubPages/HOOT/HOOT8.jpg",
-                      "/ClubPages/HOOT/HOOT9.jpg",
-                      "/ClubPages/HOOT/HOOT10.jpg",
-                      "/ClubPages/HOOT/HOOT11.jpg",
-                      "/ClubPages/HOOT/HOOT12.jpg",
-                      "/ClubPages/HOOT/HOOT13.jpg"
-                    ]}
-                    overlay={true}
-                    overlayClassName="bg-gradient-to-t from-black/60 via-black/0 to-black/60"
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <h2 className="text-4xl font-bold text-white">HOOT Gallery</h2>
-                    </div>
-                  </ImagesSlider>
-                </Suspense>
-              </div>
-            </CardBody>
-          </CardContainer>
+          {/* Gallery Section */}
+          <div className="mb-16">
+            <ImageGrid 
+              images={[
+                "/ClubPages/HOOT/HOOT1.jpg",
+                "/ClubPages/HOOT/HOOT2.jpg",
+                "/ClubPages/HOOT/HOOT3.jpg",
+                "/ClubPages/HOOT/HOOT4.jpg",
+                "/ClubPages/HOOT/HOOT5.jpg",
+                "/ClubPages/HOOT/HOOT6.jpg",
+                "/ClubPages/HOOT/HOOT7.jpg",
+                "/ClubPages/HOOT/HOOT8.jpg",
+                "/ClubPages/HOOT/HOOT9.jpg",
+                "/ClubPages/HOOT/HOOT10.jpg",
+                "/ClubPages/HOOT/HOOT11.jpg",
+                "/ClubPages/HOOT/HOOT12.jpg",
+                "/ClubPages/HOOT/HOOT13.jpg"
+              ]} 
+              className="max-w-4xl mx-auto"
+            />
+          </div>
         </div>
         {/* Members Section */}
         <section className="mb-16 mt-16">

@@ -4,7 +4,7 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
-import { ImagesSlider } from "@/components/ui/images-slider";
+import { ImageGrid } from "@/components/ui/image-grid";
 import { Suspense } from "react";
 
 interface ClubMember {
@@ -287,11 +287,9 @@ const renderMemberCard = (member: ClubMember) => (
           {/* Image Gallery */}
           <CardContainer className="w-full">
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-              <div className="h-[600px] relative rounded-lg overflow-hidden">
+              <div className="relative rounded-lg overflow-hidden">
                 <Suspense fallback={<div>Loading...</div>}>
-                  <ImagesSlider
-                    className="h-full w-full"
+                  <ImageGrid
                     images={[
                       "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.08.jpeg",
                       "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.07.jpeg",
@@ -314,13 +312,8 @@ const renderMemberCard = (member: ClubMember) => (
                       "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.06.01.jpeg",
                       "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.06.00.jpeg"
                     ]}
-                    overlay={true}
-                    overlayClassName="bg-gradient-to-t from-black/60 via-black/0 to-black/60"
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <h2 className="text-4xl font-bold text-white">Quiz Club Gallery</h2>
-                    </div>
-                  </ImagesSlider>
+                    className="max-w-4xl mx-auto"
+                  />
                 </Suspense>
               </div>
             </CardBody>

@@ -4,6 +4,8 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
+import { ImagesSlider } from "@/components/ui/images-slider";
+import { Suspense } from "react";
 
 interface ClubMember {
   id: number;
@@ -20,91 +22,91 @@ interface ClubMember {
 const VincetrokeMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Rajesh Kumar',
-    position: 'President',
-    year: '4th Year',
-    branch: 'Civil  Engineering',
-    email: 'rajesh.civil@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/rajeshkumar',
-    instagramUrl: 'https://instagram.com/rajeshkumar',
-    imageUrl: '/clubCmemLogobers/rajesh.jpg',
+    name: 'Add Name',
+    position: 'Coordinator',
+    year: 'Add Year',
+    branch: 'Add Branch',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    instagramUrl: '#',
+    imageUrl: '',
   },
   {
     id: 2,
-    name: 'Priya Sharma',
-    position: 'Vice President',
-    year: '3rd Year',
-    branch: 'Computer   Science',
-    email: 'priya.cs@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/priyasharma',
-    instagramUrl: 'https://instagram.com/priyasharma',
-    imageUrl: '/cluC/meLogombers/priya.jpg',
+    name: 'Add Name',
+    position: 'Coordinator',
+    year: 'Add Year',
+    branch: 'Add Branch',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    instagramUrl: '#',
+    imageUrl: '',
   },
   {
     id: 3,
-    name: 'Amit Verma',
-    position: 'Secretary',
-    year: '3rd Year',
-    branch: 'Mechanical Engineering',
-    email: 'amit.mech@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/amitverma',
-    instagramUrl: 'https://instagram.com/amitverma',
-    imageUrl: '/clCb/mLogoembers/amit.jpg',
+    name: 'Add Name',
+    position: 'Coordinator',
+    year: 'Add Year',
+    branch: 'Add Branch',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    instagramUrl: '#',
+    imageUrl: '',
   },
   {
     id: 4,
-    name: 'Sneha Patel',
-    position: 'Creative Head',
-    year: '2nd Year',
-    branch: 'Electrical Engineering',
-    email: 'sneha.ee@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/snehapatel',
-    instagramUrl: 'https://instagram.com/snehapatel',
-    imageUrl: '/cluC/meLogombers/sneha.jpg',
+    name: 'Add Name',
+    position: 'Sub-Coordinator',
+    year: 'Add Year',
+    branch: 'Add Branch',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    instagramUrl: '#',
+    imageUrl: '',
   },
   {
     id: 5,
-    name: 'Arjun Singh',
-    position: 'Script Writer',
-    year: '2nd Year',
-    branch: 'Chemical Engineering',
-    email: 'arjun.chem@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/arjunsingh',
-    instagramUrl: 'https://instagram.com/arjunsingh',
-    imageUrl: '/cluC/meLogombers/arjun.jpg',
+    name: 'Add Name',
+    position: 'Sub-Coordinator',
+    year: 'Add Year',
+    branch: 'Add Branch',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    instagramUrl: '#',
+    imageUrl: '',
   },
   {
     id: 6,
-    name: 'Kavya Nair',
-    position: 'Director',
-    year: '4th Year',
-    branch: ' Bio-technology ',
-    email: 'kavya.bt@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/kavyanair',
-    instagramUrl: 'https://instagram.com/kavyanair',
-    imageUrl: '/cluC/meLogombers/kavya.jpg',
+    name: 'Add Name',
+    position: 'Sub-Coordinator',
+    year: 'Add Year',
+    branch: 'Add Branch',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    instagramUrl: '#',
+    imageUrl: '',
   },
   {
     id: 7,
-    name: 'Rohit Gupta',
-    position: 'Stage Manager',
-    year: '3rd Year',
-    branch: '  Metallurgy  ',
-    email: 'rohit.met@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/rohitgupta',
-    instagramUrl: 'https://instagram.com/rohitgupta',
-    imageUrl: '/cluC/meLogombers/rohit.jpg',
+    name: 'Add Name',
+    position: 'Sub-Coordinator',
+    year: 'Add Year',
+    branch: 'Add Branch',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    instagramUrl: '#',
+    imageUrl: '',
   },
   {
     id: 8,
-    name: 'Ananya Joshi',
-    position: 'Costume Designer',
-    year: '2nd Year ',
-    branch: 'Physics        ',
-    email: 'ananya.phy@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/ananyajoshi',
-    instagramUrl: 'https://instagram.com/ananyajoshi',
-    imageUrl: '/clubCmemLogobers/ananya.jpg',
+    name: 'Add Name',
+    position: 'Sub-Coordinator',
+    year: 'Add Year',
+    branch: 'Add Branch',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    instagramUrl: '#',
+    imageUrl: '',
   }
 ];
 
@@ -276,30 +278,59 @@ const renderMemberCard = (member: ClubMember) => (
           <CardContainer className="w-full">
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-              <div className="grid grid-cols-2 gap-4">
-                <img src="/ClubLogo/Vincetroke.jpg" alt="quiz Debate" className="rounded-lg w-full h-50 object-cover" />
-                <img src="/ClubLogo/Vincetroke.jpg" alt="quiz MUN" className="rounded-lg w-full h-50 object-cover" />
-                <img src="/ClubLogo/Vincetroke.jpg" alt="quiz Event" className="rounded-lg w-full h-50 object-cover" />
-                <img src="/ClubLogo/Vincetroke.jpg" alt="quiz Team" className="rounded-lg w-full h-50 object-cover" />
+              <div className="h-[600px] relative rounded-lg overflow-hidden">
+                <Suspense fallback={<div>Loading...</div>}>
+                  <ImagesSlider
+                    className="h-full w-full"
+                    images={[
+                      "/ClubPages/Vincetroke/im 1.jpg",
+                      "/ClubPages/Vincetroke/im 2.jpg",
+                      "/ClubPages/Vincetroke/im 3.jpg",
+                      "/ClubPages/Vincetroke/im 4.jpg",
+                      "/ClubPages/Vincetroke/im 5.jpg",
+                      "/ClubPages/Vincetroke/im 6.jpg",
+                      "/ClubPages/Vincetroke/im 7.jpg",
+                      "/ClubPages/Vincetroke/im 8.jpg",
+                      "/ClubPages/Vincetroke/im 9.jpg",
+                      "/ClubPages/Vincetroke/im 10.jpg",
+                      "/ClubPages/Vincetroke/im 11.jpg",
+                      "/ClubPages/Vincetroke/im 12.jpg",
+                      "/ClubPages/Vincetroke/im 13.jpg",
+                      "/ClubPages/Vincetroke/im 14.jpg",
+                      "/ClubPages/Vincetroke/im 15.jpg",
+                      "/ClubPages/Vincetroke/im 16.jpg",
+                      "/ClubPages/Vincetroke/im 17.jpg",
+                      "/ClubPages/Vincetroke/im 18.jpg",
+                      "/ClubPages/Vincetroke/im 19.jpg",
+                      "/ClubPages/Vincetroke/im 20.jpg"
+                    ]}
+                    overlay={true}
+                    overlayClassName="bg-gradient-to-t from-black/60 via-black/0 to-black/60"
+                  >
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <h2 className="text-4xl font-bold text-white">Vincetroke Gallery</h2>
+                    </div>
+                  </ImagesSlider>
+                </Suspense>
               </div>
             </CardBody>
           </CardContainer>
         </div>
         {/* Members Section */}
-        <section className="mb-16">
+        <section className="mb-16 mt-16">
           <h2 className="text-4xl font-bold text-center mb-12" style={{ color: "#207C9A" }}>Our Team</h2>
 
 
           {/* Coordinators Section */}
           <h2 className="text-3xl font-semibold text-left mb-6 text-orange-300 px-2 md:px-0" style={{ color: "#4169E1" }}>Coordinators</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 md:px-0">
-            {VincetrokeMembers.slice(0, 4).map((member) => renderMemberCard(member))}
+            {VincetrokeMembers.slice(0, 3).map((member) => renderMemberCard(member))}
           </div>
 
           {/* Sub Coordinators Section */}
           <h2 className="text-3xl font-semibold text-left mt-12 mb-6 text-orange-300 px-4 md:px-0" style={{ color: "#4169E1" }}>Sub Coordinators</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto items-stretch">
-            {VincetrokeMembers.slice(4).map((member) => renderMemberCard(member))}
+            {VincetrokeMembers.slice(3).map((member) => renderMemberCard(member))}
           </div>
         </section>
         {/* Social Media Links */}

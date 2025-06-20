@@ -24,7 +24,7 @@ const events: Event[] = [
   {
     id: 1,
     title: 'Anwesha',
-    date: 'February 15-17, 2024',
+    date: 'February 7-9, 2025',
     description: 'Anwesha, the annual Techno-Cultural extravaganza of the Indian Institute of Technology Patna, is a celebration of innovation, artistry, and excellence. Since its inception in 2010, Anwesha has grown into one of the most anticipated youth festivals in East India, drawing vibrant participation from across the nation. With each passing year, it continues to surpass expectations, enchanting audiences with its grandeur and creativity, and setting new benchmarks in cultural and technical brilliance.',
     images: [
       { src: 'events/anwesha/IMG_20250208_223941.jpg', width: 800, height: 600, quality: 75 },
@@ -40,7 +40,7 @@ const events: Event[] = [
   {
     id: 2,
     title: 'Reverberance',
-    date: 'October 20, 2023',
+    date: 'October 26-31, 2024',
     description: 'Diwali is one of the most eagerly awaited festivals at IIT Patna, celebrated with great enthusiasm and joy. Embracing the spirit of lights, tradition, and togetherness, the House of Socio-Cultural Affairs and the House of Literature and Fine Arts proudly present Reverberance — the Inter-Year Cultural Tournament that brings the campus alive with talent, passion, and festive fervor.',
     images: [
       { src: '/events/reverberance/45761428_1923729217747212_3862406545320968192_n.jpg', width: 800, height: 600, quality: 75 },
@@ -53,7 +53,7 @@ const events: Event[] = [
   {
     id: 3,
     title: 'Nebula',
-    date: 'August 5, 2023',
+    date: 'August 25, 2024',
     description: 'The Annual Freshers’ Welcome Party at IIT Patna is a lively celebration that marks the beginning of a new chapter for incoming students. Designed to introduce them to the vibrant cultural fabric of the institute, the evening comes alive with captivating performances, interactive games, and spirited cultural activities—setting the perfect tone for their journey ahead.',
     images: [
       { src: '/events/nebula/_DSC7630.JPG', width: 800, height: 600, quality: 75 },

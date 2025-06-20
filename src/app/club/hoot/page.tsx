@@ -4,7 +4,7 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
-import { ImagesSlider } from "@/components/ui/images-slider";
+import { ImageGrid } from "@/components/ui/image-grid";
 import { Suspense } from "react";
 
 interface ClubMember {
@@ -22,91 +22,91 @@ interface ClubMember {
 const HootMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Rajesh Kumar',
-    position: 'President',
-    year: '4th Year',
-    branch: 'Civil  Engineering',
-    email: 'rajesh.civil@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/rajeshkumar',
-    instagramUrl: 'https://instagram.com/rajeshkumar',
-    imageUrl: '/club/members/rajesh.jpg',
+    name: 'Aviral Awasthi ',
+    position: 'Coordinator',
+    year: '3rd Year',
+    branch: 'Metallurgical and Materials Engineering',
+    email: 'aviral_2301mm29@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/aviral-awasthi-86943528a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    instagramUrl: '#',
+    imageUrl: '/Coordinators/HOOT/Aviral.jpg',
   },
   {
     id: 2,
-    name: 'Priya Sharma',
-    position: 'Vice President',
+    name: 'Venkatesh Mishra',
+    position: 'Coordinator',
     year: '3rd Year',
-    branch: 'Computer   Science',
-    email: 'priya.cs@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/priyasharma',
-    instagramUrl: 'https://instagram.com/priyasharma',
-    imageUrl: '/club/members/priya.jpg',
+    branch: 'Mechanical Engineering',
+    email: 'venkatesh_2301me66@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/venkatesh-mishra-399317288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+    instagramUrl: '#',
+    imageUrl: '/Coordinators/HOOT/Venkatesh.jpg',
   },
   {
     id: 3,
-    name: 'Amit Verma',
-    position: 'Secretary',
-    year: '3rd Year',
-    branch: 'Mechanical Engineering',
-    email: 'amit.mech@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/amitverma',
-    instagramUrl: 'https://instagram.com/amitverma',
-    imageUrl: '/club/members/amit.jpg',
+    name: 'Aanushka Saha',
+    position: 'Sub-Coordinator',
+    year: '2nd Year',
+    branch: 'Chemical Engineering',
+    email: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/aanushka-saha-a2b78a322/',
+    instagramUrl: '#',
+    imageUrl: '/SubCords/HOOT/aanushka_hoot.jpg',
   },
   {
     id: 4,
-    name: 'Sneha Patel',
-    position: 'Creative Head',
+    name: 'Shashwat Tiwari',
+    position: 'Sub-Coordinator',
     year: '2nd Year',
-    branch: 'Electrical Engineering',
-    email: 'sneha.ee@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/snehapatel',
-    instagramUrl: 'https://instagram.com/snehapatel',
-    imageUrl: '/club/members/sneha.jpg',
+    branch: 'Chemical Engineering',
+    email: '#',
+    linkedinUrl: 'hhttps://www.linkedin.com/in/shashwat-tiwari-2920852bb?utm_source=share&utm_campaign=share_via&utm_co',
+    instagramUrl: '#',
+    imageUrl: '/SubCords/HOOT/Shashwat.jpg',
   },
   {
     id: 5,
-    name: 'Arjun Singh',
-    position: 'Script Writer',
+    name: 'Ankit Basu',
+    position: 'Sub-Coordinator',
     year: '2nd Year',
-    branch: 'Chemical Engineering',
-    email: 'arjun.chem@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/arjunsingh',
-    instagramUrl: 'https://instagram.com/arjunsingh',
-    imageUrl: '/club/members/arjun.jpg',
+    branch: 'Mathematics and Computing',
+    email: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/ankit-basu-32295931a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+    instagramUrl: '#',
+    imageUrl: '/SubCords/HOOT/AnkitBasu.jpg',
   },
   {
     id: 6,
-    name: 'Kavya Nair',
-    position: 'Director',
-    year: '4th Year',
-    branch: ' Bio-technology ',
-    email: 'kavya.bt@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/kavyanair',
-    instagramUrl: 'https://instagram.com/kavyanair',
-    imageUrl: '/club/members/kavya.jpg',
+    name: 'Shreyas Das',
+    position: 'Sub-Coordinator',
+    year: '2nd Year',
+    branch: 'Mechanical Engineering',
+    email: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/shreyas-das-3a979b316/',
+    instagramUrl: '#',
+    imageUrl: '/SubCords/HOOT/ShreyasDas.jpg',
   },
   {
     id: 7,
-    name: 'Rohit Gupta',
-    position: 'Stage Manager',
-    year: '3rd Year',
-    branch: '  Metallurgy  ',
-    email: 'rohit.met@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/rohitgupta',
-    instagramUrl: 'https://instagram.com/rohitgupta',
-    imageUrl: '/club/members/rohit.jpg',
+    name: 'Nirmit Chaurasia',
+    position: 'Sub-Coordinator',
+    year: '2nd Year',
+    branch: 'Artificial Intelligence and Data Science',
+    email: '#',
+    linkedinUrl: 'https://in.linkedin.com/in/nirmit-chaurasia-678781191',
+    instagramUrl: '#',
+    imageUrl: '/SubCords/HOOT/nirmitphoto.png',
   },
   {
     id: 8,
-    name: 'Ananya Joshi',
-    position: 'Costume Designer',
-    year: '2nd Year ',
-    branch: 'Physics        ',
-    email: 'ananya.phy@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/ananyajoshi',
-    instagramUrl: 'https://instagram.com/ananyajoshi',
-    imageUrl: '/club/members/ananya.jpg',
+    name: 'Gopal',
+    position: 'Sub-Coordinator',
+    year: '2nd Year',
+    branch: 'Economics',
+    email: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/gopal-ramanathan-76173b306/',
+    instagramUrl: '#',
+    imageUrl: '/SubCords/HOOT/Gopal.jpg',
   }
 ];
 
@@ -280,40 +280,27 @@ const renderMemberCard = (member: ClubMember) => (
             </CardBody>
           </CardContainer>
 
-          {/* Image Gallery */}
-          <CardContainer className="w-full">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-              <div className="h-[600px] relative rounded-lg overflow-hidden">
-                <Suspense fallback={<div>Loading...</div>}>
-                  <ImagesSlider
-                    className="h-full w-full"
-                    images={[
-                      "/ClubPages/HOOT/HOOT1.jpg",
-                      "/ClubPages/HOOT/HOOT2.jpg",
-                      "/ClubPages/HOOT/HOOT3.jpg",
-                      "/ClubPages/HOOT/HOOT4.jpg",
-                      "/ClubPages/HOOT/HOOT5.jpg",
-                      "/ClubPages/HOOT/HOOT6.jpg",
-                      "/ClubPages/HOOT/HOOT7.jpg",
-                      "/ClubPages/HOOT/HOOT8.jpg",
-                      "/ClubPages/HOOT/HOOT9.jpg",
-                      "/ClubPages/HOOT/HOOT10.jpg",
-                      "/ClubPages/HOOT/HOOT11.jpg",
-                      "/ClubPages/HOOT/HOOT12.jpg",
-                      "/ClubPages/HOOT/HOOT13.jpg"
-                    ]}
-                    overlay={true}
-                    overlayClassName="bg-gradient-to-t from-black/60 via-black/0 to-black/60"
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <h2 className="text-4xl font-bold text-white">HOOT Gallery</h2>
-                    </div>
-                  </ImagesSlider>
-                </Suspense>
-              </div>
-            </CardBody>
-          </CardContainer>
+          {/* Gallery Section */}
+          <div className="mb-16">
+            <ImageGrid 
+              images={[
+                "/ClubPages/HOOT/HOOT1.jpg",
+                "/ClubPages/HOOT/HOOT2.jpg",
+                "/ClubPages/HOOT/HOOT3.jpg",
+                "/ClubPages/HOOT/HOOT4.jpg",
+                "/ClubPages/HOOT/HOOT5.jpg",
+                "/ClubPages/HOOT/HOOT6.jpg",
+                "/ClubPages/HOOT/HOOT7.jpg",
+                "/ClubPages/HOOT/HOOT8.jpg",
+                "/ClubPages/HOOT/HOOT9.jpg",
+                "/ClubPages/HOOT/HOOT10.jpg",
+                "/ClubPages/HOOT/HOOT11.jpg",
+                "/ClubPages/HOOT/HOOT12.jpg",
+                "/ClubPages/HOOT/HOOT13.jpg"
+              ]} 
+              className="max-w-4xl mx-auto"
+            />
+          </div>
         </div>
         {/* Members Section */}
         <section className="mb-16 mt-16">

@@ -6,23 +6,23 @@ import { Cover } from "@/components/ui/cover";
 const festPhotos = [
   {
     title: "Festival Moments 1",
-    src: "/gallery/fest/DSC_8732.JPG",
+    src: "/gallery/fest/reverb1.jpg",
   },
   {
     title: "Festival Moments 2",
-    src: "/gallery/fest/DSC_7893.JPG",
+    src: "/gallery/fest/DSC_8732.JPG",
   },
   {
     title: "Festival Moments 3",
-    src: "/gallery/fest/DSC_0201.JPG",
+    src: "/gallery/fest/durgapuja7.jpg",
   },
   {
     title: "Festival Moments 4",
-    src: "/gallery/fest/DSC_0127.JPG",
+    src: "/gallery/fest/IMG_20250208_223941.jpg",
   },
   {
     title: "Festival Moments 5",
-    src: "/gallery/fest/51-fz5hcDhs.jpg",
+    src: "/gallery/fest/IMG20250209221311.jpg",
   },
   {
     title: "Festival Moments 6",
@@ -30,11 +30,11 @@ const festPhotos = [
   },
   {
     title: "Festival Moments 7",
-    src: "/gallery/fest/41-5NQgcDhs.jpg",
+    src: "/gallery/fest/image26.jpg",
   },
   {
     title: "Festival Moments 8",
-    src: "/gallery/fest/4-T5nhcDhs.jpg",
+    src: "/gallery/fest/WhatsApp Image 2025-06-17 at 21.40.37_36a48b04.jpg",
   },
   {
     title: "Festival Moments 9",
@@ -46,11 +46,11 @@ const festPhotos = [
   },
   {
     title: "Festival Moments 11",
-    src: "/gallery/fest/30-UlHgcDhs.jpg",
+    src: "/gallery/fest/WhatsApp Image 2025-06-17 at 21.42.09_6507d602.jpg",
   },
   {
     title: "Festival Moments 12",
-    src: "/gallery/fest/28-To3gcDhs.jpg",
+    src: "/gallery/fest/IMG20250209221411.jpg",
   },
 ];
 

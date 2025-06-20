@@ -4,7 +4,7 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
-import { ImagesSlider } from "@/components/ui/images-slider";
+import { ImageGrid } from "@/components/ui/image-grid";
 import { Suspense } from "react";
 
 interface ClubMember {
@@ -22,89 +22,89 @@ interface ClubMember {
 const ExousiaMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Add Name',
+    name: 'Vibhuti Gupta',
     position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
+    year: '3rd Year',
+    branch: 'Metallurgical and Materials Engineering',
+    email: 'vibhuti_2301mm18@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/vibhuti-gupta-186776262?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/Exousia/Vibhuti.jpg',
   },
   {
     id: 2,
-    name: 'Add Name',
+    name: 'Ghanishth Attrey',
     position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
+    year: '3rd Year',
+    branch: 'Civil Engineering',
+    email: 'ghanishth_2301ce12@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/ghanishth-attrey-364930351?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/Exousia/Ghanisth.jpg',
   },
   {
     id: 3,
-    name: 'Add Name',
+    name: 'Antriksha Aman',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Computer Science and Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/antriksha-aman-320383327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Exousia/Antariksha.jpg',
   },
   {
     id: 4,
-    name: 'Add Name',
+    name: 'J. Karan',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Electrical and Electronics Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/karan-jarupulavath-6546212a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Exousia/KaranJarupala.jpg',
   },
   {
     id: 5,
-    name: 'Add Name',
+    name: 'G. Gagana Sadrush',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Economics',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/gaganasadrush-g-1199b9332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
     imageUrl: '',
   },
   {
     id: 6,
-    name: 'Add Name',
+    name: 'Vennela',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Computer Science and Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/vennela-jangiti-492264352?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
     imageUrl: '',
   },
   {
     id: 7,
-    name: 'Add Name',
+    name: 'Begari Tanvi',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Mathematics and Computing',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/tanvi-begari-30ab1036a/',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/Exousia/TanviBegari.jpg',
   },
   {
     id: 8,
-    name: 'Add Name',
+    name: 'E. V. Sai Chathurya',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Computer Science and Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/chathurya0311',
     instagramUrl: '#',
     imageUrl: '',
   }
@@ -273,47 +273,34 @@ const renderMemberCard = (member: ClubMember) => (
             </CardBody>
           </CardContainer>
 
-          {/* Image Gallery */}
-          <CardContainer className="w-full">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-              <div className="h-[600px] relative rounded-lg overflow-hidden">
-                <Suspense fallback={<div>Loading...</div>}>
-                  <ImagesSlider
-                    className="h-full w-full"
-                    images={[
-                      "/ClubPages/Exousia/IMG-20250613-WA0026.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0027.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0029.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0030.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0031.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0032.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0033.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0034.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0035.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0036.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0037.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0038.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0039.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0040.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0041.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0042.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0043.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0044.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0045.jpg",
-                      "/ClubPages/Exousia/IMG-20250613-WA0046.jpg"
-                    ]}
-                    overlay={true}
-                    overlayClassName="bg-gradient-to-t from-black/60 via-black/0 to-black/60"
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <h2 className="text-4xl font-bold text-white">Exousia Gallery</h2>
-                    </div>
-                  </ImagesSlider>
-                </Suspense>
-              </div>
-            </CardBody>
-          </CardContainer>
+          {/* Gallery Section */}
+          <div className="mb-16">
+            <ImageGrid 
+              images={[
+                "/ClubPages/Exousia/IMG-20250613-WA0026.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0027.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0029.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0030.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0031.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0032.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0033.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0034.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0035.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0036.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0037.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0038.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0039.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0040.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0041.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0042.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0043.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0044.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0045.jpg",
+                "/ClubPages/Exousia/IMG-20250613-WA0046.jpg"
+              ]} 
+              className="max-w-4xl mx-auto"
+            />
+          </div>
         </div>
         {/* Members Section */}
         <section className="mb-16 mt-16">

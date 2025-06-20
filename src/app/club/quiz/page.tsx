@@ -4,7 +4,7 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
-import { ImagesSlider } from "@/components/ui/images-slider";
+import { ImageGrid } from "@/components/ui/image-grid";
 import { Suspense } from "react";
 
 interface ClubMember {
@@ -22,102 +22,102 @@ interface ClubMember {
 const QuizMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Add Name',
+    name: 'Shibanshu Soubhagya Das',
     position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
+    year: '3rd Year',
+    branch: 'Civil Engineering',
+    email: 'shibanshu_2302gt08@iitp.ac.in',
+    linkedinUrl: 'https://in.linkedin.com/in/shibanshu-soubhagya-das-46a5342b5',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/QuizClub/Shibhanshu.png',
   },
   {
     id: 2,
-    name: 'Add Name',
+    name: 'Amal Biju',
     position: 'Coordinator',
-    year: 'Add Year',
+    year: '3rd Year',
     branch: 'Add Branch',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/amal-biju-5ab486300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/QuizClub/Amal.jpg',
   },
   {
     id: 3,
-    name: 'Add Name',
+    name: 'Ashmit verma',
     position: 'Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
-    email: 'Add Email',
-    linkedinUrl: '#',
+    year: '3rd Year',
+    branch: 'Engineering Physics',
+    email: 'ashmit_2301ph07@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/ashmit-verma-412076299',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/Coordinators/QuizClub/Ashmit.jpg',
   },
   {
     id: 4,
-    name: 'Add Name',
+    name: 'Leon Joel',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Mathematics and Computing',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/leon-joel-shaji-723012324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/QuizClub/leonJoel.jpg',
   },
   {
     id: 5,
-    name: 'Add Name',
+    name: 'Sarthak Poddar',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Computer Science and Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/sarthak-poddar-66038b305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/QuizClub/SarthakPoddar.jpg',
   },
   {
     id: 6,
-    name: 'Add Name',
+    name: 'Harshit Singh ',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Engineering Physics',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/harshit-singh-1158b1367/',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/QuizClub/harshit_singh.jpg',
   },
   {
     id: 7,
-    name: 'Add Name',
+    name: 'Joven Sony',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Chemical Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/joven-sony-aa0862224?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/QuizClub/Joven.jpg',
   },
   {
     id: 8,
-    name: 'Add Name',
+    name: 'Abhiram Parupudi ',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Computer Science and Engineering',
     email: 'Add Email',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/abhiram-p-432a43319?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/QuizClub/abhiramParupudi.jpg',
   },
   {
     id: 9,
-    name: 'Add Name',
+    name: 'Heet Joshi',
     position: 'Sub-Coordinator',
-    year: 'Add Year',
-    branch: 'Add Branch',
+    year: '2nd Year',
+    branch: 'Economics',
     email: 'Add Email',
     linkedinUrl: '#',
     instagramUrl: '#',
-    imageUrl: '',
+    imageUrl: '/SubCords/QuizClub/HeetJoshi.jpg',
   }
 ];
 
@@ -285,46 +285,33 @@ const renderMemberCard = (member: ClubMember) => (
           </CardContainer>
 
           {/* Image Gallery */}
-          <CardContainer className="w-full">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">Gallery</h2>
-              <div className="h-[600px] relative rounded-lg overflow-hidden">
-                <Suspense fallback={<div>Loading...</div>}>
-                  <ImagesSlider
-                    className="h-full w-full"
-                    images={[
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.08.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.07.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.07 (2).jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.06.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.06 (2).jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.18.07.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.18.06.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.19.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.18.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.17.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.16.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.15.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.14.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.13.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.12.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.11.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.10.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.08.13.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.06.01.jpeg",
-                      "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.06.00.jpeg"
-                    ]}
-                    overlay={true}
-                    overlayClassName="bg-gradient-to-t from-black/60 via-black/0 to-black/60"
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <h2 className="text-4xl font-bold text-white">Quiz Club Gallery</h2>
-                    </div>
-                  </ImagesSlider>
-                </Suspense>
-              </div>
-            </CardBody>
-          </CardContainer>
+          <div className="mb-16">
+            <ImageGrid
+              images={[
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.08.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.07.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.07 (2).jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.06.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.06 (2).jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.18.07.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.18.06.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.19.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.18.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.17.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.16.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.15.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.14.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.13.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.12.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.11.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.10.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.08.13.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.06.01.jpeg",
+                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.06.00.jpeg"
+              ]}
+              className="max-w-4xl mx-auto"
+            />
+          </div>
         </div>
         {/* Members Section */}
         <section className="mb-16 mt-16">

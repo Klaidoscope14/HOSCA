@@ -145,13 +145,6 @@ export default function DevelopersPage() {
           >
             {member.name}
           </CardItem>
-          <CardItem
-            as="p"
-            translateZ="60"
-            className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300 text-center"
-          >
-            {member.department}
-          </CardItem>
 
           <div className="flex justify-center gap-4 mt-4">
             {member.email && (
@@ -220,7 +213,6 @@ export default function DevelopersPage() {
           </div>
         </section>
 
-        {/* Contributors Section */}
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-center text-white mb-8">Sub Coordinators</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">

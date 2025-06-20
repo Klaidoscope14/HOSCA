@@ -46,7 +46,7 @@ const Navbar = () => {
     <nav className="bg-gradient-to-r from-gray-900 to-gray-950 backdrop-blur-sm border-b border-gray-800 top-0 sticky w-full z-50 shadow-lg">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <Image src="/hosca.jpg" width={0} height={0} sizes="100vw" alt="Logo" className="h-12 w-auto object-contain"/>
+          <Image src="/home/hosca.png" width={0} height={0} sizes="100vw" alt="Logo" className="h-12 w-auto object-contain"/>
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">HOSCA</span>
         </Link>
 

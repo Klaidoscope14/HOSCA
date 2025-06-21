@@ -292,21 +292,26 @@ export default function YavanikaPage() {
         </div>
 
         {/* Members Section */}
-        <section className="mb-16 mt-16">
-          <h2 className="text-4xl font-bold text-center mb-12 text-white">Our Team</h2>
+<section className="mb-16 mt-16">
+  <h2 className="text-4xl font-bold text-center mb-12 text-white">Our Team</h2>
 
-          {/* Coordinators Section */}
-          <h2 className="text-3xl font-semibold text-center mb-6 text-yellow-300 px-2 md:px-0">Coordinators</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 md:px-0">
-            {YavanikaMembers.slice(0, 3).map((member: ClubMember) => renderMemberCard(member))}
-          </div>
+  {/* Coordinators Section */}
+  <h2 className="text-3xl font-semibold text-center mb-6 text-yellow-300 px-2 md:px-0">Coordinators</h2>
+<div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto px-4 md:px-0 mb-6">
+  {YavanikaMembers.slice(0, 3).map((member) => (
+    <div className="flex justify-center">{renderMemberCard(member)}</div>
+  ))}
+</div>
 
-          {/* Sub Coordinators Section */}
-          <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-yellow-300 px-4 md:px-0">Sub Coordinators</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto items-stretch">
-            {YavanikaMembers.slice(3).map((member: ClubMember) => renderMemberCard(member))}
-          </div>
-        </section>
+  {/* Sub Coordinators Section */}
+  <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-yellow-300 px-4 md:px-0">Sub Coordinators</h2>
+<div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto px-4 md:px-0 mb-6">
+  {YavanikaMembers.slice(3).map((member) => (
+    <div className="flex justify-center">{renderMemberCard(member)}</div>
+  ))}
+</div>
+</section>
+
 
 
         {/* Social Media Links */}

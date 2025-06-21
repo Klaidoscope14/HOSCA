@@ -10,21 +10,18 @@ const Navbar = () => {
   const dropdownRef = useRef<HTMLLIElement>(null);
 
   useEffect(() => {
-    // Close dropdown on any click outside
     const handleClickOutside = (e: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setIsDropdownOpen(false);
       }
     };
     
-    // Close dropdown on scroll
     const handleScroll = () => {
       if (isDropdownOpen) {
         setIsDropdownOpen(false);
       }
     };
 
-    // Close dropdown on any touch event outside
     const handleTouchStart = (e: TouchEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setIsDropdownOpen(false);
@@ -50,7 +47,6 @@ const Navbar = () => {
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">HOSCA</span>
         </Link>
 
-        {/* Mobile menu button */}
         <button
           type="button"
           className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-gray-800/50 transition-all duration-300"
@@ -61,7 +57,6 @@ const Navbar = () => {
           </svg>
         </button>
 
-        {/* Nav Links */}
         <div className={`w-full md:block md:w-auto ${isMobileMenuOpen ? '' : 'hidden'}`} id="navbar-dropdown">
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-800 rounded-lg text-white md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent"
               style={{ backgroundColor: isMobileMenuOpen ? '#111827' : 'transparent' }}>
@@ -80,7 +75,6 @@ const Navbar = () => {
               </Link>
             </li>
 
-            {/* Dropdown */}
             <li className="relative" ref={dropdownRef}>
               <button
                 onClick={(e) => {

@@ -6,6 +6,7 @@ import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import { Suspense } from "react";
+import PixxelPage from "../pixxel/page";
 
 interface ClubMember {
   id: number;
@@ -319,16 +320,20 @@ const renderMemberCard = (member: ClubMember) => (
 
 
           {/* Coordinators Section */}
-          <h2 className="text-3xl font-semibold text-left mb-6 text-yellow-400 px-2 md:px-0">Coordinators</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 md:px-0">
-            {QuizMembers.slice(0, 3).map((member) => renderMemberCard(member))}
-          </div>
+          <h2 className="text-3xl font-semibold text-center mb-6 text-yellow-400 px-2 md:px-0">Coordinators</h2>
+<div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto px-4 md:px-0 mb-6">
+  {QuizMembers.slice(0,3).map((member) => (
+    <div className="flex justify-center">{renderMemberCard(member)}</div>
+  ))}
+</div>
 
           {/* Sub Coordinators Section */}
-          <h2 className="text-3xl font-semibold text-left mt-12 mb-6 text-yellow-400 px-4 md:px-0">Sub Coordinators</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto items-stretch">
-            {QuizMembers.slice(3).map((member) => renderMemberCard(member))}
-          </div>
+          <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-yellow-400 px-4 md:px-0">Sub Coordinators</h2>
+<div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto px-4 md:px-0 mb-6">
+  {QuizMembers.slice(3).map((member) => (
+    <div className="flex justify-center">{renderMemberCard(member)}</div>
+  ))}
+</div>
         </section>
         {/* Social Media Links */}
         <div className="flex justify-center gap-6 mt-12">

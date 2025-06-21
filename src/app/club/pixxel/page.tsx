@@ -310,16 +310,20 @@ const renderMemberCard = (member: ClubMember) => (
           <h2 className="text-4xl font-bold text-center mb-12 text-blue-500">Our Team</h2>
 
           {/* Coordinators Section */}
-          <h2 className="text-3xl font-semibold text-left mb-6 text-orange-300 px-2 md:px-0" style={{ color: "#4169E1" }}>Coordinators</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 md:px-0 justify-items-center">
-            {PixxelMembers.slice(0, 3).map((member) => renderMemberCard(member))}
-          </div>
+          <h2 className="text-3xl font-semibold text-center mb-6 text-orange-300 px-2 md:px-0" style={{ color: "#4169E1" }}>Coordinators</h2>
+<div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto px-4 md:px-0 mb-6">
+  {PixxelMembers.slice(0, 3).map((member) => (
+    <div className="flex justify-center">{renderMemberCard(member)}</div>
+  ))}
+</div>
 
           {/* Sub Coordinators Section */}
-          <h2 className="text-3xl font-semibold text-left mt-12 mb-6 text-orange-300 px-4 md:px-0" style={{ color: "#4169E1" }}>Sub Coordinators</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 md:px-0 justify-items-center">
-            {PixxelMembers.slice(3).map((member) => renderMemberCard(member))}
-          </div>
+          <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-orange-300 px-4 md:px-0" style={{ color: "#4169E1" }}>Sub Coordinators</h2>
+<div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto px-4 md:px-0 mb-6">
+  {PixxelMembers.slice(3).map((member) => (
+    <div className="flex justify-center">{renderMemberCard(member)}</div>
+  ))}
+</div>
         </section>
         {/* Social Media Links */}
         <div className="flex justify-center gap-6 mt-12">

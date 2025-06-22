@@ -132,6 +132,12 @@ export default function DevelopersPage() {
           >
             {member.name}
           </CardItem>
+<CardItem
+  translateZ="50"
+  className="text-xl font-bold text-neutral-600 dark:text-white text-center"
+>
+  {member.name}
+</CardItem>
 {member.department && (
   <CardItem
     as="p"
@@ -141,6 +147,7 @@ export default function DevelopersPage() {
     {member.department}
   </CardItem>
 )}
+
 
 
           <div className="flex justify-center gap-4 mt-4">

@@ -99,18 +99,6 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex space-x-4">
-              {/* {socialLinks.iitp.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
-                  aria-label={link.label}
-                >
-                  <link.icon className="w-6 h-6" />
-                </a>
-              ))} */}
             </div>
           </div>
         </div>

@@ -194,18 +194,15 @@ export default function DevelopersPage() {
           </p>
         </section>
 
-        {/* Coordinators Section */}
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-center text-white mb-8">Coordinators</h2>
 
-          {/* First 2 cards in a 2-column row */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
             {mainDevelopers.slice(0, 2).map(developer => (
               <div key={developer.id}>{renderMemberCard(developer)}</div>
             ))}
           </div>
 
-          {/* Remaining cards in 3-column layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {mainDevelopers.slice(2).map(developer => (
               <div key={developer.id}>{renderMemberCard(developer)}</div>
@@ -213,7 +210,6 @@ export default function DevelopersPage() {
           </div>
         </section>
 
-        {/* Contributors Section */}
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-center text-white mb-8">Sub Coordinators</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">

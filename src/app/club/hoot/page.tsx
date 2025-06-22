@@ -1,11 +1,9 @@
 'use client';
-
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {FaLinkedin,FaEnvelope} from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
-import { Suspense } from "react";
 
 interface ClubMember {
   id: number;
@@ -216,10 +214,7 @@ const renderMemberCard = (member: ClubMember) => (
       <BackgroundBeams className="absolute inset-0" />
       
       <div className="container mx-auto px-4 py-8 relative z-10">
-        {/* Hero Section */}
-        {/* Hero Section with Image Left, Content Right */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
-          {/* Image Section - Left on desktop, top on mobile */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
               <img 
@@ -231,7 +226,6 @@ const renderMemberCard = (member: ClubMember) => (
             </div>
           </div>
           
-          {/* Content Section - Right on desktop, bottom on mobile */}
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-green-700 mb-6">
               HOOT
@@ -248,9 +242,7 @@ const renderMemberCard = (member: ClubMember) => (
           </p>
         </div> */}
 
-        {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* About Section */}
           <CardContainer className="w-full">
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">About HOOT</h2>
@@ -280,7 +272,6 @@ const renderMemberCard = (member: ClubMember) => (
             </CardBody>
           </CardContainer>
 
-          {/* Gallery Section */}
           <div className="mb-16">
             <ImageGrid 
               images={[
@@ -302,23 +293,23 @@ const renderMemberCard = (member: ClubMember) => (
             />
           </div>
         </div>
-        {/* Members Section */}
         <section className="mb-16 mt-16">
           <h2 className="text-4xl font-bold text-center mb-12 text-green-800">Our Team</h2>
 
-          {/* Coordinators Section */}
-          <h2 className="text-3xl font-semibold text-left mb-6 text-orange-300 px-2 md:px-0" style={{ color: "#4169E1" }}>Coordinators</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 md:px-0 justify-items-center">
-            {HootMembers.slice(0, 2).map((member) => renderMemberCard(member))}
+          <h2 className="text-3xl font-semibold text-center mb-6 text-orange-300 px-2 md:px-0" style={{ color: "#4169E1" }}>Coordinators</h2>
+          <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto px-4 md:px-0 mb-6">
+            {HootMembers.slice(0, 2).map((member) => (
+              <div className="flex justify-center">{renderMemberCard(member)}</div>
+            ))}
           </div>
 
-          {/* Sub Coordinators Section */}
-          <h2 className="text-3xl font-semibold text-left mt-12 mb-6 text-orange-300 px-4 md:px-0" style={{ color: "#4169E1" }}>Sub Coordinators</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 md:px-0 justify-items-center">
-            {HootMembers.slice(2).map((member) => renderMemberCard(member))}
+          <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-orange-300 px-4 md:px-0" style={{ color: "#4169E1" }}>Sub Coordinators</h2>
+          <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto px-4 md:px-0 mb-6">
+            {HootMembers.slice(2).map((member) => (
+              <div className="flex justify-center">{renderMemberCard(member)}</div>
+            ))}
           </div>
         </section>
-        {/* Social Media Links */}
         <div className="flex justify-center gap-6 mt-12">
           <a
             href="https://facebook.com/hosca.iitp"

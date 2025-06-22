@@ -126,12 +126,7 @@ export default function DevelopersPage() {
             </div>
           </CardItem>
 
-          <CardItem
-            translateZ="50"
-            className="text-xl font-bold text-neutral-600 dark:text-white text-center"
-          >
-            {member.name}
-          </CardItem>
+
 <CardItem
   translateZ="50"
   className="text-xl font-bold text-neutral-600 dark:text-white text-center"

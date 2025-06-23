@@ -9,7 +9,6 @@ import { ImageGrid } from "@/components/ui/image-grid";
 interface ClubMember {
   id: number;
   name: string;
-  position: string;
   imageUrl?: string;
   email?: string;
   linkedinUrl?: string;
@@ -19,7 +18,6 @@ const AnimeMembers: ClubMember[] = [
   {
     id: 1,
     name: 'Chandra Shekhar Azad',
-    position: 'Coordinator',
     email: 'chandra_2301ec09@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/tejavath-chandrashekarazad-7363ab298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/Coordinators/AnimeClub/CSA.jpg',
@@ -27,7 +25,6 @@ const AnimeMembers: ClubMember[] = [
   {
     id: 2,
     name: 'Dikshant K.',
-    position: 'Coordinator',
     email: 'dikshant_2302st02@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/dikshant-khobragade-1b166727b/',
     imageUrl: '/Coordinators/AnimeClub/dikshantsk01.jpg',
@@ -35,7 +32,6 @@ const AnimeMembers: ClubMember[] = [
   {
     id: 3,
     name: 'Akshat',
-    position: 'Coordinator',
     email: 'akshat_2301ce02@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/akshat-kumar-singh-7400b2178?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/Coordinators/AnimeClub/akshat.jpg',
@@ -43,7 +39,6 @@ const AnimeMembers: ClubMember[] = [
   {
     id: 4,
     name: 'Tejash Agrawal ',
-    position: 'Sub-Coordinator',
     email: 'Add Email',
     linkedinUrl: '#',
     imageUrl: '/SubCords/AnimeClub/Tejash.jpg',
@@ -51,7 +46,6 @@ const AnimeMembers: ClubMember[] = [
   {
     id: 5,
     name: 'Ranveer Gupta',
-    position: 'Sub-Coordinator',
     email: 'Add Email',
     linkedinUrl: 'www.linkedin.com/in/ranveer-g-7544a4232',
     imageUrl: '/SubCords/AnimeClub/RanveerGupta.jpg',
@@ -59,7 +53,6 @@ const AnimeMembers: ClubMember[] = [
   {
     id: 6,
     name: 'Adil Khan',
-    position: 'Sub-Coordinator',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/adil-khan-98501a31a/',
     imageUrl: '/SubCords/AnimeClub/AdilKhan.jpg',
@@ -67,7 +60,6 @@ const AnimeMembers: ClubMember[] = [
   {
     id: 7,
     name: 'Satyam Sinha',
-    position: 'Sub-Coordinator',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/satyam-sinha-733801325/',
     imageUrl: '/SubCords/AnimeClub/SatyamSinha.jpg',
@@ -75,7 +67,6 @@ const AnimeMembers: ClubMember[] = [
   {
     id: 8,
     name: 'Raghav',
-    position: 'Sub-Coordinator',
     email: 'Add Email',
     linkedinUrl: 'www.linkedin.com/in/raghav-singla-885bb0325',
     imageUrl: '/SubCords/AnimeClub/Raghav.png',
@@ -83,7 +74,6 @@ const AnimeMembers: ClubMember[] = [
   {
     id: 9,
     name: 'Soyam Bais ',
-    position: 'Sub-Coordinator',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/soyam-bais-58b024329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/AnimeClub/SoyamBais.jpg',
@@ -94,7 +84,7 @@ export default function AnimePage() {
 const renderMemberCard = (member: ClubMember) => (
   <div key={member.id} className="flex justify-center w-full">
     <CardContainer className="w-[320px] h-[320px]">
-      <CardBody className="bg-white text-black border-white border w-[280px] h-[400px] rounded-xl p-6 flex flex-col justify-between">
+      <CardBody className="bg-white text-black border-white border w-[280px] h-[375px] rounded-xl p-6 flex flex-col justify-between">
 
 
         <CardItem translateZ="100" className="w-full mt-4">
@@ -117,22 +107,22 @@ const renderMemberCard = (member: ClubMember) => (
 
         <CardItem
           translateZ="50"
-          className="text-xl font-bold text-navy-950 px-2 h-[3em] flex items-center justify-center -mt-20"
+          className="text-xl font-bold text-navy-950 px-2 h-[3em] flex items-center justify-center -mt-5"
         >
           <div className="line-clamp-2 leading-tight text-center" style={{ color: "#B91C1C" }}>
             {member.name}
           </div>
         </CardItem>
 
-        <CardItem
+        {/* <CardItem
           as="p"
           translateZ="60"
           className="text-white text-sm font-semibold px-2 h-[3em] flex items-center justify-center -mt-25"
         >
           <div className="line-clamp-2 leading-tight text-center" style={{ color: "#B91C1C" }}>
-            {member.position}
+            {member.}
           </div>
-        </CardItem>
+        </CardItem> */}
 
         <div className="flex justify-center gap-3 mt-4">
           {member.email && (
@@ -140,7 +130,7 @@ const renderMemberCard = (member: ClubMember) => (
               translateZ={20}
               as="a"
               href={`mailto:${member.email}`}
-              className="w-10 h-10 p-2 rounded-full bg-white text-black hover:bg-red-500 hover:text-white transition-colors duration-300 flex items-center justify-center -mt-15"
+              className="w-10 h-10 p-2 rounded-full bg-white text-black hover:bg-red-500 hover:text-white transition-colors duration-300 flex items-center justify-center"
               aria-label="Email"
             >
               <FaEnvelope className="w-4 h-4" />
@@ -153,7 +143,7 @@ const renderMemberCard = (member: ClubMember) => (
               href={member.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 p-2 rounded-full bg-white text-black hover:bg-[#0077B5] hover:text-white transition-colors duration-300 flex items-center justify-center -mt-15"
+              className="w-10 h-10 p-2 rounded-full bg-white text-black hover:bg-[#0077B5] hover:text-white transition-colors duration-300 flex items-center justify-center"
               aria-label="LinkedIn"
             >
               <FaLinkedin className="w-4 h-4" />

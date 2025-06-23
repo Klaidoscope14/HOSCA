@@ -107,7 +107,7 @@ const renderMemberCard = (member: ClubMember) => (
 
         <CardItem
           translateZ="50"
-          className="text-xl font-bold text-black dark:text-white px-2 h-[3em] flex items-center justify-center -mt-20"
+          className="text-xl font-bold text-navy-950 px-2 h-[3em] flex items-center justify-center -mt-20"
         >
           <div className="line-clamp-2 leading-tight text-center">
             {member.name}

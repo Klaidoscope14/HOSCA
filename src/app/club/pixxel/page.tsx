@@ -10,112 +10,82 @@ interface ClubMember {
   id: number;
   name: string;
   position: string;
-  year?: string;
-  branch?: string;
   imageUrl?: string;
   email?: string;
   linkedinUrl?: string;
-  instagramUrl?: string;
 }
 
 const PixxelMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Koushik Kondaveti ',
+    name: 'Kondaveti Koushik',
     position: 'Coordinator',
-    year: '3rd Year',
-    branch: 'Mechanical Engineering',
     email: 'koushik_2301me25@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/kondaveti-koushik-83631a285/',
-    instagramUrl: '#',
     imageUrl: '/Coordinators/Pixxel/koushik.jpg',
   },
   {
     id: 2,
-    name: 'Shreyash Sankpal',
+    name: 'Shreyash M',
     position: 'Coordinator',
-    year: '3rd Year',
-    branch: 'Metallurgical and Materials Engineering',
     email: 'shreyash_2301mm16@iitp.ac.in',
     linkedinUrl: '#',
-    instagramUrl: '#',
     imageUrl: '/Coordinators/Pixxel/Shreyash.jpg',
   },
   {
     id: 3,
     name: 'Lochan Bhaskaruni',
     position: 'Coordinator',
-    year: '3rd Year',
-    branch: 'Mechanical Engineering',
     email: 'lochan_2301me28@iitp.ac.in',
     linkedinUrl: 'http://www.linkedin.com/in/lochan-bhaskaruni-10176b283',
-    instagramUrl: '#',
     imageUrl: '/Coordinators/Pixxel/Lochan.jpg',
   },
   {
     id: 4,
-    name: 'R Sai Satya Charan',
+    name: 'Charan Ravipati',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Electrical and Electronics Engineering',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/charan-ravipati-421982332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '/SubCords/Pixxel/CharanRavipati.jpg',
   },
   {
     id: 5,
-    name: 'Kalpit Chaudhary ',
+    name: 'Kalpit Chaudhary',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Civil Engineering',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/kalpit-chaudhary-946b10271?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '/SubCords/Pixxel/KalpitChaudhary.jpg',
   },
   {
     id: 6,
     name: 'K Yashwanth Varma',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Engineering Physics',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/k-yashwanth-varma-50a54a320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '/SubCords/Pixxel/KYashwanthVarma.jpg',
   },
   {
     id: 7,
-    name: 'Cheella Keerthana',
+    name: 'Cheela Keerthana',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Mechanical Engineering',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/keerthana-cheella-27a114333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '/SubCords/Pixxel/CheellaKeerthana.jpg',
   },
   {
     id: 8,
     name: 'Priyanshu Sharma',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Civil Engineering',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/priyanshu-sharma-999740348?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '/SubCords/Pixxel/PriyanshuSharma.jpg',
   },
   {
     id: 9,
-    name: 'Vuyyala Sai Hemanth Goud ',
+    name: 'Vuyyala Sai Hemanth Goud',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Chemical Science and Technology',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/sai-hemanth-vuyyala-579b4536a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
-    instagramUrl: '#',
     imageUrl: '/SubCords/Pixxel/VuyySaiHemanthGoud.JPG',
   }
 ];
@@ -123,8 +93,8 @@ const PixxelMembers: ClubMember[] = [
 export default function PixxelPage() {
 const renderMemberCard = (member: ClubMember) => (
   <div key={member.id} className="flex justify-center w-full">
-    <CardContainer className="w-[320px] h-[520px]">
-      <CardBody className="bg-gray-400 relative group/card border-white border w-[280px] h-[450px] rounded-xl p-6 flex flex-col justify-between">
+    <CardContainer className="w-[320px] h-[320px]">
+      <CardBody className="bg-gray-400 relative group/card border-white border  dark:hover:shadow-2xl dark:hover:shadow-yellow-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[280px] h-[400px] rounded-xl p-6 border flex flex-col justify-between">
         <CardItem translateZ="100" className="w-full mt-4">
           <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-2 border-white bg-white flex items-center justify-center">
             {member.imageUrl ? (
@@ -145,7 +115,7 @@ const renderMemberCard = (member: ClubMember) => (
 
         <CardItem
           translateZ="50"
-          className="text-xl font-bold text-black px-2 h-[3em] flex items-center justify-center"
+          className="text-xl font-bold text-black px-2 h-[3em] flex items-center justify-center -mt-20"
         >
           <div className="line-clamp-2 leading-tight text-center">
             {member.name}
@@ -155,24 +125,12 @@ const renderMemberCard = (member: ClubMember) => (
         <CardItem
           as="p"
           translateZ="60"
-          className="text-white text-sm font-bold px-4 h-[3em] flex items-center justify-center"
+          className="text-white text-sm font-bold px-2 h-[3em] flex items-center justify-center -mt-25"
         >
           <div className="line-clamp-2 leading-tight text-center">
             {member.position}
           </div>
         </CardItem>
-
-        {member.year && member.branch && (
-          <CardItem
-            as="p"
-            translateZ="60"
-            className="text-black text-sm px-2 h-[3em] flex items-center justify-center"
-          >
-            <div className="line-clamp-2 leading-tight text-center">
-              {member.year} - {member.branch}
-            </div>
-          </CardItem>
-        )}
 
         <div className="flex justify-center gap-3 mt-4">
           {member.email && (
@@ -180,7 +138,7 @@ const renderMemberCard = (member: ClubMember) => (
               translateZ={20}
               as="a"
               href={`mailto:${member.email}`}
-              className="p-2 rounded-full bg-white text-black hover:bg-red-500 hover:text-white transition-colors duration-300"
+              className="w-10 h-10 p-2 rounded-full bg-gray-100 hover:bg-red-500 hover:text-white transition-colors duration-300 flex items-center justify-center -mt-15"
               aria-label="Email"
             >
               <FaEnvelope className="w-4 h-4" />
@@ -193,23 +151,10 @@ const renderMemberCard = (member: ClubMember) => (
               href={member.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white text-black hover:bg-[#0077B5] hover:text-white transition-colors duration-300"
+              className="w-10 h-10 p-2 rounded-full bg-gray-100 hover:bg-[#0077B5] hover:text-white transition-colors duration-300 flex items-center justify-center -mt-15"
               aria-label="LinkedIn"
             >
               <FaLinkedin className="w-4 h-4" />
-            </CardItem>
-          )}
-          {member.instagramUrl && (
-            <CardItem
-              translateZ={20}
-              as="a"
-              href={member.instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white text-black hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white transition-colors duration-300"
-              aria-label="Instagram"
-            >
-              <FaInstagram className="w-4 h-4" />
             </CardItem>
           )}
         </div>
@@ -218,9 +163,7 @@ const renderMemberCard = (member: ClubMember) => (
   </div>
 );
   return (
-    <div className="relative min-h-screen w-full bg-[url('/club/aria_background.jpeg')] bg-cover bg-center bg-no-repeat">
-
-      <div className="absolute inset-0 bg-white/[0.6]"></div> 
+    <div className="relative min-h-screen w-full bg-white/[0.6] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <BackgroundBeams className="absolute inset-0" />      
       <div className="container mx-auto px-4 py-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
@@ -236,10 +179,10 @@ const renderMemberCard = (member: ClubMember) => (
           </div>
           
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black-300 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Pixxel
             </h1>
-            <p className="text-lg md:text-xl text-black max-w-2xl mx-auto lg:mx-0">
+            <p className="text-lg md:text-xl text-white max-w-2xl mx-auto lg:mx-0">
               The Photography and Videography Club of IIT Patna - Capturing moments, creating memories.
             </p>
           </div>

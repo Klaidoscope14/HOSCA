@@ -10,12 +10,9 @@ interface ClubMember {
   id: number;
   name: string;
   position: string;
-  year?: string;
-  branch?: string;
   imageUrl?: string;
   email?: string;
   linkedinUrl?: string;
-  instagramUrl?: string;
 }
 
 const EpicureanMembers: ClubMember[] = [
@@ -23,88 +20,64 @@ const EpicureanMembers: ClubMember[] = [
     id: 1,
     name: 'Ananya Maldyar',
     position: 'Coordinator',
-    year: '3rd Year',
-    branch: 'Electrical and Electronics Engineering',
     email: 'ananya_2301ee06@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/ananya-maldyar-132505298/',
-    instagramUrl: '#',
     imageUrl: '/Coordinators/Epicurean/ananya.jpg',
   },
   {
     id: 2,
     name: 'Shibanshu Soubhagya Das',
     position: 'Coordinator',
-    year: '3rd Year',
-    branch: 'Civil Engineering',
     email: 'shibanshu_2302gt08@iitp.ac.in',
     linkedinUrl: 'https://in.linkedin.com/in/shibanshu-soubhagya-das-46a5342b5',
-    instagramUrl: '#',
     imageUrl: '/Coordinators/Epicurean/Shibhanshu.png',
   },
   {
     id: 3,
     name: 'Aditi Lohiya',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Chemical Engineering',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/aditi-lohiya-395532321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '/SubCords/Epicurean/AditiLohiya.jpg',
   },
   {
     id: 4,
     name: 'Avi Bharti',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Computer Science and Engineering',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/avi-bharti-029b1833b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
-    instagramUrl: '#',
     imageUrl: '/SubCords/Epicurean/Avi.jpg',
   },
   {
     id: 5,
-    name: 'Shailja Brijendra Mathuria ',
+    name: 'Shailja Mathuria',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Metallurgical and Materials Engineering',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/shailja-mathuria-739834312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '/SubCords/Epicurean/ShailjaMathuria.jpg',
   },
   {
     id: 6,
-    name: 'Krittika Kiran Das',
+    name: 'Krittika Das',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Electronics and Communication Engineering',
     email: 'Add Email',
     linkedinUrl: 'https://in.linkedin.com/in/krittika-das-4704b2327',
-    instagramUrl: '#',
     imageUrl: '/SubCords/Epicurean/Kritika.HEIC',
   },
   {
     id: 7,
-    name: 'Kumari Shikha ',
+    name: 'Kumari Shikha',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Electrical and Electronics Engineering',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/kumari-shikha-a1506a327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '/SubCords/Epicurean/KumariShikha.jpg',
   },
   {
     id: 8,
-    name: 'Shashank Mishra ',
+    name: 'Shashank Mishra',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Electronics and Communication Engineering',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/shashank-mishra-72b495326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '/SubCords/Epicurean/Shashank.jpg',
   }
 ];
@@ -112,8 +85,8 @@ const EpicureanMembers: ClubMember[] = [
 export default function EpicureanPage() {
 const renderMemberCard = (member: ClubMember) => (
   <div key={member.id} className="flex justify-center w-full">
-    <CardContainer className="w-[320px] h-[520px]">
-      <CardBody className="bg-[#E5AD01] text-black border-white border w-[280px] h-[450px] rounded-xl p-6 flex flex-col justify-between">
+    <CardContainer className="w-[320px] h-[320px]">
+      <CardBody className="bg-[#E5AD01] text-black relative group/card dark:hover:shadow-2xl dark:hover:shadow-yellow-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[280px] h-[400px] rounded-xl p-6 border flex flex-col justify-between">
 
 
         <CardItem translateZ="100" className="w-full mt-4">
@@ -136,7 +109,7 @@ const renderMemberCard = (member: ClubMember) => (
 
         <CardItem
           translateZ="50"
-          className="text-xl font-bold text-indigo-950 px-2 h-[3em] flex items-center justify-center"
+          className="text-xl font-bold text-indigo-950 px-2 h-[3em] flex items-center justify-center -mt-20"
         >
           <div className="line-clamp-2 leading-tight text-center">
             {member.name}
@@ -146,24 +119,12 @@ const renderMemberCard = (member: ClubMember) => (
         <CardItem
           as="p"
           translateZ="60"
-          className="text-white text-sm font-bold px-4 h-[3em] flex items-center justify-center"
+          className="text-white text-sm font-bold px-2 h-[3em] flex items-center justify-center -mt-25"
         >
           <div className="line-clamp-2 leading-tight text-center">
             {member.position}
           </div>
         </CardItem>
-
-        {member.year && member.branch && (
-          <CardItem
-            as="p"
-            translateZ="60"
-            className="text-indigo-950 text-sm px-2 h-[3em] flex items-center justify-center"
-          >
-            <div className="line-clamp-2 leading-tight text-center">
-              {member.year} - {member.branch}
-            </div>
-          </CardItem>
-        )}
 
         <div className="flex justify-center gap-3 mt-4">
           {member.email && (
@@ -171,7 +132,7 @@ const renderMemberCard = (member: ClubMember) => (
               translateZ={20}
               as="a"
               href={`mailto:${member.email}`}
-              className="p-2 rounded-full bg-white text-black hover:bg-red-500 hover:text-white transition-colors duration-300"
+              className="w-10 h-10 p-2 rounded-full bg-gray-100 hover:bg-red-500 hover:text-white transition-colors duration-300 flex items-center justify-center -mt-15"
               aria-label="Email"
             >
               <FaEnvelope className="w-4 h-4" />
@@ -184,23 +145,10 @@ const renderMemberCard = (member: ClubMember) => (
               href={member.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white text-black hover:bg-[#0077B5] hover:text-white transition-colors duration-300"
+              className="w-10 h-10 p-2 rounded-full bg-gray-100 hover:bg-[#0077B5] hover:text-white transition-colors duration-300 flex items-center justify-center -mt-15"
               aria-label="LinkedIn"
             >
               <FaLinkedin className="w-4 h-4" />
-            </CardItem>
-          )}
-          {member.instagramUrl && (
-            <CardItem
-              translateZ={20}
-              as="a"
-              href={member.instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white text-black hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white transition-colors duration-300"
-              aria-label="Instagram"
-            >
-              <FaInstagram className="w-4 h-4" />
             </CardItem>
           )}
         </div>

@@ -11,12 +11,9 @@ interface ClubMember {
   id: number;
   name: string;
   position: string;
-  year?: string;
-  branch?: string;
   imageUrl?: string;
   email?: string;
   linkedinUrl?: string;
-  instagramUrl?: string;
 }
 
 const ExousiaMembers: ClubMember[] = [
@@ -24,88 +21,64 @@ const ExousiaMembers: ClubMember[] = [
     id: 1,
     name: 'Vibhuti Gupta',
     position: 'Coordinator',
-    year: '3rd Year',
-    branch: 'Metallurgical and Materials Engineering',
     email: 'vibhuti_2301mm18@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/vibhuti-gupta-186776262?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '/Coordinators/Exousia/Vibhuti.jpg',
   },
   {
     id: 2,
     name: 'Ghanishth Attrey',
     position: 'Coordinator',
-    year: '3rd Year',
-    branch: 'Civil Engineering',
     email: 'ghanishth_2301ce12@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/ghanishth-attrey-364930351?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '/Coordinators/Exousia/Ghanisth.jpg',
   },
   {
     id: 3,
     name: 'Antriksha Aman',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Computer Science and Engineering',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/antriksha-aman-320383327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '/SubCords/Exousia/Antariksha.jpg',
   },
   {
     id: 4,
-    name: 'J. Karan',
+    name: 'Karan Jarupala',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Electrical and Electronics Engineering',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/karan-jarupulavath-6546212a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '/SubCords/Exousia/KaranJarupala.jpg',
   },
   {
     id: 5,
-    name: 'G. Gagana Sadrush',
+    name: 'Gaganasadrush G',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Economics',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/gaganasadrush-g-1199b9332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '',
   },
   {
     id: 6,
-    name: 'Vennela',
+    name: 'Vennela Jangiti',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Computer Science and Engineering',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/vennela-jangiti-492264352?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '',
   },
   {
     id: 7,
-    name: 'Begari Tanvi',
+    name: 'Tanvi Begari',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Mathematics and Computing',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/tanvi-begari-30ab1036a/',
-    instagramUrl: '#',
     imageUrl: '/SubCords/Exousia/TanviBegari.jpg',
   },
   {
     id: 8,
-    name: 'E. V. Sai Chathurya',
+    name: 'Chathurya',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Computer Science and Engineering',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/chathurya0311',
-    instagramUrl: '#',
     imageUrl: '',
   }
 ];
@@ -113,8 +86,8 @@ const ExousiaMembers: ClubMember[] = [
 export default function ExousiaPage() {
 const renderMemberCard = (member: ClubMember) => (
   <div key={member.id} className="flex justify-center w-full">
-    <CardContainer className="w-[320px] h-[520px]">
-      <CardBody className="bg-orange-400 relative group/card border-white border w-[280px] h-[450px] rounded-xl p-6 flex flex-col justify-between">
+    <CardContainer className="w-[320px] h-[320px]">
+      <CardBody className="bg-orange-400 relative group/card border-white border dark:hover:shadow-2xl dark:hover:shadow-yellow-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[280px] h-[400px] rounded-xl p-6 border flex flex-col justify-between">
         <CardItem translateZ="100" className="w-full mt-4">
           <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-2 border-white bg-white flex items-center justify-center">
             {member.imageUrl ? (
@@ -135,7 +108,7 @@ const renderMemberCard = (member: ClubMember) => (
 
         <CardItem
           translateZ="50"
-          className="text-xl font-bold text-black px-2 h-[3em] flex items-center justify-center"
+          className="text-xl font-bold text-black dark:text-white px-2 h-[3em] flex items-center justify-center -mt-20"
         >
           <div className="line-clamp-2 leading-tight text-center">
             {member.name}
@@ -145,24 +118,12 @@ const renderMemberCard = (member: ClubMember) => (
         <CardItem
           as="p"
           translateZ="60"
-          className="text-white text-sm font-bold px-4 h-[3em] flex items-center justify-center"
+          className="text-white text-sm font-bold px-2 h-[3em] flex items-center justify-center -mt-25"
         >
           <div className="line-clamp-2 leading-tight text-center">
             {member.position}
           </div>
         </CardItem>
-
-        {member.year && member.branch && (
-          <CardItem
-            as="p"
-            translateZ="60"
-            className="text-black text-sm px-2 h-[3em] flex items-center justify-center"
-          >
-            <div className="line-clamp-2 leading-tight text-center">
-              {member.year} - {member.branch}
-            </div>
-          </CardItem>
-        )}
 
         <div className="flex justify-center gap-3 mt-4">
           {member.email && (
@@ -170,7 +131,7 @@ const renderMemberCard = (member: ClubMember) => (
               translateZ={20}
               as="a"
               href={`mailto:${member.email}`}
-              className="p-2 rounded-full bg-white text-black hover:bg-red-500 hover:text-white transition-colors duration-300"
+              className="w-10 h-10 p-2 rounded-full bg-gray-100 hover:bg-red-500 hover:text-white transition-colors duration-300 flex items-center justify-center -mt-15"
               aria-label="Email"
             >
               <FaEnvelope className="w-4 h-4" />
@@ -183,23 +144,10 @@ const renderMemberCard = (member: ClubMember) => (
               href={member.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white text-black hover:bg-[#0077B5] hover:text-white transition-colors duration-300"
+              className="w-10 h-10 p-2 rounded-full bg-gray-100 hover:bg-[#0077B5] hover:text-white transition-colors duration-300 flex items-center justify-center -mt-15"
               aria-label="LinkedIn"
             >
               <FaLinkedin className="w-4 h-4" />
-            </CardItem>
-          )}
-          {member.instagramUrl && (
-            <CardItem
-              translateZ={20}
-              as="a"
-              href={member.instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white text-black hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white transition-colors duration-300"
-              aria-label="Instagram"
-            >
-              <FaInstagram className="w-4 h-4" />
             </CardItem>
           )}
         </div>

@@ -10,110 +10,83 @@ interface ClubMember {
   id: number;
   name: string;
   position: string;
-  year?: string;
-  branch?: string;
   imageUrl?: string;
   email?: string;
   linkedinUrl?: string;
-  instagramUrl?: string;
 }
 
 const VincetrokeMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Chiranjeeb Debata  ',
+    name: 'Chiranjeeb Debata',
     position: 'Coordinator',
-    year: '3rd Year',
-    branch: 'Mechanical Engineering',
     email: 'chiranjeeb_2303me04@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/chiranjeeb-debata-a1a891295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '/Coordinators/VinceTroke/Chiranjeeb.jpg',
   },
   {
     id: 2,
-    name: 'Ishika Khanagwal ',
+    name: 'Ishika Khanagwal',
     position: 'Coordinator',
-    year: '3rd Year',
-    branch: 'Mathematics and Computing',
     email: 'ishika_2301mc09@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/ishika-khanagwal-362432297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '/Coordinators/VinceTroke/Ishika.jpg',
   },
   {
     id: 3,
     name: 'Tanvi Vasoya',
     position: 'Coordinator',
-    year: '3rd Year',
-    branch: 'Civil Engineering',
     email: 'tanvi_2301ce30@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/tanvi-vasoya-32732b298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '/Coordinators/VinceTroke/Tanvi.jpg',
   },
   {
     id: 4,
     name: 'Aditi Lohiya',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Chemical Engineering',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/aditi-lohiya-395532321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
-    imageUrl: '/SubCords/VinceTroke/Aditi_Vincetroke.jpg',
+    imageUrl: '/SubCords/Vincetroke/Aditi_Vincetroke.jpg',
   },
   {
     id: 5,
-    name: 'Riddhesh Dalal ',
+    name: 'Riddhesh Dalal',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Chemical Science and Technology',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/riddhesh-dalal-704664317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
-    imageUrl: '/SubCords/VinceTroke/Riddhesh.jpg',
+    imageUrl: '/SubCords/Vincetroke/Riddhesh.jpg',
   },
   {
     id: 6,
-    name: 'Anand Kumar ',
+    name: 'Anand Kumar',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Metallurgical and Materials Engineering',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/anand-kumar-563523342?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
-    imageUrl: '/SubCords/VinceTroke/Anand.jpg',
+    imageUrl: '/SubCords/Vincetroke/Anand.jpg',
   },
   {
     id: 7,
     name: 'Aviral Pratap Singh',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Computer Science and Engineering',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/aviral-pratap-singh-a88977319/',
-    instagramUrl: '#',
-    imageUrl: '/SubCords/VinceTroke/Aviral.jpg',
+    imageUrl: '/SubCords/Vincetroke/Aviral.jpg',
   },
   {
     id: 8,
     name: 'Richa Chaudhary',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Civil Engineering',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/richa-chaudhary-9a2877349?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
-    imageUrl: '/SubCords/VinceTroke/Richa.jpg',
+    imageUrl: '/SubCords/Vincetroke/Richa.jpg',
   }
 ];
 
 export default function VincetrokePage() {
 const renderMemberCard = (member: ClubMember) => (
   <div key={member.id} className="flex justify-center w-full">
-    <CardContainer className="w-[320px] h-[520px]">
-      <CardBody className="bg-[#D2B48C] text-black border-white border w-[280px] h-[450px] rounded-xl p-6 flex flex-col justify-between">
+    <CardContainer className="w-[320px] h-[320px]">
+      <CardBody className="bg-[#D2B48C] text-black border-white border relative group/card dark:hover:shadow-2xl dark:hover:shadow-yellow-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[280px] h-[400px] rounded-xl p-6 border flex flex-col justify-between">
 
 
         <CardItem translateZ="100" className="w-full mt-4">
@@ -136,7 +109,7 @@ const renderMemberCard = (member: ClubMember) => (
 
         <CardItem
           translateZ="50"
-          className="text-xl font-bold text-navy-950 px-2 h-[3em] flex items-center justify-center"
+          className="text-xl font-bold text-navy-950 px-2 h-[3em] flex items-center justify-center -mt-20"
         >
           <div className="line-clamp-2 leading-tight text-center" style={{ color: "#207C9A" }}>
             {member.name}
@@ -146,24 +119,12 @@ const renderMemberCard = (member: ClubMember) => (
         <CardItem
           as="p"
           translateZ="60"
-          className="text-white text-sm font-bold px-4 h-[3em] flex items-center justify-center"
+          className="text-white text-sm font-bold px-2 h-[3em] flex items-center justify-center -mt-25"
         >
           <div className="line-clamp-2 leading-tight text-center">
             {member.position}
           </div>
         </CardItem>
-
-        {member.year && member.branch && (
-          <CardItem
-            as="p"
-            translateZ="60"
-            className="text-black text-sm px-2 h-[3em] flex items-center justify-center"
-          >
-            <div className="line-clamp-2 leading-tight text-center">
-              {member.year} - {member.branch}
-            </div>
-          </CardItem>
-        )}
 
         <div className="flex justify-center gap-3 mt-4">
           {member.email && (
@@ -171,7 +132,7 @@ const renderMemberCard = (member: ClubMember) => (
               translateZ={20}
               as="a"
               href={`mailto:${member.email}`}
-              className="p-2 rounded-full bg-white text-black hover:bg-red-500 hover:text-white transition-colors duration-300"
+              className="w-10 h-10 p-2 rounded-full bg-gray-100 hover:bg-red-500 hover:text-white transition-colors duration-300 flex items-center justify-center -mt-15"
               aria-label="Email"
             >
               <FaEnvelope className="w-4 h-4" />
@@ -184,23 +145,10 @@ const renderMemberCard = (member: ClubMember) => (
               href={member.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white text-black hover:bg-[#0077B5] hover:text-white transition-colors duration-300"
+              className="w-10 h-10 p-2 rounded-full bg-gray-100 hover:bg-[#0077B5] hover:text-white transition-colors duration-300 flex items-center justify-center -mt-15"
               aria-label="LinkedIn"
             >
               <FaLinkedin className="w-4 h-4" />
-            </CardItem>
-          )}
-          {member.instagramUrl && (
-            <CardItem
-              translateZ={20}
-              as="a"
-              href={member.instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white text-black hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white transition-colors duration-300"
-              aria-label="Instagram"
-            >
-              <FaInstagram className="w-4 h-4" />
             </CardItem>
           )}
         </div>
@@ -209,9 +157,7 @@ const renderMemberCard = (member: ClubMember) => (
   </div>
 );
   return (
-    <div className="relative min-h-screen w-full bg-[url('/club/aria_background.jpeg')] bg-cover bg-center bg-no-repeat">
-
-      <div className="absolute inset-0 bg-white/[0.6]"></div> 
+    <div className="relative min-h-screen w-full bg-white/[0.6] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <BackgroundBeams className="absolute inset-0" />
       
       <div className="container mx-auto px-4 py-8 relative z-10">
@@ -228,10 +174,10 @@ const renderMemberCard = (member: ClubMember) => (
           </div>
           
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-sky-400 mb-6" style={{ color: "#007C91" }}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-sky-400 mb-6">
               Vincetroke
             </h1>
-            <p className="text-lg md:text-xl text-black max-w-2xl mx-auto lg:mx-0">
+            <p className="text-lg md:text-xl text-white max-w-2xl mx-auto lg:mx-0">
               let their imagination run wild and provides them with the sight to see things in a different way.
             </p>
           </div>
@@ -284,17 +230,17 @@ const renderMemberCard = (member: ClubMember) => (
           </div>
         </div>
         <section className="mb-16 mt-16">
-          <h2 className="text-4xl font-bold text-center mb-12" style={{ color: "#207C9A" }}>Our Team</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-white">Our Team</h2>
 
 
-          <h2 className="text-3xl font-semibold text-center mb-6 text-orange-300 px-2 md:px-0" style={{ color: "#4169E1" }}>Coordinators</h2>
+          <h2 className="text-3xl font-semibold text-center mb-6 text-yellow-300 px-2 md:px-0">Coordinators</h2>
           <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto px-4 md:px-0 mb-6">
             {VincetrokeMembers.slice(0, 3).map((member) => (
               <div className="flex justify-center">{renderMemberCard(member)}</div>
             ))}
           </div>
 
-          <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-orange-300 px-4 md:px-0" style={{ color: "#4169E1" }}>Sub Coordinators</h2>
+          <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-yellow-300 px-4 md:px-0">Sub Coordinators</h2>
           <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto px-4 md:px-0 mb-6">
             {VincetrokeMembers.slice(3).map((member) => (
               <div className="flex justify-center">{renderMemberCard(member)}</div>

@@ -10,101 +10,74 @@ interface ClubMember {
   id: number;
   name: string;
   position: string;
-  year?: string;
-  branch?: string;
   imageUrl?: string;
   email?: string;
   linkedinUrl?: string;
-  instagramUrl?: string;
 }
 
-const AnimeMembers: ClubMember[] = [
+const IkkattMembers: ClubMember[] = [
   {
     id: 1,
     name: 'Rajesh Kumar',
-    position: 'President',
-    year: '4th Year',
-    branch: 'Civil  Engineering',
+    position: 'Coordinator',
     email: 'rajesh.civil@iitp.ac.in',
     linkedinUrl: 'https://linkedin.com/in/rajeshkumar',
-    instagramUrl: 'https://instagram.com/rajeshkumar',
     imageUrl: '/club/members/rajesh.jpg',
   },
   {
     id: 2,
     name: 'Priya Sharma',
-    position: 'Vice President',
-    year: '3rd Year',
-    branch: 'Computer   Science',
+    position: 'Coordinator',
     email: 'priya.cs@iitp.ac.in',
     linkedinUrl: 'https://linkedin.com/in/priyasharma',
-    instagramUrl: 'https://instagram.com/priyasharma',
     imageUrl: '/club/members/priya.jpg',
   },
   {
     id: 3,
     name: 'Amit Verma',
-    position: 'Secretary',
-    year: '3rd Year',
-    branch: 'Mechanical Engineering',
+    position: 'Sub-Coordinator',
     email: 'amit.mech@iitp.ac.in',
     linkedinUrl: 'https://linkedin.com/in/amitverma',
-    instagramUrl: 'https://instagram.com/amitverma',
     imageUrl: '/club/members/amit.jpg',
   },
   {
     id: 4,
     name: 'Sneha Patel',
-    position: 'Creative Head',
-    year: '2nd Year',
-    branch: 'Electrical Engineering',
+    position: 'Sub-Coordinator',
     email: 'sneha.ee@iitp.ac.in',
     linkedinUrl: 'https://linkedin.com/in/snehapatel',
-    instagramUrl: 'https://instagram.com/snehapatel',
     imageUrl: '/club/members/sneha.jpg',
   },
   {
     id: 5,
     name: 'Arjun Singh',
-    position: 'Script Writer',
-    year: '2nd Year',
-    branch: 'Chemical Engineering',
+    position: 'Sub-Coordinator',
     email: 'arjun.chem@iitp.ac.in',
     linkedinUrl: 'https://linkedin.com/in/arjunsingh',
-    instagramUrl: 'https://instagram.com/arjunsingh',
     imageUrl: '/club/members/arjun.jpg',
   },
   {
     id: 6,
     name: 'Kavya Nair',
-    position: 'Director',
-    year: '4th Year',
-    branch: ' Bio-technology ',
+    position: 'Sub-Coordinator',
     email: 'kavya.bt@iitp.ac.in',
     linkedinUrl: 'https://linkedin.com/in/kavyanair',
-    instagramUrl: 'https://instagram.com/kavyanair',
     imageUrl: '/club/members/kavya.jpg',
   },
   {
     id: 7,
     name: 'Rohit Gupta',
-    position: 'Stage Manager',
-    year: '3rd Year',
-    branch: '  Metallurgy  ',
+    position: 'Sub-Coordinator',
     email: 'rohit.met@iitp.ac.in',
     linkedinUrl: 'https://linkedin.com/in/rohitgupta',
-    instagramUrl: 'https://instagram.com/rohitgupta',
     imageUrl: '/club/members/rohit.jpg',
   },
   {
     id: 8,
     name: 'Ananya Joshi',
-    position: 'Costume Designer',
-    year: '2nd Year ',
-    branch: 'Physics        ',
+    position: 'Sub-Coordinator',
     email: 'ananya.phy@iitp.ac.in',
     linkedinUrl: 'https://linkedin.com/in/ananyajoshi',
-    instagramUrl: 'https://instagram.com/ananyajoshi',
     imageUrl: '/club/members/ananya.jpg',
   }
 ];
@@ -112,8 +85,8 @@ const AnimeMembers: ClubMember[] = [
 export default function AnimePage() {
 const renderMemberCard = (member: ClubMember) => (
   <div key={member.id} className="flex justify-center w-full">
-    <CardContainer className="w-[320px] h-[520px]">
-      <CardBody className="bg-[#F5D7A1] text-black border-white border w-[280px] h-[450px] rounded-xl p-6 flex flex-col justify-between">
+    <CardContainer className="w-[320px] h-[320px]">
+      <CardBody className="bg-white dark:bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-yellow-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[280px] h-[400px] rounded-xl p-6 border flex flex-col justify-between">
 
 
         <CardItem translateZ="100" className="w-full mt-4">
@@ -136,7 +109,7 @@ const renderMemberCard = (member: ClubMember) => (
 
         <CardItem
           translateZ="50"
-          className="text-xl font-bold text-navy-950 px-2 h-[3em] flex items-center justify-center"
+          className="text-xl font-bold text-navy-950 px-2 h-[3em] flex items-center justify-center -mt-20"
         >
           <div className="line-clamp-2 leading-tight text-center" style={{ color: "#007C91" }}>
             {member.name}
@@ -146,24 +119,12 @@ const renderMemberCard = (member: ClubMember) => (
         <CardItem
           as="p"
           translateZ="60"
-          className="text-white text-sm font-bold px-4 h-[3em] flex items-center justify-center"
+          className="text-white text-sm font-bold px-2 h-[3em] flex items-center justify-center -mt-25"
         >
           <div className="line-clamp-2 leading-tight text-center" style={{ color: "#660A11" }}>
             {member.position}
           </div>
         </CardItem>
-
-        {member.year && member.branch && (
-          <CardItem
-            as="p"
-            translateZ="60"
-            className="text-black text-sm px-2 h-[3em] flex items-center justify-center"
-          >
-            <div className="line-clamp-2 leading-tight text-center" style={{ color: "#1E3A8A" }}>
-              {member.year} - {member.branch}
-            </div>
-          </CardItem>
-        )}
 
         <div className="flex justify-center gap-3 mt-4">
           {member.email && (
@@ -171,7 +132,7 @@ const renderMemberCard = (member: ClubMember) => (
               translateZ={20}
               as="a"
               href={`mailto:${member.email}`}
-              className="p-2 rounded-full bg-white text-black hover:bg-red-500 hover:text-white transition-colors duration-300"
+              className="w-10 h-10 p-2 rounded-full bg-gray-100 hover:bg-red-500 hover:text-white transition-colors duration-300 flex items-center justify-center -mt-15"
               aria-label="Email"
             >
               <FaEnvelope className="w-4 h-4" />
@@ -184,23 +145,10 @@ const renderMemberCard = (member: ClubMember) => (
               href={member.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white text-black hover:bg-[#0077B5] hover:text-white transition-colors duration-300"
+              className="w-10 h-10 p-2 rounded-full bg-gray-100 hover:bg-[#0077B5] hover:text-white transition-colors duration-300 flex items-center justify-center -mt-15"
               aria-label="LinkedIn"
             >
               <FaLinkedin className="w-4 h-4" />
-            </CardItem>
-          )}
-          {member.instagramUrl && (
-            <CardItem
-              translateZ={20}
-              as="a"
-              href={member.instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white text-black hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white transition-colors duration-300"
-              aria-label="Instagram"
-            >
-              <FaInstagram className="w-4 h-4" />
             </CardItem>
           )}
         </div>
@@ -287,12 +235,12 @@ const renderMemberCard = (member: ClubMember) => (
 
           <h2 className="text-4xl font-semibold text-center mb-6 text-orange-300 px-2 md:px-0" style={{ color: "#191970" }}>Coordinators</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 md:px-0">
-            {AnimeMembers.slice(0, 4).map((member) => renderMemberCard(member))}
+            {IkkattMembers.slice(0, 4).map((member) => renderMemberCard(member))}
           </div>
 
           <h2 className="text-4xl font-semibold text-center mt-12 mb-6 text-orange-300 px-4 md:px-0" style={{ color: "#191970" }}>Sub Coordinators</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto items-stretch">
-            {AnimeMembers.slice(4).map((member) => renderMemberCard(member))}
+            {IkkattMembers.slice(4).map((member) => renderMemberCard(member))}
           </div>
         </section>
         

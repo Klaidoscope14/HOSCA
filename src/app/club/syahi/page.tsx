@@ -10,12 +10,9 @@ interface ClubMember {
   id: number;
   name: string;
   position: string;
-  year?: string;
-  branch?: string;
   imageUrl?: string;
   email?: string;
   linkedinUrl?: string;
-  instagramUrl?: string;
 }
 
 const SyahiMembers: ClubMember[] = [
@@ -23,88 +20,64 @@ const SyahiMembers: ClubMember[] = [
     id: 1,
     name: 'Devanshu Kumar',
     position: 'Coordinator',
-    year: '3rd year',
-    branch: 'Chemical Science and Technology',
     email: 'devanshu_2301ct22@iitp.ac.in',
     linkedinUrl: 'https://linkedin.com/in/devanshu-kumar-08139b298',
-    instagramUrl: '#',
     imageUrl: '/Coordinators/Syahi/DevanshuKumar.jpeg',
   },
   {
     id: 2,
-    name: 'Kaustuv Anand ',
+    name: 'Kaustuv Anand',
     position: 'Coordinator',
-    year: '3rd year',
-    branch: 'Civil Engineering',
     email: 'kaustuv_2301ce44@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/kaustuv-anand-1981982a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '/Coordinators/Syahi/Kaustuv.jpg',
   },
   {
     id: 3,
-    name: 'Huzaim Zaoraiz ',
+    name: 'Huzaim Zaoraiz',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Chemical Science and Technology',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/huzaim-zaoraiz-a03216335?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '/SubCords/Syahi/huzaimZaoraiz.JPG',
   },
   {
     id: 4,
     name: 'Choudhary Lucky',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Metallurgical and Materials Engineering',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/choudhary-lucky-139484330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '/SubCords/Syahi/choudharyLucky.jpg',
   },
   {
     id: 5,
-    name: 'Tanush',
+    name: 'Tanush Kumar',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Engineering Physics',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/tanushkumar-yadav-9126812b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '/SubCords/Syahi/tanush.jpg',
   },
   {
     id: 6,
     name: 'Shatadrumi Dey',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Mathematics and Computing',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/shatadrumi-dey-07933031a/',
-    instagramUrl: '#',
     imageUrl: '/SubCords/Syahi/shatadrumiDey.jpg',
   },
   {
     id: 7,
     name: 'Anshika Singh',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Mechanical Engineering',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/anshika-singh-764830365',
-    instagramUrl: '#',
     imageUrl: '/SubCords/Syahi/anshikaSingh.jpg',
   },
   {
     id: 8,
-    name: 'Anand',
+    name: 'Anand Kumar',
     position: 'Sub-Coordinator',
-    year: '2nd Year',
-    branch: 'Metallurgical and Materials Engineering',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/anand-kumar-563523342?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    instagramUrl: '#',
     imageUrl: '/SubCords/Syahi/anand.jpg',
   }
 ];
@@ -112,8 +85,8 @@ const SyahiMembers: ClubMember[] = [
 export default function SyahiPage() {
 const renderMemberCard = (member: ClubMember) => (
   <div key={member.id} className="flex justify-center w-full">
-    <CardContainer className="w-[320px] h-[520px]">
-      <CardBody className="bg-blue-200 text-black border-white border w-[280px] h-[450px] rounded-xl p-6 flex flex-col justify-between">
+    <CardContainer className="w-[320px] h-[320px]">
+      <CardBody className="bg-blue-200 text-black border-white border relative group/card dark:hover:shadow-2xl dark:hover:shadow-yellow-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[280px] h-[400px] rounded-xl p-6 border flex flex-col justify-between">
 
 
         <CardItem translateZ="100" className="w-full mt-4">
@@ -136,7 +109,7 @@ const renderMemberCard = (member: ClubMember) => (
 
         <CardItem
           translateZ="50"
-          className="text-xl font-bold text-blue-950 px-2 h-[3em] flex items-center justify-center"
+          className="text-xl font-bold text-blue-950 px-2 h-[3em] flex items-center justify-center -mt-20"
         >
           <div className="line-clamp-2 leading-tight text-center">
             {member.name}
@@ -146,24 +119,12 @@ const renderMemberCard = (member: ClubMember) => (
         <CardItem
           as="p"
           translateZ="60"
-          className="text-white text-sm font-bold px-4 h-[3em] flex items-center justify-center"
+          className="text-white text-sm font-bold px-2 h-[3em] flex items-center justify-center -mt-25"
         >
           <div className="line-clamp-2 leading-tight text-center">
             {member.position}
           </div>
         </CardItem>
-
-        {member.year && member.branch && (
-          <CardItem
-            as="p"
-            translateZ="60"
-            className="text-blue-950 text-sm px-2 h-[3em] flex items-center justify-center"
-          >
-            <div className="line-clamp-2 leading-tight text-center">
-              {member.year} - {member.branch}
-            </div>
-          </CardItem>
-        )}
 
         <div className="flex justify-center gap-3 mt-4">
           {member.email && (
@@ -171,7 +132,7 @@ const renderMemberCard = (member: ClubMember) => (
               translateZ={20}
               as="a"
               href={`mailto:${member.email}`}
-              className="p-2 rounded-full bg-white text-black hover:bg-red-500 hover:text-white transition-colors duration-300"
+              className="w-10 h-10 p-2 rounded-full bg-gray-100 hover:bg-red-500 hover:text-white transition-colors duration-300 flex items-center justify-center -mt-15"
               aria-label="Email"
             >
               <FaEnvelope className="w-4 h-4" />
@@ -184,23 +145,10 @@ const renderMemberCard = (member: ClubMember) => (
               href={member.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white text-black hover:bg-[#0077B5] hover:text-white transition-colors duration-300"
+              className="w-10 h-10 p-2 rounded-full bg-gray-100 hover:bg-[#0077B5] hover:text-white transition-colors duration-300 flex items-center justify-center -mt-15"
               aria-label="LinkedIn"
             >
               <FaLinkedin className="w-4 h-4" />
-            </CardItem>
-          )}
-          {member.instagramUrl && (
-            <CardItem
-              translateZ={20}
-              as="a"
-              href={member.instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white text-black hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white transition-colors duration-300"
-              aria-label="Instagram"
-            >
-              <FaInstagram className="w-4 h-4" />
             </CardItem>
           )}
         </div>

@@ -86,7 +86,7 @@ export default function EpicureanPage() {
 const renderMemberCard = (member: ClubMember) => (
   <div key={member.id} className="flex justify-center w-full">
     <CardContainer className="w-[320px] h-[320px]">
-      <CardBody className="bg-[#E5AD01] text-black relative group/card dark:hover:shadow-2xl dark:hover:shadow-yellow-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[280px] h-[400px] rounded-xl p-6 border flex flex-col justify-between">
+      <CardBody className="bg-[#E5AD01] text-black relative group/card dark:hover:shadow-2xl dark:hover:shadow-yellow-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[280px] h-[320px] rounded-xl p-6 border flex flex-col justify-between">
 
 
         <CardItem translateZ="100" className="w-full mt-4">
@@ -116,23 +116,13 @@ const renderMemberCard = (member: ClubMember) => (
           </div>
         </CardItem>
 
-        <CardItem
-          as="p"
-          translateZ="60"
-          className="text-white text-sm font-bold px-2 h-[3em] flex items-center justify-center -mt-25"
-        >
-          <div className="line-clamp-2 leading-tight text-center">
-            {member.position}
-          </div>
-        </CardItem>
-
-        <div className="flex justify-center gap-3 mt-4">
+        <div className="flex justify-center gap-3 -mt-3">
           {member.email && (
             <CardItem
               translateZ={20}
               as="a"
               href={`mailto:${member.email}`}
-              className="w-10 h-10 p-2 rounded-full bg-gray-100 hover:bg-red-500 hover:text-white transition-colors duration-300 flex items-center justify-center -mt-15"
+              className="w-15 h-8 p-2 rounded-full bg-gray-100 hover:bg-red-500 hover:text-white transition-colors duration-300 flex items-center justify-center -mt-10"
               aria-label="Email"
             >
               <FaEnvelope className="w-4 h-4" />
@@ -145,7 +135,7 @@ const renderMemberCard = (member: ClubMember) => (
               href={member.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 p-2 rounded-full bg-gray-100 hover:bg-[#0077B5] hover:text-white transition-colors duration-300 flex items-center justify-center -mt-15"
+              className="w-15 h-8 p-2 rounded-full bg-gray-100 hover:bg-[#0077B5] hover:text-white transition-colors duration-300 flex items-center justify-center -mt-10"
               aria-label="LinkedIn"
             >
               <FaLinkedin className="w-4 h-4" />

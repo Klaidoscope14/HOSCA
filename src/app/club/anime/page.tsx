@@ -84,7 +84,7 @@ export default function AnimePage() {
 const renderMemberCard = (member: ClubMember) => (
   <div key={member.id} className="flex justify-center w-full">
     <CardContainer className="w-[320px] h-[320px]">
-      <CardBody className="bg-white text-black border-white border w-[280px] h-[375px] rounded-xl p-6 flex flex-col justify-between">
+      <CardBody className="bg-white text-black border-white border w-[280px] h-[320px] rounded-xl p-6 flex flex-col justify-between">
 
 
         <CardItem translateZ="100" className="w-full mt-4">
@@ -113,24 +113,13 @@ const renderMemberCard = (member: ClubMember) => (
             {member.name}
           </div>
         </CardItem>
-
-        {/* <CardItem
-          as="p"
-          translateZ="60"
-          className="text-white text-sm font-semibold px-2 h-[3em] flex items-center justify-center -mt-25"
-        >
-          <div className="line-clamp-2 leading-tight text-center" style={{ color: "#B91C1C" }}>
-            {member.}
-          </div>
-        </CardItem> */}
-
-        <div className="flex justify-center gap-3 mt-4">
+        <div className="flex justify-center gap-3 -mt-3">
           {member.email && (
             <CardItem
               translateZ={20}
               as="a"
               href={`mailto:${member.email}`}
-              className="w-10 h-10 p-2 rounded-full bg-white text-black hover:bg-red-500 hover:text-white transition-colors duration-300 flex items-center justify-center"
+              className="w-15 h-8 p-2 rounded-full bg-white text-black hover:bg-red-500 hover:text-white transition-colors duration-300 flex items-center justify-center"
               aria-label="Email"
             >
               <FaEnvelope className="w-4 h-4" />
@@ -143,7 +132,7 @@ const renderMemberCard = (member: ClubMember) => (
               href={member.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 p-2 rounded-full bg-white text-black hover:bg-[#0077B5] hover:text-white transition-colors duration-300 flex items-center justify-center"
+              className="w-15 h-8 p-2 rounded-full bg-white text-black hover:bg-[#0077B5] hover:text-white transition-colors duration-300 flex items-center justify-center"
               aria-label="LinkedIn"
             >
               <FaLinkedin className="w-4 h-4" />

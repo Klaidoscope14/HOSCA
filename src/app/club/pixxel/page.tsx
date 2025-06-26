@@ -86,7 +86,7 @@ const PixxelMembers: ClubMember[] = [
     position: 'Sub-Coordinator',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/sai-hemanth-vuyyala-579b4536a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
-    imageUrl: '/SubCords/Pixxel/VuyySaiHemanthGoud.JPG',
+    imageUrl: '/SubCords/Pixxel/Vuyyala Sai Hemanth Goud.jpg',
   }
 ];
 

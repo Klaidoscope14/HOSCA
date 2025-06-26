@@ -63,7 +63,7 @@ const YavanikaMembers: ClubMember[] = [
     position: 'Sub-Coordinator',
     email: 'Add Email',
     linkedinUrl: 'http://www.linkedin.com/in/priyadeep-jaiswal-39ab001b5',
-    imageUrl: '/SubCords/Yavanika/Priyadeep.heic',
+    imageUrl: '/SubCords/Yavanika/Priyadeep.jpg',
   },
   {
     id: 7,

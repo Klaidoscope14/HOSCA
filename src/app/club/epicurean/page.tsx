@@ -54,7 +54,7 @@ const EpicureanMembers: ClubMember[] = [
     position: 'Sub-Coordinator',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/shailja-mathuria-739834312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Epicurean/ShailjaMathuria.jpg',
+    imageUrl: '/SubCords/Epicurean/Shailja.jpg',
   },
   {
     id: 6,
@@ -62,7 +62,7 @@ const EpicureanMembers: ClubMember[] = [
     position: 'Sub-Coordinator',
     email: 'Add Email',
     linkedinUrl: 'https://in.linkedin.com/in/krittika-das-4704b2327',
-    imageUrl: '/SubCords/Epicurean/Kritika.HEIC',
+    imageUrl: '/SubCords/Epicurean/Kritika.jpg',
   },
   {
     id: 7,

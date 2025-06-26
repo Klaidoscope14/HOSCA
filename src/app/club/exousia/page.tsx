@@ -47,7 +47,7 @@ const ExousiaMembers: ClubMember[] = [
     position: 'Sub-Coordinator',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/karan-jarupulavath-6546212a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Exousia/KaranJarupala.jpg',
+    imageUrl: '/SubCords/Exousia/karan.jpg',
   },
   {
     id: 5,
@@ -55,7 +55,7 @@ const ExousiaMembers: ClubMember[] = [
     position: 'Sub-Coordinator',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/gaganasadrush-g-1199b9332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '',
+    imageUrl: '/SubCords/Exousia/Gagan.jpg',
   },
   {
     id: 6,
@@ -63,7 +63,7 @@ const ExousiaMembers: ClubMember[] = [
     position: 'Sub-Coordinator',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/vennela-jangiti-492264352?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '',
+    imageUrl: '/SubCords/Exousia/Venella.jpg',
   },
   {
     id: 7,
@@ -79,7 +79,7 @@ const ExousiaMembers: ClubMember[] = [
     position: 'Sub-Coordinator',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/chathurya0311',
-    imageUrl: '',
+    imageUrl: '/SubCords/Exousia/Chaturya.png',
   }
 ];
 

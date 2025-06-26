@@ -48,7 +48,7 @@ const AnimeMembers: ClubMember[] = [
     name: 'Ranveer Gupta',
     email: 'Add Email',
     linkedinUrl: 'www.linkedin.com/in/ranveer-g-7544a4232',
-    imageUrl: '/SubCords/AnimeClub/RanveerGupta.jpg',
+    imageUrl: '/SubCords/AnimeClub/Ranveer.jpg',
   },
   {
     id: 6,

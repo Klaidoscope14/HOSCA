@@ -3,6 +3,9 @@
 import React, { createContext, useContext, useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
+const CARD_HEIGHT = "350px"; // Adjust this value as needed
+const CARD_WIDTH = "300px";
+
 const MouseEnterContext = createContext<
   [boolean, React.Dispatch<React.SetStateAction<boolean>>] | undefined
 >(undefined);
@@ -41,9 +44,11 @@ export const CardContainer = ({
   return (
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
-        className={`py-1 flex items-center justify-center ${containerClassName}`}
+        className={`py-0.5 flex items-center justify-center ${containerClassName}`}
         style={{
           perspective: "1000px",
+          height: CARD_HEIGHT, // Set consistent height
+          width: CARD_WIDTH,
         }}
       >
         <motion.div
@@ -57,9 +62,11 @@ export const CardContainer = ({
           transition={{
             duration: 0.2,
           }}
-          className={`flex items-center justify-center relative w-70 h-full ${className}`}
+          className={`flex items-center justify-center relative  ${className}`}
           style={{
             transformStyle: "preserve-3d",
+            height: "100%",
+            width: "100%",
           }}
         >
           {children}
@@ -78,7 +85,11 @@ export const CardBody = ({
 }) => {
   return (
     <div
-      className={`h-96 w-96 [transform-style:preserve-3d] ${className}`}
+      className={`[transform-style:preserve-3d] ${className}`}
+      style={{
+        height: "100%",
+        width: "100%",
+      }}
     >
       {children}
     </div>

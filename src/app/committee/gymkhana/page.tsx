@@ -7,8 +7,7 @@ import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 interface CommitteeMember {
   id: number;
   name: string;
-  position: string;
-  department: string;
+  position: string;  
   imageUrl?: string;
   email?: string;
   linkedinUrl?: string;
@@ -18,71 +17,71 @@ const committeeMembers: CommitteeMember[] = [
   {
     id: 1,
     name: 'Dr. Gymkhana Advisor',
-    position: 'Gymkhana Advisor',
-    department: 'Student Affairs',
+    position: 'PIC Cultural',
     email: 'gymkhana.advisor@iitp.ac.in',
     imageUrl: '/committee/gymkhana-advisor.jpg', 
     linkedinUrl: 'https://linkedin.com/in/gymkhana-advisor', 
   },
   {
     id: 2,
-    name: 'Student General Secretary',
-    position: 'General Secretary',
-    department: '',
-    email: 'gs.gymkhana@iitp.ac.in',
-    imageUrl: '/committee/New Folder/ChiragBhardwaj.JPG', 
-    linkedinUrl: 'https://linkedin.com/in/gs-gymkhana', 
+    name: 'Kashika Aggarwal',
+    position: 'General Secretary Cultural',    
+    email: 'kashika_2201cs35@iitp.ac.in',
+    imageUrl: '/HoscaaCore/kashika.jpg', 
+    linkedinUrl: 'https://www.linkedin.com/in/kashika-aggarwal-15b0bb259/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', 
   },
   {
     id: 3,
-    name: 'Cultural Secretary',
-    position: 'Cultural Secretary',
-    department: 'Civil Engineering',
-    email: 'cultural.secretary@iitp.ac.in',
-    imageUrl: '/committee/cultural-secretary.jpg', 
-    linkedinUrl: 'https://linkedin.com/in/cultural-secretary', 
+    name: 'Senior Year Secretary',
+    position: 'Senior Year Secretary',    
+    email: 'senior.secretary@iitp.ac.in',
+    imageUrl: '/committee/sports-secretary.jpg',
+    linkedinUrl: 'https://linkedin.com/in/sports-secretary',
   },
   {
     id: 4,
-    name: 'Technical Secretary',
-    position: 'Technical Secretary',
-    department: 'Computer Science',
-    email: 'technical.secretary@iitp.ac.in',
-    imageUrl: '/committee/technical-secretary.jpg',
-    linkedinUrl: 'https://linkedin.com/in/technical-secretary',
+    name: 'Nikhil Pandey',
+    position: 'Junior Year Secretary',
+    email: 'nikhil_2301cb30@iitp.ac.in',
+    imageUrl: '/HoscaaCore/Nikhil.jpeg', 
+    linkedinUrl: 'https://www.linkedin.com/in/nikhil-pandey-319b05368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', 
   },
   {
     id: 5,
+    name: 'Singu Ashwin Manikanta Chowdary',
+    position: 'Sophomore Year Secretary',    
+    email: 'singu_2401mm09@iitp.ac.in',
+    imageUrl: '/HoscaaCore/ashwin.jpg',
+    linkedinUrl: 'https://www.linkedin.com/in/ashwin-chowdary-b5306034a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+  },
+  {
+    id: 6,
     name: 'Sports Secretary',
-    position: 'Sports Secretary',
-    department: 'Mechanical Engineering',
+    position: "UG Girls' Secretary",    
     email: 'sports.secretary@iitp.ac.in',
     imageUrl: '/committee/sports-secretary.jpg',
     linkedinUrl: 'https://linkedin.com/in/sports-secretary',
   },
   {
-    id: 6,
+    id: 7,
     name: 'Literary Secretary',
-    position: 'Literary Secretary',
-    department: 'Electrical Engineering',
+    position: "Masters' Secretary",    
     email: 'literary.secretary@iitp.ac.in',
     imageUrl: '/committee/literary-secretary.jpg',
     linkedinUrl: 'https://linkedin.com/in/literary-secretary',
   },
   {
-    id: 7,
+    id: 8,
     name: 'Social Secretary',
-    position: 'Social Secretary',
-    department: 'Chemical Engineering',
+    position: 'PHD Secretary',   
     email: 'social.secretary@iitp.ac.in',
     imageUrl: '/committee/social-secretary.jpg',
     linkedinUrl: 'https://linkedin.com/in/social-secretary',
   },
   {
-    id: 8,
+    id: 9,
     name: 'Academic Secretary',
-    position: 'Academic Secretary',
-    department: 'Mathematics',
+    position: "PG Girls' Secretary",    
     email: 'academic.secretary@iitp.ac.in',
     imageUrl: '/committee/academic-secretary.jpg',
     linkedinUrl: 'https://linkedin.com/in/academic-secretary',
@@ -90,10 +89,10 @@ const committeeMembers: CommitteeMember[] = [
 ];
 
 export default function GymkhanaCommitteePage() {
-  const gymkhanaAdvisor = committeeMembers.find(member => member.position === 'Gymkhana Advisor');
-  const generalSecretary = committeeMembers.find(member => member.position === 'General Secretary');
+  const gymkhanaAdvisor = committeeMembers.find(member => member.position === 'PIC Cultural');
+  const generalSecretary = committeeMembers.find(member => member.position === 'General Secretary Cultural');
   const otherMembers = committeeMembers.filter(member => 
-    member.position !== 'Gymkhana Advisor' && member.position !== 'General Secretary'
+    member.position !== 'PIC Cultural' && member.position !== 'General Secretary Cultural'
   );
 
   const renderMemberCard = (member: CommitteeMember) => (
@@ -111,7 +110,7 @@ export default function GymkhanaCommitteePage() {
                 />
               ) : (
                 <div className="w-full h-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                  <span className="text-4xl text-gray-400 dark:text-gray-500">
+                  <span className="text-4xl text-gray-400 dark:text-gray-500 flex items-center justify-center w-full h-full">
                     {member.name.charAt(0)}
                   </span>
                 </div>
@@ -119,26 +118,28 @@ export default function GymkhanaCommitteePage() {
             </div>
           </CardItem>
 
-          <CardItem
-            translateZ="50"
-            className="text-xl font-bold text-neutral-600 dark:text-white text-center"
-          >
-            {member.name}
-          </CardItem>
-          <CardItem
-            as="p"
-            translateZ="60"
-            className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300 text-center"
-          >
-            {member.position}
-          </CardItem>
-          <CardItem
-            as="p"
-            translateZ="60"
-            className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300 text-center"
-          >
-            {member.department}
-          </CardItem>
+          <div className = "flex justify-center gap-5 mt-4">
+              <CardItem
+                translateZ="50"
+                className="flex items-center justify-center text-2xl font-bold text-neutral-600 dark:text-white text-center"
+              >
+                {member.name}
+                
+              </CardItem>
+          </div>
+            
+          <div className = "flex justify-center gap-5 mt-4">
+              <CardItem
+                as="p"
+                translateZ="60"
+                className="text-neutral-500 text-md max-w-sm mt-2 dark:text-neutral-300 text-center"
+              >
+                {member.position}
+                
+              </CardItem>
+          </div>
+            
+          
 
           <div className="flex justify-center gap-4 mt-4">
             {member.email && (
@@ -186,27 +187,48 @@ export default function GymkhanaCommitteePage() {
           </p>
         </section>
         
-        <section className="space-y-12">
-          {gymkhanaAdvisor && (
-            <div className="max-w-md mx-auto">
-              {renderMemberCard(gymkhanaAdvisor)}
-            </div>
-          )}
+        {/* <section className="space-y-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+            {gymkhanaAdvisor && (
+              <div className="flex justify-center">
+                {renderMemberCard(gymkhanaAdvisor)}
+              </div>
+            )}
+            {generalSecretary && (
+              <div className="flex justify-center">
+                {renderMemberCard(generalSecretary)}
+              </div>
+            )}
+          </div>
 
-          {generalSecretary && (
-            <div className="max-full mx-auto">
-              {renderMemberCard(generalSecretary)}
-            </div>
-          )}
-
-          <div className="space-y-8">
-            {Array.from({ length: Math.ceil(otherMembers.length / 2) }).map((_, rowIndex) => (
-              <div key={rowIndex} className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto ">
-                {otherMembers.slice(rowIndex * 2, (rowIndex + 1) * 2).map(member => renderMemberCard(member))}
+          <div className="max-w-md mx-auto space-y-8">
+            {otherMembers.map(member => (
+              <div key={member.id} className="flex justify-center">
+                {renderMemberCard(member)}
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
+        <section className="space-y-12">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+  <div>
+    <h3 className="text-3xl font-semibold text-white mb-10 text-center">Faculty Advisor</h3>
+    {gymkhanaAdvisor && renderMemberCard(gymkhanaAdvisor)}
+  </div>
+  <div>
+    <h3 className="text-3xl font-semibold text-white mb-10 text-center">General Secretary</h3>
+    {generalSecretary && renderMemberCard(generalSecretary)}
+  </div>
+</div>
+
+
+  {/* Section: Secretaries */}
+  <h2 className="text-3xl font-semibold text-white text-center mt-12 mb-10">Secretaries</h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+    {otherMembers.map(member => renderMemberCard(member))}
+  </div>
+</section>
+
 
         <section className="mt-12 bg-gray-900/50 backdrop-blur-sm rounded-lg p-8 border border-white/[0.1]">
           <h2 className="text-2xl font-semibold mb-4 text-center text-white">About Gymkhana</h2>

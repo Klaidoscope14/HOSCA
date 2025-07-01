@@ -19,7 +19,7 @@ export default function HeroSection() {
           <VideoText
             className="w-full h-[160px] sm:h-[200px] md:h-[250px] lg:h-[280px] font-bold text-transparent animate-gradient-x"
             src="/video/hosca-bg.mp4"
-            fontSize="clamp(30px, 25vw, 200px)"
+            fontSize="clamp(30px, 25vw, 500px)"
             style={{
               WebkitTextStroke: "1px white",
               filter: "drop-shadow(0 0 6px white)",

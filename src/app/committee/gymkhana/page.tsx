@@ -77,14 +77,6 @@ const committeeMembers: CommitteeMember[] = [
     email: 'social.secretary@iitp.ac.in',
     imageUrl: '/committee/social-secretary.jpg',
     linkedinUrl: 'https://linkedin.com/in/social-secretary',
-  },
-  {
-    id: 9,
-    name: 'Academic Secretary',
-    position: "PG Girls' Secretary",    
-    email: 'academic.secretary@iitp.ac.in',
-    imageUrl: '/committee/academic-secretary.jpg',
-    linkedinUrl: 'https://linkedin.com/in/academic-secretary',
   }
 ];
 

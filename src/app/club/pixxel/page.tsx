@@ -249,7 +249,7 @@ const renderMemberCard = (member: ClubMember) => (
         </section>
         <div className="flex justify-center gap-6 mt-12">
           <a
-            href="https://facebook.com/hosca.iitp"
+            href="https://www.facebook.com/pixxeliitp/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#1877F2] hover:text-white transition-colors duration-300"
@@ -258,7 +258,7 @@ const renderMemberCard = (member: ClubMember) => (
             <FaFacebook className="w-6 h-6" />
           </a>
           <a
-            href="https://instagram.com/hosca_iitp"
+            href="https://www.instagram.com/pixxel_iitp/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#E1306C] hover:text-white transition-colors duration-300"
@@ -267,7 +267,7 @@ const renderMemberCard = (member: ClubMember) => (
             <FaInstagram className="w-6 h-6" />
           </a>
           <a
-            href="https://youtube.com/user/CULTatIITP"
+            href="https://www.youtube.com/@PixxelIITP"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#FF0000] hover:text-white transition-colors duration-300"

@@ -240,17 +240,9 @@ const renderMemberCard = (member: ClubMember) => (
 </div>
         </section>
         <div className="flex justify-center gap-6 mt-12">
+         
           <a
-            href="https://facebook.com/hosca.iitp"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full bg-gray-100 hover:bg-[#1877F2] hover:text-white transition-colors duration-300"
-            aria-label="Facebook"
-          >
-            <FaFacebook className="w-6 h-6" />
-          </a>
-          <a
-            href="https://instagram.com/hosca_iitp"
+            href="https://www.instagram.com/culinary_club_iitpatna/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#E1306C] hover:text-white transition-colors duration-300"
@@ -258,15 +250,7 @@ const renderMemberCard = (member: ClubMember) => (
           >
             <FaInstagram className="w-6 h-6" />
           </a>
-          <a
-            href="https://youtube.com/user/CULTatIITP"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full bg-gray-100 hover:bg-[#FF0000] hover:text-white transition-colors duration-300"
-            aria-label="YouTube"
-          >
-            <FaYoutube className="w-6 h-6" />
-          </a>
+         
         </div>
       </div>
     </div>

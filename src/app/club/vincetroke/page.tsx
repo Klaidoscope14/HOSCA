@@ -255,15 +255,7 @@ const renderMemberCard = (member: ClubMember) => (
           >
             <FaInstagram className="w-6 h-6" />
           </a>
-          <a
-            href="https://youtube.com/user/CULTatIITP"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full bg-gray-100 hover:bg-[#FF0000] hover:text-white transition-colors duration-300"
-            aria-label="YouTube"
-          >
-            <FaYoutube className="w-6 h-6" />
-          </a>
+         
         </div>
       </div>
     </div>

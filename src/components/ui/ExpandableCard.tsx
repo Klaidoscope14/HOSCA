@@ -3,9 +3,8 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/components/hooks/ExpandableCard";
-import { FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { IoPlay } from "react-icons/io5";
-import { MdEmail } from "react-icons/md";
 
 export function ExpandableCardDemo() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -79,69 +78,29 @@ export function ExpandableCardDemo() {
               mass: 1,
               duration: 0.3
             }}
-            className="w-[80vw] max-w-[500px] h-[65vh] md:h-[75vh] md:max-h-[80vh] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-2xl rounded-2xl overflow-hidden relative min-h-[400px] shadow-2xl"
+            className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90vh] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden relative min-h-[500px] shadow-2xl"
           >
-            <motion.div
-              ref={ref}
-              initial={{
-                opacity: 0,
-                scale: 0.92,
-                y: 40,
-                boxShadow: "0 0 0 0 rgba(0,0,0,0)",
-                filter: "blur(8px)",
-              }}
-              animate={{
-                opacity: 1,
-                scale: 1,
-                y: 0,
-                boxShadow: "0 12px 32px 0 rgba(80,80,180,0.10), 0 1.5px 8px 0 rgba(244,114,182,0.10)",
-                filter: "blur(0px)",
-                transition: {
-                  type: "spring",
-                  stiffness: 220,
-                  damping: 24,
-                  mass: 1,
-                  opacity: { duration: 0.18 },
-                  filter: { duration: 0.22 },
-                },
-              }}
-              exit={{
-                opacity: 0,
-                scale: 0.92,
-                y: 40,
-                boxShadow: "0 0 0 0 rgba(0,0,0,0)",
-                filter: "blur(8px)",
-                transition: {
-                  type: "spring",
-                  stiffness: 220,
-                  damping: 24,
-                  mass: 1,
-                  opacity: { duration: 0.18 },
-                  filter: { duration: 0.22 },
-                },
-              }}
-              className="
-              "
-            >
-              <button
-                onClick={() => setActive(null)}
-                className="absolute top-4 right-4 z-20 p-2 rounded-full bg-gray-100 hover:bg-red-100 transition-colors"
-                aria-label="Close"
-                type="button"
-              >
-              <CloseIcon />
-              </button>
-              <div className="relative w-full bg-gradient-to-b from-gray-100/80 to-white dark:from-neutral-800 dark:to-neutral-900 flex items-center justify-center overflow-hidden">
-                <img
-                  width={320}
-                  height={320}
-                  src={active.src}
-                  alt={active.title}
-                  className="object-contain max-h-full max-w-full mx-auto drop-shadow-lg transition-all duration-300"
-                  style={{ background: "transparent" }}
-                />
-              </div>
-            </motion.div>
+          <motion.div
+            layoutId={`image-${active.title}-${id}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ 
+              opacity: 0,
+              transition: {
+                duration: 0.15,
+                ease: "easeInOut"
+              }
+            }}
+            className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg overflow-hidden"
+          >
+            <img
+              width={200}
+              height={200}
+              src={active.src}
+              alt={active.title}
+              className="w-full h-full object-cover object-top"
+            />
+          </motion.div>
           <div className="flex flex-col h-full">
             <div className="flex justify-between items-start p-4">
               <div>
@@ -308,17 +267,17 @@ export function ExpandableCardDemo() {
                 className="flex gap-2 opacity-100 transition-opacity duration-300"
                 onClick={(e) => e.stopPropagation()}
               >
-              {card.outlookLink && (
-                <a
-                  href={card.outlookLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-gray-100 hover:bg-blue-500 hover:text-white transition-colors duration-300"
-                  aria-label="Email"
-                >
-                  <MdEmail className="w-4 h-4" />
-                </a>
-              )}  
+                {card.facebookLink && (
+                  <a
+                    href={card.facebookLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-full bg-gray-100 hover:bg-[#1877F2] hover:text-white transition-colors duration-300"
+                    aria-label="Facebook"
+                  >
+                    <FaFacebook className="w-4 h-4" />
+                  </a>
+                )}
                 {card.instagramLink && (
                   <a
                     href={card.instagramLink}
@@ -386,7 +345,7 @@ const cards = [
     src: "/ClubLogo/yavanika.png",
     ctaText: "Learn More",
     ctaLink: "/club/yavanika",
-    outlookLink: "mailto:drama_club@iitp.ac.in",
+    facebookLink: "https://www.facebook.com/yavanika.iitp/",
     instagramLink: "https://www.instagram.com/yavanika_iitp/?hl=en",
     content: () => (
       <p>
@@ -400,7 +359,7 @@ const cards = [
     src: "/ClubLogo/exousia.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/exousia",
-    outlookLink: "mailto:danceclub@iitp.ac.in",
+    facebookLink: "https://www.facebook.com/DanceClubIITPatna/",
     instagramLink: "https://www.instagram.com/exousia_iitp/",
     content: () => (
       <p>
@@ -414,7 +373,7 @@ const cards = [
     src: "/ClubLogo/aria.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/aria",
-    outlookLink: "mailto:music_club@iitp.ac.in",
+    facebookLink: "https://www.facebook.com/musicclubiitpatna/",
     instagramLink: "https://www.instagram.com/aria_iitp/",
     content: () => (
       <p>
@@ -428,7 +387,7 @@ const cards = [
     src: "/ClubLogo/Pixxel.jpeg",
     ctaText: "Learn More",
     ctaLink: "/club/pixxel",
-    outlookLink: "mailto:pixxell_club@iitp.ac.in",
+    facebookLink: "https://www.facebook.com/pixxeliitp/",
     instagramLink: "https://www.instagram.com/pixxel_iitp/?hl=en",
     content: () => (
       <p>
@@ -442,7 +401,7 @@ const cards = [
     src: "/ClubLogo/hoot.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/hoot",
-    outlookLink: "mailto:hoot@iitp.ac.in",
+    facebookLink: "https://www.facebook.com/hootiitp/",
     instagramLink: "https://www.instagram.com/hoot.iitp/",
     content: () => (
       <p>
@@ -456,7 +415,7 @@ const cards = [
     src: "/ClubLogo/quiz.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/quiz",
-    outlookLink: "mailto:quizclub@iitp.ac.in",
+    facebookLink: "https://www.facebook.com/quizclubTO/",
     instagramLink: "https://www.instagram.com/qc_iitp/",
     content: () => (
       <p>
@@ -470,7 +429,7 @@ const cards = [
     src: "/ClubLogo/Syahi.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/syahi",
-    outlookLink: "mailto:literary_club@iitp.ac.in",
+    facebookLink: "https://www.facebook.com/quizclubTO/",
     instagramLink: "https://www.instagram.com/qc_iitp/",
     content: () => (
       <p>
@@ -484,7 +443,7 @@ const cards = [
     src: "/ClubLogo/epicurean.png",
     ctaText: "Learn More",
     ctaLink: "/club/epicurean",
-    outlookLink: "mailto:culinary_club@iitp.ac.in",
+    facebookLink: "https://hi-in.facebook.com/watch/syahi_iitp/",
     instagramLink: "https://www.instagram.com/culinary_club_iitpatna/",
     content: () => (
       <p>
@@ -498,7 +457,7 @@ const cards = [
     src: "/ClubLogo/HexaChrome.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/hexachrome",
-    outlookLink: "mailto:hexachrome@iitp.ac.in",
+    facebookLink: "https://instagram.com/hexachrome_official?igshid=NTc4MTIwNjQ2YQ==",
     instagramLink: "https://instagram.com/hexachrome_official?igshid=NTc4MTIwNjQ2YQ==",
     content: () => (
       <p>
@@ -512,7 +471,7 @@ const cards = [
     src: "/ClubLogo/Vincetroke.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/vincetroke",
-    outlookLink: "mailto:vincestroke_club@iitp.ac.in",
+    facebookLink: "https://www.facebook.com/vincetroke.iitp/community/",
     instagramLink: "https://www.instagram.com/vincetroke.iitp/",
     content: () => (
       <p>
@@ -526,7 +485,7 @@ const cards = [
     src: "/ClubLogo/anime.png",
     ctaText: "Learn More",
     ctaLink: "/club/anime",
-    outlookLink: "mailto:anime_club@iitp.ac.in",
+    facebookLink: "https://www.instagram.com/animeclub_iitp/",
     instagramLink: "https://www.instagram.com/animeclub_iitp/",
     content: () => (
       <p>
@@ -540,7 +499,7 @@ const cards = [
     src: "/ClubLogo/ikkatt.png",
     ctaText: "Learn More",
     ctaLink: "/club/ikkatt",
-    outlookLink: "mailto:ikkatt@iitp.ac.in",
+    facebookLink: "https://www.instagram.com/ikkatt_iitp/",
     instagramLink: "https://www.instagram.com/ikkatt_iitp/",
     content: () => (
       <p>
@@ -554,7 +513,7 @@ const cards = [
     src: "/ClubLogo/std.png",
     ctaText: "Learn More",
     ctaLink: "/club/std",
-    outlookLink: "mailto:standup_club@iitp.ac.in",
+    facebookLink: "https://www.instagram.com/standup_club.iitp/",
     instagramLink: "https://www.instagram.com/standup_club.iitp/",
     content: () => (
       <p>

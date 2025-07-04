@@ -5,116 +5,81 @@ import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
-import { Suspense } from "react";
 
 interface ClubMember {
   id: number;
   name: string;
   position: string;
-  year?: string;
-  branch?: string;
   imageUrl?: string;
   email?: string;
   linkedinUrl?: string;
-  instagramUrl?: string;
 }
 
 const VincetrokeMembers: ClubMember[] = [
   {
     id: 1,
-    name: "Chiranjeeb Debata  ",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Mechanical Engineering",
-    email: "chiranjeeb_2303me04@iitp.ac.in",
-    linkedinUrl:
-      "https://www.linkedin.com/in/chiranjeeb-debata-a1a891295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/VinceTroke/Chiranjeeb.jpg",
+    name: 'Chiranjeeb Debata',
+    position: 'Coordinator',
+    email: 'chiranjeeb_2303me04@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/chiranjeeb-debata-a1a891295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/Coordinators/VinceTroke/Chiranjeeb.jpg',
   },
   {
     id: 2,
-    name: "Ishika Khanagwal ",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Mathematics and Computing",
-    email: "ishika_2301mc09@iitp.ac.in",
-    linkedinUrl:
-      "https://www.linkedin.com/in/ishika-khanagwal-362432297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/VinceTroke/Ishika.jpg",
+    name: 'Ishika Khanagwal',
+    position: 'Coordinator',
+    email: 'ishika_2301mc09@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/ishika-khanagwal-362432297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/Coordinators/VinceTroke/Ishika.jpg',
   },
   {
     id: 3,
-    name: "Tanvi Vasoya",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Civil Engineering",
-    email: "tanvi_2301ce30@iitp.ac.in",
-    linkedinUrl:
-      "https://www.linkedin.com/in/tanvi-vasoya-32732b298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/VinceTroke/Tanvi.jpg",
+    name: 'Tanvi Vasoya',
+    position: 'Coordinator',
+    email: 'tanvi_2301ce30@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/tanvi-vasoya-32732b298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/Coordinators/VinceTroke/Tanvi.jpg',
   },
   {
     id: 4,
-    name: "Aditi Lohiya",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Chemical Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/aditi-lohiya-395532321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/VinceTroke/Aditi_Vincetroke.jpg",
+    name: 'Aditi Lohiya',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/aditi-lohiya-395532321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Vincetroke/Aditi_Vincetroke.jpg',
   },
   {
     id: 5,
-    name: "Riddhesh Dalal ",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Chemical Science and Technology",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/riddhesh-dalal-704664317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/VinceTroke/Riddhesh.jpg",
+    name: 'Riddhesh Dalal',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/riddhesh-dalal-704664317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Vincetroke/Riddhesh.jpg',
   },
   {
     id: 6,
-    name: "Anand Kumar ",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Metallurgical and Materials Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/anand-kumar-563523342?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/VinceTroke/Anand.jpg",
+    name: 'Anand Kumar',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/anand-kumar-563523342?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Vincetroke/Anand.jpg',
   },
   {
     id: 7,
-    name: "Aviral Pratap Singh",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Computer Science and Engineering",
-    email: "Add Email",
-    linkedinUrl: "https://www.linkedin.com/in/aviral-pratap-singh-a88977319/",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/VinceTroke/Aviral.jpg",
+    name: 'Aviral Pratap Singh',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/aviral-pratap-singh-a88977319/',
+    imageUrl: '/SubCords/Vincetroke/Aviral.jpg',
   },
   {
     id: 8,
-    name: "Richa Chaudhary",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Civil Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/richa-chaudhary-9a2877349?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/VinceTroke/Richa.jpg",
-  },
+    name: 'Richa Chaudhary',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/richa-chaudhary-9a2877349?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Vincetroke/Richa.jpg',
+  }
 ];
 
 export default function VincetrokePage() {
@@ -198,10 +163,7 @@ export default function VincetrokePage() {
       <BackgroundBeams className="absolute inset-0" />
 
       <div className="container mx-auto px-4 py-8 relative z-10">
-        {/* Hero Section */}
-        {/* Hero Section with Image Left, Content Right */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
-          {/* Image Section - Left on desktop, top on mobile */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
               <img
@@ -271,7 +233,6 @@ export default function VincetrokePage() {
             </div>
           </div>
 
-          {/* Gallery Section */}
           <div className="mb-16">
             <ImageGrid
               images={[
@@ -311,10 +272,10 @@ export default function VincetrokePage() {
             )}
           </div>
         </section>
-        {/* Social Media Links */}
+
         <div className="flex justify-center gap-6 mt-12">
           <a
-            href="https://facebook.com/hosca.iitp"
+            href="https://www.facebook.com/vincetroke.iitp/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#1877F2] hover:text-white transition-colors duration-300"
@@ -323,7 +284,7 @@ export default function VincetrokePage() {
             <FaFacebook className="w-6 h-6" />
           </a>
           <a
-            href="https://instagram.com/hosca_iitp"
+            href="https://www.instagram.com/vincetroke.iitp/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#E1306C] hover:text-white transition-colors duration-300"
@@ -331,15 +292,7 @@ export default function VincetrokePage() {
           >
             <FaInstagram className="w-6 h-6" />
           </a>
-          <a
-            href="https://youtube.com/user/CULTatIITP"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full bg-gray-100 hover:bg-[#FF0000] hover:text-white transition-colors duration-300"
-            aria-label="YouTube"
-          >
-            <FaYoutube className="w-6 h-6" />
-          </a>
+         
         </div>
       </div>
     </div>

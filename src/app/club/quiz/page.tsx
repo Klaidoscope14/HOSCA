@@ -5,125 +5,89 @@ import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
-import { Suspense } from "react";
 
 interface ClubMember {
   id: number;
   name: string;
   position: string;
-  year?: string;
-  branch?: string;
   imageUrl?: string;
   email?: string;
   linkedinUrl?: string;
-  instagramUrl?: string;
 }
 
 const QuizMembers: ClubMember[] = [
   {
     id: 1,
-    name: "Shibanshu Soubhagya Das",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Civil Engineering",
-    email: "shibanshu_2302gt08@iitp.ac.in",
-    linkedinUrl: "https://in.linkedin.com/in/shibanshu-soubhagya-das-46a5342b5",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/QuizClub/Shibhanshu.png",
+    name: 'Shibanshu Soubhagya Das',
+    position: 'Coordinator',
+    email: 'shibanshu_2302gt08@iitp.ac.in',
+    linkedinUrl: 'https://in.linkedin.com/in/shibanshu-soubhagya-das-46a5342b5',
+    imageUrl: '/Coordinators/QuizClub/Shibhanshu.png',
   },
   {
     id: 2,
-    name: "Amal Biju",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Add Branch",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/amal-biju-5ab486300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/QuizClub/Amal.jpg",
+    name: 'Amal Biju',
+    position: 'Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/amal-biju-5ab486300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/Coordinators/QuizClub/Amal.jpg',
   },
   {
     id: 3,
-    name: "Ashmit verma",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Engineering Physics",
-    email: "ashmit_2301ph07@iitp.ac.in",
-    linkedinUrl: "https://www.linkedin.com/in/ashmit-verma-412076299",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/QuizClub/Ashmit.jpg",
+    name: 'Ashmit Verma',
+    position: 'Coordinator',
+    email: 'ashmit_2301ph07@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/ashmit-verma-412076299',
+    imageUrl: '/Coordinators/QuizClub/Ashmit.jpg',
   },
   {
     id: 4,
-    name: "Leon Joel",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Mathematics and Computing",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/leon-joel-shaji-723012324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/QuizClub/leonJoel.jpg",
+    name: 'Leon Joel Shaji',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/leon-joel-shaji-723012324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/QuizClub/leonJoel.jpg',
   },
   {
     id: 5,
-    name: "Sarthak Poddar",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Computer Science and Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/sarthak-poddar-66038b305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/QuizClub/SarthakPoddar.jpg",
+    name: 'Sarthak Poddar',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/sarthak-poddar-66038b305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/QuizClub/SarthakPoddar.jpg',
   },
   {
     id: 6,
-    name: "Harshit Singh ",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Engineering Physics",
-    email: "Add Email",
-    linkedinUrl: "https://www.linkedin.com/in/harshit-singh-1158b1367/",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/QuizClub/harshit_singh.jpg",
+    name: 'Harshit Singh',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/harshit-singh-1158b1367/',
+    imageUrl: '/SubCords/QuizClub/harshit_singh.jpg',
   },
   {
     id: 7,
-    name: "Joven Sony",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Chemical Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/joven-sony-aa0862224?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/QuizClub/Joven.jpg",
+    name: 'Joven Sony',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/joven-sony-aa0862224?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/QuizClub/Joven.jpg',
   },
   {
     id: 8,
-    name: "Abhiram Parupudi ",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Computer Science and Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/abhiram-p-432a43319?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/QuizClub/abhiramParupudi.jpg",
+    name: 'Abhiram Parupudi',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/abhiram-p-432a43319?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/QuizClub/abhiramParupudi.jpg',
   },
   {
     id: 9,
-    name: "Heet Joshi",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Economics",
-    email: "Add Email",
-    linkedinUrl: "#",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/QuizClub/HeetJoshi.jpg",
-  },
+    name: 'Heet Joshi',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    imageUrl: '/SubCords/QuizClub/HeetJoshi.jpg',
+  }
 ];
 
 export default function QuizPage() {
@@ -207,10 +171,7 @@ export default function QuizPage() {
       <BackgroundBeams className="absolute inset-0" />
 
       <div className="container mx-auto px-4 py-8 relative z-10">
-        {/* Hero Section */}
-        {/* Hero Section with Image Left, Content Right */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
-          {/* Image Section - Left on desktop, top on mobile */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
               <img
@@ -221,8 +182,7 @@ export default function QuizPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
           </div>
-
-          {/* Content Section - Right on desktop, bottom on mobile */}
+          
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-600 mb-6">
               Quiz Club
@@ -276,7 +236,6 @@ export default function QuizPage() {
             </div>
           </div>
 
-          {/* Image Gallery */}
           <div className="mb-16">
             <ImageGrid
               images={[
@@ -324,10 +283,9 @@ export default function QuizPage() {
             {QuizMembers.slice(3).map((member) => renderMemberCard(member))}
           </div>
         </section>
-        {/* Social Media Links */}
         <div className="flex justify-center gap-6 mt-12">
           <a
-            href="https://facebook.com/hosca.iitp"
+            href="https://www.facebook.com/QCIITP/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#1877F2] hover:text-white transition-colors duration-300"
@@ -336,7 +294,7 @@ export default function QuizPage() {
             <FaFacebook className="w-6 h-6" />
           </a>
           <a
-            href="https://instagram.com/hosca_iitp"
+            href="https://www.instagram.com/qc_iitp/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#E1306C] hover:text-white transition-colors duration-300"
@@ -345,7 +303,7 @@ export default function QuizPage() {
             <FaInstagram className="w-6 h-6" />
           </a>
           <a
-            href="https://youtube.com/user/CULTatIITP"
+            href="https://www.youtube.com/c/QuizClubIITPatna"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#FF0000] hover:text-white transition-colors duration-300"

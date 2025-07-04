@@ -5,114 +5,81 @@ import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
-import { Suspense } from "react";
 
 interface ClubMember {
   id: number;
   name: string;
   position: string;
-  year?: string;
-  branch?: string;
   imageUrl?: string;
   email?: string;
   linkedinUrl?: string;
-  instagramUrl?: string;
 }
 
 const SyahiMembers: ClubMember[] = [
   {
     id: 1,
-    name: "Devanshu Kumar",
-    position: "Coordinator",
-    year: "3rd year",
-    branch: "Chemical Science and Technology",
-    email: "devanshu_2301ct22@iitp.ac.in",
-    linkedinUrl: "https://linkedin.com/in/devanshu-kumar-08139b298",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/Syahi/DevanshuKumar.jpeg",
+    name: 'Devanshu Kumar',
+    position: 'Coordinator',
+    email: 'devanshu_2301ct22@iitp.ac.in',
+    linkedinUrl: 'https://linkedin.com/in/devanshu-kumar-08139b298',
+    imageUrl: '/Coordinators/Syahi/DevanshuKumar.jpeg',
   },
   {
     id: 2,
-    name: "Kaustuv Anand ",
-    position: "Coordinator",
-    year: "3rd year",
-    branch: "Civil Engineering",
-    email: "kaustuv_2301ce44@iitp.ac.in",
-    linkedinUrl:
-      "https://www.linkedin.com/in/kaustuv-anand-1981982a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/Syahi/Kaustuv.jpg",
+    name: 'Kaustuv Anand',
+    position: 'Coordinator',
+    email: 'kaustuv_2301ce44@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/kaustuv-anand-1981982a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/Coordinators/Syahi/Kaustuv.jpg',
   },
   {
     id: 3,
-    name: "Huzaim Zaoraiz ",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Chemical Science and Technology",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/huzaim-zaoraiz-a03216335?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Syahi/huzaimZaoraiz.JPG",
+    name: 'Huzaim Zaoraiz',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/huzaim-zaoraiz-a03216335?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Syahi/huzaimZaoraiz.JPG',
   },
   {
     id: 4,
-    name: "Choudhary Lucky",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Metallurgical and Materials Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/choudhary-lucky-139484330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Syahi/choudharyLucky.jpg",
+    name: 'Choudhary Lucky',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/choudhary-lucky-139484330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Syahi/choudharyLucky.jpg',
   },
   {
     id: 5,
-    name: "Tanush",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Engineering Physics",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/tanushkumar-yadav-9126812b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Syahi/tanush.jpg",
+    name: 'Tanush Kumar',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/tanushkumar-yadav-9126812b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Syahi/tanush.jpg',
   },
   {
     id: 6,
-    name: "Shatadrumi Dey",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Mathematics and Computing",
-    email: "Add Email",
-    linkedinUrl: "https://www.linkedin.com/in/shatadrumi-dey-07933031a/",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Syahi/shatadrumiDey.jpg",
+    name: 'Shatadrumi Dey',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/shatadrumi-dey-07933031a/',
+    imageUrl: '/SubCords/Syahi/shatadrumiDey.jpg',
   },
   {
     id: 7,
-    name: "Anshika Singh",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Mechanical Engineering",
-    email: "Add Email",
-    linkedinUrl: "https://www.linkedin.com/in/anshika-singh-764830365",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Syahi/anshikaSingh.jpg",
+    name: 'Anshika Singh',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/anshika-singh-764830365',
+    imageUrl: '/SubCords/Syahi/anshikaSingh.jpg',
   },
   {
     id: 8,
-    name: "Anand",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Metallurgical and Materials Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/anand-kumar-563523342?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Syahi/anand.jpg",
-  },
+    name: 'Anand Kumar',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/anand-kumar-563523342?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Syahi/anand.jpg',
+  }
 ];
 
 export default function SyahiPage() {
@@ -196,10 +163,7 @@ export default function SyahiPage() {
       <BackgroundBeams className="absolute inset-0" />
 
       <div className="container mx-auto px-4 py-8 relative z-10">
-        {/* Hero Section */}
-        {/* Hero Section with Image Left, Content Right */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
-          {/* Image Section - Left on desktop, top on mobile */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
               <img
@@ -210,8 +174,7 @@ export default function SyahiPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
           </div>
-
-          {/* Content Section - Right on desktop, bottom on mobile */}
+          
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-300 mb-6">
               Syahi Club
@@ -267,7 +230,6 @@ export default function SyahiPage() {
             </div>
           </div>
 
-          {/* Gallery Section */}
           <div className="mb-16">
             <ImageGrid
               images={[
@@ -303,10 +265,10 @@ export default function SyahiPage() {
             {SyahiMembers.slice(2).map((member) => renderMemberCard(member))}
           </div>
         </section>
-        {/* Social Media Links */}
+        
         <div className="flex justify-center gap-6 mt-12">
           <a
-            href="https://facebook.com/hosca.iitp"
+            href="https://www.facebook.com/syahi_iitp/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#1877F2] hover:text-white transition-colors duration-300"
@@ -315,7 +277,7 @@ export default function SyahiPage() {
             <FaFacebook className="w-6 h-6" />
           </a>
           <a
-            href="https://instagram.com/hosca_iitp"
+            href="https://www.instagram.com/syahi.iitp/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#E1306C] hover:text-white transition-colors duration-300"
@@ -324,7 +286,7 @@ export default function SyahiPage() {
             <FaInstagram className="w-6 h-6" />
           </a>
           <a
-            href="https://youtube.com/user/CULTatIITP"
+            href="https://www.youtube.com/c/SyahiLiteraryAssociationIITP"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#FF0000] hover:text-white transition-colors duration-300"

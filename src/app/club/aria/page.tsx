@@ -5,115 +5,83 @@ import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
-import { Suspense } from "react";
 
 interface ClubMember {
   id: number;
   name: string;
   position: string;
-  year?: string;
-  branch?: string;
   imageUrl?: string;
   email?: string;
   linkedinUrl?: string;
-  instagramUrl?: string;
 }
 
 const AriaMembers: ClubMember[] = [
   {
     id: 1,
-    name: "Aarsh Sanghavi",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Computer Science and Engineering",
-    email: "aarsh_2301cs01@iitp.ac.in",
-    linkedinUrl: "https://www.linkedin.com/in/aarsh-sanghavi-b61552280/",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/Aria/aarsh.jpg",
+    name: 'Aarsh Sanghavi',
+    position: 'Coordinator',
+    email: 'aarsh_2301cs01@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/aarsh-sanghavi-b61552280/',
+    imageUrl: '/Coordinators/Aria/aarsh.jpg',
   },
   {
     id: 2,
-    name: "Rithvik Konidena",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Computer Science and Engineering",
-    email: "rithvik_2302cs09@iitp.ac.in",
-    linkedinUrl: "https://www.linkedin.com/in/rithvik-konidena-01a637317/",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/Aria/Rithvik.jpeg",
+    name: 'Rithvik Konidena',
+    position: 'Coordinator',
+    email: 'rithvik_2302cs09@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/rithvik-konidena-01a637317/',
+    imageUrl: '/Coordinators/Aria/Rithvik.jpeg',
   },
   {
     id: 3,
-    name: "Dhairya Garg",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Chemical Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/dhairya-garg-32656024b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Aria/Dhairya.jpg",
+    name: 'Dhairya Garg',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/dhairya-garg-32656024b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Aria/Dhairya.jpg',
   },
   {
     id: 4,
-    name: "Sejal Goel ",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Computer Science and Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/sejal-goel-6ab186314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Aria/Sejal.jpg",
+    name: 'Sejal Goel',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/sejal-goel-6ab186314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Aria/Sejal.jpg',
   },
   {
     id: 5,
-    name: "Sankhanil Chakraborty ",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Artificial Intelligence and Data Science",
-    email: "Add Email",
-    linkedinUrl: "https://www.linkedin.com/in/sankhanil-chakraborty-9377a032a/",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Aria/Sankhanil.jpg",
+    name: 'Sankhanil Chakraborty',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/sankhanil-chakraborty-9377a032a/',
+    imageUrl: '/SubCords/Aria/Sankhanil.jpg',
   },
   {
     id: 6,
-    name: "Shorya Pratap Singh",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Chemical Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/shorya-pratap-singh-7aa29b320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Aria/SHORYA.jpg",
+    name: 'Shorya Pratap Singh',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/shorya-pratap-singh-7aa29b320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Aria/SHORYA.jpg',
   },
   {
     id: 7,
-    name: "Abhinav Datta ",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Computer Science and Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/abhinav-datta-54795131a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Aria/AbhinavDatta.jpg",
+    name: 'Abhinav Datta',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/abhinav-datta-54795131a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Aria/AbhinavDatta.jpg',
   },
   {
     id: 8,
-    name: "Joven Sony",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Chemical Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/joven-sony-aa0862224?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Aria/Joven.jpg",
-  },
+    name: 'Joven Sony',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/joven-sony-aa0862224?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Aria/Joven.jpg',
+  }
 ];
+
 
 export default function AriaPage() {
   const renderMemberCard = (member: ClubMember) => (
@@ -196,10 +164,7 @@ export default function AriaPage() {
       <BackgroundBeams className="absolute inset-0" />
 
       <div className="container mx-auto px-4 py-8 relative z-10">
-        {/* Hero Section */}
-        {/* Hero Section with Image Left, Content Right */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
-          {/* Image Section - Left on desktop, top on mobile */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
               <img
@@ -210,8 +175,7 @@ export default function AriaPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
           </div>
-
-          {/* Content Section - Right on desktop, bottom on mobile */}
+          
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-700 mb-6">
               Aria
@@ -223,7 +187,6 @@ export default function AriaPage() {
           </div>
         </div>
 
-        {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* About Section */}
           <div className="w-full">
@@ -265,7 +228,6 @@ export default function AriaPage() {
             </div>
           </div>
 
-          {/* Image Gallery */}
           <div className="mb-16">
             <ImageGrid
               images={[
@@ -307,10 +269,9 @@ export default function AriaPage() {
             {AriaMembers.slice(2).map((member) => renderMemberCard(member))}
           </div>
         </section>
-        {/* Social Media Links */}
         <div className="flex justify-center gap-6 mt-12">
           <a
-            href="https://facebook.com/hosca.iitp"
+            href="https://www.facebook.com/musicclubiitpatna/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#1877F2] hover:text-white transition-colors duration-300"
@@ -319,7 +280,7 @@ export default function AriaPage() {
             <FaFacebook className="w-6 h-6" />
           </a>
           <a
-            href="https://instagram.com/hosca_iitp"
+            href="https://www.instagram.com/aria_iitp/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#E1306C] hover:text-white transition-colors duration-300"
@@ -328,7 +289,7 @@ export default function AriaPage() {
             <FaInstagram className="w-6 h-6" />
           </a>
           <a
-            href="https://youtube.com/user/CULTatIITP"
+            href="https://www.youtube.com/@musicclubiitpatna"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#FF0000] hover:text-white transition-colors duration-300"

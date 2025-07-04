@@ -5,123 +5,79 @@ import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
-import { Suspense } from "react";
 
 interface ClubMember {
   id: number;
   name: string;
-  position: string;
-  year?: string;
-  branch?: string;
   imageUrl?: string;
   email?: string;
   linkedinUrl?: string;
-  instagramUrl?: string;
 }
 
 const AnimeMembers: ClubMember[] = [
   {
     id: 1,
-    name: "Chandra Shekhar Azad",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Electronics and Communication Engineering",
-    email: "chandra_2301ec09@iitp.ac.in",
-    linkedinUrl:
-      "https://www.linkedin.com/in/tejavath-chandrashekarazad-7363ab298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/AnimeClub/CSA.jpg",
+    name: 'Chandra Shekhar Azad',
+    email: 'chandra_2301ec09@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/tejavath-chandrashekarazad-7363ab298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/Coordinators/AnimeClub/CSA.jpg',
   },
   {
     id: 2,
-    name: "Dikshant K.",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Civil Engineering",
-    email: "dikshant_2302st02@iitp.ac.in",
-    linkedinUrl: "https://www.linkedin.com/in/dikshant-khobragade-1b166727b/",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/AnimeClub/dikshantsk01.jpg",
+    name: 'Dikshant K.',
+    email: 'dikshant_2302st02@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/dikshant-khobragade-1b166727b/',
+    imageUrl: '/Coordinators/AnimeClub/dikshantsk01.jpg',
   },
   {
     id: 3,
-    name: "Akshat",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Civil Engineering",
-    email: "akshat_2301ce02@iitp.ac.in",
-    linkedinUrl:
-      "https://www.linkedin.com/in/akshat-kumar-singh-7400b2178?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/AnimeClub/akshat.jpg",
+    name: 'Akshat',
+    email: 'akshat_2301ce02@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/akshat-kumar-singh-7400b2178?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/Coordinators/AnimeClub/akshat.jpg',
   },
   {
     id: 4,
-    name: "Tejash Agrawal ",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Electrical and Electronics Engineering",
-    email: "Add Email",
-    linkedinUrl: "#",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/AnimeClub/Tejash.jpg",
+    name: 'Tejash Agrawal ',
+    email: 'Add Email',
+    linkedinUrl: '#',
+    imageUrl: '/SubCords/AnimeClub/Tejash.jpg',
   },
   {
     id: 5,
-    name: "Ranveer Gupta",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Mathematics and Computing",
-    email: "Add Email",
-    linkedinUrl: "www.linkedin.com/in/ranveer-g-7544a4232",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/AnimeClub/RanveerGupta.jpg",
+    name: 'Ranveer Gupta',
+    email: 'Add Email',
+    linkedinUrl: 'www.linkedin.com/in/ranveer-g-7544a4232',
+    imageUrl: '/SubCords/AnimeClub/Ranveer.jpg',
   },
   {
     id: 6,
-    name: "Adil Khan",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Electronics and Communication Engineering",
-    email: "Add Email",
-    linkedinUrl: "https://www.linkedin.com/in/adil-khan-98501a31a/",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/AnimeClub/AdilKhan.jpg",
+    name: 'Adil Khan',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/adil-khan-98501a31a/',
+    imageUrl: '/SubCords/AnimeClub/AdilKhan.jpg',
   },
   {
     id: 7,
-    name: "Satyam Sinha",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Engineering Physics",
-    email: "Add Email",
-    linkedinUrl: "https://www.linkedin.com/in/satyam-sinha-733801325/",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/AnimeClub/SatyamSinha.jpg",
+    name: 'Satyam Sinha',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/satyam-sinha-733801325/',
+    imageUrl: '/SubCords/AnimeClub/SatyamSinha.jpg',
   },
   {
     id: 8,
-    name: "Raghav",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Mathematics and Computing",
-    email: "Add Email",
-    linkedinUrl: "www.linkedin.com/in/raghav-singla-885bb0325",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/AnimeClub/Raghav.png",
+    name: 'Raghav',
+    email: 'Add Email',
+    linkedinUrl: 'www.linkedin.com/in/raghav-singla-885bb0325',
+    imageUrl: '/SubCords/AnimeClub/Raghav.png',
   },
   {
     id: 9,
-    name: "Soyam Bais ",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Electronics and Communication Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/soyam-bais-58b024329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/AnimeClub/SoyamBais.jpg",
-  },
+    name: 'Soyam Bais ',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/soyam-bais-58b024329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/AnimeClub/SoyamBais.jpg',
+  }
 ];
 
 export default function AnimePage() {
@@ -204,10 +160,9 @@ export default function AnimePage() {
       <BackgroundBeams className="absolute inset-0" />
 
       <div className="container mx-auto px-4 py-8 relative z-10">
-        {/* Hero Section */}
-        {/* Hero Section with Image Left, Content Right */}
+        
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
-          {/* Image Section - Left on desktop, top on mobile */}
+          
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
               <img
@@ -218,8 +173,7 @@ export default function AnimePage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
           </div>
-
-          {/* Content Section - Right on desktop, bottom on mobile */}
+          
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
             <h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-sky-400 mb-6"
@@ -278,7 +232,6 @@ export default function AnimePage() {
             </div>
           </div>
 
-          {/* Image Gallery */}
           <div className="mb-16">
             <ImageGrid
               images={[
@@ -319,19 +272,10 @@ export default function AnimePage() {
             {AnimeMembers.slice(3).map((member) => renderMemberCard(member))}
           </div>
         </section>
-        {/* Social Media Links */}
         <div className="flex justify-center gap-6 mt-12">
+        
           <a
-            href="https://facebook.com/hosca.iitp"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full bg-gray-100 hover:bg-[#1877F2] hover:text-white transition-colors duration-300"
-            aria-label="Facebook"
-          >
-            <FaFacebook className="w-6 h-6" />
-          </a>
-          <a
-            href="https://instagram.com/hosca_iitp"
+            href="https://www.instagram.com/animeclub_iitp/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#E1306C] hover:text-white transition-colors duration-300"
@@ -339,15 +283,7 @@ export default function AnimePage() {
           >
             <FaInstagram className="w-6 h-6" />
           </a>
-          <a
-            href="https://youtube.com/user/CULTatIITP"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full bg-gray-100 hover:bg-[#FF0000] hover:text-white transition-colors duration-300"
-            aria-label="YouTube"
-          >
-            <FaYoutube className="w-6 h-6" />
-          </a>
+        
         </div>
       </div>
     </div>

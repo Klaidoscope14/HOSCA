@@ -5,101 +5,73 @@ import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
-import { Suspense } from "react";
 
 interface ClubMember {
   id: number;
   name: string;
   position: string;
-  year?: string;
-  branch?: string;
   imageUrl?: string;
   email?: string;
   linkedinUrl?: string;
-  instagramUrl?: string;
 }
 
 const HexachromeMembers: ClubMember[] = [
   {
     id: 1,
-    name: "Chahat Mahajan",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Artificial Intelligence and Data Science",
-    email: "chahat_2301ai49@iitp.ac.in",
-    linkedinUrl: "https://www.linkedin.com/in/chahat-mahajan-b80767298/",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/HexaChrome/Chahat.jpg",
+    name: 'Chahat Mahajan',
+    position: 'Coordinator',
+    email: 'chahat_2301ai49@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/chahat-mahajan-b80767298/',
+    imageUrl: '/Coordinators/HexaChrome/Chahat.jpg',
   },
   {
     id: 2,
-    name: "Keshav Mahansaria ",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Computer Science and Engineering",
-    email: "keshav_2301cs23@iitp.ac.in",
-    linkedinUrl: "https://www.linkedin.com/in/keshav-mahansaria-66979229a",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/HexaChrome/Keshav.jpg",
+    name: 'Keshav Mahansaria',
+    position: 'Coordinator',
+    email: 'keshav_2301cs23@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/keshav-mahansaria-66979229a',
+    imageUrl: '/Coordinators/HexaChrome/Keshav.jpg',
   },
   {
     id: 3,
-    name: "Aryan Patil",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Metallurgical and Materials Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/aryan-patil-58393736a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/HexaChrome/AryanPatil.jpg",
+    name: 'Aryan Patil',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/aryan-patil-58393736a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/HexaChrome/AryanPatil.jpg',
   },
   {
     id: 4,
-    name: "K.Anantha Akash",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Engineering Physics",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/akash-kota-a3538a323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "",
+    name: 'Akash Kota',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/akash-kota-a3538a323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Exousia/KaranJarupala.jpg',
   },
   {
     id: 5,
-    name: "Hrijoy Sikdar",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Electrical and Electronics Engineering",
-    email: "Add Email",
-    linkedinUrl: "https://www.linkedin.com/in/hrijoy-sikdar-780a28311",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/HexaChrome/HrijoySikdar.webp",
+    name: 'Hrijoy Sikdar',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/hrijoy-sikdar-780a28311',
+    imageUrl: '/SubCords/HexaChrome/HrijoySikdar.webp',
   },
   {
     id: 6,
-    name: "Lavanya Bhadani",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Artificial Intelligence and Data Science",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/lavanya-bhadani-1834b1313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/HexaChrome/lavanya.jpg",
+    name: 'Lavanya Bhadani',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/lavanya-bhadani-1834b1313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/HexaChrome/lavanya.jpg',
   },
   {
     id: 7,
-    name: "Vaibhav Dalmia",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Computer Science and Engineering",
-    email: "http://www.linkedin.com/in/vaibhav-dalmia-2b1b84325",
-    linkedinUrl: "#",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/HexaChrome/VaibhavDalmia.jpg",
-  },
+    name: 'Vaibhav Dalmia',
+    position: 'Sub-Coordinator',
+    email: 'http://www.linkedin.com/in/vaibhav-dalmia-2b1b84325',
+    linkedinUrl: '#',
+    imageUrl: '/SubCords/HexaChrome/VaibhavDalmia.jpg',
+  }
 ];
 
 export default function HexaChromePage() {
@@ -183,10 +155,7 @@ export default function HexaChromePage() {
       <BackgroundBeams className="absolute inset-0" />
 
       <div className="container mx-auto px-4 py-8 relative z-10">
-        {/* Hero Section */}
-        {/* Hero Section with Image Left, Content Right */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
-          {/* Image Section - Left on desktop, top on mobile */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
               <img
@@ -197,8 +166,7 @@ export default function HexaChromePage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
           </div>
-
-          {/* Content Section - Right on desktop, bottom on mobile */}
+          
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-sky-400 mb-6">
               HexaChrome
@@ -253,7 +221,6 @@ export default function HexaChromePage() {
             </div>
           </div>
 
-          {/* Gallery Section */}
           <div className="mb-16">
             <ImageGrid
               images={[
@@ -305,19 +272,10 @@ export default function HexaChromePage() {
             )}
           </div>
         </section>
-        {/* Social Media Links */}
         <div className="flex justify-center gap-6 mt-12">
+          
           <a
-            href="https://facebook.com/hosca.iitp"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full bg-gray-100 hover:bg-[#1877F2] hover:text-white transition-colors duration-300"
-            aria-label="Facebook"
-          >
-            <FaFacebook className="w-6 h-6" />
-          </a>
-          <a
-            href="https://instagram.com/hosca_iitp"
+            href="https://www.instagram.com/hexachrome_iitp/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#E1306C] hover:text-white transition-colors duration-300"
@@ -325,15 +283,7 @@ export default function HexaChromePage() {
           >
             <FaInstagram className="w-6 h-6" />
           </a>
-          <a
-            href="https://youtube.com/user/CULTatIITP"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full bg-gray-100 hover:bg-[#FF0000] hover:text-white transition-colors duration-300"
-            aria-label="YouTube"
-          >
-            <FaYoutube className="w-6 h-6" />
-          </a>
+         
         </div>
       </div>
     </div>

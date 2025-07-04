@@ -12,115 +12,83 @@ interface ClubMember {
   id: number;
   name: string;
   position: string;
-  year?: string;
-  branch?: string;
   imageUrl?: string;
   email?: string;
   linkedinUrl?: string;
-  instagramUrl?: string;
 }
 
 const YavanikaMembers: ClubMember[] = [
   {
     id: 1,
-    name: "Viraj Kulkarni ",
-    position: "Coordinator",
-    year: "3rd year",
-    branch: "Metallurgical and Materials Engineering",
-    email: "viraj_2301mm25@iitp.ac.in",
-    linkedinUrl:
-      "https://www.linkedin.com/in/viraj-kulkarni-097869312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/Yavanika/Viraj.JPG",
+    name: 'Viraj Kulkarni ',
+    position: 'Coordinator',
+    email: 'viraj_2301mm25@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/viraj-kulkarni-097869312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+    imageUrl: '/Coordinators/Yavanika/Viraj.JPG',
   },
   {
     id: 2,
-    name: "Kumari Nisha",
-    position: "Coordinator",
-    year: "3rd year",
-    branch: "Chemical Science and Technology",
-    email: "kumari_2301ct13@iitp.ac.in",
-    linkedinUrl:
-      "https://www.linkedin.com/in/kumari-nisha-3209b02a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/Yavanika/Nisha.jpeg",
+    name: 'Kumari Nisha',
+    position: 'Coordinator',
+    email: 'kumari_2301ct13@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/kumari-nisha-3209b02a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/Coordinators/Yavanika/Nisha.jpeg',
   },
   {
     id: 3,
-    name: "Lalit Sen",
-    position: "Coordinator",
-    year: "3rd year",
-    branch: "Electronics and Communication Engineering",
-    email: "lalit_2301ec59@iitp.ac.in",
-    linkedinUrl:
-      "https://www.linkedin.com/in/lalit-sen-73a2392a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/Yavanika/Lalit.jpg",
+    name: 'Lalit Sen',
+    position: 'Coordinator',
+    email: 'lalit_2301ec59@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/Lalit-sen-73a2392a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+    imageUrl: '/Coordinators/Yavanika/Lalit.jpg',
   },
   {
     id: 4,
-    name: "Yahya Dawoodi",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Electrical and Electronics Engineering",
-    email: "Add Email",
-    linkedinUrl: "https://www.linkedin.com/in/yahya-dawoodi-119dd39239/",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Yavanika/Yahya.jpg",
+    name: 'Yahya Dawoodi',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/yahya-dawoodi-119dd39239/',
+    imageUrl: '/SubCords/Yavanika/Yahya.jpg',
   },
   {
     id: 5,
-    name: "Ayush Kumar Gupta",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Civil Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/ayush-gupta-675549320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Yavanika/Ayush.png",
+    name: 'Ayush Kumar Gupta',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/ayush-gupta-675549320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Yavanika/Ayush.png',
   },
   {
     id: 6,
-    name: "Priyadeep Jaiswal",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Electronics and Communication Engineering",
-    email: "Add Email",
-    linkedinUrl: "http://www.linkedin.com/in/priyadeep-jaiswal-39ab001b5",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Yavanika/Priyadeep.heic",
+    name: 'Priyadeep Jaiswal',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'http://www.linkedin.com/in/priyadeep-jaiswal-39ab001b5',
+    imageUrl: '/SubCords/Yavanika/Priyadeep.jpg',
   },
   {
     id: 7,
-    name: "Vishmith Shetty",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Mechanical Engineering",
-    email: "Add Email",
-    linkedinUrl: "https://www.linkedin.com/in/vishmith-shetty-a16873313/",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Yavanika/Vishmith.jpg",
+    name: 'Vishmith Shetty',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/vishmith-shetty-a16873313/',
+    imageUrl: '/SubCords/Yavanika/Vishmith.jpg',
   },
   {
     id: 8,
-    name: "Vidhi Patel",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Mathematics and Computing",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/vidhi-patel-5a1893310?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Yavanika/vidhiPatel.jpg",
-  },
+    name: 'Vidhi Patel',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/vidhi-patel-5a1893310?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Yavanika/vidhiPatel.jpg',
+  }
 ];
 
 export default function YavanikaPage() {
   const renderMemberCard = (member: ClubMember) => (
     <div key={member.id} className="flex justify-center w-full">
-      <CardContainer className="w-[320px] h-[520px]">
-        <CardBody className="bg-white dark:bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-yellow-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[280px] h-[450px] rounded-xl p-6 border flex flex-col justify-between">
+      <CardContainer className="w-[320px] h-[320px]">
+        <CardBody className="bg-white dark:bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-yellow-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[280px] h-[320px] rounded-xl p-6 border flex flex-col justify-between">
           <CardItem translateZ="100" className="w-full mt-4">
             <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-2 border-yellow-500 flex-shrink-0">
               {member.imageUrl ? (
@@ -130,9 +98,9 @@ export default function YavanikaPage() {
                   className="w-full h-full object-cover"
                 />
               ) : (
-                <div className="w-full h-full bg-gray-200 dark:bg-gray-700 flex justify-center">
-                  <span className="text-sm font-semibold text-center text-gray-600 dark:text-gray-300 px-2 pt-10 md:pt-14 truncate">
-                    {member.name}
+                <div className="w-full h-full bg-white flex items-center justify-center">
+                  <span className="text-3xl font-bold text-orange-500 text-center px-2">
+                    {member.name.charAt(0)}
                   </span>
                 </div>
               )}
@@ -155,7 +123,7 @@ export default function YavanikaPage() {
                 translateZ={20}
                 as="a"
                 href={`mailto:${member.email}`}
-                className="p-2 rounded-full bg-gray-100 hover:bg-red-500 hover:text-white transition-colors duration-300"
+                className="p-2 rounded-full bg-white text-black hover:bg-red-500 hover:text-white transition-colors duration-300"
                 aria-label="Email"
               >
                 <FaEnvelope className="w-4 h-4" />
@@ -168,7 +136,7 @@ export default function YavanikaPage() {
                 href={member.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full bg-gray-100 hover:bg-[#0077B5] hover:text-white transition-colors duration-300"
+                className="p-2 rounded-full bg-white text-black hover:bg-[#0077B5] hover:text-white transition-colors duration-300"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin className="w-4 h-4" />
@@ -203,10 +171,10 @@ export default function YavanikaPage() {
           {/* Image Section - Left on desktop, top on mobile */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
-              <img
-                src="/ClubLogo/yavanika.png"
-                alt="Yavanika Drama Society"
-                className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
+              <img 
+                src="/ClubLogo/yavanika.png" 
+                alt="Yavanika Drama Society" 
+                className="w-80 h-70 lg:w-96 lg:h-80 object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
@@ -314,7 +282,7 @@ export default function YavanikaPage() {
         {/* Social Media Links */}
         <div className="flex justify-center gap-6 mt-12">
           <a
-            href="https://facebook.com/hosca.iitp"
+            href="https://www.facebook.com/yavanika.iitp/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#1877F2] hover:text-white transition-colors duration-300"
@@ -323,7 +291,7 @@ export default function YavanikaPage() {
             <FaFacebook className="w-6 h-6" />
           </a>
           <a
-            href="https://instagram.com/hosca_iitp"
+            href="https://www.instagram.com/yavanika_iitp/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#E1306C] hover:text-white transition-colors duration-300"
@@ -332,7 +300,7 @@ export default function YavanikaPage() {
             <FaInstagram className="w-6 h-6" />
           </a>
           <a
-            href="https://youtube.com/user/CULTatIITP"
+            href="https://www.youtube.com/@Yavanika_iitp"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#FF0000] hover:text-white transition-colors duration-300"

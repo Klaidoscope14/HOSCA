@@ -38,7 +38,6 @@ const About = () => {
 
   return (
      <div className="relative w-full min-h-screen overflow-hidden bg-black text-white">
-      {/* Fullscreen Particles */}
       <Particles className="absolute inset-0 z-0" quantity={90} color="#888888" size={0.4} />
  <div className="relative z-10 flex flex-col items-center justify-center p-4 max-w-7xl mx-auto py-24">
         <Suspense fallback={<div className="w-full max-w-4xl h-[300px] bg-gray-800 animate-pulse rounded-xl" />}>

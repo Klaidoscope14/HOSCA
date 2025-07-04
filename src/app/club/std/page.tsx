@@ -9,103 +9,76 @@ interface ClubMember {
   id: number;
   name: string;
   position: string;
-  year?: string;
-  branch?: string;
   imageUrl?: string;
   email?: string;
   linkedinUrl?: string;
-  instagramUrl?: string;
 }
 
-const AnimeMembers: ClubMember[] = [
+const StdMembers: ClubMember[] = [
   {
     id: 1,
-    name: "Rajesh Kumar",
-    position: "President",
-    year: "4th Year",
-    branch: "Civil  Engineering",
-    email: "rajesh.civil@iitp.ac.in",
-    linkedinUrl: "https://linkedin.com/in/rajeshkumar",
-    instagramUrl: "https://instagram.com/rajeshkumar",
-    imageUrl: "/club/members/rajesh.jpg",
+    name: 'Rajesh Kumar',
+    position: 'Coordinator',
+    email: 'rajesh.civil@iitp.ac.in',
+    linkedinUrl: 'https://linkedin.com/in/rajeshkumar',
+    imageUrl: '/club/members/rajesh.jpg',
   },
   {
     id: 2,
-    name: "Priya Sharma",
-    position: "Vice President",
-    year: "3rd Year",
-    branch: "Computer   Science",
-    email: "priya.cs@iitp.ac.in",
-    linkedinUrl: "https://linkedin.com/in/priyasharma",
-    instagramUrl: "https://instagram.com/priyasharma",
-    imageUrl: "/club/members/priya.jpg",
+    name: 'Priya Sharma',
+    position: 'Coordinator',
+    email: 'priya.cs@iitp.ac.in',
+    linkedinUrl: 'https://linkedin.com/in/priyasharma',
+    imageUrl: '/club/members/priya.jpg',
   },
   {
     id: 3,
-    name: "Amit Verma",
-    position: "Secretary",
-    year: "3rd Year",
-    branch: "Mechanical Engineering",
-    email: "amit.mech@iitp.ac.in",
-    linkedinUrl: "https://linkedin.com/in/amitverma",
-    instagramUrl: "https://instagram.com/amitverma",
-    imageUrl: "/club/members/amit.jpg",
+    name: 'Amit Verma',
+    position: 'Sub-Coordinator',
+    email: 'amit.mech@iitp.ac.in',
+    linkedinUrl: 'https://linkedin.com/in/amitverma',
+    imageUrl: '/club/members/amit.jpg',
   },
   {
     id: 4,
-    name: "Sneha Patel",
-    position: "Creative Head",
-    year: "2nd Year",
-    branch: "Electrical Engineering",
-    email: "sneha.ee@iitp.ac.in",
-    linkedinUrl: "https://linkedin.com/in/snehapatel",
-    instagramUrl: "https://instagram.com/snehapatel",
-    imageUrl: "/club/members/sneha.jpg",
+    name: 'Sneha Patel',
+    position: 'Sub-Coordinator',
+    email: 'sneha.ee@iitp.ac.in',
+    linkedinUrl: 'https://linkedin.com/in/snehapatel',
+    imageUrl: '/club/members/sneha.jpg',
   },
   {
     id: 5,
-    name: "Arjun Singh",
-    position: "Script Writer",
-    year: "2nd Year",
-    branch: "Chemical Engineering",
-    email: "arjun.chem@iitp.ac.in",
-    linkedinUrl: "https://linkedin.com/in/arjunsingh",
-    instagramUrl: "https://instagram.com/arjunsingh",
-    imageUrl: "/club/members/arjun.jpg",
+    name: 'Arjun Singh',
+    position: 'Sub-Coordinator',
+    email: 'arjun.chem@iitp.ac.in',
+    linkedinUrl: 'https://linkedin.com/in/arjunsingh',
+    imageUrl: '/club/members/arjun.jpg',
   },
   {
     id: 6,
-    name: "Kavya Nair",
-    position: "Director",
-    year: "4th Year",
-    branch: " Bio-technology ",
-    email: "kavya.bt@iitp.ac.in",
-    linkedinUrl: "https://linkedin.com/in/kavyanair",
-    instagramUrl: "https://instagram.com/kavyanair",
-    imageUrl: "/club/members/kavya.jpg",
+    name: 'Kavya Nair',
+    position: 'Sub-Coordinator',
+    email: 'kavya.bt@iitp.ac.in',
+    linkedinUrl: 'https://linkedin.com/in/kavyanair',
+    imageUrl: '/club/members/kavya.jpg',
   },
   {
     id: 7,
-    name: "Rohit Gupta",
-    position: "Stage Manager",
-    year: "3rd Year",
-    branch: "  Metallurgy  ",
-    email: "rohit.met@iitp.ac.in",
-    linkedinUrl: "https://linkedin.com/in/rohitgupta",
-    instagramUrl: "https://instagram.com/rohitgupta",
-    imageUrl: "/club/members/rohit.jpg",
+    name: 'Rohit Gupta',
+    position: 'Sub-Coordinator',
+    email: 'rohit.met@iitp.ac.in',
+    linkedinUrl: 'https://linkedin.com/in/rohitgupta',
+    imageUrl: '/club/members/rohit.jpg',
   },
   {
     id: 8,
-    name: "Ananya Joshi",
-    position: "Costume Designer",
-    year: "2nd Year ",
-    branch: "Physics        ",
-    email: "ananya.phy@iitp.ac.in",
-    linkedinUrl: "https://linkedin.com/in/ananyajoshi",
-    instagramUrl: "https://instagram.com/ananyajoshi",
-    imageUrl: "/club/members/ananya.jpg",
-  },
+    name: 'Ananya Joshi',
+    position: 'Sub-Coordinator',
+    email: 'ananya.phy@iitp.ac.in',
+    linkedinUrl: 'https://linkedin.com/in/ananyajoshi',
+    imageUrl: '/club/members/ananya.jpg',
+  }
 ];
 
 export default function AnimePage() {
@@ -188,10 +161,7 @@ export default function AnimePage() {
       <BackgroundBeams className="absolute inset-0" />
 
       <div className="container mx-auto px-4 py-8 relative z-10">
-        {/* Hero Section */}
-        {/* Hero Section with Image Left, Content Right */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
-          {/* Image Section - Left on desktop, top on mobile */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
               <img
@@ -202,8 +172,7 @@ export default function AnimePage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
           </div>
-
-          {/* Content Section - Right on desktop, bottom on mobile */}
+          
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
             <h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-sky-400 mb-6"
@@ -259,7 +228,6 @@ export default function AnimePage() {
             </div>
           </div>
 
-          {/* Image Gallery */}
           <CardContainer className="w-full">
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">
@@ -300,28 +268,19 @@ export default function AnimePage() {
             Coordinators
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
-            {AnimeMembers.slice(0, 4).map((member) => renderMemberCard(member))}
+            {StdMembers.slice(0, 4).map((member) => renderMemberCard(member))}
           </div>
           <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-[#191970] px-4 md:px-0">
             Sub Coordinators
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {AnimeMembers.slice(4).map((member) => renderMemberCard(member))}
+            {StdMembers.slice(4).map((member) => renderMemberCard(member))}
           </div>
         </section>
-        {/* Social Media Links */}
+        
         <div className="flex justify-center gap-6 mt-12">
           <a
-            href="https://facebook.com/hosca.iitp"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full bg-gray-100 hover:bg-[#1877F2] hover:text-white transition-colors duration-300"
-            aria-label="Facebook"
-          >
-            <FaFacebook className="w-6 h-6" />
-          </a>
-          <a
-            href="https://instagram.com/hosca_iitp"
+            href="https://www.instagram.com/standup_club.iitp/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#E1306C] hover:text-white transition-colors duration-300"
@@ -329,15 +288,7 @@ export default function AnimePage() {
           >
             <FaInstagram className="w-6 h-6" />
           </a>
-          <a
-            href="https://youtube.com/user/CULTatIITP"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full bg-gray-100 hover:bg-[#FF0000] hover:text-white transition-colors duration-300"
-            aria-label="YouTube"
-          >
-            <FaYoutube className="w-6 h-6" />
-          </a>
+
         </div>
       </div>
     </div>

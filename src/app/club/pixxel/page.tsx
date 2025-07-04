@@ -5,126 +5,89 @@ import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
-import { Suspense } from "react";
 
 interface ClubMember {
   id: number;
   name: string;
   position: string;
-  year?: string;
-  branch?: string;
   imageUrl?: string;
   email?: string;
   linkedinUrl?: string;
-  instagramUrl?: string;
 }
 
 const PixxelMembers: ClubMember[] = [
   {
     id: 1,
-    name: "Koushik Kondaveti ",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Mechanical Engineering",
-    email: "koushik_2301me25@iitp.ac.in",
-    linkedinUrl: "https://www.linkedin.com/in/kondaveti-koushik-83631a285/",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/Pixxel/koushik.jpg",
+    name: 'Kondaveti Koushik',
+    position: 'Coordinator',
+    email: 'koushik_2301me25@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/kondaveti-koushik-83631a285/',
+    imageUrl: '/Coordinators/Pixxel/koushik.jpg',
   },
   {
     id: 2,
-    name: "Shreyash Sankpal",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Metallurgical and Materials Engineering",
-    email: "shreyash_2301mm16@iitp.ac.in",
-    linkedinUrl: "#",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/Pixxel/Shreyash.jpg",
+    name: 'Shreyash M',
+    position: 'Coordinator',
+    email: 'shreyash_2301mm16@iitp.ac.in',
+    linkedinUrl: '#',
+    imageUrl: '/Coordinators/Pixxel/Shreyash.jpg',
   },
   {
     id: 3,
-    name: "Lochan Bhaskaruni",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Mechanical Engineering",
-    email: "lochan_2301me28@iitp.ac.in",
-    linkedinUrl: "http://www.linkedin.com/in/lochan-bhaskaruni-10176b283",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/Pixxel/Lochan.jpg",
+    name: 'Lochan Bhaskaruni',
+    position: 'Coordinator',
+    email: 'lochan_2301me28@iitp.ac.in',
+    linkedinUrl: 'http://www.linkedin.com/in/lochan-bhaskaruni-10176b283',
+    imageUrl: '/Coordinators/Pixxel/Lochan.jpg',
   },
   {
     id: 4,
-    name: "R Sai Satya Charan",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Electrical and Electronics Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/charan-ravipati-421982332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Pixxel/CharanRavipati.jpg",
+    name: 'Charan Ravipati',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/charan-ravipati-421982332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Pixxel/CharanRavipati.jpg',
   },
   {
     id: 5,
-    name: "Kalpit Chaudhary ",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Civil Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/kalpit-chaudhary-946b10271?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Pixxel/KalpitChaudhary.jpg",
+    name: 'Kalpit Chaudhary',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/kalpit-chaudhary-946b10271?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Pixxel/KalpitChaudhary.jpg',
   },
   {
     id: 6,
-    name: "K Yashwanth Varma",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Engineering Physics",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/k-yashwanth-varma-50a54a320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Pixxel/KYashwanthVarma.jpg",
+    name: 'K Yashwanth Varma',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/k-yashwanth-varma-50a54a320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Pixxel/KYashwanthVarma.jpg',
   },
   {
     id: 7,
-    name: "Cheella Keerthana",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Mechanical Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/keerthana-cheella-27a114333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Pixxel/CheellaKeerthana.jpg",
+    name: 'Cheela Keerthana',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/keerthana-cheella-27a114333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Pixxel/CheellaKeerthana.jpg',
   },
   {
     id: 8,
-    name: "Priyanshu Sharma",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Civil Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/priyanshu-sharma-999740348?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Pixxel/PriyanshuSharma.jpg",
+    name: 'Priyanshu Sharma',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/priyanshu-sharma-999740348?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Pixxel/PriyanshuSharma.jpg',
   },
   {
     id: 9,
-    name: "Vuyyala Sai Hemanth Goud ",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Chemical Science and Technology",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/sai-hemanth-vuyyala-579b4536a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Pixxel/VuyySaiHemanthGoud.JPG",
-  },
+    name: 'Vuyyala Sai Hemanth Goud',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/sai-hemanth-vuyyala-579b4536a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+    imageUrl: '/SubCords/Pixxel/Vuyyala Sai Hemanth Goud.jpg',
+  }
 ];
 
 export default function PixxelPage() {
@@ -207,10 +170,7 @@ export default function PixxelPage() {
       <div className="absolute inset-0 bg-white/[0.6]"></div>
       <BackgroundBeams className="absolute inset-0" />
       <div className="container mx-auto px-4 py-8 relative z-10">
-        {/* Hero Section */}
-        {/* Hero Section with Image Left, Content Right */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
-          {/* Image Section - Left on desktop, top on mobile */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
               <img
@@ -221,10 +181,9 @@ export default function PixxelPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
           </div>
-
-          {/* Content Section - Right on desktop, bottom on mobile */}
+          
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black-300 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Pixxel
             </h1>
             <p className="text-lg md:text-xl text-black max-w-2xl mx-auto lg:mx-0">
@@ -276,7 +235,6 @@ export default function PixxelPage() {
             </div>
           </div>
 
-          {/* Gallery Section */}
           <div className="mb-16">
             <ImageGrid
               images={[
@@ -320,10 +278,9 @@ export default function PixxelPage() {
             {PixxelMembers.slice(3).map((member) => renderMemberCard(member))}
           </div>
         </section>
-        {/* Social Media Links */}
         <div className="flex justify-center gap-6 mt-12">
           <a
-            href="https://facebook.com/hosca.iitp"
+            href="https://www.facebook.com/pixxeliitp/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#1877F2] hover:text-white transition-colors duration-300"
@@ -332,7 +289,7 @@ export default function PixxelPage() {
             <FaFacebook className="w-6 h-6" />
           </a>
           <a
-            href="https://instagram.com/hosca_iitp"
+            href="https://www.instagram.com/pixxel_iitp/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#E1306C] hover:text-white transition-colors duration-300"
@@ -341,7 +298,7 @@ export default function PixxelPage() {
             <FaInstagram className="w-6 h-6" />
           </a>
           <a
-            href="https://youtube.com/user/CULTatIITP"
+            href="https://www.youtube.com/@PixxelIITP"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#FF0000] hover:text-white transition-colors duration-300"

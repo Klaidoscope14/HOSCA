@@ -1,119 +1,85 @@
-"use client";
-
+'use client';
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
-import { Suspense } from "react";
 
 interface ClubMember {
   id: number;
   name: string;
   position: string;
-  year?: string;
-  branch?: string;
   imageUrl?: string;
   email?: string;
   linkedinUrl?: string;
-  instagramUrl?: string;
 }
 
 const HootMembers: ClubMember[] = [
   {
     id: 1,
-    name: "Aviral Awasthi ",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Metallurgical and Materials Engineering",
-    email: "aviral_2301mm29@iitp.ac.in",
-    linkedinUrl:
-      "https://www.linkedin.com/in/aviral-awasthi-86943528a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/HOOT/Aviral.jpg",
+    name: 'Aviral Awasthi',
+    position: 'Coordinator',
+    email: 'aviral_2301mm29@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/aviral-awasthi-86943528a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/Coordinators/HOOT/Aviral.jpg',
   },
   {
     id: 2,
-    name: "Venkatesh Mishra",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Mechanical Engineering",
-    email: "venkatesh_2301me66@iitp.ac.in",
-    linkedinUrl:
-      "https://www.linkedin.com/in/venkatesh-mishra-399317288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/HOOT/Venkatesh.jpg",
+    name: 'Venkatesh Mishra',
+    position: 'Coordinator',
+    email: 'venkatesh_2301me66@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/venkatesh-mishra-399317288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+    imageUrl: '/Coordinators/HOOT/Venkatesh.jpg',
   },
   {
     id: 3,
-    name: "Aanushka Saha",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Chemical Engineering",
-    email: "#",
-    linkedinUrl: "https://www.linkedin.com/in/aanushka-saha-a2b78a322/",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/HOOT/aanushka_hoot.jpg",
+    name: 'Aanushka Saha',
+    position: 'Sub-Coordinator',
+    email: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/aanushka-saha-a2b78a322/',
+    imageUrl: '/SubCords/HOOT/aanushka_hoot.jpg',
   },
   {
     id: 4,
-    name: "Shashwat Tiwari",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Chemical Engineering",
-    email: "#",
-    linkedinUrl:
-      "hhttps://www.linkedin.com/in/shashwat-tiwari-2920852bb?utm_source=share&utm_campaign=share_via&utm_co",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/HOOT/Shashwat.jpg",
+    name: 'Shashwat Tiwari',
+    position: 'Sub-Coordinator',
+    email: '#',
+    linkedinUrl: 'hhttps://www.linkedin.com/in/shashwat-tiwari-2920852bb?utm_source=share&utm_campaign=share_via&utm_co',
+    imageUrl: '/SubCords/HOOT/Shashwat.jpg',
   },
   {
     id: 5,
-    name: "Ankit Basu",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Mathematics and Computing",
-    email: "#",
-    linkedinUrl:
-      "https://www.linkedin.com/in/ankit-basu-32295931a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/HOOT/AnkitBasu.jpg",
+    name: 'Ankit Basu',
+    position: 'Sub-Coordinator',
+    email: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/ankit-basu-32295931a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+    imageUrl: '/SubCords/HOOT/AnkitBasu.jpg',
   },
   {
     id: 6,
-    name: "Shreyas Das",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Mechanical Engineering",
-    email: "#",
-    linkedinUrl: "https://www.linkedin.com/in/shreyas-das-3a979b316/",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/HOOT/ShreyasDas.jpg",
+    name: 'Shreyas Das',
+    position: 'Sub-Coordinator',
+    email: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/shreyas-das-3a979b316/',
+    imageUrl: '/SubCords/HOOT/ShreyasDas.jpg',
   },
   {
     id: 7,
-    name: "Nirmit Chaurasia",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Artificial Intelligence and Data Science",
-    email: "#",
-    linkedinUrl: "https://in.linkedin.com/in/nirmit-chaurasia-678781191",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/HOOT/nirmitphoto.png",
+    name: 'Nirmit Chaurasia',
+    position: 'Sub-Coordinator',
+    email: '#',
+    linkedinUrl: 'https://in.linkedin.com/in/nirmit-chaurasia-678781191',
+    imageUrl: '/SubCords/HOOT/nirmitphoto.png',
   },
   {
     id: 8,
-    name: "Gopal",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Economics",
-    email: "#",
-    linkedinUrl: "https://www.linkedin.com/in/gopal-ramanathan-76173b306/",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/HOOT/Gopal.jpg",
-  },
+    name: 'Gopal Ramanathan',
+    position: 'Sub-Coordinator',
+    email: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/gopal-ramanathan-76173b306/',
+    imageUrl: '/SubCords/HOOT/Gopal.jpg',
+  }
 ];
-
 export default function HootPage() {
   const renderMemberCard = (member: ClubMember) => (
     <div key={member.id} className="flex justify-center w-full">
@@ -195,10 +161,7 @@ export default function HootPage() {
       <BackgroundBeams className="absolute inset-0" />
 
       <div className="container mx-auto px-4 py-8 relative z-10">
-        {/* Hero Section */}
-        {/* Hero Section with Image Left, Content Right */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
-          {/* Image Section - Left on desktop, top on mobile */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
               <img
@@ -209,8 +172,7 @@ export default function HootPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
           </div>
-
-          {/* Content Section - Right on desktop, bottom on mobile */}
+          
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-green-700 mb-6">
               HOOT
@@ -228,7 +190,6 @@ export default function HootPage() {
           </p>
         </div> */}
 
-        {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* About Section */}
           <div className="w-full">
@@ -270,7 +231,6 @@ export default function HootPage() {
             </div>
           </div>
 
-          {/* Gallery Section */}
           <div className="mb-16">
             <ImageGrid
               images={[
@@ -311,10 +271,9 @@ export default function HootPage() {
             {HootMembers.slice(2).map((member) => renderMemberCard(member))}
           </div>
         </section>
-        {/* Social Media Links */}
         <div className="flex justify-center gap-6 mt-12">
           <a
-            href="https://facebook.com/hosca.iitp"
+            href="https://www.facebook.com/hootiitp/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#1877F2] hover:text-white transition-colors duration-300"
@@ -323,7 +282,7 @@ export default function HootPage() {
             <FaFacebook className="w-6 h-6" />
           </a>
           <a
-            href="https://instagram.com/hosca_iitp"
+            href="https://www.instagram.com/hoot.iitp/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#E1306C] hover:text-white transition-colors duration-300"
@@ -331,15 +290,7 @@ export default function HootPage() {
           >
             <FaInstagram className="w-6 h-6" />
           </a>
-          <a
-            href="https://youtube.com/user/CULTatIITP"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full bg-gray-100 hover:bg-[#FF0000] hover:text-white transition-colors duration-300"
-            aria-label="YouTube"
-          >
-            <FaYoutube className="w-6 h-6" />
-          </a>
+         
         </div>
       </div>
     </div>

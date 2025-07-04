@@ -11,109 +11,76 @@ interface ClubMember {
   id: number;
   name: string;
   position: string;
-  year?: string;
-  branch?: string;
   imageUrl?: string;
   email?: string;
   linkedinUrl?: string;
-  instagramUrl?: string;
 }
 
 const ExousiaMembers: ClubMember[] = [
   {
     id: 1,
-    name: "Vibhuti Gupta",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Metallurgical and Materials Engineering",
-    email: "vibhuti_2301mm18@iitp.ac.in",
-    linkedinUrl:
-      "https://www.linkedin.com/in/vibhuti-gupta-186776262?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/Exousia/Vibhuti.jpg",
+    name: 'Vibhuti Gupta',
+    position: 'Coordinator',
+    email: 'vibhuti_2301mm18@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/vibhuti-gupta-186776262?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/Coordinators/Exousia/Vibhuti.jpg',
   },
   {
     id: 2,
-    name: "Ghanishth Attrey",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Civil Engineering",
-    email: "ghanishth_2301ce12@iitp.ac.in",
-    linkedinUrl:
-      "https://www.linkedin.com/in/ghanishth-attrey-364930351?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/Exousia/Ghanisth.jpg",
+    name: 'Ghanishth Attrey',
+    position: 'Coordinator',
+    email: 'ghanishth_2301ce12@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/ghanishth-attrey-364930351?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/Coordinators/Exousia/Ghanisth.jpg',
   },
   {
     id: 3,
-    name: "Antriksha Aman",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Computer Science and Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/antriksha-aman-320383327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Exousia/Antariksha.jpg",
+    name: 'Antriksha Aman',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/antriksha-aman-320383327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Exousia/Antariksha.jpg',
   },
   {
     id: 4,
-    name: "J. Karan",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Electrical and Electronics Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/karan-jarupulavath-6546212a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Exousia/KaranJarupala.jpg",
+    name: 'Karan Jarupala',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/karan-jarupulavath-6546212a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Exousia/karan.jpg',
   },
   {
     id: 5,
-    name: "G. Gagana Sadrush",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Economics",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/gaganasadrush-g-1199b9332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "",
+    name: 'Gaganasadrush G',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/gaganasadrush-g-1199b9332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Exousia/Gagan.jpg',
   },
   {
     id: 6,
-    name: "Vennela",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Computer Science and Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/vennela-jangiti-492264352?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "",
+    name: 'Vennela Jangiti',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/vennela-jangiti-492264352?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Exousia/Venella.jpg',
   },
   {
     id: 7,
-    name: "Begari Tanvi",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Mathematics and Computing",
-    email: "Add Email",
-    linkedinUrl: "https://www.linkedin.com/in/tanvi-begari-30ab1036a/",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Exousia/TanviBegari.jpg",
+    name: 'Tanvi Begari',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/tanvi-begari-30ab1036a/',
+    imageUrl: '/SubCords/Exousia/TanviBegari.jpg',
   },
   {
     id: 8,
-    name: "E. V. Sai Chathurya",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Computer Science and Engineering",
-    email: "Add Email",
-    linkedinUrl: "https://www.linkedin.com/in/chathurya0311",
-    instagramUrl: "#",
-    imageUrl: "",
-  },
+    name: 'Chathurya',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/chathurya0311',
+    imageUrl: '/SubCords/Exousia/Chaturya.png',
+  }
 ];
 
 export default function ExousiaPage() {
@@ -198,10 +165,7 @@ export default function ExousiaPage() {
       <BackgroundBeams className="absolute inset-0" />
 
       <div className="container mx-auto px-4 py-8 relative z-10">
-        {/* Hero Section */}
-        {/* Hero Section with Image Left, Content Right */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
-          {/* Image Section - Left on desktop, top on mobile */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
               <img
@@ -212,8 +176,7 @@ export default function ExousiaPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
           </div>
-
-          {/* Content Section - Right on desktop, bottom on mobile */}
+          
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-orange-400 mb-6">
               Exousia
@@ -267,7 +230,6 @@ export default function ExousiaPage() {
             </div>
           </div>
 
-          {/* Gallery Section */}
           <div className="mb-16">
             <ImageGrid
               images={[
@@ -315,11 +277,11 @@ export default function ExousiaPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
             {ExousiaMembers.slice(2).map((member) => renderMemberCard(member))}
           </div>
+          
         </section>
-        {/* Social Media Links */}
         <div className="flex justify-center gap-6 mt-12">
           <a
-            href="https://facebook.com/hosca.iitp"
+            href="https://www.facebook.com/DanceClubIITPatna/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#1877F2] hover:text-white transition-colors duration-300"
@@ -328,7 +290,7 @@ export default function ExousiaPage() {
             <FaFacebook className="w-6 h-6" />
           </a>
           <a
-            href="https://instagram.com/hosca_iitp"
+            href="https://www.instagram.com/exousia_iitp/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#E1306C] hover:text-white transition-colors duration-300"
@@ -337,7 +299,7 @@ export default function ExousiaPage() {
             <FaInstagram className="w-6 h-6" />
           </a>
           <a
-            href="https://youtube.com/user/CULTatIITP"
+            href="https://www.youtube.com/@exousia_iitp"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#FF0000] hover:text-white transition-colors duration-300"

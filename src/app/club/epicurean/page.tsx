@@ -5,114 +5,81 @@ import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
-import { Suspense } from "react";
 
 interface ClubMember {
   id: number;
   name: string;
   position: string;
-  year?: string;
-  branch?: string;
   imageUrl?: string;
   email?: string;
   linkedinUrl?: string;
-  instagramUrl?: string;
 }
 
 const EpicureanMembers: ClubMember[] = [
   {
     id: 1,
-    name: "Ananya Maldyar",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Electrical and Electronics Engineering",
-    email: "ananya_2301ee06@iitp.ac.in",
-    linkedinUrl: "https://www.linkedin.com/in/ananya-maldyar-132505298/",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/Epicurean/ananya.jpg",
+    name: 'Ananya Maldyar',
+    position: 'Coordinator',
+    email: 'ananya_2301ee06@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/ananya-maldyar-132505298/',
+    imageUrl: '/Coordinators/Epicurean/ananya.jpg',
   },
   {
     id: 2,
-    name: "Shibanshu Soubhagya Das",
-    position: "Coordinator",
-    year: "3rd Year",
-    branch: "Civil Engineering",
-    email: "shibanshu_2302gt08@iitp.ac.in",
-    linkedinUrl: "https://in.linkedin.com/in/shibanshu-soubhagya-das-46a5342b5",
-    instagramUrl: "#",
-    imageUrl: "/Coordinators/Epicurean/Shibhanshu.png",
+    name: 'Shibanshu Soubhagya Das',
+    position: 'Coordinator',
+    email: 'shibanshu_2302gt08@iitp.ac.in',
+    linkedinUrl: 'https://in.linkedin.com/in/shibanshu-soubhagya-das-46a5342b5',
+    imageUrl: '/Coordinators/Epicurean/Shibhanshu.png',
   },
   {
     id: 3,
-    name: "Aditi Lohiya",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Chemical Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/aditi-lohiya-395532321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Epicurean/AditiLohiya.jpg",
+    name: 'Aditi Lohiya',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/aditi-lohiya-395532321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Epicurean/AditiLohiya.jpg',
   },
   {
     id: 4,
-    name: "Avi Bharti",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Computer Science and Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/avi-bharti-029b1833b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Epicurean/Avi.jpg",
+    name: 'Avi Bharti',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/avi-bharti-029b1833b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+    imageUrl: '/SubCords/Epicurean/Avi.jpg',
   },
   {
     id: 5,
-    name: "Shailja Brijendra Mathuria ",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Metallurgical and Materials Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/shailja-mathuria-739834312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Epicurean/ShailjaMathuria.jpg",
+    name: 'Shailja Mathuria',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/shailja-mathuria-739834312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Epicurean/Shailja.jpg',
   },
   {
     id: 6,
-    name: "Krittika Kiran Das",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Electronics and Communication Engineering",
-    email: "Add Email",
-    linkedinUrl: "https://in.linkedin.com/in/krittika-das-4704b2327",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Epicurean/Kritika.HEIC",
+    name: 'Krittika Das',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://in.linkedin.com/in/krittika-das-4704b2327',
+    imageUrl: '/SubCords/Epicurean/Kritika.jpg',
   },
   {
     id: 7,
-    name: "Kumari Shikha ",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Electrical and Electronics Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/kumari-shikha-a1506a327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Epicurean/KumariShikha.jpg",
+    name: 'Kumari Shikha',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/kumari-shikha-a1506a327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Epicurean/KumariShikha.jpg',
   },
   {
     id: 8,
-    name: "Shashank Mishra ",
-    position: "Sub-Coordinator",
-    year: "2nd Year",
-    branch: "Electronics and Communication Engineering",
-    email: "Add Email",
-    linkedinUrl:
-      "https://www.linkedin.com/in/shashank-mishra-72b495326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    instagramUrl: "#",
-    imageUrl: "/SubCords/Epicurean/Shashank.jpg",
-  },
+    name: 'Shashank Mishra',
+    position: 'Sub-Coordinator',
+    email: 'Add Email',
+    linkedinUrl: 'https://www.linkedin.com/in/shashank-mishra-72b495326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    imageUrl: '/SubCords/Epicurean/Shashank.jpg',
+  }
 ];
 
 export default function EpicureanPage() {
@@ -196,22 +163,18 @@ export default function EpicureanPage() {
       <BackgroundBeams className="absolute inset-0" />
 
       <div className="container mx-auto px-4 py-8 relative z-10">
-        {/* Hero Section */}
-        {/* Hero Section with Image Left, Content Right */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
-          {/* Image Section - Left on desktop, top on mobile */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
-              <img
-                src="/ClubLogo/epicurean.png"
-                alt="Litracy Society"
+              <img 
+                src="/ClubLogo/epicurean.png" 
+                alt="Epicurean" 
                 className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
           </div>
-
-          {/* Content Section - Right on desktop, bottom on mobile */}
+          
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-300 mb-6">
               Epicurean
@@ -267,7 +230,6 @@ export default function EpicureanPage() {
             </div>
           </div>
 
-          {/* Image Gallery */}
           <div className="mb-16">
             <ImageGrid
               images={[
@@ -307,19 +269,10 @@ export default function EpicureanPage() {
             )}
           </div>
         </section>
-        {/* Social Media Links */}
         <div className="flex justify-center gap-6 mt-12">
+         
           <a
-            href="https://facebook.com/hosca.iitp"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full bg-gray-100 hover:bg-[#1877F2] hover:text-white transition-colors duration-300"
-            aria-label="Facebook"
-          >
-            <FaFacebook className="w-6 h-6" />
-          </a>
-          <a
-            href="https://instagram.com/hosca_iitp"
+            href="https://www.instagram.com/culinary_club_iitpatna/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-100 hover:bg-[#E1306C] hover:text-white transition-colors duration-300"
@@ -327,15 +280,7 @@ export default function EpicureanPage() {
           >
             <FaInstagram className="w-6 h-6" />
           </a>
-          <a
-            href="https://youtube.com/user/CULTatIITP"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full bg-gray-100 hover:bg-[#FF0000] hover:text-white transition-colors duration-300"
-            aria-label="YouTube"
-          >
-            <FaYoutube className="w-6 h-6" />
-          </a>
+         
         </div>
       </div>
     </div>

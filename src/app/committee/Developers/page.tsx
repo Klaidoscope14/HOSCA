@@ -82,9 +82,9 @@ const contributors: Developer[] = [
   },
   {
     id: 11,
-    name: "Ayaan Tejani",
-    email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/committee/literary-secretary.jpg",
+    name: "Aayan Tejani",
+    email: "aayan_2401cs58@iitp.ac.in",
+    imageUrl: "/HoscaaSubcoords/Aayan.jpg",
     linkedinUrl: "https://www.linkedin.com/in/aayan-tejani-7022b9240/",
   },
   {

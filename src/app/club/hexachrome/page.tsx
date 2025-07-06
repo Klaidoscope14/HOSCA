@@ -172,7 +172,7 @@ export default function HexaChromePage() {
               HexaChrome
             </h1>
             <p className="text-lg md:text-xl text-black max-w-2xl mx-auto lg:mx-0">
-              aims to provide a platform for students to learn and improve in
+              Aims to provide a platform for students to learn and improve in
               solving puzzles such as Rubik's Cube, Cryptograms, Crosswords,
               Scrabble,
             </p>

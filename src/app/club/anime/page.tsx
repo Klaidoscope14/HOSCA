@@ -2,7 +2,7 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 
@@ -158,11 +158,8 @@ export default function AnimePage() {
   return (
     <div className="relative min-h-screen w-full bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <BackgroundBeams className="absolute inset-0" />
-
       <div className="container mx-auto px-4 py-8 relative z-10">
-        
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
-          
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">   
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
               <img
@@ -190,9 +187,7 @@ export default function AnimePage() {
           </div>
         </div>
 
-        {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* About Section */}
           <div className="w-full">
             <div className="bg-white border-white relative group/card shadow-lg w-full h-auto rounded-xl p-8">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">
@@ -253,7 +248,6 @@ export default function AnimePage() {
             />
           </div>
         </div>
-        {/* Members Section */}
 
         <section className="space-y-12">
           <h2 className="text-4xl font-bold text-center mb-12 text-blue-500">
@@ -283,7 +277,6 @@ export default function AnimePage() {
           >
             <FaInstagram className="w-6 h-6" />
           </a>
-        
         </div>
       </div>
     </div>

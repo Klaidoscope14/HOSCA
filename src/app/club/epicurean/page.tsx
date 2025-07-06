@@ -2,7 +2,7 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 
@@ -186,9 +186,7 @@ export default function EpicureanPage() {
           </div>
         </div>
 
-        {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* About Section */}
           <div className="w-full">
             <div className="border-white relative group/card shadow-lg w-full h-auto rounded-xl p-8 ">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">
@@ -246,7 +244,6 @@ export default function EpicureanPage() {
             />
           </div>
         </div>
-        {/* Members Section */}
 
         <section className="space-y-12">
           <h2 className="text-4xl font-bold text-center mb-12 text-[#FFDB58]">

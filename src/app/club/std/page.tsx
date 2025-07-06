@@ -21,7 +21,7 @@ const StdMembers: ClubMember[] = [
     position: 'Coordinator',
     email: 'rajesh.civil@iitp.ac.in',
     linkedinUrl: 'https://linkedin.com/in/rajeshkumar',
-    imageUrl: '/club/members/rajesh.jpg',
+    imageUrl: '/Coordinators/STD/Abhitesh.jpg',
   },
   {
     id: 2,
@@ -29,55 +29,39 @@ const StdMembers: ClubMember[] = [
     position: 'Coordinator',
     email: 'priya.cs@iitp.ac.in',
     linkedinUrl: 'https://linkedin.com/in/priyasharma',
-    imageUrl: '/club/members/priya.jpg',
+    imageUrl: '/Coordinators/STD/Archita.jpeg',
   },
   {
     id: 3,
-    name: 'Amit Verma',
+    name: 'Shiva Gupta',
     position: 'Sub-Coordinator',
     email: 'amit.mech@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/amitverma',
-    imageUrl: '/club/members/amit.jpg',
+    linkedinUrl: 'https://www.linkedin.com/in/shiva-gupta-iit-patna/',
+    imageUrl: '/SubCords/STD/Shiva.jpeg',
   },
   {
     id: 4,
-    name: 'Sneha Patel',
+    name: 'Pratyush Chandra',
     position: 'Sub-Coordinator',
     email: 'sneha.ee@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/snehapatel',
-    imageUrl: '/club/members/sneha.jpg',
+    linkedinUrl: 'https://in.linkedin.com/in/pratyush-chandra-',
+    imageUrl: '/SubCords/STD/Pratyush.jpg',
   },
   {
     id: 5,
-    name: 'Arjun Singh',
+    name: 'Vaibhav Shrivastava ',
     position: 'Sub-Coordinator',
     email: 'arjun.chem@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/arjunsingh',
-    imageUrl: '/club/members/arjun.jpg',
+    linkedinUrl: 'https://www.linkedin.com/in/vaibhav-srivastava-13737a321/',
+    imageUrl: '/SubCords/STD/Vaibhav.jpg',
   },
   {
     id: 6,
-    name: 'Kavya Nair',
+    name: 'Monika Poonia',
     position: 'Sub-Coordinator',
     email: 'kavya.bt@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/kavyanair',
-    imageUrl: '/club/members/kavya.jpg',
-  },
-  {
-    id: 7,
-    name: 'Rohit Gupta',
-    position: 'Sub-Coordinator',
-    email: 'rohit.met@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/rohitgupta',
-    imageUrl: '/club/members/rohit.jpg',
-  },
-  {
-    id: 8,
-    name: 'Ananya Joshi',
-    position: 'Sub-Coordinator',
-    email: 'ananya.phy@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/ananyajoshi',
-    imageUrl: '/club/members/ananya.jpg',
+    linkedinUrl: 'https://www.linkedin.com/in/monika-poonia-b52025324',
+    imageUrl: '/SubCords/STD/monika.jpg',
   }
 ];
 
@@ -234,6 +218,12 @@ export default function AnimePage() {
                 Gallery
               </h2>
               <div className="grid grid-cols-2 gap-4">
+                <img src="/ClubPages/STD/IMG_20250614_162431.jpg" alt="std Debate" className="rounded-lg w-full h-54 object-cover" />
+                <img src="/ClubPages/STD/IMG_20250614_163131.jpg" alt="std MUN" className="rounded-lg w-full h-54 object-cover" />
+                <img src="/ClubPages/STD/IMG-20240810-WA0024.jpg" alt="std Event" className="rounded-lg w-full h-54 object-cover" />
+                <img src="/ClubPages/STD/IMG-20250614-WA0006.jpg" alt="std Team" className="rounded-lg w-full h-54 object-cover" />
+                <img src="/ClubPages/STD/IMG-20250614-WA0011.jpg" alt="std Team" className="rounded-lg w-full h-54 object-cover" />
+                <img src="/ClubPages/STD/IMG-20250614-WA0014.jpg" alt="std Team" className="rounded-lg w-full h-54 object-cover" />
                 <img
                   src="/ClubLogo/std.png"
                   alt="std Debate"

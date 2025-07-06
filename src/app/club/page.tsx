@@ -5,6 +5,7 @@ import { Cover } from "@/components/ui/cover";
 function ClubBackgroundDecor() {
   return (
     <>
+      {/* Animated, more lively blurred blobs */}
       <div className="fixed inset-0 -z-20 pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[40vw] h-[40vw] bg-purple-400 opacity-30 rounded-full filter blur-3xl animate-blob1"></div>
         <div className="absolute bottom-[-10%] right-[-10%] w-[45vw] h-[45vw] bg-pink-400 opacity-30 rounded-full filter blur-3xl animate-blob2"></div>

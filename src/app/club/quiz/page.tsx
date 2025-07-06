@@ -86,7 +86,7 @@ const QuizMembers: ClubMember[] = [
     position: 'Sub-Coordinator',
     email: 'Add Email',
     linkedinUrl: '#',
-    imageUrl: '/SubCords/QuizClub/HeetJoshi.jpg',
+    imageUrl: '/SubCords/QuizClub/HeetJoshi.jpeg',
   }
 ];
 

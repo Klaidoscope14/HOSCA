@@ -193,9 +193,7 @@ export default function PixxelPage() {
           </div>
         </div>
 
-        {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* About Section */}
           <div className="w-full">
             <div className="border-white relative group/card shadow-lg w-full h-auto rounded-xl p-8">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">
@@ -257,10 +255,9 @@ export default function PixxelPage() {
             />
           </div>
         </div>
-        {/* Members Section */}
 
         <section className="space-y-12">
-          <h2 className="text-4xl font-bold text-center mb-12 text-blue-500">
+          <h2 className="text-4xl font-bold text-center mt-10 mb-12 text-blue-500">
             Our Team
           </h2>
           <h2 className="text-3xl font-semibold text-center mb-6 text-[#4169E1] px-2 md:px-0">

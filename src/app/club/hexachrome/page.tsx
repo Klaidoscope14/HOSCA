@@ -46,7 +46,7 @@ const HexachromeMembers: ClubMember[] = [
     position: 'Sub-Coordinator',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/akash-kota-a3538a323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Exousia/KaranJarupala.jpg',
+    imageUrl: '/SubCords/HexaChrome/Akash.jpg',
   },
   {
     id: 5,

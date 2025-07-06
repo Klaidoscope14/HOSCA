@@ -195,9 +195,9 @@ export default function EpicureanPage() {
                 About Epicurean
               </h2>
               <p className="text-neutral-600 dark:text-neutral-300">
-                The House of Oratory Talents is the speaking arts club of IIT
-                Patna.The club practices the art of articulation and this is
-                where team bonding is celebrated.
+                Where flavors ignite curiosity and passion simmers with every stir.
+                Epicurean isn’t just about food—it’s a journey of taste, technique, and togetherness.
+                From spontaneous dorm recipes to exquisite culinary experiments, we celebrate the joy of creating and sharing.
               </p>
               <div className="mt-6">
                 <h3 className="text-xl font-semibold text-neutral-700 dark:text-white mb-3">

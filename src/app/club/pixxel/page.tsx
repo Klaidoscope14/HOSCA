@@ -46,7 +46,7 @@ const PixxelMembers: ClubMember[] = [
     position: 'Sub-Coordinator',
     email: 'Add Email',
     linkedinUrl: 'https://www.linkedin.com/in/charan-ravipati-421982332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Pixxel/CharanRavipati.jpg',
+    imageUrl: '/SubCords/Pixxel/Charan.png',
   },
   {
     id: 5,

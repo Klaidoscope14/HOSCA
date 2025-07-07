@@ -263,11 +263,33 @@ export default function HexaChromePage() {
           <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-[#4169E1] px-4 md:px-0">
             Sub Coordinators
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {HexachromeMembers.slice(2).map((member) =>
+          <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            {HexachromeMembers.slice(2,5).map((member) =>
               renderMemberCard(member)
             )}
           </div>
+          <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto ">
+            {HexachromeMembers.slice(5).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+            
+            <div className="hidden sm:grid sm:grid-cols-2 lg:hidden gap-10 max-w-6xl mx-auto">
+            {HexachromeMembers.slice(2,4).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+          <div className="hidden sm:grid sm:grid-cols-2 lg:hidden gap-10 max-w-6xl mx-auto ">
+            {HexachromeMembers.slice(4,6).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+          <div className="hidden sm:grid sm:grid-cols-1 lg:hidden gap-10 max-w-6xl mx-auto ">
+            {HexachromeMembers.slice(6).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+
         </section>
         <div className="flex justify-center gap-6 mt-12">
           

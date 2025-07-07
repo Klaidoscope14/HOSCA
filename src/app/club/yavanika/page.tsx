@@ -268,14 +268,49 @@ export default function YavanikaPage() {
           <h2 className="text-3xl font-semibold text-center mb-6 text-yellow-300 px-2 md:px-0">
             Coordinators
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {YavanikaMembers.slice(0,3).map((member: ClubMember) => renderMemberCard(member))}
+          <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            {YavanikaMembers.slice(0, 3).map((member) =>
+              renderMemberCard(member)
+            )}
           </div>
-          <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-yellow-300 px-4 md:px-0">
+          <div className="hidden sm:grid sm:grid-cols-2 lg:hidden gap-10 max-w-6xl mx-auto">
+            {YavanikaMembers.slice(0, 2).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+          <div className="hidden sm:grid sm:grid-cols-1 lg:hidden gap-10 max-w-6xl mx-auto">
+            {YavanikaMembers.slice(2,3).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+          <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-[#4169E1] px-4 md:px-0">
             Sub Coordinators
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {YavanikaMembers.slice(3).map((member: ClubMember) => renderMemberCard(member))}
+          <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            {YavanikaMembers.slice(3,6).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+          <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto ">
+            {YavanikaMembers.slice(6).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+            
+            <div className="hidden sm:grid sm:grid-cols-2 lg:hidden gap-10 max-w-6xl mx-auto">
+            {YavanikaMembers.slice(3,5).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+          <div className="hidden sm:grid sm:grid-cols-2 lg:hidden gap-10 max-w-6xl mx-auto ">
+            {YavanikaMembers.slice(5,7).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+          <div className="hidden sm:grid sm:grid-cols-1 lg:hidden gap-10 max-w-6xl mx-auto ">
+            {YavanikaMembers.slice(7).map((member) =>
+              renderMemberCard(member)
+            )}
           </div>
         </section> 
 

@@ -123,19 +123,7 @@ export default function AnimePage() {
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
-            {/* {member.instagramUrl && (
-              <CardItem
-                translateZ={20}
-                as="a"
-                href={member.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white text-black hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white transition-colors duration-300"
-                aria-label="Instagram"
-              >
-                <FaInstagram className="w-4 h-4" />
-              </CardItem>
-            )} */}
+           
           </div>
         </CardBody>
       </CardContainer>
@@ -212,12 +200,6 @@ export default function AnimePage() {
               </div>
             </div>
           </div>
-
-          {/* <CardContainer className="w-full">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">
-                Gallery
-              </h2> */}
               <div className="mb-16">
                <ImageGrid
                             images={[
@@ -229,53 +211,12 @@ export default function AnimePage() {
                               "/ClubPages/STD/IMG-20250614-WA0014.jpg",
                               "/ClubLogo/std.png",
                               "/ClubLogo/std.png",
-                              // "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.18.jpeg",
-                              // "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.17.jpeg",
-                              // "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.16.jpeg",
-                              // "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.15.jpeg",
-                              // "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.14.jpeg",
-                              // "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.13.jpeg",
-                              // "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.12.jpeg",
-                              // "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.11.jpeg",
-                              // "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.10.jpeg",
-                              // "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.08.13.jpeg",
-                              // "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.06.01.jpeg",
-                              // "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.06.00.jpeg",
+                            
                             ]}
                             className="max-w-4xl mx-auto"
                           />
 
               </div>
-              {/* <div className="grid grid-cols-2 gap-4">
-                <img src="/ClubPages/STD/IMG_20250614_162431.jpg" alt="std Debate" className="rounded-lg w-full h-54 object-cover" />
-                <img src="/ClubPages/STD/IMG_20250614_163131.jpg" alt="std MUN" className="rounded-lg w-full h-54 object-cover" />
-                <img src="/ClubPages/STD/IMG-20240810-WA0024.jpg" alt="std Event" className="rounded-lg w-full h-54 object-cover" />
-                <img src="/ClubPages/STD/IMG-20250614-WA0006.jpg" alt="std Team" className="rounded-lg w-full h-54 object-cover" />
-                <img src="/ClubPages/STD/IMG-20250614-WA0011.jpg" alt="std Team" className="rounded-lg w-full h-54 object-cover" />
-                <img src="/ClubPages/STD/IMG-20250614-WA0014.jpg" alt="std Team" className="rounded-lg w-full h-54 object-cover" />
-                <img
-                  src="/ClubLogo/std.png"
-                  alt="std Debate"
-                  className="rounded-lg w-full h-54 object-cover"
-                />
-                <img
-                  src="/ClubLogo/std.png"
-                  alt="std MUN"
-                  className="rounded-lg w-full h-54 object-cover"
-                />
-                <img
-                  src="/ClubLogo/std.png"
-                  alt="std Event"
-                  className="rounded-lg w-full h-54 object-cover"
-                />
-                <img
-                  src="/ClubLogo/std.png"
-                  alt="std Team"
-                  className="rounded-lg w-full h-54 object-cover"
-                />
-              </div> */}
-            {/* </CardBody>
-          </CardContainer> */}
         </div>
         {/* Members Section */}
 

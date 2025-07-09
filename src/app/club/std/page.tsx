@@ -2,7 +2,7 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 interface ClubMember {
@@ -17,25 +17,25 @@ interface ClubMember {
 const StdMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Rajesh Kumar',
+    name: 'Abhitesh Shukla',
     position: 'Coordinator',
-    email: 'rajesh.civil@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/rajeshkumar',
+    email: 'abhitesh_2301ee52@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/abhitesh-shukla-bb8053294/',
     imageUrl: '/Coordinators/STD/Abhitesh.jpg',
   },
   {
     id: 2,
-    name: 'Priya Sharma',
+    name: 'Archita Shuchi',
     position: 'Coordinator',
-    email: 'priya.cs@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/priyasharma',
+    email: 'archita_2301ce06@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/archita-shuchi-a88143326/',
     imageUrl: '/Coordinators/STD/Archita.jpeg',
   },
   {
     id: 3,
     name: 'Shiva Gupta',
     position: 'Sub-Coordinator',
-    email: 'amit.mech@iitp.ac.in',
+    email: 'standup_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/shiva-gupta-iit-patna/',
     imageUrl: '/SubCords/STD/Shiva.jpeg',
   },
@@ -43,7 +43,7 @@ const StdMembers: ClubMember[] = [
     id: 4,
     name: 'Pratyush Chandra',
     position: 'Sub-Coordinator',
-    email: 'sneha.ee@iitp.ac.in',
+    email: 'standup_club@iitp.ac.in',
     linkedinUrl: 'https://in.linkedin.com/in/pratyush-chandra-',
     imageUrl: '/SubCords/STD/Pratyush.jpg',
   },
@@ -51,7 +51,7 @@ const StdMembers: ClubMember[] = [
     id: 5,
     name: 'Vaibhav Shrivastava ',
     position: 'Sub-Coordinator',
-    email: 'arjun.chem@iitp.ac.in',
+    email: 'standup_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/vaibhav-srivastava-13737a321/',
     imageUrl: '/SubCords/STD/Vaibhav.jpg',
   },
@@ -59,7 +59,7 @@ const StdMembers: ClubMember[] = [
     id: 6,
     name: 'Monika Poonia',
     position: 'Sub-Coordinator',
-    email: 'kavya.bt@iitp.ac.in',
+    email: 'standup_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/monika-poonia-b52025324',
     imageUrl: '/SubCords/STD/monika.jpg',
   }
@@ -172,9 +172,7 @@ export default function AnimePage() {
           </div>
         </div>
 
-        {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* About Section */}
           <div className="w-full">
             <div className="border-white relative group/card shadow-lg w-full h-auto rounded-xl p-8">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">
@@ -248,7 +246,6 @@ export default function AnimePage() {
             </CardBody>
           </CardContainer>
         </div>
-        {/* Members Section */}
 
         <section className="space-y-12">
           <h2 className="text-4xl font-bold text-center mb-12 text-[#6A0DAD]">
@@ -257,14 +254,14 @@ export default function AnimePage() {
           <h2 className="text-3xl font-semibold text-center mb-6 text-[#191970] px-2 md:px-0">
             Coordinators
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
-            {StdMembers.slice(0, 4).map((member) => renderMemberCard(member))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
+            {StdMembers.slice(0, 2).map((member) => renderMemberCard(member))}
           </div>
           <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-[#191970] px-4 md:px-0">
             Sub Coordinators
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {StdMembers.slice(4).map((member) => renderMemberCard(member))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
+            {StdMembers.slice(2).map((member) => renderMemberCard(member))}
           </div>
         </section>
         

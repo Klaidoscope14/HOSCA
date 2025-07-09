@@ -28,7 +28,7 @@ const QuizMembers: ClubMember[] = [
     id: 2,
     name: 'Amal Biju',
     position: 'Coordinator',
-    email: 'Add Email',
+    email: 'quizclub@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/amal-biju-5ab486300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/Coordinators/QuizClub/Amal.jpg',
   },
@@ -44,7 +44,7 @@ const QuizMembers: ClubMember[] = [
     id: 4,
     name: 'Leon Joel Shaji',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'quizclub@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/leon-joel-shaji-723012324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/QuizClub/leonJoel.jpg',
   },
@@ -52,7 +52,7 @@ const QuizMembers: ClubMember[] = [
     id: 5,
     name: 'Sarthak Poddar',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'quizclub@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/sarthak-poddar-66038b305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/QuizClub/SarthakPoddar.jpg',
   },
@@ -60,7 +60,7 @@ const QuizMembers: ClubMember[] = [
     id: 6,
     name: 'Harshit Singh',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'quizclub@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/harshit-singh-1158b1367/',
     imageUrl: '/SubCords/QuizClub/harshit_singh.jpg',
   },
@@ -68,7 +68,7 @@ const QuizMembers: ClubMember[] = [
     id: 7,
     name: 'Joven Sony',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'quizclub@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/joven-sony-aa0862224?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/QuizClub/Joven.jpg',
   },
@@ -76,7 +76,7 @@ const QuizMembers: ClubMember[] = [
     id: 8,
     name: 'Abhiram Parupudi',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'quizclub@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/abhiram-p-432a43319?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/QuizClub/abhiramParupudi.jpg',
   },
@@ -84,7 +84,7 @@ const QuizMembers: ClubMember[] = [
     id: 9,
     name: 'Heet Joshi',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'quizclub@iitp.ac.in',
     linkedinUrl: '#',
     imageUrl: '/SubCords/QuizClub/HeetJoshi.jpeg',
   }
@@ -194,9 +194,7 @@ export default function QuizPage() {
           </div>
         </div>
 
-        {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* About Section */}
           <div className="w-full ">
             <div className="border-white relative group/card shadow-lg w-full h-auto rounded-xl p-8">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">
@@ -264,7 +262,6 @@ export default function QuizPage() {
             />
           </div>
         </div>
-        {/* Members Section */}
 
         <section className="space-y-12">
           <h2 className="text-4xl font-bold text-center mb-12 text-[#E6A14C]">

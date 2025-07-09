@@ -2,8 +2,9 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { ImageGrid } from "@/components/ui/image-grid";
 
 interface ClubMember {
   id: number;
@@ -35,7 +36,7 @@ const StdMembers: ClubMember[] = [
     id: 3,
     name: 'Shiva Gupta',
     position: 'Sub-Coordinator',
-    email: 'standup_club@iitp.ac.in',
+    email: 'amit.mech@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/shiva-gupta-iit-patna/',
     imageUrl: '/SubCords/STD/Shiva.jpeg',
   },
@@ -43,7 +44,7 @@ const StdMembers: ClubMember[] = [
     id: 4,
     name: 'Pratyush Chandra',
     position: 'Sub-Coordinator',
-    email: 'standup_club@iitp.ac.in',
+    email: 'sneha.ee@iitp.ac.in',
     linkedinUrl: 'https://in.linkedin.com/in/pratyush-chandra-',
     imageUrl: '/SubCords/STD/Pratyush.jpg',
   },
@@ -51,7 +52,7 @@ const StdMembers: ClubMember[] = [
     id: 5,
     name: 'Vaibhav Shrivastava ',
     position: 'Sub-Coordinator',
-    email: 'standup_club@iitp.ac.in',
+    email: 'arjun.chem@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/vaibhav-srivastava-13737a321/',
     imageUrl: '/SubCords/STD/Vaibhav.jpg',
   },
@@ -59,7 +60,7 @@ const StdMembers: ClubMember[] = [
     id: 6,
     name: 'Monika Poonia',
     position: 'Sub-Coordinator',
-    email: 'standup_club@iitp.ac.in',
+    email: 'kavya.bt@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/monika-poonia-b52025324',
     imageUrl: '/SubCords/STD/monika.jpg',
   }
@@ -122,19 +123,7 @@ export default function AnimePage() {
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
-            {/* {member.instagramUrl && (
-              <CardItem
-                translateZ={20}
-                as="a"
-                href={member.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white text-black hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white transition-colors duration-300"
-                aria-label="Instagram"
-              >
-                <FaInstagram className="w-4 h-4" />
-              </CardItem>
-            )} */}
+           
           </div>
         </CardBody>
       </CardContainer>
@@ -172,7 +161,9 @@ export default function AnimePage() {
           </div>
         </div>
 
+        {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {/* About Section */}
           <div className="w-full">
             <div className="border-white relative group/card shadow-lg w-full h-auto rounded-xl p-8">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">
@@ -209,43 +200,25 @@ export default function AnimePage() {
               </div>
             </div>
           </div>
+              <div className="mb-16">
+               <ImageGrid
+                            images={[
+                              "/ClubPages/STD/IMG_20250614_162431.jpg",
+                              "/ClubPages/STD/IMG_20250614_163131.jpg",
+                              "/ClubPages/STD/IMG-20240810-WA0024.jpg",
+                              "/ClubPages/STD/IMG-20250614-WA0006.jpg",
+                              "/ClubPages/STD/IMG-20250614-WA0011.jpg",
+                              "/ClubPages/STD/IMG-20250614-WA0014.jpg",
+                              "/ClubLogo/std.png",
+                              "/ClubLogo/std.png",
+                            
+                            ]}
+                            className="max-w-4xl mx-auto"
+                          />
 
-          <CardContainer className="w-full">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">
-                Gallery
-              </h2>
-              <div className="grid grid-cols-2 gap-4">
-                <img src="/ClubPages/STD/IMG_20250614_162431.jpg" alt="std Debate" className="rounded-lg w-full h-54 object-cover" />
-                <img src="/ClubPages/STD/IMG_20250614_163131.jpg" alt="std MUN" className="rounded-lg w-full h-54 object-cover" />
-                <img src="/ClubPages/STD/IMG-20240810-WA0024.jpg" alt="std Event" className="rounded-lg w-full h-54 object-cover" />
-                <img src="/ClubPages/STD/IMG-20250614-WA0006.jpg" alt="std Team" className="rounded-lg w-full h-54 object-cover" />
-                <img src="/ClubPages/STD/IMG-20250614-WA0011.jpg" alt="std Team" className="rounded-lg w-full h-54 object-cover" />
-                <img src="/ClubPages/STD/IMG-20250614-WA0014.jpg" alt="std Team" className="rounded-lg w-full h-54 object-cover" />
-                <img
-                  src="/ClubLogo/std.png"
-                  alt="std Debate"
-                  className="rounded-lg w-full h-54 object-cover"
-                />
-                <img
-                  src="/ClubLogo/std.png"
-                  alt="std MUN"
-                  className="rounded-lg w-full h-54 object-cover"
-                />
-                <img
-                  src="/ClubLogo/std.png"
-                  alt="std Event"
-                  className="rounded-lg w-full h-54 object-cover"
-                />
-                <img
-                  src="/ClubLogo/std.png"
-                  alt="std Team"
-                  className="rounded-lg w-full h-54 object-cover"
-                />
               </div>
-            </CardBody>
-          </CardContainer>
         </div>
+        {/* Members Section */}
 
         <section className="space-y-12">
           <h2 className="text-4xl font-bold text-center mb-12 text-[#6A0DAD]">
@@ -260,7 +233,7 @@ export default function AnimePage() {
           <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-[#191970] px-4 md:px-0">
             Sub Coordinators
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
             {StdMembers.slice(2).map((member) => renderMemberCard(member))}
           </div>
         </section>

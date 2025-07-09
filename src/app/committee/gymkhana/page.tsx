@@ -56,39 +56,7 @@ const committeeMembers: CommitteeMember[] = [
     imageUrl: "/HoscaaCore/ashwin.jpg",
     linkedinUrl:
       "https://www.linkedin.com/in/ashwin-chowdary-b5306034a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-  },
-  // {
-  //   id: 6,
-  //   name: "Sports Secretary",
-  //   position: "UG Girls' Secretary",
-  //   email: "sports.secretary@iitp.ac.in",
-  //   imageUrl: "/committee/sports-secretary.jpg",
-  //   linkedinUrl: "https://linkedin.com/in/sports-secretary",
-  // },
-  // {
-  //   id: 7,
-  //   name: "Literary Secretary",
-  //   position: "Masters' Secretary",
-  //   email: "literary.secretary@iitp.ac.in",
-  //   imageUrl: "/committee/literary-secretary.jpg",
-  //   linkedinUrl: "https://linkedin.com/in/literary-secretary",
-  // },
-  // {
-  //   id: 8,
-  //   name: "Social Secretary",
-  //   position: "PHD Secretary",
-  //   email: "social.secretary@iitp.ac.in",
-  //   imageUrl: "/committee/social-secretary.jpg",
-  //   linkedinUrl: "https://linkedin.com/in/social-secretary",
-  // },
-  // {
-  //   id: 9,
-  //   name: "Academic Secretary",
-  //   position: "PG Girls' Secretary",
-  //   email: "academic.secretary@iitp.ac.in",
-  //   imageUrl: "/committee/academic-secretary.jpg",
-  //   linkedinUrl: "https://linkedin.com/in/academic-secretary",
-  // },
+  }
 ];
 
 export default function GymkhanaCommitteePage() {
@@ -210,7 +178,6 @@ export default function GymkhanaCommitteePage() {
             </div>
           </div>
 
-          {/* Section: Secretaries */}
           <h2 className="text-3xl font-semibold text-white text-center mt-12 mb-10">
             Secretaries
           </h2>

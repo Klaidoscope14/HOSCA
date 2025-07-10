@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 export const ImageGrid = ({
   images,
@@ -41,21 +42,22 @@ export const ImageGrid = ({
   return (
     <div className={cn("w-full bg-white rounded-xl p-6 shadow-lg", className)}>
       <h2 className="text-2xl font-bold text-neutral-700 mb-6">Gallery</h2>
-      
+
       {/* 2x2 Grid View */}
       <div className="grid grid-cols-2 gap-4 mb-4">
         {images.slice(currentIndex, currentIndex + 4).map((image, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className="relative aspect-square overflow-hidden rounded-lg cursor-pointer"
             onClick={() => {
               setCurrentIndex(currentIndex + index);
               setShowFullSlider(true);
             }}
           >
-            <img
+            <Image
               src={image}
               alt={`Gallery image ${currentIndex + index + 1}`}
+              fill
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>
@@ -91,24 +93,33 @@ export const ImageGrid = ({
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
             onClick={() => setShowFullSlider(false)}
           >
-            <div className="relative max-w-4xl w-full mx-4" onClick={e => e.stopPropagation()}>
+            <div
+              className="relative max-w-4xl w-full mx-4"
+              onClick={(e) => e.stopPropagation()}
+            >
               <button
                 onClick={handleFullScreenPrevious}
                 className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-300"
               >
                 <ChevronLeft className="w-6 h-6 text-white" />
               </button>
-              
-              <motion.img
+
+              <motion.div
                 key={currentIndex}
-                src={images[currentIndex]}
-                alt={`Gallery image ${currentIndex + 1}`}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3 }}
-                className="w-full h-[80vh] object-contain rounded-lg"
-              />
+                className="relative w-full h-[80vh] rounded-lg overflow-hidden"
+              >
+                <Image
+                  src={images[currentIndex]}
+                  alt={`Gallery image ${currentIndex + 1}`}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 80vh"
+                />
+              </motion.div>
 
               <button
                 onClick={handleFullScreenNext}
@@ -126,4 +137,4 @@ export const ImageGrid = ({
       </AnimatePresence>
     </div>
   );
-}; 
+};

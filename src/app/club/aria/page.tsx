@@ -2,9 +2,9 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
+import Image from "next/image";
 
 interface ClubMember {
   id: number;
@@ -82,19 +82,20 @@ const AriaMembers: ClubMember[] = [
   }
 ];
 
-
 export default function AriaPage() {
   const renderMemberCard = (member: ClubMember) => (
     <div key={member.id} className="flex justify-center w-full">
       <CardContainer className="w-[320px] h-[520px]">
         <CardBody className="bg-sky-300 relative group/card border-white border w-[280px] h-[450px] rounded-xl p-6 flex flex-col justify-between">
           <CardItem translateZ="100" className="w-full mt-4">
-            <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-2 border-white bg-white flex items-center justify-center">
+            <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-2 border-white bg-white">
               {member.imageUrl ? (
-                <img
+                <Image
                   src={member.imageUrl}
                   alt={member.name}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="144px"
                 />
               ) : (
                 <div className="w-full h-full bg-white flex items-center justify-center">
@@ -158,6 +159,7 @@ export default function AriaPage() {
       </CardContainer>
     </div>
   );
+
   return (
     <div className="relative min-h-screen w-full bg-[url('/club/aria_background.jpeg')] bg-cover bg-center bg-no-repeat">
       <div className="absolute inset-0 bg-white/[0.6]"></div>
@@ -166,16 +168,18 @@ export default function AriaPage() {
       <div className="container mx-auto px-4 py-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-            <div className="relative">
-              <img
+            <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+              <Image
                 src="/ClubLogo/aria.jpg"
                 alt="Aria Music Society"
-                className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
+                fill
+                className="object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl" />
             </div>
           </div>
-          
+
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-700 mb-6">
               Aria
@@ -188,19 +192,18 @@ export default function AriaPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* About Section */}
           <div className="w-full">
-            <div className="border-white relative group/card shadow-lg w-full h-auto rounded-xl p-8 ">
+            <div className="border-white relative group/card shadow-lg w-full h-auto rounded-xl p-8">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">
                 About Aria
               </h2>
               <p className="text-neutral-600 dark:text-neutral-300">
-                Aria, standing for "melody" in Italian, is the music society of
-                IIT Patna. It aims to foster musical talent and bring people
-                together through their love for music. From soulful vocals to
-                electrifying instrumentals, Aria creates a symphony that
-                resonates across the campus.
+              Aria, standing for &quot;melody&quot; in Italian, is the music society of
+              IIT Patna. It aims to foster musical talent and bring people together
+              through their love for music. From soulful vocals to electrifying
+              instrumentals, Aria creates a symphony that resonates across the campus.
               </p>
+
               <div className="mt-6">
                 <h3 className="text-xl font-semibold text-neutral-700 dark:text-white mb-3">
                   What We Do
@@ -250,7 +253,6 @@ export default function AriaPage() {
             />
           </div>
         </div>
-        {/* Members Section */}
 
         <section className="space-y-12">
           <h2 className="text-4xl font-bold text-center mb-12 text-blue-500">
@@ -269,6 +271,7 @@ export default function AriaPage() {
             {AriaMembers.slice(2).map((member) => renderMemberCard(member))}
           </div>
         </section>
+
         <div className="flex justify-center gap-6 mt-12">
           <a
             href="https://www.facebook.com/musicclubiitpatna/"

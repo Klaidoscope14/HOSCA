@@ -2,10 +2,9 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
-import { Suspense } from "react";
+import Image from "next/image";
 
 interface ClubMember {
   id: number;
@@ -91,10 +90,12 @@ export default function ExousiaPage() {
           <CardItem translateZ="100" className="w-full mt-4">
             <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-2 border-white bg-white flex items-center justify-center">
               {member.imageUrl ? (
-                <img
+                <Image
                   src={member.imageUrl}
                   alt={member.name}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  priority
                 />
               ) : (
                 <div className="w-full h-full bg-white flex items-center justify-center">
@@ -167,16 +168,19 @@ export default function ExousiaPage() {
       <div className="container mx-auto px-4 py-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-            <div className="relative">
-              <img
+            <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+              <Image
                 src="/ClubLogo/exousia.jpg"
                 alt="Exousia Dance Society"
-                className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
+                width={384}
+                height={384}
+                className="object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
+                priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
           </div>
-          
+
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-orange-400 mb-6">
               Exousia
@@ -190,7 +194,6 @@ export default function ExousiaPage() {
 
         {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* About Section */}
           <div className="w-full">
             <div className="border-white relative group/card shadow-lg w-full h-auto rounded-xl p-8 ">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">
@@ -232,30 +235,31 @@ export default function ExousiaPage() {
 
           <div className="mb-16">
             <ImageGrid
-              images={[
-                "/ClubPages/Exousia/IMG-20250613-WA0026.jpg",
-                "/ClubPages/Exousia/IMG-20250613-WA0027.jpg",
-                "/ClubPages/Exousia/IMG-20250613-WA0029.jpg",
-                "/ClubPages/Exousia/IMG-20250613-WA0030.jpg",
-                "/ClubPages/Exousia/IMG-20250613-WA0031.jpg",
-                "/ClubPages/Exousia/IMG-20250613-WA0032.jpg",
-                "/ClubPages/Exousia/IMG-20250613-WA0033.jpg",
-                "/ClubPages/Exousia/IMG-20250613-WA0034.jpg",
-                "/ClubPages/Exousia/IMG-20250613-WA0035.jpg",
-                "/ClubPages/Exousia/IMG-20250613-WA0036.jpg",
-                "/ClubPages/Exousia/IMG-20250613-WA0037.jpg",
-                "/ClubPages/Exousia/IMG-20250613-WA0038.jpg",
-                "/ClubPages/Exousia/IMG-20250613-WA0039.jpg",
-                "/ClubPages/Exousia/IMG-20250613-WA0040.jpg",
-                "/ClubPages/Exousia/IMG-20250613-WA0041.jpg",
-                "/ClubPages/Exousia/IMG-20250613-WA0042.jpg",
-                "/ClubPages/Exousia/IMG-20250613-WA0043.jpg",
-                "/ClubPages/Exousia/IMG-20250613-WA0044.jpg",
-                "/ClubPages/Exousia/IMG-20250613-WA0045.jpg",
-                "/ClubPages/Exousia/IMG-20250613-WA0046.jpg",
-              ]}
-              className="max-w-4xl mx-auto"
-            />
+           images={[
+            "/ClubPages/Exousia/IMG-20250613-WA0026.jpg",
+            "/ClubPages/Exousia/IMG-20250613-WA0027.jpg",
+            "/ClubPages/Exousia/IMG-20250613-WA0029.jpg",
+            "/ClubPages/Exousia/IMG-20250613-WA0030.jpg",
+            "/ClubPages/Exousia/IMG-20250613-WA0031.jpg",
+            "/ClubPages/Exousia/IMG-20250613-WA0032.jpg",
+            "/ClubPages/Exousia/IMG-20250613-WA0033.jpg",
+            "/ClubPages/Exousia/IMG-20250613-WA0034.jpg",
+            "/ClubPages/Exousia/IMG-20250613-WA0035.jpg",
+            "/ClubPages/Exousia/IMG-20250613-WA0036.jpg",
+            "/ClubPages/Exousia/IMG-20250613-WA0037.jpg",
+            "/ClubPages/Exousia/IMG-20250613-WA0038.jpg",
+            "/ClubPages/Exousia/IMG-20250613-WA0039.jpg",
+            "/ClubPages/Exousia/IMG-20250613-WA0040.jpg",
+            "/ClubPages/Exousia/IMG-20250613-WA0041.jpg",
+            "/ClubPages/Exousia/IMG-20250613-WA0042.jpg",
+            "/ClubPages/Exousia/IMG-20250613-WA0043.jpg",
+            "/ClubPages/Exousia/IMG-20250613-WA0044.jpg",
+            "/ClubPages/Exousia/IMG-20250613-WA0045.jpg",
+            "/ClubPages/Exousia/IMG-20250613-WA0046.jpg",
+             ]}
+            className="max-w-4xl mx-auto"
+/>
+
           </div>
         </div>
         {/* Members Section */}
@@ -279,6 +283,8 @@ export default function ExousiaPage() {
           </div>
           
         </section>
+
+        {/* Social Links */}
         <div className="flex justify-center gap-6 mt-12">
           <a
             href="https://www.facebook.com/DanceClubIITPatna/"

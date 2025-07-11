@@ -1,7 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useRef } from "react";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion, useMotionValue } from "framer-motion";
 
 const CARD_HEIGHT = "350px"; // Adjust this value as needed
 const CARD_WIDTH = "300px";
@@ -100,12 +100,6 @@ export const CardItem = ({
   as: Tag = "div",
   children,
   className,
-  translateX = 0,
-  translateY = 0,
-  translateZ = 0,
-  rotateX = 0,
-  rotateY = 0,
-  rotateZ = 0,
   ...rest
 }: {
   as?: React.ElementType;

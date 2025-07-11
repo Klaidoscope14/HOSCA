@@ -5,6 +5,7 @@ import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
+import Image from "next/image";
 
 interface ClubMember {
   id: number;
@@ -82,16 +83,18 @@ export default function HexaChromePage() {
           <CardItem translateZ="100" className="w-full mt-4">
             <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-2 border-white bg-white flex items-center justify-center">
               {member.imageUrl ? (
-                <img
+                <Image
                   src={member.imageUrl}
                   alt={member.name}
+                  width={144}
+                  height={144}
                   className="w-full h-full object-cover"
                 />
               ) : (
                 <div className="w-full h-full bg-white flex items-center justify-center">
-                  <span className="text-3xl font-bold text-orange-500 text-center px-2">
-                    {member.name.charAt(0)}
-                  </span>
+                <span className="text-3xl font-bold text-orange-500 text-center px-2">
+                  {member.name.charAt(0)}
+                </span>
                 </div>
               )}
             </div>
@@ -149,32 +152,35 @@ export default function HexaChromePage() {
       </CardContainer>
     </div>
   );
+
   return (
     <div className="relative min-h-screen w-full bg-[url('/club/aria_background.jpeg')] bg-cover bg-center bg-no-repeat">
-      <div className="absolute inset-0 bg-white/[0.6]"></div>
+      <div className="absolute inset-0 bg-white/60"></div>
       <BackgroundBeams className="absolute inset-0" />
 
       <div className="container mx-auto px-4 py-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
-              <img
+              <Image
                 src="/ClubLogo/Hexachrome.jpg"
-                alt="Puzzel Society"
-                className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
+                alt="Hexachrome"
+                width={384}
+                height={384}
+                className="object-cover rounded-2xl shadow-2xl border border-white/10"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
           </div>
-          
+
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-sky-400 mb-6">
               HexaChrome
             </h1>
             <p className="text-lg md:text-xl text-black max-w-2xl mx-auto lg:mx-0">
               Aims to provide a platform for students to learn and improve in
-              solving puzzles such as Rubik's Cube, Cryptograms, Crosswords,
-              Scrabble,
+              solving puzzles such as Rubik&apos;s Cube, Cryptograms,
+              Crosswords, Scrabble.
             </p>
           </div>
         </div>

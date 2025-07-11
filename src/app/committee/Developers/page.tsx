@@ -31,7 +31,7 @@ const mainDevelopers: Developer[] = [
   },
   {
     id: 3,
-    name: "Shaurya Agrawal",
+    name: "Shaurya Aggarwal",
     email: "culturalaffairs@iitp.ac.in",
     imageUrl: "/HoscaaCoords/shaurya.jpg",
     linkedinUrl: "https://www.linkedin.com/in/shaurya-aggarwal-iitp/",

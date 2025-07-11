@@ -2,6 +2,9 @@
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "motion/react";
 import React, { useEffect, useState, useCallback } from "react";
+import type { Variants, Transition, Easing } from "framer-motion";
+
+const customEase = [0.645, 0.045, 0.355, 1.0] as unknown as Easing;
 
 export const ImagesSlider = ({
   images,
@@ -79,7 +82,7 @@ export const ImagesSlider = ({
     };
   }, [autoplay, handleNext, handlePrevious]);
 
-  const slideVariants = {
+  const slideVariants: Variants = {
     initial: { scale: 0, opacity: 0, rotateX: 45 },
     visible: {
       scale: 1,
@@ -87,8 +90,8 @@ export const ImagesSlider = ({
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: [0.645, 0.045, 0.355, 1.0] as any,
-      },
+        ease: customEase,
+      } as Transition,
     },
     upExit:   { opacity: 1, y: "-150%", transition: { duration: 1 } },
     downExit: { opacity: 1, y: "150%",  transition: { duration: 1 } },

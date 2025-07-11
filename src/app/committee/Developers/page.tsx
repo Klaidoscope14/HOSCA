@@ -26,7 +26,7 @@ const mainDevelopers: Developer[] = [
     id: 2,
     name: "Saubhagya Laxman Mamgain",
     email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/HoscaaCoords/Saubhagya.png",
+    imageUrl: "/HoscaaCoords/Saubhagya.PNG",
     linkedinUrl: "https://www.linkedin.com/in/saubhagya-laxman-mamgain-14492b27b/",
   },
   {
@@ -54,7 +54,7 @@ const mainDevelopers: Developer[] = [
     id: 6,
     name: "Kshitij Vasule",
     email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/HoscaaCoords/Kshitij.jpg",
+    imageUrl: "/HoscaaCoords/Kshitij.JPG",
     linkedinUrl: "https://www.linkedin.com/in/kshitij-vasule-36a19a294/",
   },
   {

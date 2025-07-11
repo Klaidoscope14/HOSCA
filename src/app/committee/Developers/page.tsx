@@ -113,7 +113,7 @@ const contributors: Developer[] = [
   },
 ];
 
-const CndCords: Developer[] = [
+const CndCords: Cnd[] = [
   {
     id: 1,
     name: "Ansh Singh",
@@ -123,7 +123,7 @@ const CndCords: Developer[] = [
   }
 ];
 
-const CndSubcords: Developer[] = [
+const CndSubcords: Cnd[] = [
   {
     id: 2,
     name: "Khanak Jain",

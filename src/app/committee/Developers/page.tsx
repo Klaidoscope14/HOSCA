@@ -14,6 +14,15 @@ interface Developer {
   department?: string;
 }
 
+interface Cnd {
+  id: number;
+  name: string;
+  imageUrl?: string;
+  email?: string;
+  linkedinUrl?: string;
+  department?: string;
+}
+
 const mainDevelopers: Developer[] = [
   {
     id: 1,
@@ -102,6 +111,61 @@ const contributors: Developer[] = [
     imageUrl: "/HoscaaSubcoords/Amar.jpg",
     linkedinUrl: "https://www.linkedin.com/in/amar-kumar-860b17312/",
   },
+];
+
+const CndCords: Developer[] = [
+  {
+    id: 1,
+    name: "Ansh Singh",
+    email: "culturalaffairs@iitp.ac.in",
+    imageUrl: "/CnDCords/Ansh.png",
+    linkedinUrl: "https://www.linkedin.com/in/anshnvm",
+  }
+];
+
+const CndSubcords: Developer[] = [
+  {
+    id: 2,
+    name: "Khanak Jain",
+    email: "culturalaffairs@iitp.ac.in",
+    imageUrl: "/HoscaaSubcoords/khanak.jpg",
+    linkedinUrl: "https://www.linkedin.com/in/khanak-jain-4412ba2b8/",
+  },
+  {
+    id: 3,
+    name: "Saubhagya Ji Jaiswal",
+    email: "saubhagya_2401me72@iitp.ac.in",
+    imageUrl: "/CnDSubcords/SJJ.jpg",
+    linkedinUrl: "https://www.linkedin.com/in/saubhagya-ji-jaiswal-33b2a2289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+  },
+  {
+    id: 4,
+    name: "Shailja Brijendra Mathuria ",
+    email: "culturalaffairs@iitp.ac.in",
+    imageUrl: "/CnDSubcords/Shailja.jpg",
+    linkedinUrl: "https://www.linkedin.com/in/shailja-mathuria-739834312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+  },
+  {
+    id: 5,
+    name: "Sahil",
+    email: "culturalaffairs@iitp.ac.in",
+    imageUrl: "/CnDSubcords/Sahil.jpg",
+    linkedinUrl: "https://www.linkedin.com/in/sahil-72019a360?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+  },
+  {
+    id: 6,
+    name: "Swarnava Ghosh",
+    email: "culturalaffairs@iitp.ac.in",
+    imageUrl: "/CnDSubcords/Swarnava.jpeg",
+    linkedinUrl: "https://www.linkedin.com/in/swarnava-ghosh-b074a1326/",
+  },
+  {
+    id: 7,
+    name: "D. Sravan Kumar",
+    email: "culturalaffairs@iitp.ac.in",
+    imageUrl: "/CnDSubcords/Sravan.jpg",
+    linkedinUrl: "https://www.linkedin.com/in/d-sravan-kumar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+  }
 ];
 
 export default function DevelopersPage() {
@@ -209,6 +273,41 @@ export default function DevelopersPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {contributors.map(contributor => (
               <div key={contributor.id}>{renderMemberCard(contributor)}</div>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      <div className="container mx-auto px-4 py-8 relative z-10">
+        <h1 className="text-4xl font-bold text-center mb-8 text-white">C&D Team</h1>
+
+        <section className="max-w-3xl mx-auto mb-12 text-center">
+          <p className="text-lg text-gray-300">
+            The following individuals have contributed to the Design of this website:
+          </p>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-2xl font-semibold text-center text-white mb-8">Coordinators</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-4xl mx-auto mb-8">
+            {CndCords.slice(0, 1).map(cnd => (
+              <div key={cnd.id}>{renderMemberCard(cnd)}</div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {CndCords.slice(2).map(cnd => (
+              <div key={cnd.id}>{renderMemberCard(cnd)}</div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-2xl font-semibold text-center text-white mb-8">Sub Coordinators</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {CndSubcords.map(cnds => (
+              <div key={cnds.id}>{renderMemberCard(cnds)}</div>
             ))}
           </div>
         </section>

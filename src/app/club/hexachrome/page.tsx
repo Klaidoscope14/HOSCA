@@ -134,19 +134,6 @@ export default function HexaChromePage() {
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
-            {/* {member.instagramUrl && (
-              <CardItem
-                translateZ={20}
-                as="a"
-                href={member.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white text-black hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white transition-colors duration-300"
-                aria-label="Instagram"
-              >
-                <FaInstagram className="w-4 h-4" />
-              </CardItem>
-            )} */}
           </div>
         </CardBody>
       </CardContainer>
@@ -193,7 +180,7 @@ export default function HexaChromePage() {
               </h2>
               <p className="text-neutral-600 dark:text-neutral-300">
                 The Hexachrome Club aims to provide a platform for students to
-                learn and improve in solving puzzles such as Rubik's Cube,
+                learn and improve in solving puzzles such as Rubik&apos;s Cube,
                 Cryptograms, Crosswords, Scrabble. It fosters a problem-solving
                 mindset and builds a community of puzzle enthusiasts driven by
                 logic, creativity, and speed.

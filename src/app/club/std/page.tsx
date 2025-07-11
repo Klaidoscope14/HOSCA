@@ -2,9 +2,10 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
+import Image from "next/image";
 
 interface ClubMember {
   id: number;
@@ -73,19 +74,21 @@ export default function AnimePage() {
         <CardBody className="bg-[#7AE8E6] text-black border-white border w-[280px] h-[450px] rounded-xl p-6 flex flex-col justify-between">
           <CardItem translateZ="100" className="w-full mt-4">
             <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-2 border-red-500 bg-white flex items-center justify-center">
-              {member.imageUrl ? (
-                <img
-                  src={member.imageUrl}
-                  alt={member.name}
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <div className="w-full h-full bg-white flex items-center justify-center">
-                  <span className="text-3xl font-bold text-orange-500 text-center px-2">
-                    {member.name.charAt(0)}
-                  </span>
-                </div>
-              )}
+            {member.imageUrl ? (
+              <Image
+                src={member.imageUrl}
+                alt={member.name}
+                width={500} 
+                height={500}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <div className="w-full h-full bg-white flex items-center justify-center">
+                <span className="text-3xl font-bold text-orange-500 text-center px-2">
+                  {member.name.charAt(0)}
+                </span>
+              </div>
+            )}
             </div>
           </CardItem>
 
@@ -136,11 +139,13 @@ export default function AnimePage() {
       <div className="container mx-auto px-4 py-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-            <div className="relative">
-              <img
+          <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+              <Image
                 src="/ClubLogo/std.png"
                 alt="Stand Up Comedy Society"
-                className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
+                fill
+                className="object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
+                priority 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>

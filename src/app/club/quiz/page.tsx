@@ -5,6 +5,7 @@ import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
+import Image from "next/image";
 
 interface ClubMember {
   id: number;
@@ -97,19 +98,21 @@ export default function QuizPage() {
         <CardBody className="bg-[#E6A14C] text-black border-white border w-[280px] h-[450px] rounded-xl p-6 flex flex-col justify-between">
           <CardItem translateZ="100" className="w-full mt-4">
             <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-2 border-white bg-white flex items-center justify-center">
-              {member.imageUrl ? (
-                <img
-                  src={member.imageUrl}
-                  alt={member.name}
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <div className="w-full h-full bg-white flex items-center justify-center">
-                  <span className="text-3xl font-bold text-orange-500 text-center px-2">
-                    {member.name.charAt(0)}
-                  </span>
-                </div>
-              )}
+            {member.imageUrl ? (
+              <Image
+                src={member.imageUrl}
+                alt={member.name}
+                width={500} 
+                height={500}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <div className="w-full h-full bg-white flex items-center justify-center">
+                <span className="text-3xl font-bold text-orange-500 text-center px-2">
+                  {member.name.charAt(0)}
+                </span>
+              </div>
+            )}
             </div>
           </CardItem>
 
@@ -147,19 +150,6 @@ export default function QuizPage() {
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
-            {/* {member.instagramUrl && (
-              <CardItem
-                translateZ={20}
-                as="a"
-                href={member.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white text-black hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white transition-colors duration-300"
-                aria-label="Instagram"
-              >
-                <FaInstagram className="w-4 h-4" />
-              </CardItem>
-            )} */}
           </div>
         </CardBody>
       </CardContainer>
@@ -173,11 +163,13 @@ export default function QuizPage() {
       <div className="container mx-auto px-4 py-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-            <div className="relative">
-              <img
+          <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+              <Image
                 src="/ClubLogo/quiz.jpg"
                 alt="Knowledge Society"
-                className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
+                fill
+                className="object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
+                priority 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
@@ -188,7 +180,7 @@ export default function QuizPage() {
               Quiz Club
             </h1>
             <p className="text-lg md:text-xl text-black max-w-2xl mx-auto lg:mx-0">
-              One doesn't need to mug up random nerdy facts to attend quizzes,
+              One doesn&apos;t need to mug up random nerdy facts to attend quizzes,
               all one needs is a keen eye for the things that surround us
             </p>
           </div>
@@ -202,7 +194,7 @@ export default function QuizPage() {
               </h2>
               <p className="text-neutral-600 dark:text-neutral-300">
                 The Quiz Club, IIT Patna believes that the most important thing
-                is having fun (and ofc quizzing xd). One doesn't need to mug up
+                is having fun (and ofc quizzing xd). One doesn&apos;t need to mug up
                 random nerdy facts to attend quizzes, all one needs is a keen
                 eye for the things that surround us. The club turns everyday
                 knowledge into thrilling quiz battles and brainy banter.{" "}

@@ -44,15 +44,15 @@ const PixxelMembers: ClubMember[] = [
     id: 4,
     name: 'Charan Ravipati',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'pixxel_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/charan-ravipati-421982332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Pixxel/CharanRavipati.jpg',
+    imageUrl: '/SubCords/Pixxel/Charan.png',
   },
   {
     id: 5,
     name: 'Kalpit Chaudhary',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'pixxel_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/kalpit-chaudhary-946b10271?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/Pixxel/KalpitChaudhary.jpg',
   },
@@ -60,7 +60,7 @@ const PixxelMembers: ClubMember[] = [
     id: 6,
     name: 'K Yashwanth Varma',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'pixxel_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/k-yashwanth-varma-50a54a320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/Pixxel/KYashwanthVarma.jpg',
   },
@@ -68,7 +68,7 @@ const PixxelMembers: ClubMember[] = [
     id: 7,
     name: 'Cheela Keerthana',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'pixxel_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/keerthana-cheella-27a114333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/Pixxel/CheellaKeerthana.jpg',
   },
@@ -76,7 +76,7 @@ const PixxelMembers: ClubMember[] = [
     id: 8,
     name: 'Priyanshu Sharma',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'pixxel_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/priyanshu-sharma-999740348?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/Pixxel/PriyanshuSharma.jpg',
   },
@@ -84,7 +84,7 @@ const PixxelMembers: ClubMember[] = [
     id: 9,
     name: 'Vuyyala Sai Hemanth Goud',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'pixxel_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/sai-hemanth-vuyyala-579b4536a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
     imageUrl: '/SubCords/Pixxel/Vuyyala Sai Hemanth Goud.jpg',
   }
@@ -193,9 +193,7 @@ export default function PixxelPage() {
           </div>
         </div>
 
-        {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* About Section */}
           <div className="w-full">
             <div className="border-white relative group/card shadow-lg w-full h-auto rounded-xl p-8">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">
@@ -238,29 +236,28 @@ export default function PixxelPage() {
           <div className="mb-16">
             <ImageGrid
               images={[
-                "/ClubPages/Pixxel/IMG-20250614-WA0146.jpg",
-                "/ClubPages/Pixxel/IMG-20250614-WA0142.jpg",
-                "/ClubPages/Pixxel/IMG-20250614-WA0140.jpg",
-                "/ClubPages/Pixxel/IMG-20250614-WA0136.jpg",
-                "/ClubPages/Pixxel/IMG-20250614-WA0134.jpg",
-                "/ClubPages/Pixxel/IMG-20250614-WA0125.jpg",
-                "/ClubPages/Pixxel/IMG-20250614-WA0119.jpg",
-                "/ClubPages/Pixxel/IMG-20250614-WA0115.jpg",
-                "/ClubPages/Pixxel/IMG-20250614-WA0114.jpg",
-                "/ClubPages/Pixxel/IMG-20250614-WA0113.jpg",
-                "/ClubPages/Pixxel/IMG-20250614-WA0109.jpg",
-                "/ClubPages/Pixxel/IMG-20250614-WA0108.jpg",
-                "/ClubPages/Pixxel/IMG-20250614-WA0107.jpg",
-                "/ClubPages/Pixxel/IMG-20250210-WA0018.jpg",
+                "/ClubPages/Pixxel/1000062866.jpg",
+                "/ClubPages/Pixxel/1000062867.jpg",
+                "/ClubPages/Pixxel/1000125976.jpg",
+                "/ClubPages/Pixxel/1000126585.jpg",
+                "/ClubPages/Pixxel/1000145976.jpg",
+                "/ClubPages/Pixxel/IMG_0228.jpg",
+                "/ClubPages/Pixxel/IMG_20241213_154530.jpg",
+                "/ClubPages/Pixxel/IMG_20250129_164756.jpg",
+                "/ClubPages/Pixxel/IMG_20250327_023518.jpg",
+                "/ClubPages/Pixxel/IMG-20240907-WA0008.jpg",
+                "/ClubPages/Pixxel/IMG-20241213-WA0008.jpg",
+                "/ClubPages/Pixxel/IMG-20241213-WA0015.jpg",
+                "/ClubPages/Pixxel/IMG_0238.jpg",
+                "/ClubPages/Pixxel/SAVE_20250327_023318.jpg",
               ]}
               className="max-w-4xl mx-auto"
             />
           </div>
         </div>
-        {/* Members Section */}
 
         <section className="space-y-12">
-          <h2 className="text-4xl font-bold text-center mb-12 text-blue-500">
+          <h2 className="text-4xl font-bold text-center mt-10 mb-12 text-blue-500">
             Our Team
           </h2>
           <h2 className="text-3xl font-semibold text-center mb-6 text-[#4169E1] px-2 md:px-0">

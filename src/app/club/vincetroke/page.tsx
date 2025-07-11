@@ -2,9 +2,10 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
+import Image from "next/image";
 
 interface ClubMember {
   id: number;
@@ -44,7 +45,7 @@ const VincetrokeMembers: ClubMember[] = [
     id: 4,
     name: 'Aditi Lohiya',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'vincetroke_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/aditi-lohiya-395532321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/Vincetroke/Aditi_Vincetroke.jpg',
   },
@@ -52,7 +53,7 @@ const VincetrokeMembers: ClubMember[] = [
     id: 5,
     name: 'Riddhesh Dalal',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'vincetroke_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/riddhesh-dalal-704664317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/Vincetroke/Riddhesh.jpg',
   },
@@ -60,7 +61,7 @@ const VincetrokeMembers: ClubMember[] = [
     id: 6,
     name: 'Anand Kumar',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'vincetroke_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/anand-kumar-563523342?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/Vincetroke/Anand.jpg',
   },
@@ -68,7 +69,7 @@ const VincetrokeMembers: ClubMember[] = [
     id: 7,
     name: 'Aviral Pratap Singh',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'vincetroke_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/aviral-pratap-singh-a88977319/',
     imageUrl: '/SubCords/Vincetroke/Aviral.jpg',
   },
@@ -76,7 +77,7 @@ const VincetrokeMembers: ClubMember[] = [
     id: 8,
     name: 'Richa Chaudhary',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'vincetroke_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/richa-chaudhary-9a2877349?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/Vincetroke/Richa.jpg',
   }
@@ -90,7 +91,8 @@ export default function VincetrokePage() {
           <CardItem translateZ="100" className="w-full mt-4">
             <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-2 border-white bg-white flex items-center justify-center">
               {member.imageUrl ? (
-                <img
+                <Image
+                  fill
                   src={member.imageUrl}
                   alt={member.name}
                   className="w-full h-full object-cover"
@@ -139,19 +141,7 @@ export default function VincetrokePage() {
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
-            {/* {member.instagramUrl && (
-              <CardItem
-                translateZ={20}
-                as="a"
-                href={member.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white text-black hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white transition-colors duration-300"
-                aria-label="Instagram"
-              >
-                <FaInstagram className="w-4 h-4" />
-              </CardItem>
-            )} */}
+           
           </div>
         </CardBody>
       </CardContainer>
@@ -166,7 +156,8 @@ export default function VincetrokePage() {
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
-              <img
+              <Image
+                fill
                 src="/ClubLogo/Vincetroke.jpg"
                 alt="Art Society"
                 className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
@@ -258,16 +249,47 @@ export default function VincetrokePage() {
           <h2 className="text-3xl font-semibold text-center mb-6 text-[#4169E1] px-2 md:px-0">
             Coordinators
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
             {VincetrokeMembers.slice(0, 3).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+          <div className="hidden sm:grid sm:grid-cols-2 lg:hidden gap-10 max-w-6xl mx-auto">
+            {VincetrokeMembers.slice(0, 2).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+          <div className="hidden sm:grid sm:grid-cols-1 lg:hidden gap-10 max-w-6xl mx-auto">
+            {VincetrokeMembers.slice(2,3).map((member) =>
               renderMemberCard(member)
             )}
           </div>
           <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-[#4169E1] px-4 md:px-0">
             Sub Coordinators
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {VincetrokeMembers.slice(3).map((member) =>
+          <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            {VincetrokeMembers.slice(3,6).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+          <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto ">
+            {VincetrokeMembers.slice(6).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+            
+            <div className="hidden sm:grid sm:grid-cols-2 lg:hidden gap-10 max-w-6xl mx-auto">
+            {VincetrokeMembers.slice(3,5).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+          <div className="hidden sm:grid sm:grid-cols-2 lg:hidden gap-10 max-w-6xl mx-auto ">
+            {VincetrokeMembers.slice(5,7).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+          <div className="hidden sm:grid sm:grid-cols-1 lg:hidden gap-10 max-w-6xl mx-auto ">
+            {VincetrokeMembers.slice(7).map((member) =>
               renderMemberCard(member)
             )}
           </div>

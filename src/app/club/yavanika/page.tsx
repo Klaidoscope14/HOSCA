@@ -5,8 +5,7 @@ import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
-import { Suspense } from "react";
-
+import Image from "next/image";
 
 interface ClubMember {
   id: number;
@@ -46,7 +45,7 @@ const YavanikaMembers: ClubMember[] = [
     id: 4,
     name: 'Yahya Dawoodi',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'drama_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/yahya-dawoodi-119dd39239/',
     imageUrl: '/SubCords/Yavanika/Yahya.jpg',
   },
@@ -54,7 +53,7 @@ const YavanikaMembers: ClubMember[] = [
     id: 5,
     name: 'Ayush Kumar Gupta',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'drama_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/ayush-gupta-675549320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/Yavanika/Ayush.png',
   },
@@ -62,7 +61,7 @@ const YavanikaMembers: ClubMember[] = [
     id: 6,
     name: 'Priyadeep Jaiswal',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'drama_club@iitp.ac.in',
     linkedinUrl: 'http://www.linkedin.com/in/priyadeep-jaiswal-39ab001b5',
     imageUrl: '/SubCords/Yavanika/Priyadeep.jpg',
   },
@@ -70,7 +69,7 @@ const YavanikaMembers: ClubMember[] = [
     id: 7,
     name: 'Vishmith Shetty',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'drama_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/vishmith-shetty-a16873313/',
     imageUrl: '/SubCords/Yavanika/Vishmith.jpg',
   },
@@ -78,7 +77,7 @@ const YavanikaMembers: ClubMember[] = [
     id: 8,
     name: 'Vidhi Patel',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'drama_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/vidhi-patel-5a1893310?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/Yavanika/vidhiPatel.jpg',
   }
@@ -92,9 +91,10 @@ export default function YavanikaPage() {
           <CardItem translateZ="100" className="w-full mt-4">
             <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-2 border-yellow-500 flex-shrink-0">
               {member.imageUrl ? (
-                <img
+                <Image
                   src={member.imageUrl}
                   alt={member.name}
+                  fill
                   className="w-full h-full object-cover"
                 />
               ) : (
@@ -142,19 +142,7 @@ export default function YavanikaPage() {
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
-            {/* {member.instagramUrl && (
-              <CardItem
-                translateZ={20}
-                as="a"
-                href={member.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-full bg-gray-100 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white transition-colors duration-300"
-                aria-label="Instagram"
-              >
-                <FaInstagram className="w-4 h-4" />
-              </CardItem>
-            )} */}
+           
           </div>
         </CardBody>
       </CardContainer>
@@ -171,7 +159,8 @@ export default function YavanikaPage() {
           {/* Image Section - Left on desktop, top on mobile */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
-              <img 
+              <Image
+                fill 
                 src="/ClubLogo/yavanika.png" 
                 alt="Yavanika Drama Society" 
                 className="w-80 h-70 lg:w-96 lg:h-80 object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
@@ -268,14 +257,49 @@ export default function YavanikaPage() {
           <h2 className="text-3xl font-semibold text-center mb-6 text-yellow-300 px-2 md:px-0">
             Coordinators
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {YavanikaMembers.slice(0,3).map((member: ClubMember) => renderMemberCard(member))}
+          <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            {YavanikaMembers.slice(0, 3).map((member) =>
+              renderMemberCard(member)
+            )}
           </div>
-          <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-yellow-300 px-4 md:px-0">
+          <div className="hidden sm:grid sm:grid-cols-2 lg:hidden gap-10 max-w-6xl mx-auto">
+            {YavanikaMembers.slice(0, 2).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+          <div className="hidden sm:grid sm:grid-cols-1 lg:hidden gap-10 max-w-6xl mx-auto">
+            {YavanikaMembers.slice(2,3).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+          <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-[#4169E1] px-4 md:px-0">
             Sub Coordinators
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {YavanikaMembers.slice(3).map((member: ClubMember) => renderMemberCard(member))}
+          <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            {YavanikaMembers.slice(3,6).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+          <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto ">
+            {YavanikaMembers.slice(6).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+            
+            <div className="hidden sm:grid sm:grid-cols-2 lg:hidden gap-10 max-w-6xl mx-auto">
+            {YavanikaMembers.slice(3,5).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+          <div className="hidden sm:grid sm:grid-cols-2 lg:hidden gap-10 max-w-6xl mx-auto ">
+            {YavanikaMembers.slice(5,7).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+          <div className="hidden sm:grid sm:grid-cols-1 lg:hidden gap-10 max-w-6xl mx-auto ">
+            {YavanikaMembers.slice(7).map((member) =>
+              renderMemberCard(member)
+            )}
           </div>
         </section> 
 

@@ -17,10 +17,8 @@ export function MobileNavHeader({ children }: { children: ReactNode }) {
 }
 
 export function MobileNavToggle({
-  isOpen,
   onClick,
 }: {
-  isOpen: boolean;
   onClick: () => void;
 }) {
   return (

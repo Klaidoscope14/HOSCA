@@ -2,7 +2,7 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
@@ -37,7 +37,7 @@ const HexachromeMembers: ClubMember[] = [
     id: 3,
     name: 'Aryan Patil',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'hexachrome@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/aryan-patil-58393736a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/HexaChrome/AryanPatil.jpg',
   },
@@ -45,7 +45,7 @@ const HexachromeMembers: ClubMember[] = [
     id: 4,
     name: 'Akash Kota',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'hexachrome@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/akash-kota-a3538a323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/HexaChrome/Akash.jpg',
   },
@@ -53,7 +53,7 @@ const HexachromeMembers: ClubMember[] = [
     id: 5,
     name: 'Hrijoy Sikdar',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'hexachrome@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/hrijoy-sikdar-780a28311',
     imageUrl: '/SubCords/HexaChrome/HrijoySikdar.webp',
   },
@@ -61,7 +61,7 @@ const HexachromeMembers: ClubMember[] = [
     id: 6,
     name: 'Lavanya Bhadani',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'hexachrome@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/lavanya-bhadani-1834b1313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/HexaChrome/lavanya.jpg',
   },
@@ -69,8 +69,8 @@ const HexachromeMembers: ClubMember[] = [
     id: 7,
     name: 'Vaibhav Dalmia',
     position: 'Sub-Coordinator',
-    email: 'http://www.linkedin.com/in/vaibhav-dalmia-2b1b84325',
-    linkedinUrl: '#',
+    email: '',
+    linkedinUrl: 'http://www.linkedin.com/in/vaibhav-dalmia-2b1b84325',
     imageUrl: '/SubCords/HexaChrome/VaibhavDalmia.jpg',
   }
 ];
@@ -185,9 +185,7 @@ export default function HexaChromePage() {
           </div>
         </div>
 
-        {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* About Section */}
           <div className="w-full">
             <div className="border-white relative group/card shadow-lg w-full h-auto rounded-xl p-8 ">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">
@@ -255,7 +253,6 @@ export default function HexaChromePage() {
             />
           </div>
         </div>
-        {/* Members Section */}
 
         <section className="space-y-12">
           <h2 className="text-4xl font-bold text-center mb-12 text-[#1E90FF]">
@@ -272,11 +269,33 @@ export default function HexaChromePage() {
           <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-[#4169E1] px-4 md:px-0">
             Sub Coordinators
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {HexachromeMembers.slice(2).map((member) =>
+          <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            {HexachromeMembers.slice(2,5).map((member) =>
               renderMemberCard(member)
             )}
           </div>
+          <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto ">
+            {HexachromeMembers.slice(5).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+            
+            <div className="hidden sm:grid sm:grid-cols-2 lg:hidden gap-10 max-w-6xl mx-auto">
+            {HexachromeMembers.slice(2,4).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+          <div className="hidden sm:grid sm:grid-cols-2 lg:hidden gap-10 max-w-6xl mx-auto ">
+            {HexachromeMembers.slice(4,6).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+          <div className="hidden sm:grid sm:grid-cols-1 lg:hidden gap-10 max-w-6xl mx-auto ">
+            {HexachromeMembers.slice(6).map((member) =>
+              renderMemberCard(member)
+            )}
+          </div>
+
         </section>
         <div className="flex justify-center gap-6 mt-12">
           

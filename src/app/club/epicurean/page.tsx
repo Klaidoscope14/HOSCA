@@ -2,7 +2,7 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
@@ -37,7 +37,7 @@ const EpicureanMembers: ClubMember[] = [
     id: 3,
     name: 'Aditi Lohiya',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'culinary_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/aditi-lohiya-395532321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/Epicurean/AditiLohiya.jpg',
   },
@@ -45,7 +45,7 @@ const EpicureanMembers: ClubMember[] = [
     id: 4,
     name: 'Avi Bharti',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'culinary_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/avi-bharti-029b1833b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
     imageUrl: '/SubCords/Epicurean/Avi.jpg',
   },
@@ -53,7 +53,7 @@ const EpicureanMembers: ClubMember[] = [
     id: 5,
     name: 'Shailja Mathuria',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'culinary_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/shailja-mathuria-739834312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/Epicurean/Shailja.jpg',
   },
@@ -61,7 +61,7 @@ const EpicureanMembers: ClubMember[] = [
     id: 6,
     name: 'Krittika Das',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'culinary_club@iitp.ac.in',
     linkedinUrl: 'https://in.linkedin.com/in/krittika-das-4704b2327',
     imageUrl: '/SubCords/Epicurean/Kritika.jpg',
   },
@@ -69,7 +69,7 @@ const EpicureanMembers: ClubMember[] = [
     id: 7,
     name: 'Kumari Shikha',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'culinary_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/kumari-shikha-a1506a327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/Epicurean/KumariShikha.jpg',
   },
@@ -77,7 +77,7 @@ const EpicureanMembers: ClubMember[] = [
     id: 8,
     name: 'Shashank Mishra',
     position: 'Sub-Coordinator',
-    email: 'Add Email',
+    email: 'culinary_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/shashank-mishra-72b495326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/SubCords/Epicurean/Shashank.jpg',
   }

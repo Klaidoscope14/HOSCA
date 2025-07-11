@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import React, { ElementType, ReactNode, useEffect, useState,  CSSProperties } from "react";
+import React, { ElementType, ReactNode, useEffect, useState } from "react";
 
 export interface VideoTextProps {
   /**

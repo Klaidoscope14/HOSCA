@@ -3,6 +3,7 @@
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
+import Image from "next/image";
 
 interface Developer {
   id: number;
@@ -30,7 +31,7 @@ const mainDevelopers: Developer[] = [
   },
   {
     id: 3,
-    name: "Shaurya Agrawal",
+    name: "Shaurya Aggarwal",
     email: "culturalaffairs@iitp.ac.in",
     imageUrl: "/HoscaaCoords/shaurya.jpg",
     linkedinUrl: "https://www.linkedin.com/in/shaurya-aggarwal-iitp/",
@@ -82,9 +83,9 @@ const contributors: Developer[] = [
   },
   {
     id: 11,
-    name: "Ayaan Tejani",
-    email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/committee/literary-secretary.jpg",
+    name: "Aayan Tejani",
+    email: "aayan_2401cs58@iitp.ac.in",
+    imageUrl: "/HoscaaSubcoords/Aayan.jpg",
     linkedinUrl: "https://www.linkedin.com/in/aayan-tejani-7022b9240/",
   },
   {
@@ -111,7 +112,8 @@ export default function DevelopersPage() {
           <CardItem translateZ="100" className="w-full mt-4 flex justify-center">
             <div className="relative w-32 h-32 mb-4 rounded-full overflow-hidden border-3 border-[#768686]">
               {member.imageUrl ? (
-                <img
+                <Image
+                  fill
                   src={member.imageUrl}
                   alt={member.name}
                   className="w-full h-full object-cover"
@@ -126,25 +128,22 @@ export default function DevelopersPage() {
             </div>
           </CardItem>
 
-
-<CardItem
-  translateZ="50"
-  className="text-xl font-bold text-neutral-600 dark:text-white text-center"
->
-  {member.name}
-</CardItem>
-{member.department && (
-  <CardItem
-    as="p"
-    translateZ="60"
-    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300 text-center"
-  >
-    {member.department}
-  </CardItem>
-)}
-
-
-
+          <CardItem
+            translateZ="50"
+            className="text-xl font-bold text-neutral-600 dark:text-white text-center"
+          >
+            {member.name}
+          </CardItem>
+          {member.department && (
+            <CardItem
+              as="p"
+              translateZ="60"
+              className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300 text-center"
+            >
+              {member.department}
+            </CardItem>
+          )}
+          
           <div className="flex justify-center gap-4 mt-4">
             {member.email && (
               <CardItem

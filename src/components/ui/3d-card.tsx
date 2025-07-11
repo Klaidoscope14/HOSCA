@@ -1,7 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useRef } from "react";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 
 const CARD_HEIGHT = "350px"; // Adjust this value as needed
 const CARD_WIDTH = "300px";
@@ -124,24 +124,6 @@ export const CardItem = ({
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-
-  const mouseXSpring = useSpring(x);
-  const mouseYSpring = useSpring(y);
-
-  const rotateXNum = typeof rotateX === 'string' ? parseFloat(rotateX) : rotateX;
-  const rotateYNum = typeof rotateY === 'string' ? parseFloat(rotateY) : rotateY;
-  const rotateZNum = typeof rotateZ === 'string' ? parseFloat(rotateZ) : rotateZ;
-  const translateXNum = typeof translateX === 'string' ? parseFloat(translateX) : translateX;
-  const translateYNum = typeof translateY === 'string' ? parseFloat(translateY) : translateY;
-  const translateZNum = typeof translateZ === 'string' ? parseFloat(translateZ) : translateZ;
-
-  const rotateXSpring = useSpring(rotateXNum);
-  const rotateYSpring = useSpring(rotateYNum);
-  const rotateZSpring = useSpring(rotateZNum);
-
-  const translateXSpring = useSpring(translateXNum);
-  const translateYSpring = useSpring(translateYNum);
-  const translateZSpring = useSpring(translateZNum);
 
   React.useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {

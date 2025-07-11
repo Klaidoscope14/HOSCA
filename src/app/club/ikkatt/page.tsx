@@ -2,7 +2,7 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 
@@ -18,67 +18,75 @@ interface ClubMember {
 const IkkattMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Rajesh Kumar',
+    name: 'Meghna Kumari',
     position: 'Coordinator',
-    email: 'rajesh.civil@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/rajeshkumar',
-    imageUrl: '/club/members/rajesh.jpg',
+    email: 'meghna_2301ce18@iitp.ac.in',
+    linkedinUrl: 'http://linkedin.com/in/meghna-kumari-00a431298',
+    imageUrl: '/Coordinators/ikkat/Meghna.jpeg',
   },
   {
     id: 2,
-    name: 'Priya Sharma',
+    name: 'Sanskar',
     position: 'Coordinator',
-    email: 'priya.cs@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/priyasharma',
-    imageUrl: '/club/members/priya.jpg',
+    email: 'sanskar_2301mm31@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/sanskar-sahu-58a81b289/',
+    imageUrl: '/Coordinators/ikkat/sanskar.jpg',
   },
   {
     id: 3,
-    name: 'Amit Verma',
-    position: 'Sub-Coordinator',
-    email: 'amit.mech@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/amitverma',
-    imageUrl: '/club/members/amit.jpg',
+    name: 'Amaan Ali',
+    position: 'Coordinator',
+    email: 'amaan_2302gt06@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/amaan-ali-94830b291/',
+    imageUrl: '/Coordinators/ikkat/Amaan.jpeg',
   },
   {
     id: 4,
-    name: 'Sneha Patel',
+    name: 'Mohima Baidya',
     position: 'Sub-Coordinator',
-    email: 'sneha.ee@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/snehapatel',
-    imageUrl: '/club/members/sneha.jpg',
+    email: 'culturalaffairs@iitp.ac.in',
+    linkedinUrl: 'http://www.linkedin.com/in/mohima-baidya/',
+    imageUrl: '/SubCords/ikkat/Mohima.jpg',
   },
   {
     id: 5,
-    name: 'Arjun Singh',
+    name: 'Aanushka Saha',
     position: 'Sub-Coordinator',
-    email: 'arjun.chem@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/arjunsingh',
-    imageUrl: '/club/members/arjun.jpg',
+    email: 'culturalaffairs@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/aanushka-saha-a2b78a322/',
+    imageUrl: '/SubCords/ikkat/aanushka.jpg',
   },
   {
     id: 6,
-    name: 'Kavya Nair',
+    name: 'Aditi Lohiya',
     position: 'Sub-Coordinator',
-    email: 'kavya.bt@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/kavyanair',
-    imageUrl: '/club/members/kavya.jpg',
+    email: 'culturalaffairs@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/aditi-lohiya-395532321/',
+    imageUrl: '/SubCords/ikkat/Aditi_ikkat.jpg',
   },
   {
     id: 7,
-    name: 'Rohit Gupta',
+    name: 'Prince',
     position: 'Sub-Coordinator',
-    email: 'rohit.met@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/rohitgupta',
-    imageUrl: '/club/members/rohit.jpg',
+    email: 'culturalaffairs@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/prince-narayan-173b0a36a/',
+    imageUrl: '/SubCords/ikkat/prince.jpg',
   },
   {
     id: 8,
-    name: 'Ananya Joshi',
+    name: 'Ankit Basu',
     position: 'Sub-Coordinator',
-    email: 'ananya.phy@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/ananyajoshi',
-    imageUrl: '/club/members/ananya.jpg',
+    email: 'culturalaffairs@iitp.ac.in',
+    linkedinUrl: 'https://www.linkedin.com/in/ankit-basu-32295931a/',
+    imageUrl: '/SubCords/ikkat/AnkitBasu.jpg',
+  },
+  {
+    id: 9,
+    name: 'Tanishq Sangwan',
+    position: 'Sub-Coordinator',
+    email: 'culturalaffairs@iitp.ac.in',
+    linkedinUrl: 'www.linkedin.com/in/tanishq-sangwan/',
+    imageUrl: '/SubCords/ikkat/Tanishq.jpg',
   }
 ];
 
@@ -189,9 +197,7 @@ export default function AnimePage() {
           </div>
         </div>
 
-        {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* About Section */}
           <div className="w-full">
             <div className="border-white relative group/card shadow-lg w-full h-auto rounded-xl p-8">
               <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">
@@ -234,20 +240,19 @@ export default function AnimePage() {
           <div className="mb-16">
             <ImageGrid
               images={[
-                "/ClubPages/Ikkatt/ikkatt-1.jpg",
-                "/ClubPages/Ikkatt/ikkatt-2.jpg",
-                "/ClubPages/Ikkatt/ikkatt-3.jpg",
-                "/ClubPages/Ikkatt/ikkatt-4.jpg",
-                "/ClubPages/Ikkatt/ikkatt-5.jpg",
-                "/ClubPages/Ikkatt/ikkatt-6.jpg",
-                "/ClubPages/Ikkatt/ikkatt-7.jpg",
-                "/ClubPages/Ikkatt/ikkatt-8.jpg",
+                "/ClubPages/Ikkatt/ikkat1.jpg",
+                "/ClubPages/Ikkatt/ikkat2.jpg",
+                "/ClubPages/Ikkatt/ikkat3.jpg",
+                "/ClubPages/Ikkatt/ikkat4.jpg",
+                "/ClubPages/Ikkatt/ikkat5.jpg",
+                "/ClubPages/Ikkatt/ikkat6.jpg",
+                "/ClubPages/Ikkatt/ikkat9.jpg",
+                "/ClubPages/Ikkatt/ikkat8.jpg"
               ]}
               className="max-w-4xl mx-auto"
             />
           </div>
         </div>
-        {/* Members Section */}
 
         <section className="space-y-12">
           <h2 className="text-4xl font-bold text-center mb-12 text-[#4169E1]">
@@ -256,14 +261,14 @@ export default function AnimePage() {
           <h2 className="text-3xl font-semibold text-center mb-6 text-[#191970] px-2 md:px-0">
             Coordinators
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
-            {IkkattMembers.slice(0, 4).map((member) => renderMemberCard(member))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            {IkkattMembers.slice(0, 3).map((member) => renderMemberCard(member))}
           </div>
           <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-[#191970] px-4 md:px-0">
             Sub Coordinators
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {IkkattMembers.slice(4).map((member) => renderMemberCard(member))}
+            {IkkattMembers.slice(3).map((member) => renderMemberCard(member))}
           </div>
         </section>
         

@@ -349,7 +349,7 @@ const cards = [
     instagramLink: "https://www.instagram.com/yavanika_iitp/?hl=en",
     content: () => (
       <p>
-        If life's a stage, Yavanika brings the spotlight. From street plays that hit hard to full-blown productions that stir the soul, they don't just act—they <b>live</b> the script. One of the oldest cultural clubs, Yavanika has drama in its DNA (the good kind, promise).
+        If life&apos;s a stage, Yavanika brings the spotlight. From street plays that hit hard to full-blown productions that stir the soul, they don&apos;t just act—they <b>live</b> the script. One of the oldest cultural clubs, Yavanika has drama in its DNA (the good kind, promise).
       </p>
     ),
   },
@@ -363,7 +363,7 @@ const cards = [
     instagramLink: "https://www.instagram.com/exousia_iitp/",
     content: () => (
       <p>
-        Exousia doesn't walk—<b>they groove</b>. Whether it's Bollywood, freestyle, or hip-hop battles, they've got rhythm in every step. With iconic events like FlipToe and Beat It Off, they light up stages and hearts alike.
+        Exousia doesn&apos;t walk—<b>they groove</b>. Whether it&apos;s Bollywood, freestyle, or hip-hop battles, they&apos;ve got rhythm in every step. With iconic events like FlipToe and Beat It Off, they light up stages and hearts alike.
       </p>
     ),
   },
@@ -377,7 +377,7 @@ const cards = [
     instagramLink: "https://www.instagram.com/aria_iitp/",
     content: () => (
       <p>
-        If your soul has a soundtrack, Aria is probably playing it. From cozy acoustic nights to electrifying concerts, Aria hits the right notes—every time. They don't just play music; they build a vibe.
+        If your soul has a soundtrack, Aria is probably playing it. From cozy acoustic nights to electrifying concerts, Aria hits the right notes—every time. They don&apos;t just play music; they build a vibe.
       </p>
     ),
   },
@@ -391,7 +391,7 @@ const cards = [
     instagramLink: "https://www.instagram.com/pixxel_iitp/?hl=en",
     content: () => (
       <p>
-        The eyes behind every epic IITP memory. Pixxel's not just about taking pictures—they freeze feelings. From covering fests to capturing candids, they turn every moment into a masterpiece.
+        The eyes behind every epic IITP memory. Pixxel&apos;s not just about taking pictures—they freeze feelings. From covering fests to capturing candids, they turn every moment into a masterpiece.
       </p>
     ),
   },
@@ -405,7 +405,7 @@ const cards = [
     instagramLink: "https://www.instagram.com/hoot.iitp/",
     content: () => (
       <p>
-        Got opinions louder than your roommate's alarm? HOOT gives you the mic. Debate, JAM, MUN—you name it, they talk it. It's where logic meets flair and your voice finally gets the stage it deserves.
+        Got opinions louder than your roommate&apos;s alarm? HOOT gives you the mic. Debate, JAM, MUN—you name it, they talk it. It&apos;s where logic meets flair and your voice finally gets the stage it deserves.
       </p>
     ),
   },
@@ -419,7 +419,7 @@ const cards = [
     instagramLink: "https://www.instagram.com/qc_iitp/",
     content: () => (
       <p>
-        Forget mugging facts. Quiz Club is about curiosity, deduction, and that sweet feeling of yelling the right answer before anyone else. With quizzes like Parakh and Knockout, it's where trivia gets thrilling.
+        Forget mugging facts. Quiz Club is about curiosity, deduction, and that sweet feeling of yelling the right answer before anyone else. With quizzes like Parakh and Knockout, it&apos;s where trivia gets thrilling.
       </p>
     ),
   },
@@ -433,7 +433,7 @@ const cards = [
     instagramLink: "https://www.instagram.com/qc_iitp/",
     content: () => (
       <p>
-        Forget mugging facts. Quiz Club is about curiosity, deduction, and that sweet feeling of yelling the right answer before anyone else. With quizzes like Parakh and Knockout, it's where trivia gets thrilling.
+        Forget mugging facts. Quiz Club is about curiosity, deduction, and that sweet feeling of yelling the right answer before anyone else. With quizzes like Parakh and Knockout, it&apos;s where trivia gets thrilling.
       </p>
     ),
   },
@@ -447,7 +447,7 @@ const cards = [
     instagramLink: "https://www.instagram.com/culinary_club_iitpatna/",
     content: () => (
       <p>
-        For those who speak fluent food. Epicurean is where kitchen skills meet creativity—whether it's plating pasta or reinventing Maggi. Cook, taste, bond—no Michelin star needed.
+        For those who speak fluent food. Epicurean is where kitchen skills meet creativity—whether it&apos;s plating pasta or reinventing Maggi. Cook, taste, bond—no Michelin star needed.
       </p>
     ),
   },
@@ -461,7 +461,7 @@ const cards = [
     instagramLink: "https://instagram.com/hexachrome_official?igshid=NTc4MTIwNjQ2YQ==",
     content: () => (
       <p>
-        Rubik's Cubes, riddles, crosswords—if solving things is your jam, HexaChrome is home. Brains get a proper workout here, minus the sweat. Fun, friendly, and freakishly clever.
+        Rubik&apos;s Cubes, riddles, crosswords—if solving things is your jam, HexaChrome is home. Brains get a proper workout here, minus the sweat. Fun, friendly, and freakishly clever.
       </p>
     ),
   },
@@ -503,7 +503,7 @@ const cards = [
     instagramLink: "https://www.instagram.com/ikkatt_iitp/",
     content: () => (
       <p>
-        Style isn't just worn—it's designed. Ikkatt gives you the ramp and the sketchpad. From fashion shows to DIY workshops, this club turns creativity into couture.
+        Style isn&apos;t just worn—it&apos;s designed. Ikkatt gives you the ramp and the sketchpad. From fashion shows to DIY workshops, this club turns creativity into couture.
       </p>
     ),
   },
@@ -517,7 +517,7 @@ const cards = [
     instagramLink: "https://www.instagram.com/standup_club.iitp/",
     content: () => (
       <p>
-        Got jokes? STD's the stage. IITP's unofficial therapy session where students turn awkwardness, engineering pain, and hostel horrors into stand-up gold. Laughter guaranteed.
+        Got jokes? STD&apos;s the stage. IITP&apos;s unofficial therapy session where students turn awkwardness, engineering pain, and hostel horrors into stand-up gold. Laughter guaranteed.
       </p>
     ),
   },

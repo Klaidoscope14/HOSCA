@@ -426,7 +426,7 @@ const cards = [
   {
     description: "7.",
     title: "Syahi",
-    src: "/ClubLogo/Syahi.jpg",
+    src: "/ClubLogo/syahi.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/syahi",
     facebookLink: "https://www.facebook.com/quizclubTO/",
@@ -454,7 +454,7 @@ const cards = [
   {
     description: "9.",
     title: "HexaChrome",
-    src: "/ClubLogo/HexaChrome.jpg",
+    src: "/ClubLogo/Hexachrome.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/hexachrome",
     facebookLink: "https://instagram.com/hexachrome_official?igshid=NTc4MTIwNjQ2YQ==",

@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/components/hooks/ExpandableCard";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { IoPlay } from "react-icons/io5";
+import Image from "next/image";
 
 export function ExpandableCardDemo() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -93,7 +94,7 @@ export function ExpandableCardDemo() {
             }}
             className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg overflow-hidden"
           >
-            <img
+            <Image
               width={200}
               height={200}
               src={active.src}
@@ -223,7 +224,7 @@ export function ExpandableCardDemo() {
                   }
                 }}
               >
-                <img
+                <Image
                   width={100}
                   height={100}
                   src={card.src}

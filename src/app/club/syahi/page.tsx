@@ -2,9 +2,9 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
+import Image from "next/image";
 
 interface ClubMember {
   id: number;
@@ -90,9 +90,11 @@ export default function SyahiPage() {
           <CardItem translateZ="100" className="w-full mt-4">
             <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-2 border-white bg-white flex items-center justify-center">
               {member.imageUrl ? (
-                <img
+                <Image
                   src={member.imageUrl}
                   alt={member.name}
+                  width={144}
+                  height={144}
                   className="w-full h-full object-cover"
                 />
               ) : (
@@ -157,6 +159,7 @@ export default function SyahiPage() {
       </CardContainer>
     </div>
   );
+
   return (
     <div className="relative min-h-screen w-full bg-[url('/club/aria_background.jpeg')] bg-cover bg-center bg-no-repeat">
       <div className="absolute inset-0 bg-white/[0.6]"></div>
@@ -166,15 +169,17 @@ export default function SyahiPage() {
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
-              <img
+              <Image
                 src="/ClubLogo/syahi.jpg"
-                alt="Litracy Society"
+                alt="Syahi Club Logo"
+                width={384}
+                height={384}
                 className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl" />
             </div>
           </div>
-          
+
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-300 mb-6">
               Syahi Club

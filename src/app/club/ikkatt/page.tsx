@@ -23,7 +23,7 @@ const IkkattMembers: ClubMember[] = [
     position: 'Coordinator',
     email: 'meghna_2301ce18@iitp.ac.in',
     linkedinUrl: 'http://linkedin.com/in/meghna-kumari-00a431298',
-    imageUrl: '/Coordinators/ikkat/Meghna.jpeg',
+    imageUrl: '/Coordinators/Ikkat/Meghna.jpeg',
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const IkkattMembers: ClubMember[] = [
     position: 'Coordinator',
     email: 'sanskar_2301mm31@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/sanskar-sahu-58a81b289/',
-    imageUrl: '/Coordinators/ikkat/sanskar.jpg',
+    imageUrl: '/Coordinators/Ikkat/sanskar.jpg',
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const IkkattMembers: ClubMember[] = [
     position: 'Coordinator',
     email: 'amaan_2302gt06@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/amaan-ali-94830b291/',
-    imageUrl: '/Coordinators/ikkat/Amaan.jpeg',
+    imageUrl: '/Coordinators/Ikkat/Amaan.jpeg',
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ const IkkattMembers: ClubMember[] = [
     position: 'Sub-Coordinator',
     email: 'culturalaffairs@iitp.ac.in',
     linkedinUrl: 'http://www.linkedin.com/in/mohima-baidya/',
-    imageUrl: '/SubCords/ikkat/Mohima.jpg',
+    imageUrl: '/SubCords/Ikkat/Mohima.jpg',
   },
   {
     id: 5,
@@ -55,7 +55,7 @@ const IkkattMembers: ClubMember[] = [
     position: 'Sub-Coordinator',
     email: 'culturalaffairs@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/aanushka-saha-a2b78a322/',
-    imageUrl: '/SubCords/ikkat/aanushka.jpg',
+    imageUrl: '/SubCords/Ikkat/aanushka.jpg',
   },
   {
     id: 6,
@@ -63,7 +63,7 @@ const IkkattMembers: ClubMember[] = [
     position: 'Sub-Coordinator',
     email: 'culturalaffairs@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/aditi-lohiya-395532321/',
-    imageUrl: '/SubCords/ikkat/Aditi_ikkat.jpg',
+    imageUrl: '/SubCords/Ikkat/Aditi_ikkat.jpg',
   },
   {
     id: 7,
@@ -71,7 +71,7 @@ const IkkattMembers: ClubMember[] = [
     position: 'Sub-Coordinator',
     email: 'culturalaffairs@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/prince-narayan-173b0a36a/',
-    imageUrl: '/SubCords/ikkat/prince.jpg',
+    imageUrl: '/SubCords/Ikkat/prince.jpg',
   },
   {
     id: 8,
@@ -79,7 +79,7 @@ const IkkattMembers: ClubMember[] = [
     position: 'Sub-Coordinator',
     email: 'culturalaffairs@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/ankit-basu-32295931a/',
-    imageUrl: '/SubCords/ikkat/AnkitBasu.jpg',
+    imageUrl: '/SubCords/Ikkat/AnkitBasu.jpg',
   },
   {
     id: 9,
@@ -87,7 +87,7 @@ const IkkattMembers: ClubMember[] = [
     position: 'Sub-Coordinator',
     email: 'culturalaffairs@iitp.ac.in',
     linkedinUrl: 'www.linkedin.com/in/tanishq-sangwan/',
-    imageUrl: '/SubCords/ikkat/Tanishq.jpg',
+    imageUrl: '/SubCords/Ikkat/Tanishq.jpg',
   }
 ];
 

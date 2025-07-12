@@ -118,7 +118,7 @@ const CndCords: Cnd[] = [
     id: 1,
     name: "Ansh Singh",
     email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/CnDCords/Ansh.png",
+    imageUrl: "/CnDCords/Ansh.jpeg",
     linkedinUrl: "https://www.linkedin.com/in/anshnvm",
   }
 ];
@@ -126,41 +126,34 @@ const CndCords: Cnd[] = [
 const CndSubcords: Cnd[] = [
   {
     id: 2,
-    name: "Khanak Jain",
-    email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/HoscaaSubcoords/khanak.jpg",
-    linkedinUrl: "https://www.linkedin.com/in/khanak-jain-4412ba2b8/",
-  },
-  {
-    id: 3,
     name: "Saubhagya Ji Jaiswal",
     email: "saubhagya_2401me72@iitp.ac.in",
     imageUrl: "/CndSubcords/SJJ.jpg",
     linkedinUrl: "https://www.linkedin.com/in/saubhagya-ji-jaiswal-33b2a2289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
-    id: 4,
+    id: 3,
     name: "Shailja Brijendra Mathuria ",
     email: "culturalaffairs@iitp.ac.in",
     imageUrl: "/CndSubcords/Shailja.jpg",
     linkedinUrl: "https://www.linkedin.com/in/shailja-mathuria-739834312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
-    id: 5,
+    id: 4,
     name: "Sahil",
     email: "culturalaffairs@iitp.ac.in",
     imageUrl: "/CndSubcords/Sahil.jpg",
     linkedinUrl: "https://www.linkedin.com/in/sahil-72019a360?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
-    id: 6,
+    id: 5,
     name: "Swarnava Ghosh",
     email: "culturalaffairs@iitp.ac.in",
     imageUrl: "/CndSubcords/Swarnava.jpeg",
     linkedinUrl: "https://www.linkedin.com/in/swarnava-ghosh-b074a1326/",
   },
   {
-    id: 7,
+    id: 6,
     name: "D. Sravan Kumar",
     email: "culturalaffairs@iitp.ac.in",
     imageUrl: "/CndSubcords/Sravan.jpg",

@@ -37,7 +37,7 @@ const Footer = () => {
             <div className="flex items-center space-x-4">
               <div className="relative w-16 h-16 rounded-full overflow-hidden bg-white">
                 <Image
-                  src="/hosca.jpg"
+                  src="/home/hosca.png"
                   alt="HOSCA Logo"
                   fill
                   className="object-cover"

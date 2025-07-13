@@ -175,20 +175,20 @@ export default function AnimePage() {
                 About STD Club
               </h2>
               <p className="text-neutral-600 dark:text-neutral-300">
-                Got jokes? STD’s the stage. IITP’s unofficial therapy session
-                where students turn awkwardness, engineering pain, and hostel
-                horrors into stand-up gold. Laughter guaranteed.
+                Got trauma? Cool, turn it into punchlines.
+STD is IITP’s unofficial therapy session—where hostel L’s, mess food mysteries, and daily breakdowns get roasted harder than mess papad.
+Join the Stand-Up Club—where crying turns into comedy, and oversharing is an art form.
               </p>
               <div className="mt-6">
                 <h3 className="text-xl font-semibold text-neutral-700 dark:text-white mb-3">
                   What We Do
                 </h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li>quirks & gimmicks</li>
-                  <li>critical thinking skills(MUN)</li>
-                  <li>Quest-ion</li>
-                  <li>Pan India Quizzing fest PARAKH annually</li>
-                  <li>Group discussions</li>
+                  <li>Organize Open Mics</li>
+                  <li>Create Crazy Comedy Content</li>
+                  <li>Host Roast Events</li>
+                  <li>Performances at college fests</li>
+                  <li>Conduct Workshops</li>
                 </ul>
               </div>
               <div className="mt-6">
@@ -196,11 +196,11 @@ export default function AnimePage() {
                   Our Events
                 </h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li>PD (Public Debate)</li>
-                  <li>MUN (Model United Nations)</li>
-                  <li>JAM (Just A Minute)</li>
-                  <li>Group Discussions</li>
-                  <li>Speaking Workshops</li>
+                  <li>Meme War</li>
+                  <li>Standup Nights</li>
+                  <li>Roast Rumble</li>
+                  <li>Improv battles</li>
+                  <li>Open Mic</li>
                 </ul>
               </div>
             </div>

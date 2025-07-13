@@ -78,7 +78,7 @@ const mainDevelopers: Developer[] = [
     name: "Chaitanya Kotipalli",
     email: "culturalaffairs@iitp.ac.in",
     imageUrl: "/HoscaaCoords/Chaitanya.jpg",
-    linkedinUrl: "https://linkedin.com/in/dev8",
+    linkedinUrl: "https://www.linkedin.com/in/chaitanya-kotipalli-6234a6317/",
   },
 ];
 

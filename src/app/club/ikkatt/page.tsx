@@ -221,11 +221,11 @@ export default function AnimePage() {
                   What We Do
                 </h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li>quirks & gimmicks</li>
-                  <li>critical thinking skills(MUN)</li>
-                  <li>Quest-ion</li>
-                  <li>Pan India Quizzing fest PARAKH annually</li>
-                  <li>Group discussions</li>
+                  <li>Conduct fashion and makeup workshop</li>
+                  <li>Rampwalks</li>
+                  <li>Upcycling and thrifting clothes</li>
+                  <li>Online / Offline photoshoot and modelling workshop</li>
+                  <li>Performances at college fests</li>
                 </ul>
               </div>
               <div className="mt-6">
@@ -233,11 +233,11 @@ export default function AnimePage() {
                   Our Events
                 </h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li>PD (Public Debate)</li>
-                  <li>MUN (Model United Nations)</li>
-                  <li>JAM (Just A Minute)</li>
-                  <li>Group Discussions</li>
-                  <li>Speaking Workshops</li>
+                  <li>Mr and Mrs Freshers</li>
+                  <li>Reverb Fashion</li>
+                  <li>Inter-College fashion events</li>
+                  <li>StyleSpill</li>
+                  <li>Verve</li>
                 </ul>
               </div>
             </div>

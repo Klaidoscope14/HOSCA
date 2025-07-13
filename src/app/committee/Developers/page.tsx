@@ -284,13 +284,7 @@ export default function DevelopersPage() {
           <h2 className="text-2xl font-semibold text-center text-white mb-8">Coordinators</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-4xl mx-auto mb-8">
-            {CndCords.slice(0, 1).map(cnd => (
-              <div key={cnd.id}>{renderMemberCard(cnd)}</div>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {CndCords.slice(2).map(cnd => (
+            {CndCords.map(cnd => (
               <div key={cnd.id}>{renderMemberCard(cnd)}</div>
             ))}
           </div>
@@ -298,9 +292,16 @@ export default function DevelopersPage() {
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-center text-white mb-8">Sub Coordinators</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {CndSubcords.map(cnds => (
-              <div key={cnds.id}>{renderMemberCard(cnds)}</div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
+            {CndSubcords.slice(0, 2).map(cnd => (
+              <div key={cnd.id}>{renderMemberCard(cnd)}</div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {CndSubcords.slice(2).map(cnd => (
+              <div key={cnd.id}>{renderMemberCard(cnd)}</div>
             ))}
           </div>
         </section>

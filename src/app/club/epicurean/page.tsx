@@ -47,7 +47,7 @@ const EpicureanMembers: ClubMember[] = [
     position: 'Sub-Coordinator',
     email: 'culinary_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/avi-bharti-029b1833b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
-    imageUrl: '/SubCords/Epicurean/Avi.jpg',
+    imageUrl: '/SubCords/Epicurean/Avi.JPG',
   },
   {
     id: 5,

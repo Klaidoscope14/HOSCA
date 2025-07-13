@@ -16,11 +16,11 @@ interface CommitteeMember {
 const committeeMembers: CommitteeMember[] = [
   {
     id: 1,
-    name: "Dr. Gymkhana Advisor",
+    name: "Dr. Ayash Kanto Mukherjee",
     position: "PIC Cultural",
-    email: "gymkhana.advisor@iitp.ac.in",
-    imageUrl: "/committee/gymkhana-advisor.jpg",
-    linkedinUrl: "https://linkedin.com/in/gymkhana-advisor",
+    email: "pic_cultural@iitp.ac.in",
+    imageUrl: "/HoscaaCore/Ayash.jpg",
+    linkedinUrl: "akm@iitp.ac.in",
   },
   {
     id: 2,

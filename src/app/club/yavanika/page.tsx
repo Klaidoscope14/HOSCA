@@ -153,23 +153,21 @@ export default function YavanikaPage() {
       <BackgroundBeams className="absolute inset-0" />
 
       <div className="container mx-auto px-4 py-8 relative z-10">
-        {/* Hero Section */}
-        {/* Hero Section with Image Left, Content Right */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16 mt-12 lg:mt-24">
-          {/* Image Section - Left on desktop, top on mobile */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-            <div className="relative">
+          <div className="relative w-80 h-80 lg:w-96 lg:h-96">
               <Image
-                fill 
-                src="/ClubLogo/yavanika.png" 
-                alt="Yavanika Drama Society" 
-                className="w-80 h-70 lg:w-96 lg:h-80 object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
+                src="/ClubLogo/yavanika.png"
+                alt="Exousia Dance Society"
+                width={384}
+                height={384}
+                className="object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
+                priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
           </div>
 
-          {/* Content Section - Right on desktop, bottom on mobile */}
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-300 mb-6">
               Yavanika

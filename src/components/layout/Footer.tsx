@@ -10,8 +10,7 @@ const Footer = () => {
     { name: 'Clubs', href: '/club' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'Events', href: '/events' },
-    { name: 'HOSCA Committee', href: '/committee/hoscaa' },
-    { name: 'Gymkhana Committee', href: '/committee/gymkhana' },
+    { name: 'Gymkhana Committee', href: '/committee/Developers' },
     { name: 'IIT Patna', href: 'https://www.iitp.ac.in/', external: true },
   ];
 
@@ -37,7 +36,7 @@ const Footer = () => {
             <div className="flex items-center space-x-4">
               <div className="relative w-16 h-16 rounded-full overflow-hidden bg-white">
                 <Image
-                  src="/hosca.jpg"
+                  src="/home/hosca.png"
                   alt="HOSCA Logo"
                   fill
                   className="object-cover"

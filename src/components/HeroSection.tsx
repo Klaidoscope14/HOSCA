@@ -17,9 +17,9 @@ export default function HeroSection() {
       <div className="relative z-20 flex flex-col items-center justify-center px-4 py-24 min-h-screen space-y-8">
         <div className="w-full max-w-[90vw] flex justify-center items-center">
           <VideoText
-            className="w-full h-[160px] sm:h-[200px] md:h-[250px] lg:h-[280px] font-bold text-transparent animate-gradient-x"
+            className="w-full h-[160px] sm:h-[200px] md:h-[250px] lg:h-[350px] font-bold text-transparent animate-gradient-x"
             src="/video/hosca-bg.mp4"
-            fontSize="clamp(30px, 25vw, 500px)"
+            fontSize="clamp(30px, 25vw, 350px)"
             style={{
               WebkitTextStroke: "1px white",
               filter: "drop-shadow(0 0 6px white)",

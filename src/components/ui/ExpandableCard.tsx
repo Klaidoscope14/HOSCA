@@ -433,7 +433,7 @@ const cards = [
     instagramLink: "https://www.instagram.com/qc_iitp/",
     content: () => (
       <p>
-        Forget mugging facts. Quiz Club is about curiosity, deduction, and that sweet feeling of yelling the right answer before anyone else. With quizzes like Parakh and Knockout, it&apos;s where trivia gets thrilling.
+        Poetry, storytelling, blogs, or blackout prose — if it&apos;s got words, it&apos;s got Syahi written all over it. Whether you&apos;re a silent scribbler or a stage poet, Syahi is where your imagination spills ink.
       </p>
     ),
   },

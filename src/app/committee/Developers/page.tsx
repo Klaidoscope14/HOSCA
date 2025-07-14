@@ -4,6 +4,7 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import Image from "next/image";
+import GymkhanaCommitteePage from "../gymkhana/page";
 
 interface Developer {
   id: number;
@@ -78,7 +79,7 @@ const mainDevelopers: Developer[] = [
     name: "Chaitanya Kotipalli",
     email: "culturalaffairs@iitp.ac.in",
     imageUrl: "/HoscaaCoords/Chaitanya.jpg",
-    linkedinUrl: "https://linkedin.com/in/dev8",
+    linkedinUrl: "https://www.linkedin.com/in/chaitanya-kotipalli-6234a6317/",
   },
 ];
 
@@ -135,7 +136,7 @@ const CndSubcords: Cnd[] = [
     id: 3,
     name: "Shailja Brijendra Mathuria ",
     email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/CndSubcords/Shailja.jpg",
+    imageUrl: "/CndSubcords/Shailja.jpeg",
     linkedinUrl: "https://www.linkedin.com/in/shailja-mathuria-739834312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
@@ -236,6 +237,8 @@ export default function DevelopersPage() {
     <div className="relative min-h-screen w-full bg-black/[0.96] antialiased bg-grid-white/[0.02] overflow-hidden">
       <BackgroundBeams className="absolute inset-0" />
 
+      <GymkhanaCommitteePage/>
+
       <div className="container mx-auto px-4 py-8 relative z-10">
         <h1 className="text-4xl font-bold text-center mb-8 text-white">Web Developers</h1>
 
@@ -284,13 +287,7 @@ export default function DevelopersPage() {
           <h2 className="text-2xl font-semibold text-center text-white mb-8">Coordinators</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-4xl mx-auto mb-8">
-            {CndCords.slice(0, 1).map(cnd => (
-              <div key={cnd.id}>{renderMemberCard(cnd)}</div>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {CndCords.slice(2).map(cnd => (
+            {CndCords.map(cnd => (
               <div key={cnd.id}>{renderMemberCard(cnd)}</div>
             ))}
           </div>
@@ -298,10 +295,41 @@ export default function DevelopersPage() {
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-center text-white mb-8">Sub Coordinators</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {CndSubcords.map(cnds => (
-              <div key={cnds.id}>{renderMemberCard(cnds)}</div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
+            {CndSubcords.slice(0, 2).map(cnd => (
+              <div key={cnd.id}>{renderMemberCard(cnd)}</div>
             ))}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {CndSubcords.slice(2).map(cnd => (
+              <div key={cnd.id}>{renderMemberCard(cnd)}</div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-12 bg-gray-900/50 backdrop-blur-sm rounded-lg p-8 border border-white/[0.1]">
+          <h2 className="text-2xl font-semibold mb-4 text-center text-white">
+            About Gymkhana
+          </h2>
+          <div className="max-w-3xl mx-auto">
+            <p className="text-gray-300 mb-4">
+              The Gymkhana Committee at IIT Patna is the apex student body that
+              oversees and coordinates all student activities, including
+              cultural, technical, and sports events. It works in collaboration
+              with various clubs and associations to ensure the holistic
+              development of students.
+            </p>
+            <p className="text-gray-300">The committee is responsible for:</p>
+            <ul className="list-disc list-inside text-gray-300 mt-2 space-y-2">
+              <li>Organizing and managing student activities and events</li>
+              <li>Coordinating between different clubs and associations</li>
+              <li>Managing student welfare and development programs</li>
+              <li>
+                Facilitating communication between students and administration
+              </li>
+            </ul>
           </div>
         </section>
       </div>

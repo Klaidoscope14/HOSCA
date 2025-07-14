@@ -47,15 +47,15 @@ const EpicureanMembers: ClubMember[] = [
     position: 'Sub-Coordinator',
     email: 'culinary_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/avi-bharti-029b1833b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
-    imageUrl: '/SubCords/Epicurean/Avi.jpg',
+    imageUrl: '/SubCords/Epicurean/Avi.JPG',
   },
   {
     id: 5,
-    name: 'Shailja Mathuria',
+    name: 'Shailja Brijendra Mathuria',
     position: 'Sub-Coordinator',
     email: 'culinary_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/shailja-mathuria-739834312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Epicurean/Shailja.jpg',
+    imageUrl: '/CndSubcords/Shailja.jpeg',
   },
   {
     id: 6,
@@ -142,19 +142,6 @@ export default function EpicureanPage() {
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
-            {/* {member.instagramUrl && (
-              <CardItem
-                translateZ={20}
-                as="a"
-                href={member.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white text-black hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white transition-colors duration-300"
-                aria-label="Instagram"
-              >
-                <FaInstagram className="w-4 h-4" />
-              </CardItem>
-            )} */}
           </div>
         </CardBody>
       </CardContainer>

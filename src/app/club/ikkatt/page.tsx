@@ -233,7 +233,7 @@ export default function AnimePage() {
                   Our Events
                 </h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li>Mr and Mrs Freshers</li>
+                  <li>Mr and Ms Freshers</li>
                   <li>Reverb Fashion</li>
                   <li>Inter-College fashion events</li>
                   <li>StyleSpill</li>

@@ -67,7 +67,7 @@ const PixxelMembers: ClubMember[] = [
   },
   {
     id: 7,
-    name: 'Cheela Keerthana',
+    name: 'Cheella Keerthana',
     position: 'Sub-Coordinator',
     email: 'pixxel_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/keerthana-cheella-27a114333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',

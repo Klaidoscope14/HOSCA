@@ -136,7 +136,7 @@ const CndSubcords: Cnd[] = [
     id: 3,
     name: "Shailja Brijendra Mathuria ",
     email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/CndSubcords/Shailja.jpg",
+    imageUrl: "/CndSubcords/Shailja.jpeg",
     linkedinUrl: "https://www.linkedin.com/in/shailja-mathuria-739834312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {

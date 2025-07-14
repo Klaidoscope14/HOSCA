@@ -39,7 +39,7 @@ const HexachromeMembers: ClubMember[] = [
     position: 'Sub-Coordinator',
     email: 'hexachrome@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/aryan-patil-58393736a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/HexaChrome/AryanPatil.jpg',
+    imageUrl: '/SubCords/HexaChrome/AryanPatil.jpeg',
   },
   {
     id: 4,

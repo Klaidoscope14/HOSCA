@@ -51,11 +51,11 @@ const EpicureanMembers: ClubMember[] = [
   },
   {
     id: 5,
-    name: 'Shailja Mathuria',
+    name: 'Shailja Brijendra Mathuria',
     position: 'Sub-Coordinator',
     email: 'culinary_club@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/shailja-mathuria-739834312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Epicurean/Shailja.jpg',
+    imageUrl: '/CndSubcords/Shailja.jpeg',
   },
   {
     id: 6,

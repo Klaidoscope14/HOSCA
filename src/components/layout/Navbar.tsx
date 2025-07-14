@@ -75,7 +75,14 @@ const Navbar = () => {
               </Link>
             </li>
 
-            <li className="relative" ref={dropdownRef}>
+            <li>
+              <Link href="/committee/Developers" className="block py-2 px-3 text-white rounded md:bg-transparent md:text-white md:p-0 hover:text-blue-400 relative group transition-colors duration-300">
+                Gymkhana
+                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-blue-400 transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 md:block hidden"></span>
+              </Link>
+            </li>
+
+            {/* <li className="relative" ref={dropdownRef}>
               <button
                 onClick={(e) => {
                   e.stopPropagation(); 
@@ -113,7 +120,7 @@ const Navbar = () => {
                   </ul>
                 </div>
               )}
-            </li>
+            </li> */}
 
             <li>
               <Link href="/gallery" className="block py-2 px-3 text-white rounded hover:bg-gray-800/50 md:hover:bg-transparent md:p-0 hover:text-blue-400 relative group transition-colors duration-300">

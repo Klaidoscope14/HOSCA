@@ -186,30 +186,6 @@ export default function GymkhanaCommitteePage() {
             {otherMembers.map((member) => renderMemberCard(member))}
           </div>
         </section>
-
-        <section className="mt-12 bg-gray-900/50 backdrop-blur-sm rounded-lg p-8 border border-white/[0.1]">
-          <h2 className="text-2xl font-semibold mb-4 text-center text-white">
-            About Gymkhana
-          </h2>
-          <div className="max-w-3xl mx-auto">
-            <p className="text-gray-300 mb-4">
-              The Gymkhana Committee at IIT Patna is the apex student body that
-              oversees and coordinates all student activities, including
-              cultural, technical, and sports events. It works in collaboration
-              with various clubs and associations to ensure the holistic
-              development of students.
-            </p>
-            <p className="text-gray-300">The committee is responsible for:</p>
-            <ul className="list-disc list-inside text-gray-300 mt-2 space-y-2">
-              <li>Organizing and managing student activities and events</li>
-              <li>Coordinating between different clubs and associations</li>
-              <li>Managing student welfare and development programs</li>
-              <li>
-                Facilitating communication between students and administration
-              </li>
-            </ul>
-          </div>
-        </section>
       </div>
     </div>
   );

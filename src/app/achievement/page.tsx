@@ -94,7 +94,7 @@ export default function AchievementPage() {
     title: "Epicurean",
     link: "/clubs/epicurean",
     staticImage: "/ClubLogo/epicurean.png",
-      achievement: "Won Crescendo at IIT Bombay for their acapella performance.",
+    achievement: "Won Crescendo at IIT Bombay for their acapella performance.",
   },
 
   {
@@ -107,7 +107,7 @@ export default function AchievementPage() {
     title: "Anime",
     link: "/clubs/yavanika",
     staticImage: "/ClubLogo/anime.png",
-     achievement: "Won Crescendo at IIT Bombay for their acapella performance.",
+    achievement: "Won Crescendo at IIT Bombay for their acapella performance.",
   },
   {
     title: "Hoot",
@@ -126,38 +126,38 @@ export default function AchievementPage() {
     title: "Hexachrome",
     link: "/clubs/yavanika",
     staticImage: "/ClubLogo/Hexachrome.jpg",
-     achievement: "Won Crescendo at IIT Bombay for their acapella performance.",
+    achievement: "Won Crescendo at IIT Bombay for their acapella performance.",
   },
   {
     title: "Quiz",
     link: "/clubs/epicurean",
     staticImage: "/ClubLogo/quiz.jpg",
-     achievement: "Won Crescendo at IIT Bombay for their acapella performance.",
+    achievement: "Won Crescendo at IIT Bombay for their acapella performance.",
   },
   
   {
     title: "Syahi",
     link: "/clubs/aria",
     staticImage: "/ClubLogo/syahi.jpg",
-   achievement: "Won Crescendo at IIT Bombay for their acapella performance.",
+    achievement: "Won Crescendo at IIT Bombay for their acapella performance.",
   },
   {
     title: "Vincetroke",
     link: "/clubs/yavanika",
     staticImage: "/ClubLogo/Vincetroke.jpg",
-   achievement: "Won Crescendo at IIT Bombay for their acapella performance.",
+    achievement: "Won Crescendo at IIT Bombay for their acapella performance.",
   },
   {
     title: "ikkatt",
     link: "/clubs/epicurean",
     staticImage: "/ClubLogo/ikkatt.png",
-     achievement: "Won Crescendo at IIT Bombay for their acapella performance.",
+    achievement: "Won Crescendo at IIT Bombay for their acapella performance.",
   },
    {
     title: "STD",
     link: "/clubs/epicurean",
     staticImage: "/ClubLogo/std.png",
-     achievement: "Won Crescendo at IIT Bombay for their acapella performance.",
+    achievement: "Won Crescendo at IIT Bombay for their acapella performance.",
   }
   
 ];

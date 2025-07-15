@@ -1,4 +1,3 @@
-// app/(main)/achievements/page.tsx
 'use client';
 
 import React from 'react';
@@ -164,12 +163,12 @@ export default function AchievementPage() {
 ];
 
   return (
-    <div className="relative min-h-screen bg-black text-white">
+    <div className="relative mt-10 min-h-screen text-white">
       <AchievementBackgroundDecor />
 
       <div className="relative z-10 container mx-auto px-4">
         <div className="mb-12 text-center">
-          <h2 className="mt-0 text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-800 via-white to-black bg-clip-text text-transparent animate-gradient-x">
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-800 via-white to-black bg-clip-text text-transparent animate-gradient-x">
             <Cover>Achievements</Cover>
           </h2>
           <p className="text-lg mt-6 mb-12 max-w-2xl mx-auto bg-gradient-to-r from-gray-900 via-orange-600 to-red-700 bg-clip-text text-transparent">
@@ -177,36 +176,31 @@ export default function AchievementPage() {
           </p>
         </div>
 
-        {/* Infinite Scrolling Achievements */}
         <div className="my-10">
           <InfiniteMovingCards items={testimonials} />
         </div>
 
-        {/* Club Cards */}
-<div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-items-center mt-20">
-  {clubCards.slice(0, clubCards.length - 1).map((club) => (
-    <CardDemo
-      key={club.title}
-      title={club.title}
-      link={club.link}
-      staticImage={club.staticImage}
-      achievement={club.achievement}
-    />
-  ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-items-center mt-20">
+          {clubCards.slice(0, clubCards.length - 1).map((club) => (
+            <CardDemo
+              key={club.title}
+              title={club.title}
+              link={club.link}
+              staticImage={club.staticImage}
+              achievement={club.achievement}
+            />
+          ))}
 
-  {/* Last card (STD) centered */}
-  <div className="col-span-full flex justify-center">
-    <CardDemo
-      key={clubCards[clubCards.length - 1].title}
-      title={clubCards[clubCards.length - 1].title}
-      link={clubCards[clubCards.length - 1].link}
-      staticImage={clubCards[clubCards.length - 1].staticImage}
-      achievement={clubCards[clubCards.length - 1].achievement}
-    />
-  </div>
-</div>
-
-
+        <div className="col-span-full flex justify-center mb-10">
+          <CardDemo
+            key={clubCards[clubCards.length - 1].title}
+            title={clubCards[clubCards.length - 1].title}
+            link={clubCards[clubCards.length - 1].link}
+            staticImage={clubCards[clubCards.length - 1].staticImage}
+            achievement={clubCards[clubCards.length - 1].achievement}
+          />
+        </div>
+      </div>
       </div>
     </div>
   );

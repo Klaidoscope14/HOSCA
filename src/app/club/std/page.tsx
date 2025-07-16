@@ -176,8 +176,8 @@ export default function AnimePage() {
               </h2>
               <p className="text-neutral-600 dark:text-neutral-300">
                 Got trauma? Cool, turn it into punchlines.
-STD is IITP’s unofficial therapy session—where hostel L’s, mess food mysteries, and daily breakdowns get roasted harder than mess papad.
-Join the Stand-Up Club—where crying turns into comedy, and oversharing is an art form.
+STD is IITP&apos;s unofficial therapy session—where hostel L&apos;s, mess food mysteries, and daily breakdowns get roasted harder than mess papad.
+Join the StandUp Club—where crying turns into comedy, and oversharing is an art form.
               </p>
               <div className="mt-6">
                 <h3 className="text-xl font-semibold text-neutral-700 dark:text-white mb-3">

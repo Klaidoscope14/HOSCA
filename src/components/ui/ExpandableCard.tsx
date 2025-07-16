@@ -457,8 +457,8 @@ const cards = [
     src: "/ClubLogo/Hexachrome.jpg",
     ctaText: "Learn More",
     ctaLink: "/club/hexachrome",
-    facebookLink: "https://instagram.com/hexachrome_official?igshid=NTc4MTIwNjQ2YQ==",
-    instagramLink: "https://instagram.com/hexachrome_official?igshid=NTc4MTIwNjQ2YQ==",
+    facebookLink: "https://www.instagram.com/hexachrome_iitp/",
+    instagramLink: "https://www.instagram.com/hexachrome_iitp/",
     content: () => (
       <p>
         Rubik&apos;s Cubes, riddles, crosswords—if solving things is your jam, HexaChrome is home. Brains get a proper workout here, minus the sweat. Fun, friendly, and freakishly clever.

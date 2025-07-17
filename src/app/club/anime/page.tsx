@@ -172,7 +172,7 @@ export default function AnimePage() {
               Anime Club
             </h1>
             <p className="text-lg md:text-xl text-white max-w-2xl mx-auto lg:mx-0">
-              Whether you're a seasoned otaku or just getting started with your first series, Anime club welcomes all with open arms.
+              Whether you&apos;re a seasoned otaku or just getting started with your first series, Anime club welcomes all with open arms.
             </p>
           </div>
         </div>

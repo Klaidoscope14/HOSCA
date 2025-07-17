@@ -188,25 +188,21 @@ export default function EpicureanPage() {
               <div className="mt-6">
                 <h3 className="text-xl font-semibold text-neutral-700 dark:text-white mb-3">What We Do</h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li>
-                    The club conducts events running from PD,MUN,JAM and lots
-                    more to allow the young minds to see the world through a
-                    better perspective
-                  </li>
-                  <li>Essay Writting (MUN)</li>
-                  <li>Quest-ion</li>
-                  <li>Pan India Quizzing fest PARAKH annually</li>
-                  <li>Group discussions</li>
+                  <li>Learning new recipes and techniques</li>
+                  <li>Bonding over shared meals</li>
+                  <li>Celebrating the Joy of Cooking</li>
+                  <li>Hands-On Cooking workshops</li>
+                  <li>Exploring Culinary and Beverage Arts</li>
                 </ul>
               </div>
               <div className="mt-6">
                 <h3 className="text-xl font-semibold text-neutral-700 dark:text-white mb-3">Our Events</h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li>PD (Public Debate)</li>
-                  <li>MUN (Model United Nations)</li>
-                  <li>JAM (Just A Minute)</li>
-                  <li>Group Discussions</li>
-                  <li>Speaking Workshops</li>
+                  <li>Culinary Competitions</li>
+                  <li>Mixology Events</li>
+                  <li>Weekly Cooking Sessions</li>
+                  <li>What&apos;s in the pot?</li>
+                  <li>Cooking and Beverage Workshops</li>
                 </ul>
               </div>
             </div>

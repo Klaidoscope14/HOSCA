@@ -204,10 +204,8 @@ export default function HootPage() {
               </h2>
               <p className="text-neutral-600 dark:text-neutral-300">
                 The House of Oratory Talents is the speaking arts club of IIT
-                Patna. HOOT is an engaging club where an individual finds his
-                way to speak his mind out. We at HOOT deal with current affairs,
-                get to know where the world is going and ponder on how we can
-                improvise our thought process too.
+                Patna. HOOT is a vibrant space for exploring ideas, public speaking and expressing thoughts with clarity. Through debates,
+                discussions and performance arts, it fosters confidence, critical thinking and creative expression.
               </p>
               <div className="mt-6">
                 <h3 className="text-xl font-semibold text-neutral-700 dark:text-white mb-3">
@@ -215,7 +213,7 @@ export default function HootPage() {
                 </h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
                   <li>Debate competitions</li>
-                  <li>Model United Nations (MUN)</li>
+                  <li>Improv Battles</li>
                   <li>Just A Minute (JAM) sessions</li>
                   <li>Public speaking workshops</li>
                   <li>Group discussions</li>
@@ -228,9 +226,9 @@ export default function HootPage() {
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
                   <li>PD (Public Debate)</li>
                   <li>MUN (Model United Nations)</li>
-                  <li>JAM (Just A Minute)</li>
-                  <li>Group Discussions</li>
-                  <li>Speaking Workshops</li>
+                  <li>Just A Minute (JAM)</li>
+                  <li>Verbal Voyage</li>
+                  <li>Asian Parliamentary Debate</li>
                 </ul>
               </div>
             </div>

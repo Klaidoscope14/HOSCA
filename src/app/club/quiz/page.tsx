@@ -204,11 +204,12 @@ export default function QuizPage() {
                   What We Do
                 </h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li>weekly quizzes made up of fun and deducible questions</li>
-                  <li>Knockout (MUN)</li>
-                  <li>Quest-ion</li>
-                  <li>Pan India Quizzing fest PARAKH annually</li>
-                  <li>Group discussions</li>
+                  <li>Debunk myths about quizzing</li>
+                  <li>Regular weekly sets</li>
+                  <li>Traditional and Buzzer Quizzes</li>
+                  <li>General Quizzes with topics of India and Sports </li>
+                  <li>Quizzes on diverse topics including MELA, TLC, and SBT</li>
+                 
                 </ul>
               </div>
               <div className="mt-6">
@@ -216,11 +217,11 @@ export default function QuizPage() {
                   Our Events
                 </h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li>PD (Public Debate)</li>
-                  <li>MUN (Model United Nations)</li>
-                  <li>JAM (Just A Minute)</li>
-                  <li>Group Discussions</li>
-                  <li>Speaking Workshops</li>
+                  <li>Parakh</li>
+                  <li>QC101</li>
+                  <li>Celest-ion</li>
+                  <li>Knockout</li>
+                  <li>Reverb Quizzes(TLC and Bihtawood)</li>
                 </ul>
               </div>
             </div>

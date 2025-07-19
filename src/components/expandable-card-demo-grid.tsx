@@ -117,41 +117,39 @@ const [active, setActive] = useState<{
           </div>
         ) : null}
       </AnimatePresence>
-   {/* Club Grid without STD */}
-<ul className="mx-auto w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-y-16 gap-x-100 items-start">
-  {cards
-    .filter((card) => card.title !== "STD")
-    .map((card, index) => (
-      <motion.div
-        layoutId={`card-${card.title}-${id}`}
-        key={card.title}
-        onClick={() => setActive(card)}
-        className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
-      >
-        <div className="flex gap-4 flex-col w-full">
-          <motion.div layoutId={`image-${card.title}-${id}`}>
-            <img
-              width={100}
-              height={100}
-              src={card.src}
-              alt={card.title}
-              className="h-60 w-full rounded-lg object-cover object-top"
-            />
-          </motion.div>
-          <div className="flex justify-center items-center flex-col">
-            <motion.h3
-              layoutId={`title-${card.title}-${id}`}
-              className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left text-base"
+      <ul className="mx-auto w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-y-16 gap-x-100 items-start">
+        {cards
+          .filter((card) => card.title !== "STD")
+          .map((card) => (
+            <motion.div
+              layoutId={`card-${card.title}-${id}`}
+              key={card.title}
+              onClick={() => setActive(card)}
+              className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
             >
-              {card.title}
-            </motion.h3>
-          </div>
-        </div>
-      </motion.div>
-    ))}
-</ul>
+              <div className="flex gap-4 flex-col w-full">
+                <motion.div layoutId={`image-${card.title}-${id}`}>
+                  <img
+                    width={100}
+                    height={100}
+                    src={card.src}
+                    alt={card.title}
+                    className="h-60 w-full rounded-lg object-cover object-top"
+                  />
+                </motion.div>
+                <div className="flex justify-center items-center flex-col">
+                  <motion.h3
+                    layoutId={`title-${card.title}-${id}`}
+                    className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left text-base"
+                  >
+                    {card.title}
+                  </motion.h3>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+      </ul>
 
-{/* STD Card - Centered on Its Own Line */}
 <div className="w-full flex justify-center mt-16">
   <motion.div
     layoutId={`card-STD-${id}`}
@@ -179,7 +177,6 @@ const [active, setActive] = useState<{
     </div>
   </motion.div>
 </div>
-
     </>
   );
 }
@@ -218,74 +215,54 @@ export const CloseIcon = () => {
 };
 
 const cards = [
-  
    {
   title: "Yavanika",
   src: "/ClubLogo/yavanika.png",
   content: () => (
     <div>
-    
       <div className="rounded-xl shadow-md p-6 bg-white dark:bg-zinc-900">
-  <h3 className="text-xl font-semibold mb-4">Yavanika</h3>
-  <div className="max-h-48 overflow-y-auto pr-2">
-    <ul className="list-disc list-inside text-sm space-y-2">
-      <li>Kaizen 2024 (Nukkad Natak) - Bronze</li>
-      <li>AN College (InnoAdExpo Inter College Competition 2024) - Gold</li>
-      <li>INTER IIT CULT MEET 7.0 - Bronze (Stage Play)</li>
-      <li>INTER IIT CULT MEET 6.0 - Silver (Mime)</li>
-    </ul>
-  </div>
-</div>
-
+        <h3 className="text-xl font-semibold mb-4">Yavanika</h3>
+          <div className="max-h-48 overflow-y-auto pr-2">
+            <ul className="list-disc list-inside text-sm space-y-2">
+              <li>Kaizen 2024 (Nukkad Natak) - Bronze</li>
+              <li>AN College (InnoAdExpo Inter College Competition 2024) - Gold</li>
+              <li>INTER IIT CULT MEET 7.0 - Bronze (Stage Play)</li>
+              <li>INTER IIT CULT MEET 6.0 - Silver (Mime)</li>
+            </ul>
+          </div>
+      </div>
     </div>
   )
-
-
   },
   {
-  
     title: "Exousia",
     src: "/ClubLogo/exousia.jpg",
-    
-    content: () => (<p></p>
-      
-    ),
+    content: () => (<p></p>),
   },
-  {
-    
+  {   
     title: "Aria",
-    src: "/ClubLogo/aria.jpg",
-   
-    content: () => (<p></p>
-     
+    src: "/ClubLogo/aria.jpg",   
+    content: () => (<p></p>    
     ),
   },
   {
-
     title: "Pixxel",
     src: "/ClubLogo/Pixxel.jpeg",
-   
-    content: () => (<p></p>
-    
+    content: () => (<p></p>   
     ),
   },
-  {
-    
+  {   
     title: "HOOT",
-    src: "/ClubLogo/hoot.jpg",
-    
-    content: () => (<p></p>
-     
+    src: "/ClubLogo/hoot.jpg",    
+    content: () => (<p></p> 
     ),
   },
-  
- 
   {
   title: "Quiz Club",
   src: "/ClubLogo/quiz.jpg",
 
   content: () => (
-   <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
+  <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
   <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
     <li>
       <strong>Inter IIT Cult 7.0:</strong> TLC Quiz – Runner-up<br />
@@ -324,17 +301,11 @@ const cards = [
 
   )
 },
-
-    
-  
-  {
-
-     title: "Syahi",
+{
+  title: "Syahi",
   src: "/ClubLogo/syahi.jpg",
-  
   content: () => (
     <div>
-    
       <ul className="list-disc list-inside mt-2 space-y-1">
         <li>🥇 <strong>Gold</strong> – English Poetry Slam</li>
         <li>🥈 <strong>Silver</strong> – Hindi Poetry Writing</li>
@@ -342,63 +313,37 @@ const cards = [
         <li>🥉 <strong>Bronze</strong> – English Poetry Writing</li>
         <li>🔹 <strong>5th Rank</strong> – English Slam Poetry (Second Entry)</li>
       </ul>
-      
     </div>
   )
-
   },
   {
-  
     title: "Epicurean",
     src: "/ClubLogo/epicurean.png",
-    
-    content: () => (<p></p>
-   
-    ),
+    content: () => (<p></p>),
   },
   {
-  
     title: "HexaChrome",
     src: "/ClubLogo/Hexachrome.jpg",
-  
-    content: () => (<p></p>
-      
-    ),
+    content: () => (<p></p>),
   },
   {
-
     title: "Vincetroke",
     src: "/ClubLogo/Vincetroke.jpg",
-
-    content: () => (<p></p>
-     
-    ),
+    content: () => (<p></p>),
   },
   {
-  
     title: "Anime Club",
-    src: "/ClubLogo/anime.png",
-   
-    content: () => (<p></p>
-      
-    ),
+    src: "/ClubLogo/anime.png", 
+    content: () => (<p></p>),
   },
   {
-   
     title: "Ikkatt",
     src: "/ClubLogo/ikkatt.png",
-   
-    content: () => (<p></p>
-      
-    ),
+    content: () => (<p></p>),
   },
   {
-  
     title: "STD",
     src: "/ClubLogo/std.png",
-  
-    content: () => (<p></p>
-    
-    ),
+    content: () => (<p></p>),
   },
 ];

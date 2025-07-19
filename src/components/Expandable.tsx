@@ -40,7 +40,6 @@ export default function ExpandableCard({
 
   return (
     <>
-      {/* Overlay */}
       <AnimatePresence>
         {active && (
           <motion.div
@@ -52,7 +51,6 @@ export default function ExpandableCard({
         )}
       </AnimatePresence>
 
-      {/* Modal */}
       <AnimatePresence>
         {active && (
           <div className="fixed inset-0 z-[100] grid place-items-center">
@@ -120,7 +118,6 @@ export default function ExpandableCard({
         )}
       </AnimatePresence>
 
-      {/* Card Grid */}
       <ul
         className={`grid gap-6 grid-cols-1 md:grid-cols-2 ${className}`}
       >

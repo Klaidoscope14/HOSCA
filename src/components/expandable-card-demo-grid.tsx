@@ -4,6 +4,8 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/components/hooks/ExpandableCard";
 import { JSX } from "react/jsx-runtime";
+import Image from "next/image";
+const MotionImage = motion(Image);
 
 export function ExpandableCardDemo() {
 const [active, setActive] = useState<{
@@ -75,16 +77,14 @@ const [active, setActive] = useState<{
               ref={ref}
               className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
-              <motion.div layoutId={`image-${active.title}-${id}`}>
-                <img
-                  width={200}
-                  height={200}
-                  src={active.src}
-                  alt={active.title}
-                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
-                />
-              </motion.div>
-
+             <MotionImage
+                layoutId={`image-${active.title}-${id}`}
+                src={active.src}
+                alt={active.title}
+                width={800} 
+                height={320} 
+                className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+              />
               <div>
                 <div className="flex justify-between items-start p-4">
                   <div className="">
@@ -96,8 +96,6 @@ const [active, setActive] = useState<{
                     </motion.h3>
                    
                   </div>
-
-                  
                 </div>
                 <div className="pt-4 relative px-4">
                   <motion.div
@@ -128,15 +126,14 @@ const [active, setActive] = useState<{
               className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
             >
               <div className="flex gap-4 flex-col w-full">
-                <motion.div layoutId={`image-${card.title}-${id}`}>
-                  <img
-                    width={100}
-                    height={100}
-                    src={card.src}
-                    alt={card.title}
-                    className="h-60 w-full rounded-lg object-cover object-top"
-                  />
-                </motion.div>
+                <MotionImage
+                  layoutId={`image-${card.title}-${id}`}
+                  src={card.src}
+                  alt={card.title}
+                  width={400} 
+                  height={240} 
+                  className="h-60 w-full rounded-lg object-cover object-top"
+                />
                 <div className="flex justify-center items-center flex-col">
                   <motion.h3
                     layoutId={`title-${card.title}-${id}`}
@@ -150,33 +147,32 @@ const [active, setActive] = useState<{
           ))}
       </ul>
 
-<div className="w-full flex justify-center mt-16">
-  <motion.div
-    layoutId={`card-STD-${id}`}
-    onClick={() => setActive(cards.find((c) => c.title === "STD")??null)}
-    className="w-full max-w-xs p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
-  >
-    <div className="flex gap-4 flex-col w-full">
-      <motion.div layoutId={`image-STD-${id}`}>
-        <img
-          width={100}
-          height={100}
-          src={"/ClubLogo/std.png"}
-          alt={"STD"}
-          className="h-60 w-full rounded-lg object-cover object-top"
-        />
-      </motion.div>
-      <div className="flex justify-center items-center flex-col">
-        <motion.h3
-          layoutId={`title-STD-${id}`}
-          className="font-medium text-neutral-800 dark:text-neutral-200 text-center text-base"
+      <div className="w-full flex justify-center mt-16">
+        <motion.div
+          layoutId={`card-STD-${id}`}
+          onClick={() => setActive(cards.find((c) => c.title === "STD")??null)}
+          className="w-full max-w-xs p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
         >
-          STD
-        </motion.h3>
+          <div className="flex gap-4 flex-col w-full">
+            <MotionImage
+              layoutId={`image-STD-${id}`}
+              src="/ClubLogo/std.png"
+              alt="STD"
+              width={400}    
+              height={240}    
+              className="h-60 w-full rounded-lg object-cover object-top"
+            />
+            <div className="flex justify-center items-center flex-col">
+              <motion.h3
+                layoutId={`title-STD-${id}`}
+                className="font-medium text-neutral-800 dark:text-neutral-200 text-center text-base"
+              >
+                STD
+              </motion.h3>
+            </div>
+          </div>
+        </motion.div>
       </div>
-    </div>
-  </motion.div>
-</div>
     </>
   );
 }

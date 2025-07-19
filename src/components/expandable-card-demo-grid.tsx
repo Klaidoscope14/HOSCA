@@ -33,9 +33,7 @@ const [active, setActive] = useState<{
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [active]);
-
   useOutsideClick(ref, () => setActive(null)); 
-
 
   return (
     <>

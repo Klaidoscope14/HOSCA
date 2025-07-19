@@ -10,8 +10,7 @@ const Footer = () => {
     { name: 'Clubs', href: '/club' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'Events', href: '/events' },
-    { name: 'HOSCA Committee', href: '/committee/hoscaa' },
-    { name: 'Gymkhana Committee', href: '/committee/gymkhana' },
+    { name: 'Gymkhana Committee', href: '/committee/Developers' },
     { name: 'IIT Patna', href: 'https://www.iitp.ac.in/', external: true },
   ];
 

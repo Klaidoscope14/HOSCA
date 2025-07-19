@@ -75,44 +75,18 @@ const Navbar = () => {
               </Link>
             </li>
 
-            <li className="relative" ref={dropdownRef}>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation(); 
-                  setIsDropdownOpen(!isDropdownOpen);
-                }}
-                className="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-gray-800/50 md:hover:bg-transparent md:border-0 hover:text-blue-400 md:p-0 relative group transition-colors duration-300"
-              >
+            <li>
+              <Link href="/committee/Developers" className="block py-2 px-3 text-white rounded md:bg-transparent md:text-white md:p-0 hover:text-blue-400 relative group transition-colors duration-300">
                 Committee
-                <svg className="w-2.5 h-2.5 ms-2.5 transition-transform duration-200" 
-                     style={{ transform: isDropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
-                     fill="none" viewBox="0 0 10 6">
-                  <path d="M1 1l4 4 4-4" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
-                </svg>
                 <span className="absolute inset-x-0 bottom-0 h-0.5 bg-blue-400 transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 md:block hidden"></span>
-              </button>
-              {isDropdownOpen && (
-                <div
-                  className="absolute z-20 mt-2 w-44 bg-gray-900 rounded-lg shadow-lg border border-gray-800 backdrop-blur-sm"
-                >
-                  <ul className="py-2 text-sm text-white">
-                    <li>
-                      <Link href="/committee/gymkhana" 
-                        className="block px-4 py-2 hover:bg-gray-800/70 hover:text-blue-400 transition-all duration-300 relative group">
-                        Gymkhana
-                        <span className="absolute inset-y-0 left-0 w-0.5 bg-blue-400 transform scale-y-0 origin-bottom group-hover:scale-y-100 transition-transform duration-300"></span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/committee/Developers"
-                        className="block px-4 py-2 hover:bg-gray-800/70 hover:text-blue-400 transition-all duration-300 relative group">
-                        Developers
-                        <span className="absolute inset-y-0 left-0 w-0.5 bg-blue-400 transform scale-y-0 origin-bottom group-hover:scale-y-100 transition-transform duration-300"></span>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              )}
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/achievement" className="block py-2 px-3 text-white rounded hover:bg-gray-800/50 md:hover:bg-transparent md:p-0 hover:text-blue-400 relative group transition-colors duration-300">
+                Achievements
+                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-blue-400 transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 md:block hidden"></span>
+              </Link>
             </li>
 
             <li>
@@ -121,13 +95,13 @@ const Navbar = () => {
                 <span className="absolute inset-x-0 bottom-0 h-0.5 bg-blue-400 transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 md:block hidden"></span>
               </Link>
             </li>
+
             <li>
               <Link href="/events" className="block py-2 px-3 text-white rounded hover:bg-gray-800/50 md:hover:bg-transparent md:p-0 hover:text-blue-400 relative group transition-colors duration-300">
                 Events
                 <span className="absolute inset-x-0 bottom-0 h-0.5 bg-blue-400 transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 md:block hidden"></span>
               </Link>
-            </li>
-            
+            </li>    
           </ul>
         </div>
       </div>

@@ -39,7 +39,7 @@ const HexachromeMembers: ClubMember[] = [
     position: 'Sub-Coordinator',
     email: 'hexachrome@iitp.ac.in',
     linkedinUrl: 'https://www.linkedin.com/in/aryan-patil-58393736a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/HexaChrome/AryanPatil.jpg',
+    imageUrl: '/SubCords/HexaChrome/AryanPatil.jpeg',
   },
   {
     id: 4,
@@ -190,11 +190,11 @@ export default function HexaChromePage() {
                   What We Do
                 </h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li> Puzzle-solving has many benefits</li>
-                  <li>critical thinking skills(MUN)</li>
-                  <li>Quest-ion</li>
-                  <li>Pan India Quizzing fest PARAKH annually</li>
-                  <li>Group discussions</li>
+                  <li>Sudo-Clash</li>
+                  <li>Playing Games</li>
+                  <li>Cryptogram learning workshops</li>
+                  <li>Sudoku Solving sessions</li>
+                  <li>Rubik&apos;s cube learning sessions</li>
                 </ul>
               </div>
               <div className="mt-6">
@@ -202,11 +202,11 @@ export default function HexaChromePage() {
                   Our Events
                 </h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li>PD (Public Debate)</li>
-                  <li>MUN (Model United Nations)</li>
-                  <li>JAM (Just A Minute)</li>
-                  <li>Group Discussions</li>
-                  <li>Speaking Workshops</li>
+                  <li>Escape Room</li>
+                  <li>Sudoku Solving</li>
+                  <li>Unscramble</li>
+                  <li>Tambola Night</li>
+                  <li>Cryptogram</li>
                 </ul>
               </div>
             </div>

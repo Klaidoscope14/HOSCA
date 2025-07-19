@@ -71,7 +71,12 @@ const EventCard = ({ event }: { event: Event }) => {
     <div className="w-full md:w-1/2 h-[400px] relative rounded-lg overflow-hidden shadow-4-strong">
       <Suspense fallback={<div className="w-full h-full bg-gray-800 animate-pulse" />}>
         <ImagesSlider
-          images={event.images.map(img => img.src)}
+          images={event.images.map((img, index) => ({
+            ...img,
+            fetchPriority: index === 0 ? "high" : "auto",
+            loading: index === 0 ? "eager" : "lazy",
+            decoding: "async"
+          }))}
           className="h-full w-full"
           overlay={true}
           overlayClassName="bg-gradient-to-t from-black/60 to-transparent"

@@ -16,11 +16,11 @@ interface CommitteeMember {
 const committeeMembers: CommitteeMember[] = [
   {
     id: 1,
-    name: "Dr. Gymkhana Advisor",
+    name: "Dr. Ayash Kanto Mukherjee",
     position: "PIC Cultural",
-    email: "gymkhana.advisor@iitp.ac.in",
-    imageUrl: "/committee/gymkhana-advisor.jpg",
-    linkedinUrl: "https://linkedin.com/in/gymkhana-advisor",
+    email: "pic_cultural@iitp.ac.in",
+    imageUrl: "/HoscaaCore/Ayash.jpg",
+    linkedinUrl: "akm@iitp.ac.in",
   },
   {
     id: 2,
@@ -33,14 +33,6 @@ const committeeMembers: CommitteeMember[] = [
   },
   {
     id: 3,
-    name: "Senior Year Secretary",
-    position: "Senior Year Secretary",
-    email: "senior.secretary@iitp.ac.in",
-    imageUrl: "/committee/sports-secretary.jpg",
-    linkedinUrl: "https://linkedin.com/in/sports-secretary",
-  },
-  {
-    id: 4,
     name: "Nikhil Pandey",
     position: "Junior Year Secretary",
     email: "nikhil_2301cb30@iitp.ac.in",
@@ -49,7 +41,7 @@ const committeeMembers: CommitteeMember[] = [
       "https://www.linkedin.com/in/nikhil-pandey-319b05368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
-    id: 5,
+    id: 4,
     name: "Singu Ashwin Manikanta Chowdary",
     position: "Sophomore Year Secretary",
     email: "singu_2401mm09@iitp.ac.in",
@@ -182,7 +174,7 @@ export default function GymkhanaCommitteePage() {
           <h2 className="text-3xl font-semibold text-white text-center mt-12 mb-10">
             Secretaries
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
             {otherMembers.map((member) => renderMemberCard(member))}
           </div>
         </section>

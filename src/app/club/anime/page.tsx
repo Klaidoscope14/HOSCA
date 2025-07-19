@@ -49,7 +49,7 @@ const AnimeMembers: ClubMember[] = [
     name: 'Ranveer Gupta',
     email: 'anime_club@iitp.ac.in',
     linkedinUrl: 'www.linkedin.com/in/ranveer-g-7544a4232',
-    imageUrl: '/SubCords/AnimeClub/Ranveer.jpg',
+    imageUrl: '/SubCords/AnimeClub/Ranveer.jpeg',
   },
   {
     id: 6,
@@ -172,10 +172,7 @@ export default function AnimePage() {
               Anime Club
             </h1>
             <p className="text-lg md:text-xl text-white max-w-2xl mx-auto lg:mx-0">
-              the Anime Club is a hub for everyone from veteran weebs to budding
-              enthusiasts and provides a unique platform for people to get
-              together, engage in active discussions and showcase their emotions
-              and creativity about anything related to the animanga world
+              Whether you&apos;re a seasoned otaku or just getting started with your first series, Anime club welcomes all with open arms.
             </p>
           </div>
         </div>
@@ -187,7 +184,7 @@ export default function AnimePage() {
                 About Anime Club
               </h2>
               <p className="text-neutral-600 dark:text-neutral-300">
-                the Anime Club is a hub for everyone from veteran weebs to
+                Anime Club is a hub for everyone from veteran weebs to
                 budding enthusiasts and provides a unique platform for people to
                 get together, engage in active discussions and showcase their
                 emotions and creativity about anything related to the animanga
@@ -198,11 +195,11 @@ export default function AnimePage() {
                   What We Do
                 </h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li>quirks & gimmicks</li>
-                  <li>critical thinking skills(MUN)</li>
-                  <li>Quest-ion</li>
-                  <li>Pan India Quizzing fest PARAKH annually</li>
-                  <li>Group discussions</li>
+                  <li>Regular watch sessions</li>
+                  <li>Animeme showcase</li>
+                  <li>Gaming Arcade and Merch stalls</li>
+                  <li>Anime Arts</li>
+                  <li>Anime themed Quizzes</li>
                 </ul>
               </div>
               <div className="mt-6">
@@ -210,11 +207,11 @@ export default function AnimePage() {
                   Our Events
                 </h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li>PD (Public Debate)</li>
-                  <li>MUN (Model United Nations)</li>
-                  <li>JAM (Just A Minute)</li>
-                  <li>Group Discussions</li>
-                  <li>Speaking Workshops</li>
+                  <li>Animecon</li>
+                  <li>Hunter x Hunter</li>
+                  <li>Dalgona candy challenge</li>
+                  <li>Animake </li>
+                  <li>Ramen Rangers.in</li>
                 </ul>
               </div>
             </div>

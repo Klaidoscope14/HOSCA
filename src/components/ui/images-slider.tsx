@@ -6,6 +6,16 @@ import type { Variants, Transition, Easing } from "framer-motion";
 
 const customEase = [0.645, 0.045, 0.355, 1.0] as unknown as Easing;
 
+interface SliderImage {
+  src: string;
+  width?: number;
+  height?: number;
+  alt?: string;
+  loading?: 'lazy' | 'eager';
+  fetchpriority?: 'high' | 'low' | 'auto';
+  decoding?: 'async' | 'sync' | 'auto';
+}
+
 export const ImagesSlider = ({
   images,
   children,
@@ -15,7 +25,7 @@ export const ImagesSlider = ({
   autoplay = true,
   direction = "up",
 }: {
-  images: string[];
+  images: SliderImage[];
   children: React.ReactNode;
   overlay?: React.ReactNode;
   overlayClassName?: string;
@@ -44,8 +54,8 @@ export const ImagesSlider = ({
     const loadPromises: Promise<string>[] = images.map((image) => {
       return new Promise<string>((resolve, reject) => {
         const img = new Image();
-        img.src = image;
-        img.onload = () => resolve(image);
+        img.src = image.src;
+        img.onload = () => resolve(image.src);
         img.onerror = () => reject(new Error(`Failed to load image: ${image}`));
       });
     });
@@ -120,7 +130,13 @@ export const ImagesSlider = ({
         <AnimatePresence>
           <motion.img
             key={currentIndex}
-            src={loadedImages[currentIndex]}
+            src={images[currentIndex].src}
+            width={images[currentIndex].width}
+            height={images[currentIndex].height}
+            alt={images[currentIndex].alt || `Slide ${currentIndex + 1}`}
+            loading={images[currentIndex].loading || 'lazy'}
+            fetchPriority={images[currentIndex].fetchpriority || 'auto'}
+            decoding={images[currentIndex].decoding || 'async'}
             initial="initial"
             animate="visible"
             exit={direction === "up" ? "upExit" : "downExit"}

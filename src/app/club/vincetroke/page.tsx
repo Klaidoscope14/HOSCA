@@ -157,9 +157,11 @@ export default function VincetrokePage() {
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
               <Image
-                fill
                 src="/ClubLogo/Vincetroke.jpg"
                 alt="Art Society"
+                
+                width={384}
+                height={384}
                 className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl border border-white/[0.1]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
@@ -175,7 +177,7 @@ export default function VincetrokePage() {
               Vincetroke
             </h1>
             <p className="text-lg md:text-xl text-black max-w-2xl mx-auto lg:mx-0">
-              let their imagination run wild and provides them with the sight to
+              Let their imagination run wild and provides them with the sight to
               see things in a different way.
             </p>
           </div>
@@ -202,11 +204,11 @@ export default function VincetrokePage() {
                   What We Do
                 </h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li>Puzzle-solving has many benefits</li>
-                  <li>critical thinking skills(MUN)</li>
-                  <li>Quest-ion</li>
-                  <li>Pan India Quizzing fest PARAKH annually</li>
-                  <li>Group discussions</li>
+                  <li>Charcoal Art</li>
+                  <li>Live sketching</li>
+                  <li>Wall and Canva paintings</li>
+                  <li>Art and Origami sessions</li>
+                  <li>Costume Design via Origami</li>
                 </ul>
               </div>
               <div className="mt-6">
@@ -214,11 +216,11 @@ export default function VincetrokePage() {
                   Our Events
                 </h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li>PD (Public Debate)</li>
-                  <li>MUN (Model United Nations)</li>
-                  <li>JAM (Just A Minute)</li>
-                  <li>Group Discussions</li>
-                  <li>Speaking Workshops</li>
+                  <li>Darpan</li>
+                  <li>Chakra Bhav</li>
+                  <li>Rang Tarang</li>
+                  <li>Monochrome Painting</li>
+                  <li>DrawVerse</li>
                 </ul>
               </div>
             </div>

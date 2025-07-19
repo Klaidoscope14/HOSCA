@@ -211,13 +211,11 @@ export default function SyahiPage() {
                   What We Do
                 </h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li>
-                    express what one feels, introspect it and grow as a human
-                  </li>
-                  <li>Essay Writting (MUN)</li>
-                  <li>Quest-ion</li>
-                  <li>Pan India Quizzing fest PARAKH annually</li>
-                  <li>Group discussions</li>
+                  <li>Poetic performances</li>
+                  <li>Word games and scrabble</li>
+                  <li>Creative Writing</li>
+                  <li>Slams</li>
+                  <li>Literary Workshops</li>
                 </ul>
               </div>
               <div className="mt-6">
@@ -225,11 +223,11 @@ export default function SyahiPage() {
                   Our Events
                 </h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li>PD (Public Debate)</li>
-                  <li>MUN (Model United Nations)</li>
-                  <li>JAM (Just A Minute)</li>
-                  <li>Group Discussions</li>
-                  <li>Speaking Workshops</li>
+                  <li>Kavyarangam</li>
+                  <li>Abhivyakti</li>
+                  <li>Cult fest Performances</li>
+                  <li>Ink Heart</li>
+                  <li>Broken Board</li>
                 </ul>
               </div>
             </div>

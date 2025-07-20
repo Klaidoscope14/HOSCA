@@ -5,6 +5,7 @@ import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import Image from "next/image";
 import GymkhanaCommitteePage from "../gymkhana/page";
+import Link from "next/link";
 
 interface Developer {
   id: number;
@@ -306,6 +307,24 @@ export default function DevelopersPage() {
             {CndSubcords.slice(2).map(cnd => (
               <div key={cnd.id}>{renderMemberCard(cnd)}</div>
             ))}
+          </div>
+        </section>
+
+        <section className="mt-12 bg-gray-900/50 backdrop-blur-sm rounded-lg p-8 border border-white/[0.1]">
+          <h2 className="text-2xl font-semibold mb-4 text-center text-white">
+            Meet the Minds Behind the Magic of HOSCA
+          </h2>
+          <div className="max-w-3xl mx-auto">
+            <p className="text-gray-300 mb-4">From captivating performances to immersive workshops, every cultural endeavor at IIT Patna is driven by the enthusiasm and dedication of a dynamic student team. Curious about the people steering these vibrant initiatives?</p>
+            <p className="text-gray-300 mb-4"> Get to know the Coordinators and Sub-Coordinators of HOSCA’s diverse clubs — the creative minds and leaders who infuse campus life with passion, innovation, and spirit. </p>
+          </div>
+          <div className="flex flex-col sm:flex-row justify-center gap-6 opacity-100 transform-none">
+            <Link
+              href="/club"
+              className="group relative px-8 py-2 my-1 rounded-full overflow-hidden bg-gradient-to-r from-red-600 to-red-800 text-white text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <span className="relative z-10 flex justify-center">Click Me</span>
+            </Link>
           </div>
         </section>
 

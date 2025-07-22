@@ -213,42 +213,136 @@ const cards = [
   title: "Yavanika",
   src: "/ClubLogo/yavanika.png",
   content: () => (
-    <div>
-      <div className="rounded-xl shadow-md p-6 bg-white dark:bg-zinc-900">
-        <h3 className="text-xl font-semibold mb-4">Yavanika</h3>
-          <div className="max-h-48 overflow-y-auto pr-2">
-            <ul className="list-disc list-inside text-sm space-y-2">
-              <li>Kaizen 2024 (Nukkad Natak) - Bronze</li>
-              <li>AN College (InnoAdExpo Inter College Competition 2024) - Gold</li>
-              <li>INTER IIT CULT MEET 7.0 - Bronze (Stage Play)</li>
-              <li>INTER IIT CULT MEET 6.0 - Silver (Mime)</li>
-            </ul>
-          </div>
-      </div>
-    </div>
+  <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
+  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
+    <li>
+      <strong>Kaizen 2024 </strong>(Nukkad Natak) - Bronze<br />
+    </li>
+    <li>
+      <strong>AN College (InnoAdExpo Inter College Competition 2024) - </strong>Gold<br />
+    </li>
+    <li>
+      <strong>INTER IIT CULT MEET 7.0 - </strong>Bronze (Stage Play)<br />
+    </li>
+    <li>
+      <strong>INTER IIT CULT MEET 6.0 - </strong>Silver (Mime)<br />
+    </li>
+  </ul>
+</div>
+
   )
   },
   {
     title: "Exousia",
     src: "/ClubLogo/exousia.jpg",
-    content: () => (<p></p>),
+    content: () => (
+  <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
+  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
+
+    <li>
+      <strong>Kaizen 2024:</strong> Duet - 1st Place<br />
+    </li>
+    <li>
+      <strong>Kaizen 2024:</strong>Street Battle - 3rd Place<br />
+    </li>
+    <li>
+      <strong>Inter IIT Cult 7.0:</strong> Group Dance - 7th Place<br />
+    </li>
+    <li>
+      <strong>Anwesha 2025:</strong>Street Battle - 3rd Place<br />
+    </li>
+  </ul>
+</div>
+
+    ),
   },
   {   
     title: "Aria",
     src: "/ClubLogo/aria.jpg",   
-    content: () => (<p></p>    
+    content: () => (   
+  <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
+  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
+    Aria 24-25 achievements
+
+    <li>
+      <strong>Inter IIT Cult 7.0:</strong>Pair on stage: 5th place<br />
+      Team IIT Patna: Debangshu, Sankhanil
+    </li>
+    <li>
+      <strong>Inter IIT Cult 7.0:</strong>Battle of bands: 6th place<br />
+    </li>
+    <li>
+      <strong>Inter IIT Cult 6.0:</strong>Classical solo singing: 1st and 3rd place<br />
+      Debangshu and Jayshree didi respectively
+    </li>
+    <li>
+      <strong>Inter IIT Cult 6.0:</strong>Pain on stage: 3rd place<br />
+       Ajay and Piyush
+    </li>
+    <li>
+      <strong>Kaizen:</strong>Battle of the Band: 3rd Place<br />
+    </li>
+    <li>
+      <strong>Anwesha:</strong>Battle of the Bands: 1st and 2nd place<br />
+    </li>
+    <li>
+      <strong>Anwesha: </strong>Anwesha Solo Singing: 1st Place (Aarsh)<br />
+    </li>
+  </ul>
+</div>
+
     ),
   },
   {
     title: "Pixxel",
     src: "/ClubLogo/Pixxel.jpeg",
-    content: () => (<p></p>   
+    content: () => (
+  <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
+  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
+    <li>
+      <strong>Inter IIT Cult 7.0:</strong>Online Short Filmmaking Competition - 7th position<br />
+    </li>
+    <li>
+      <strong>Inter IIT Cult 7.0:</strong>51 Hour Film Making - 9th position<br />
+    </li>
+    <li>
+      <strong>Inter IIT Cult 7.0:</strong> Street Photography – 5th position<br />
+    </li>
+    <li>
+      <strong>Inter IIT Cult 7.0:</strong>Online Photography Competition - 6th position<br />
+    </li>
+    <li>
+      <strong>Inter IIT Cult 7.0:</strong>Online Photostory - 6th position<br />
+    </li>
+  </ul>
+</div>
+ 
     ),
   },
   {   
     title: "HOOT",
     src: "/ClubLogo/hoot.jpg",    
-    content: () => (<p></p> 
+    content: () => (
+  <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
+  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
+    Inter IIT Cultural Meet 7.0 – Patna (JAM: Just A Minute)
+In the 7th edition of the Inter IIT Cultural Meet held in Patna, two of our members qualified as semi-finalists in the JAM (Just A Minute) event, showcasing quick wit, verbal dexterity, and spontaneous thinking at a national level.
+
+IIT Guwahati Parliamentary Debate – IITG PD'24
+At the prestigious IITG PD'24, our team secured an impressive 5th overall rank among several elite institutions. Additionally, two of our speakers ranked among the Top 10 Speakers of the tournament, reflecting the club’s strength in argumentation, clarity, and oratory finesse.
+
+    <li>
+      <strong>Inter IIT Cult 7.0:</strong>(JAM: Just A Minute)<br />
+      In the 7th edition of the Inter IIT Cultural Meet held in Patna, two of our members qualified as semi-finalists in the JAM (Just A Minute) event, showcasing quick wit, verbal dexterity, and spontaneous thinking at a national level.
+
+    </li>
+    <li>
+      <strong>IIT Guwahati Parliamentary Debate – IITG PD'24:</strong>At the prestigious IITG PD'24, our team secured an impressive 5th overall rank among several elite institutions. Additionally, two of our speakers ranked among the Top 10 Speakers of the tournament, reflecting the club’s strength in argumentation, clarity, and oratory finesse.
+<br />
+</li>
+  </ul>
+</div>
+
     ),
   },
   {
@@ -299,13 +393,13 @@ const cards = [
   title: "Syahi",
   src: "/ClubLogo/syahi.jpg",
   content: () => (
-    <div>
-      <ul className="list-disc list-inside mt-2 space-y-1">
-        <li>🥇 <strong>Gold</strong> – English Poetry Slam</li>
-        <li>🥈 <strong>Silver</strong> – Hindi Poetry Writing</li>
-        <li>🥈 <strong>Silver</strong> – Hindi Creative Writing</li>
-        <li>🥉 <strong>Bronze</strong> – English Poetry Writing</li>
-        <li>🔹 <strong>5th Rank</strong> – English Slam Poetry (Second Entry)</li>
+  <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
+  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
+        <li><strong>Gold</strong> – English Poetry Slam</li>
+        <li><strong>Silver</strong> – Hindi Poetry Writing</li>
+        <li><strong>Silver</strong> – Hindi Creative Writing</li>
+        <li><strong>Bronze</strong> – English Poetry Writing</li>
+        <li><strong>5th Rank</strong> – English Slam Poetry (Second Entry)</li>
       </ul>
     </div>
   )
@@ -313,31 +407,113 @@ const cards = [
   {
     title: "Epicurean",
     src: "/ClubLogo/epicurean.png",
-    content: () => (<p></p>),
+    content: () => (
+ <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
+  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
+    <li>
+      <strong>Inter IIT Cult 7.0:</strong>mixology - gold<br />
+    </li>
+    <li>
+      <strong>Inter IIT Cult 7.0:</strong>cook off- gold<br />
+    </li>
+  </ul>
+</div>
+),
   },
   {
     title: "HexaChrome",
     src: "/ClubLogo/Hexachrome.jpg",
-    content: () => (<p></p>),
+    content: () => (
+ <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
+  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
+    <li>
+      <strong>Unscramble 2025:</strong> Silver – 4×4<br />
+    </li>
+    <li>
+      <strong>Unscramble 2025:</strong> Bronze – 3×3<br />
+    </li>
+    <li>
+      <strong>Unscramble 2025:</strong> Bronze – 3×3 One-Handed<br />
+    </li>
+
+  </ul>
+</div>
+    ),
   },
   {
     title: "Vincetroke",
     src: "/ClubLogo/Vincetroke.jpg",
-    content: () => (<p></p>),
+    content: () => (
+ <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
+  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
+    <li>
+      <strong>Inter IIT cult 7.0 2024:</strong> 1st position in charcoal art among 23 IITs<br />
+    </li>
+    <li>
+      <strong>Inter IIT cult 7.0 2024:</strong> 2nd position in costume design among 23 IITs<br />
+    </li>
+    <li>
+      <strong>Inter IIT cult 7.0 2024:</strong> 3rd, 14th and 29th positions in canvas painting among 57 entries from all IITs
+<br />
+    </li>
+    <li>
+      <strong>Inter IIT cult 7.0 2024:</strong> 5th, 14th and 29th positions in live sketching among 69 entries from all IITs<br />
+    </li>
+  </ul>
+</div>
+
+
+    ),
   },
   {
     title: "Anime Club",
     src: "/ClubLogo/anime.png", 
-    content: () => (<p></p>),
+    content: () => (
+<div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
+  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
+    <li>
+      <strong>AnimeCon (Successfully organized since 2023):</strong> One of our most impactful and crowd-pulling events, AnimeCon has been successfully organized since 2023. What started as a unique initiative to bring anime, manga, and pop culture enthusiasts together has now become a flagship event. With engaging activities like cosplay competitions, fan-art showcases, anime quizzes, and themed games, AnimeCon has consistently witnessed enthusiastic participation and vibrant energy. Its continued success stands as a testament to our team's creativity, coordination, and ability to execute large-scale thematic events with excellence.
+<br />
+    </li>
+
+  </ul>
+</div>
+      
+    ),
   },
   {
     title: "Ikkatt",
     src: "/ClubLogo/ikkatt.png",
-    content: () => (<p></p>),
+    content: () => (
+<div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
+  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
+    <li>
+      <strong>Inter IIT cult 7.0 2024:</strong> Online modelling inter iit 4th position <br />
+    </li>
+  </ul>
+</div>
+    ),
   },
   {
     title: "STD",
     src: "/ClubLogo/std.png",
-    content: () => (<p></p>),
+    content: () => (
+ <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
+  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
+    <li>
+      <strong>Inter IIT cult 6.0 :</strong> Silver Medal in Stand-up<br />
+    </li>
+    <li>
+      <strong>Inter IIT cult 6.0 :</strong> 4th Rank in Stand-up<br />
+    </li>
+    <li>
+      <strong>Inter IIT cult 7.0 2024 :</strong> 4th Rank in Stand-up
+<br />
+    </li>
+    <li>
+      <strong>Laughter Premier League :</strong> Comic Debate - 4th Rank    </li>
+  </ul>
+</div>
+    ),
   },
 ];

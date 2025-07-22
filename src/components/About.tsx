@@ -78,7 +78,7 @@ const About = () => {
                   🎨 <span className="font-semibold text-black">Vincetroke</span> – Paint your imagination<br />
                   🌸 <span className="font-semibold text-black">Anime Club</span> – Watch. Cosplay. Debate. Repeat.<br />
                   👗 <span className="font-semibold text-black">Ikkatt</span> – The Fashion Warehouse of IITP<br />
-                  🎭 <span className="font-semibold text-black">STD</span> – Capture stories in a single shot<br /><br />
+                  🎭 <span className="font-semibold text-black">STD</span> – The Standup Den of IITP <br /><br />
                   ✨ <span className="font-semibold text-red-700">This isn&apos;t just culture — this is HoSCA.</span>
                 </p>
                 </div>

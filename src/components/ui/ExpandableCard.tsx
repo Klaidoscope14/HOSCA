@@ -167,7 +167,7 @@ export function ExpandableCardDemo() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ delay: 0.18, duration: 0.18 }}
-              className="absolute bottom-4 right-4"
+              className="flex justify-between items-center p-4"
             >
               <a
                 href={active.ctaLink}
@@ -181,6 +181,13 @@ export function ExpandableCardDemo() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </a>
+              <button
+                onClick={() => setActive(null)}
+                aria-label="Close"
+                className="absolute bottom-4 right-4 z-20 inline-flex px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                >
+                Close
+              </button>
             </motion.div>
           </div>
         </motion.div>

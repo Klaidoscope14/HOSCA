@@ -98,7 +98,7 @@ export function ExpandableCardDemo() {
               onClick={() => setActive(card)}
               role="button"
               tabIndex={0}
-              className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+              className="p-4 flex flex-col hover:bg-neutral-200 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
             >
               <div className="flex gap-4 flex-col w-full">
                 <MotionImage
@@ -128,7 +128,7 @@ export function ExpandableCardDemo() {
           onClick={() => setActive(cards.find((c) => c.title === "STD") ?? null)}
           role="button"
           tabIndex={0}
-          className="w-full max-w-xs p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+          className="w-full max-w-xs p-4 flex flex-col hover:bg-neutral-200 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
         >
           <div className="flex gap-4 flex-col w-full">
             <MotionImage

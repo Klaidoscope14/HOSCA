@@ -5,7 +5,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 
 const Cover = dynamic(() => import('@/components/ui/cover').then(mod => mod.Cover), { ssr: false });
-const InfiniteMovingCards = dynamic(() => import('@/components/ui/infinitemovingcards').then(mod => mod.InfiniteMovingCards), { ssr: false });
+// const InfiniteMovingCards = dynamic(() => import('@/components/ui/infinitemovingcards').then(mod => mod.InfiniteMovingCards), { ssr: false });
 
 function AchievementBackgroundDecor() {
   return (
@@ -209,17 +209,17 @@ export default function AchievementPage() {
     <div className="relative min-h-screen">
       <AchievementBackgroundDecor />
 
-      <div className="relative z-10 container mx-auto px-4">
+      <div className="relative z-10 container mx-auto px-4 mb-12">
         <div className="mb-12">
           <h2 className="mt-10 text-3xl md:text-4xl font-bold text-center mb-2 bg-gradient-to-r from-purple-800 via-white to-black bg-clip-text text-transparent animate-gradient-x">
             <Cover>Achievements</Cover>
           </h2>
-          <p className="text-lg mt-6 mb-12 max-w-2xl mx-auto bg-gradient-to-r from-gray-900 via-orange-600 to-red-700 bg-clip-text text-transparent">
-            Celebrate the outstanding accomplishments of our clubs and students at HOSCA, IIT Patna.
+          <p className="text-lg mt-6 mb-12 max-w-2xl flex justify-center mx-auto bg-gradient-to-r from-gray-900 via-orange-600 to-red-700 bg-clip-text text-transparent">
+            Honoring our clubs and students' achievements at HOSCA, IIT Patna.
           </p>
-          <div className="my-10">
+          {/* <div className="my-10">
             <InfiniteMovingCards items={testimonials} />
-          </div>
+          </div> */}
         </div>
         <ExpandableCardDemo />
       </div>

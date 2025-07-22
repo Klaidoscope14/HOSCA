@@ -77,6 +77,132 @@ export default function AchievementPage() {
       name: "Web Dev Cell",
       title: "Hackathon 2025",
     },
+    {
+      quote: "INTER IIT CULT MEET 7.0 - Bronze (Stage Play)",
+      name: "Yavanika",
+      title: "DEC 2024",
+    },
+    {
+      quote: "INTER IIT CULT MEET 6.0 - Silver (Mime)",
+      name: "Yavanika",
+      title: "DEC 2023",
+    },
+    {
+      quote: "INTER IIT CULT MEET 7.0 - Group Dance - 7th Place",
+      name: "Exousia",
+      title: "DEC 2024",
+    },
+    {
+      quote: "INTER IIT CULT MEET 7.0 - Pair on stage: 5th place",
+      name: "Aria",
+      title: "DEC 2024",
+    },
+    {
+      quote: "INTER IIT CULT MEET 6.0 - Classical solo singing: 1st and 3rd place",
+      name: "Aria",
+      title: "DEC 2023",
+    },
+    {
+      quote: "INTER IIT CULT MEET 7.0 - Pair on stage: 5th place",
+      name: "Aria",
+      title: "DEC 2024",
+    },
+    {
+      quote: "INTER IIT CULT MEET 6.0 - Pain on stage: 3rd place",
+      name: "Aria",
+      title: "DEC 2023",
+    },
+
+    {
+      quote: "INTER IIT CULT MEET 7.0 - 6th position in Online Photostory",
+      name: "Pixxel",
+      title: "DEC 2024",
+    },
+    {
+      quote: "INTER IIT CULT MEET 7.0 - 6th position in Online Photography Competition",
+      name: "Pixxel",
+      title: "DEC 2024",
+    },
+    {
+      quote: "INTER IIT CULT MEET 7.0 - 5th position in Street Photography",
+      name: "Pixxel",
+      title: "DEC 2024",
+    },
+    {
+      quote: "INTER IIT CULT MEET 7.0 - 9th position in 51 Hour Film Making",
+      name: "Pixxel",
+      title: "DEC 2024",
+    },
+    {
+      quote: "INTER IIT CULT MEET 7.0 - 51 Hour JAM: Just A Minute qualified as semi-finalist",
+      name: "Hoot",
+      title: "DEC 2024",
+    },
+    {
+      quote: "INTER IIT CULT MEET 7.0 - Runner up in TLC Quiz",
+      name: "Quiz Club",
+      title: "DEC 2024",
+    },
+    {
+      quote: "INTER IIT CULT MEET 7.0 - Qualified Sports Quiz Prelims, 5th in Finals",
+      name: "Quiz Club",
+      title: "DEC 2024",
+    },
+    {
+      quote: "INTER IIT CULT MEET 7.0 - Qualified General Quiz Prelims, 6th in Finals",
+      name: "Quiz Club",
+      title: "DEC 2024",
+    },
+    {
+      quote: "INTER IIT CULT MEET 7.0 - gold in Mixology",
+      name: "Epicurean",
+      title: "DEC 2024",
+    },
+    {
+      quote: "INTER IIT CULT MEET 7.0 - Cook off- gold",
+      name: "Epicurean",
+      title: "DEC 2024",
+    },
+    {
+      quote: "INTER IIT CULT MEET 7.0 - 1st position in charcoal art among 23 IITs",
+      name: "VinceStroke",
+      title: "DEC 2024",
+    },
+    {
+      quote: "INTER IIT CULT MEET 7.0 - 2nd position in costume design among 23 IITs",
+      name: "VinceStroke",
+      title: "DEC 2024",
+    },
+    {
+      quote: "INTER IIT CULT MEET 7.0 - 3rd, 14th and 29th positions in canvas painting among 57 entries from all IITs",
+      name: "VinceStroke",
+      title: "DEC 2024",
+    },
+    {
+      quote: "INTER IIT CULT MEET 7.0 - 5th, 14th and 29th positions in live sketching among 69 entries from all IITs",
+      name: "VinceStroke",
+      title: "DEC 2024",
+    },
+    {
+      quote: "INTER IIT CULT MEET 7.0 - 4th position in Online modelling ",
+      name: "ikkatt",
+      title: "DEC 2024",
+    },
+    {
+      quote: "INTER IIT CULT MEET 6.0 - Silver Medal in Stand-up",
+      name: "STD",
+      title: "DEC 2023",
+    },
+    {
+      quote: "INTER IIT CULT MEET 6.0 - 4th Rank in Stand-up",
+      name: "STD",
+      title: "DEC 2023",
+    },
+    {
+      quote: "INTER IIT CULT MEET 7.0 - 4th Rank in Stand-up",
+      name: "STD",
+      title: "DEC 2024",
+    },
   ];
 
   return (
@@ -91,12 +217,10 @@ export default function AchievementPage() {
           <p className="text-lg mt-6 mb-12 max-w-2xl mx-auto bg-gradient-to-r from-gray-900 via-orange-600 to-red-700 bg-clip-text text-transparent">
             Celebrate the outstanding accomplishments of our clubs and students at HOSCA, IIT Patna.
           </p>
-
           <div className="my-10">
             <InfiniteMovingCards items={testimonials} />
           </div>
         </div>
-
         <ExpandableCardDemo />
       </div>
     </div>

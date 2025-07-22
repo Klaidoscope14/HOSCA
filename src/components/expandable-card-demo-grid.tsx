@@ -316,7 +316,6 @@ const cards = [
     </li>
   </ul>
 </div>
- 
     ),
   },
   {   
@@ -325,21 +324,13 @@ const cards = [
     content: () => (
   <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
   <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
-    Inter IIT Cultural Meet 7.0 – Patna (JAM: Just A Minute)
-In the 7th edition of the Inter IIT Cultural Meet held in Patna, two of our members qualified as semi-finalists in the JAM (Just A Minute) event, showcasing quick wit, verbal dexterity, and spontaneous thinking at a national level.
-
-IIT Guwahati Parliamentary Debate – IITG PD&apos;24
-At the prestigious IITG PD&apos;24, our team secured an impressive 5th overall rank among several elite institutions. Additionally, two of our speakers ranked among the Top 10 Speakers of the tournament, reflecting the club&apos;s strength in argumentation, clarity, and oratory finesse.
-
     <li>
       <strong>Inter IIT Cult 7.0:</strong>(JAM: Just A Minute)<br />
       In the 7th edition of the Inter IIT Cultural Meet held in Patna, two of our members qualified as semi-finalists in the JAM (Just A Minute) event, showcasing quick wit, verbal dexterity, and spontaneous thinking at a national level.
-
     </li>
     <li>
-      <strong>IIT Guwahati Parliamentary Debate – IITG PD&apos;24:</strong>At the prestigious IITG PD&apos;24, our team secured an impressive 5th overall rank among several elite institutions. Additionally, two of our speakers ranked among the Top 10 Speakers of the tournament, reflecting the club&apos;s strength in argumentation, clarity, and oratory finesse.
-<br />
-</li>
+      <strong>IIT Guwahati Parliamentary Debate – IITG PD&apos;24:</strong>At the prestigious IITG PD&apos;24, our team secured an impressive 5th overall rank among several elite institutions. Additionally, two of our speakers ranked among the Top 10 Speakers of the tournament, reflecting the club&apos;s strength in argumentation, clarity, and oratory finesse.<br/>
+    </li>
   </ul>
 </div>
 

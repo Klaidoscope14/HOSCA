@@ -329,7 +329,7 @@ const cards = [
 In the 7th edition of the Inter IIT Cultural Meet held in Patna, two of our members qualified as semi-finalists in the JAM (Just A Minute) event, showcasing quick wit, verbal dexterity, and spontaneous thinking at a national level.
 
 IIT Guwahati Parliamentary Debate – IITG PD&apos;24
-At the prestigious IITG PD'24, our team secured an impressive 5th overall rank among several elite institutions. Additionally, two of our speakers ranked among the Top 10 Speakers of the tournament, reflecting the club&apos;s strength in argumentation, clarity, and oratory finesse.
+At the prestigious IITG PD&apos;24, our team secured an impressive 5th overall rank among several elite institutions. Additionally, two of our speakers ranked among the Top 10 Speakers of the tournament, reflecting the club&apos;s strength in argumentation, clarity, and oratory finesse.
 
     <li>
       <strong>Inter IIT Cult 7.0:</strong>(JAM: Just A Minute)<br />
@@ -337,7 +337,7 @@ At the prestigious IITG PD'24, our team secured an impressive 5th overall rank a
 
     </li>
     <li>
-      <strong>IIT Guwahati Parliamentary Debate – IITG PD'24:</strong>At the prestigious IITG PD&apos;24, our team secured an impressive 5th overall rank among several elite institutions. Additionally, two of our speakers ranked among the Top 10 Speakers of the tournament, reflecting the club&apos;s strength in argumentation, clarity, and oratory finesse.
+      <strong>IIT Guwahati Parliamentary Debate – IITG PD&apos;24:</strong>At the prestigious IITG PD&apos;24, our team secured an impressive 5th overall rank among several elite institutions. Additionally, two of our speakers ranked among the Top 10 Speakers of the tournament, reflecting the club&apos;s strength in argumentation, clarity, and oratory finesse.
 <br />
 </li>
   </ul>

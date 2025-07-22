@@ -190,7 +190,7 @@ export default function AchievementPage() {
             <Cover>Achievements</Cover>
           </h2>
           <p className="text-lg mt-6 mb-12 max-w-2xl flex justify-center mx-auto bg-gradient-to-r from-gray-900 via-orange-600 to-red-700 bg-clip-text text-transparent">
-            Honoring our clubs and students' achievements at HOSCA, IIT Patna.
+            Honoring our clubs and students&apos; achievements at HOSCA, IIT Patna.
           </p>
           <div className="my-10">
             <InfiniteMovingCards items={testimonials} />

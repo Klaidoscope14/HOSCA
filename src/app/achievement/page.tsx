@@ -5,7 +5,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 
 const Cover = dynamic(() => import('@/components/ui/cover').then(mod => mod.Cover), { ssr: false });
-// const InfiniteMovingCards = dynamic(() => import('@/components/ui/infinitemovingcards').then(mod => mod.InfiniteMovingCards), { ssr: false });
+const InfiniteMovingCards = dynamic(() => import('@/components/ui/infinitemovingcards').then(mod => mod.InfiniteMovingCards), { ssr: false });
 
 function AchievementBackgroundDecor() {
   return (
@@ -52,31 +52,6 @@ function AchievementBackgroundDecor() {
 
 export default function AchievementPage() {
   const testimonials = [
-    {
-      quote: "Victory at the National Robotics Championship. Gears, glory, and grit all the way.",
-      name: "Robotics Club",
-      title: "TechFest 2025",
-    },
-    {
-      quote: "Secured 1st place in Inter IIT Cultural Meet — where talent met triumph.",
-      name: "Dramatics Society",
-      title: "IIT Hyderabad",
-    },
-    {
-      quote: "Published groundbreaking paper on AI in chemical synthesis. Future? Ours.",
-      name: "AI Research Group",
-      title: "Springer Journal 2024",
-    },
-    {
-      quote: "Broke previous footfall records with our flagship event ‘Ignite’. Crowd went wild.",
-      name: "HOSCA",
-      title: "Ignite 2025",
-    },
-    {
-      quote: "Turned caffeine into code and clinched the top prize at Hack36.",
-      name: "Web Dev Cell",
-      title: "Hackathon 2025",
-    },
     {
       quote: "INTER IIT CULT MEET 7.0 - Bronze (Stage Play)",
       name: "Yavanika",
@@ -217,9 +192,9 @@ export default function AchievementPage() {
           <p className="text-lg mt-6 mb-12 max-w-2xl flex justify-center mx-auto bg-gradient-to-r from-gray-900 via-orange-600 to-red-700 bg-clip-text text-transparent">
             Honoring our clubs and students' achievements at HOSCA, IIT Patna.
           </p>
-          {/* <div className="my-10">
+          <div className="my-10">
             <InfiniteMovingCards items={testimonials} />
-          </div> */}
+          </div>
         </div>
         <ExpandableCardDemo />
       </div>

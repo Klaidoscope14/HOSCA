@@ -328,8 +328,8 @@ const cards = [
     Inter IIT Cultural Meet 7.0 – Patna (JAM: Just A Minute)
 In the 7th edition of the Inter IIT Cultural Meet held in Patna, two of our members qualified as semi-finalists in the JAM (Just A Minute) event, showcasing quick wit, verbal dexterity, and spontaneous thinking at a national level.
 
-IIT Guwahati Parliamentary Debate – IITG PD'24
-At the prestigious IITG PD'24, our team secured an impressive 5th overall rank among several elite institutions. Additionally, two of our speakers ranked among the Top 10 Speakers of the tournament, reflecting the club’s strength in argumentation, clarity, and oratory finesse.
+IIT Guwahati Parliamentary Debate – IITG PD&apos;24
+At the prestigious IITG PD'24, our team secured an impressive 5th overall rank among several elite institutions. Additionally, two of our speakers ranked among the Top 10 Speakers of the tournament, reflecting the club&apos;s strength in argumentation, clarity, and oratory finesse.
 
     <li>
       <strong>Inter IIT Cult 7.0:</strong>(JAM: Just A Minute)<br />
@@ -337,7 +337,7 @@ At the prestigious IITG PD'24, our team secured an impressive 5th overall rank a
 
     </li>
     <li>
-      <strong>IIT Guwahati Parliamentary Debate – IITG PD'24:</strong>At the prestigious IITG PD'24, our team secured an impressive 5th overall rank among several elite institutions. Additionally, two of our speakers ranked among the Top 10 Speakers of the tournament, reflecting the club’s strength in argumentation, clarity, and oratory finesse.
+      <strong>IIT Guwahati Parliamentary Debate – IITG PD'24:</strong>At the prestigious IITG PD&apos;24, our team secured an impressive 5th overall rank among several elite institutions. Additionally, two of our speakers ranked among the Top 10 Speakers of the tournament, reflecting the club&apos;s strength in argumentation, clarity, and oratory finesse.
 <br />
 </li>
   </ul>
@@ -472,7 +472,7 @@ At the prestigious IITG PD'24, our team secured an impressive 5th overall rank a
 <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
   <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
     <li>
-      <strong>AnimeCon (Successfully organized since 2023):</strong> One of our most impactful and crowd-pulling events, AnimeCon has been successfully organized since 2023. What started as a unique initiative to bring anime, manga, and pop culture enthusiasts together has now become a flagship event. With engaging activities like cosplay competitions, fan-art showcases, anime quizzes, and themed games, AnimeCon has consistently witnessed enthusiastic participation and vibrant energy. Its continued success stands as a testament to our team's creativity, coordination, and ability to execute large-scale thematic events with excellence.
+      <strong>AnimeCon (Successfully organized since 2023):</strong> One of our most impactful and crowd-pulling events, AnimeCon has been successfully organized since 2023. What started as a unique initiative to bring anime, manga, and pop culture enthusiasts together has now become a flagship event. With engaging activities like cosplay competitions, fan-art showcases, anime quizzes, and themed games, AnimeCon has consistently witnessed enthusiastic participation and vibrant energy. Its continued success stands as a testament to our team&apos;s creativity, coordination, and ability to execute large-scale thematic events with excellence.
 <br />
     </li>
 

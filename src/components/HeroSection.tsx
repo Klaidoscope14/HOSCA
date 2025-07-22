@@ -1,14 +1,49 @@
 'use client';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { FlipText } from "@/components/magicui/flip-text";
-import { VideoText } from "@/components/magicui/video-text";
-import { Particles } from "@/components/magicui/particles";
+
+const VideoText = React.lazy(() =>
+  import('@/components/magicui/video-text').then((module) => ({
+    default: module.VideoText,
+  }))
+);
+
+const FlipText = React.lazy(() =>
+  import('@/components/magicui/flip-text').then((module) => ({
+    default: module.FlipText,
+  }))
+);
+
+const Particles = React.lazy(() =>
+  import('@/components/magicui/particles').then((module) => ({
+    default: module.Particles,
+  }))
+);
 
 export default function HeroSection() {
+  const [showEnhancements, setShowEnhancements] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowEnhancements(true);
+    }, 500); 
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <section className="relative w-full min-h-screen bg-black overflow-hidden text-white">
-      <Particles className="absolute inset-0 z-0" quantity={90} color="#999999" size={0.4} />
+      <Head>
+        <link rel="preload" href="/video/hosca-bg.mp4" as="video" type="video/mp4" />
+      </Head>
+
+      {showEnhancements && (
+        <React.Suspense fallback={null}>
+          <Particles className="absolute inset-0 z-0" quantity={60} color="#999999" size={0.7} />
+        </React.Suspense>
+      )}
 
       <div className="absolute inset-0 z-10 pointer-events-none">
         <div className="w-full h-full bg-gradient-to-r from-white/10 via-white/5 to-white/10 blur-3xl opacity-40" />
@@ -16,27 +51,32 @@ export default function HeroSection() {
 
       <div className="relative z-20 flex flex-col items-center justify-center px-4 py-24 min-h-screen space-y-8">
         <div className="w-full max-w-[90vw] flex justify-center items-center">
-          <VideoText
-            className="w-full h-[160px] sm:h-[200px] md:h-[250px] lg:h-[350px] font-bold text-transparent animate-gradient-x"
-            src="/video/hosca-bg.mp4"
-            fontSize="clamp(30px, 25vw, 350px)"
-            style={{
-              WebkitTextStroke: "1px white",
-              filter: "drop-shadow(0 0 6px white)",
-            }}
-          >
-            HOSCA
-          </VideoText>
+          {showEnhancements && (
+            <React.Suspense fallback={null}>
+              <VideoText
+                className="w-full h-[160px] sm:h-[200px] md:h-[250px] lg:h-[350px] font-bold text-transparent animate-gradient-x"
+                src="/video/hosca-bg.mp4"
+                fontSize="clamp(30px, 25vw, 350px)"
+                style={{
+                  WebkitTextStroke: "1px white",
+                  filter: "drop-shadow(0 0 6px white)",
+                }}
+              >
+                HOSCA
+              </VideoText>
+            </React.Suspense>
+          )}
         </div>
 
-        <div className="text-center leading-tight space-y-2">
-          <FlipText className="text-sm sm:text-xl md:text-2xl lg:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-gray-300 via-white to-gray-300 font-medium animate-gradient-x-slow tracking-normal">
+        <div className="px-4 sm:px-6 md:px-8 text-center leading-tight space-y-2 overflow-hidden">
+          <FlipText className="text-sm sm:text-xl md:text-2xl lg:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-gray-300 via-white to-gray-300 font-medium animate-gradient-x-slow tracking-tight">
             The House Of Socio-Cultural
           </FlipText>
-          <FlipText className="text-sm sm:text-xl md:text-2xl lg:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-gray-300 via-white to-gray-300 font-medium animate-gradient-x-slow tracking-normal">
+          <FlipText className="text-sm sm:text-xl md:text-2xl lg:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-gray-300 via-white to-gray-300 font-medium animate-gradient-x-slow tracking-tight">
             Affairs
           </FlipText>
         </div>
+
 
         <motion.div
           className="flex flex-col sm:flex-row justify-center gap-6"

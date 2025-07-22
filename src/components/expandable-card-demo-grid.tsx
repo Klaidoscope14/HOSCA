@@ -1,18 +1,17 @@
 "use client";
 
-import React, { useEffect, useId, useRef, useState } from "react";
+import React, { useEffect, useId, useRef, useState} from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { useOutsideClick } from "@/components/hooks/ExpandableCard";
 import { JSX } from "react/jsx-runtime";
 import Image from "next/image";
-const MotionImage = motion(Image);
 
+const MotionImage = motion(Image);
 export function ExpandableCardDemo() {
-const [active, setActive] = useState<{
-  title: string;
-  src: string;
-  content: () => JSX.Element;
-} | null>(null);
+  const [active, setActive] = useState<{
+    title: string;
+    src: string;
+    content: () => JSX.Element;
+  } | null>(null);
 
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
@@ -24,7 +23,7 @@ const [active, setActive] = useState<{
       }
     }
 
-    if (active && typeof active === "object") {
+    if (active) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
@@ -33,12 +32,11 @@ const [active, setActive] = useState<{
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [active]);
-  useOutsideClick(ref, () => setActive(null)); 
 
   return (
     <>
       <AnimatePresence>
-        {active && typeof active === "object" && (
+        {active && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -48,79 +46,58 @@ const [active, setActive] = useState<{
         )}
       </AnimatePresence>
       <AnimatePresence>
-        {active && typeof active === "object" ? (
-          <div className="fixed inset-0  grid place-items-center z-[100]">
-            <motion.button
-              key={`button-${active.title}-${id}`}
-              layout
-              initial={{
-                opacity: 0,
-              }}
-              animate={{
-                opacity: 1,
-              }}
-              exit={{
-                opacity: 0,
-                transition: {
-                  duration: 0.05,
-                },
-              }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
-              onClick={() => setActive(null)}
-            >
-              <CloseIcon />
-            </motion.button>
-            <motion.div
-              layoutId={`card-${active.title}-${id}`}
-              ref={ref}
-              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
-            >
-             <MotionImage
+        {active ? (
+          <div className="fixed inset-0 grid place-items-center z-[100] p-4">
+      <motion.div
+        layoutId={`card-${active.title}-${id}`}
+        ref={ref}
+        className="w-full max-w-[500px] h-[75vh] md:h-[565px] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden relative"
+      >
+      <button
+        onClick={() => setActive(null)}
+        aria-label="Close"
+        className="absolute top-4 right-4 z-20 bg-white dark:bg-neutral-900 rounded-full p-1 shadow hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
+      >
+        <CloseIcon />
+      </button>
+              <MotionImage
                 layoutId={`image-${active.title}-${id}`}
                 src={active.src}
                 alt={active.title}
-                width={800} 
-                height={320} 
-                className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                width={800}
+                height={320}
+                className="w-full h-auto max-h-80 object-cover flex-shrink-0"
               />
-              <div>
-                <div className="flex justify-between items-start p-4">
-                  <div className="">
-                    <motion.h3
-                      layoutId={`title-${active.title}-${id}`}
-                      className="font-medium text-neutral-700 dark:text-neutral-200 text-base"
-                    >
-                      {active.title}
-                    </motion.h3>
-                   
-                  </div>
-                </div>
-                <div className="pt-4 relative px-4">
-                  <motion.div
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+              <div className="flex flex-col flex-grow overflow-hidden">
+                <div className="p-4 flex-shrink-0">
+                  <motion.h3
+                    layoutId={`title-${active.title}-${id}`}
+                    className="font-medium text-neutral-700 dark:text-neutral-200 text-base"
                   >
-                    {typeof active.content === "function"
-                      ? active.content()
-                      : active.content}
-                  </motion.div>
+                    {active.title}
+                  </motion.h3>
+                </div>
+                <div className="px-4 pb-12 flex-grow overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none]">
+                  <div className="antialiased text-neutral-600 dark:text-neutral-400">
+                    {active.content()}
+                  </div>
                 </div>
               </div>
             </motion.div>
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="mx-auto w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-y-16 gap-x-100 items-start">
+
+      <ul className="mx-auto w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-start">
         {cards
           .filter((card) => card.title !== "STD")
-          .map((card) => (
+          .map((card, index) => (
             <motion.div
               layoutId={`card-${card.title}-${id}`}
-              key={card.title}
+              key={`card-${card.title}-${index}`}
               onClick={() => setActive(card)}
+              role="button"
+              tabIndex={0}
               className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
             >
               <div className="flex gap-4 flex-col w-full">
@@ -128,8 +105,8 @@ const [active, setActive] = useState<{
                   layoutId={`image-${card.title}-${id}`}
                   src={card.src}
                   alt={card.title}
-                  width={400} 
-                  height={240} 
+                  width={400}
+                  height={240}
                   className="h-60 w-full rounded-lg object-cover object-top"
                 />
                 <div className="flex justify-center items-center flex-col">
@@ -148,7 +125,9 @@ const [active, setActive] = useState<{
       <div className="w-full flex justify-center mt-16">
         <motion.div
           layoutId={`card-STD-${id}`}
-          onClick={() => setActive(cards.find((c) => c.title === "STD")??null)}
+          onClick={() => setActive(cards.find((c) => c.title === "STD") ?? null)}
+          role="button"
+          tabIndex={0}
           className="w-full max-w-xs p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
         >
           <div className="flex gap-4 flex-col w-full">
@@ -156,8 +135,8 @@ const [active, setActive] = useState<{
               layoutId={`image-STD-${id}`}
               src="/ClubLogo/std.png"
               alt="STD"
-              width={400}    
-              height={240}    
+              width={400}
+              height={240}
               className="h-60 w-full rounded-lg object-cover object-top"
             />
             <div className="flex justify-center items-center flex-col">
@@ -178,18 +157,6 @@ const [active, setActive] = useState<{
 export const CloseIcon = () => {
   return (
     <motion.svg
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-      }}
-      exit={{
-        opacity: 0,
-        transition: {
-          duration: 0.05,
-        },
-      }}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -199,7 +166,7 @@ export const CloseIcon = () => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="h-4 w-4 text-black"
+      className="h-5 w-5 text-black"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M18 6l-12 12" />
@@ -207,15 +174,12 @@ export const CloseIcon = () => {
     </motion.svg>
   );
 };
-
 const cards = [
    {
   title: "Yavanika",
   src: "/ClubLogo/yavanika.png",
   content: () => (
-  <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
-  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
-    <li>
+      <ul className="list-disc list-inside space-y-3 text-sm leading-relaxed">    <li>
       <strong>Kaizen 2024 </strong>(Nukkad Natak) - Bronze<br />
     </li>
     <li>
@@ -228,17 +192,13 @@ const cards = [
       <strong>INTER IIT CULT MEET 6.0 - </strong>Silver (Mime)<br />
     </li>
   </ul>
-</div>
-
   )
   },
   {
     title: "Exousia",
     src: "/ClubLogo/exousia.jpg",
     content: () => (
-  <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
-  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
-
+      <ul className="list-disc list-inside space-y-3 text-sm leading-relaxed">
     <li>
       <strong>Kaizen 2024:</strong> Duet - 1st Place<br />
     </li>
@@ -252,7 +212,6 @@ const cards = [
       <strong>Anwesha 2025:</strong>Street Battle - 3rd Place<br />
     </li>
   </ul>
-</div>
 
     ),
   },
@@ -260,9 +219,7 @@ const cards = [
     title: "Aria",
     src: "/ClubLogo/aria.jpg",   
     content: () => (   
-  <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
-  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
-    Aria 24-25 achievements
+      <ul className="list-disc list-inside space-y-3 text-sm leading-relaxed">    Aria 24-25 achievements
 
     <li>
       <strong>Inter IIT Cult 7.0:</strong>Pair on stage: 5th place<br />
@@ -289,7 +246,6 @@ const cards = [
       <strong>Anwesha: </strong>Anwesha Solo Singing: 1st Place (Aarsh)<br />
     </li>
   </ul>
-</div>
 
     ),
   },
@@ -297,9 +253,7 @@ const cards = [
     title: "Pixxel",
     src: "/ClubLogo/Pixxel.jpeg",
     content: () => (
-  <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
-  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
-    <li>
+      <ul className="list-disc list-inside space-y-3 text-sm leading-relaxed">    <li>
       <strong>Inter IIT Cult 7.0:</strong>Online Short Filmmaking Competition - 7th position<br />
     </li>
     <li>
@@ -315,16 +269,13 @@ const cards = [
       <strong>Inter IIT Cult 7.0:</strong>Online Photostory - 6th position<br />
     </li>
   </ul>
-</div>
     ),
   },
   {   
     title: "HOOT",
     src: "/ClubLogo/hoot.jpg",    
     content: () => (
-  <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
-  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
-    <li>
+      <ul className="list-disc list-inside space-y-3 text-sm leading-relaxed">    <li>
       <strong>Inter IIT Cult 7.0:</strong>(JAM: Just A Minute)<br />
       In the 7th edition of the Inter IIT Cultural Meet held in Patna, two of our members qualified as semi-finalists in the JAM (Just A Minute) event, showcasing quick wit, verbal dexterity, and spontaneous thinking at a national level.
     </li>
@@ -332,8 +283,6 @@ const cards = [
       <strong>IIT Guwahati Parliamentary Debate – IITG PD&apos;24:</strong>At the prestigious IITG PD&apos;24, our team secured an impressive 5th overall rank among several elite institutions. Additionally, two of our speakers ranked among the Top 10 Speakers of the tournament, reflecting the club&apos;s strength in argumentation, clarity, and oratory finesse.<br/>
     </li>
   </ul>
-</div>
-
     ),
   },
   {
@@ -341,9 +290,7 @@ const cards = [
   src: "/ClubLogo/quiz.jpg",
 
   content: () => (
-  <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
-  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
-    <li>
+      <ul className="list-disc list-inside space-y-3 text-sm leading-relaxed">    <li>
       <strong>Inter IIT Cult 7.0:</strong> TLC Quiz – Runner-up<br />
       Team IIT Patna - 1: Abhimanyu Singh Bisht (2001CB04), Aryan Dabad (2101AI36), Shibanshu Das (2302GT08)
     </li>
@@ -376,7 +323,6 @@ const cards = [
       Siddhant Senapati (2101AI38), Aryan Dabad (2101AI36), Kirtan Jain (2101CS38)
     </li>
   </ul>
-</div>
 
   )
 },
@@ -384,40 +330,33 @@ const cards = [
   title: "Syahi",
   src: "/ClubLogo/syahi.jpg",
   content: () => (
-  <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
-  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
-        <li><strong>Gold</strong> – English Poetry Slam</li>
+      <ul className="list-disc list-inside space-y-3 text-sm leading-relaxed"> 
+      <li><strong>Gold</strong> – English Poetry Slam</li>
         <li><strong>Silver</strong> – Hindi Poetry Writing</li>
         <li><strong>Silver</strong> – Hindi Creative Writing</li>
         <li><strong>Bronze</strong> – English Poetry Writing</li>
         <li><strong>5th Rank</strong> – English Slam Poetry (Second Entry)</li>
       </ul>
-    </div>
   )
   },
   {
     title: "Epicurean",
     src: "/ClubLogo/epicurean.png",
     content: () => (
- <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
-  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
-    <li>
+      <ul className="list-disc list-inside space-y-3 text-sm leading-relaxed">    <li>
       <strong>Inter IIT Cult 7.0:</strong>mixology - gold<br />
     </li>
     <li>
       <strong>Inter IIT Cult 7.0:</strong>cook off- gold<br />
     </li>
   </ul>
-</div>
 ),
   },
   {
     title: "HexaChrome",
     src: "/ClubLogo/Hexachrome.jpg",
     content: () => (
- <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
-  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
-    <li>
+      <ul className="list-disc list-inside space-y-3 text-sm leading-relaxed">    <li>
       <strong>Unscramble 2025:</strong> Silver – 4×4<br />
     </li>
     <li>
@@ -428,16 +367,13 @@ const cards = [
     </li>
 
   </ul>
-</div>
     ),
   },
   {
     title: "Vincetroke",
     src: "/ClubLogo/Vincetroke.jpg",
     content: () => (
- <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
-  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
-    <li>
+      <ul className="list-disc list-inside space-y-3 text-sm leading-relaxed">    <li>
       <strong>Inter IIT cult 7.0 2024:</strong> 1st position in charcoal art among 23 IITs<br />
     </li>
     <li>
@@ -451,7 +387,6 @@ const cards = [
       <strong>Inter IIT cult 7.0 2024:</strong> 5th, 14th and 29th positions in live sketching among 69 entries from all IITs<br />
     </li>
   </ul>
-</div>
 
 
     ),
@@ -460,15 +395,12 @@ const cards = [
     title: "Anime Club",
     src: "/ClubLogo/anime.png", 
     content: () => (
-<div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
-  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
-    <li>
+      <ul className="list-disc list-inside space-y-3 text-sm leading-relaxed">    <li>
       <strong>AnimeCon (Successfully organized since 2023):</strong> One of our most impactful and crowd-pulling events, AnimeCon has been successfully organized since 2023. What started as a unique initiative to bring anime, manga, and pop culture enthusiasts together has now become a flagship event. With engaging activities like cosplay competitions, fan-art showcases, anime quizzes, and themed games, AnimeCon has consistently witnessed enthusiastic participation and vibrant energy. Its continued success stands as a testament to our team&apos;s creativity, coordination, and ability to execute large-scale thematic events with excellence.
 <br />
     </li>
 
   </ul>
-</div>
       
     ),
   },
@@ -476,22 +408,17 @@ const cards = [
     title: "Ikkatt",
     src: "/ClubLogo/ikkatt.png",
     content: () => (
-<div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
-  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
-    <li>
+      <ul className="list-disc list-inside space-y-3 text-sm leading-relaxed">    <li>
       <strong>Inter IIT cult 7.0 2024:</strong> Online modelling inter iit 4th position <br />
     </li>
   </ul>
-</div>
     ),
   },
   {
     title: "STD",
     src: "/ClubLogo/std.png",
     content: () => (
- <div className="max-h-96 overflow-y-auto p-4 bg-white rounded-xl border border-[#2c2c2c]">
-  <ul className="list-disc list-inside space-y-4 text-sm leading-relaxed text-black">
-    <li>
+      <ul className="list-disc list-inside space-y-3 text-sm leading-relaxed">    <li>
       <strong>Inter IIT cult 6.0 :</strong> Silver Medal in Stand-up<br />
     </li>
     <li>
@@ -504,7 +431,6 @@ const cards = [
     <li>
       <strong>Laughter Premier League :</strong> Comic Debate - 4th Rank    </li>
   </ul>
-</div>
     ),
   },
 ];

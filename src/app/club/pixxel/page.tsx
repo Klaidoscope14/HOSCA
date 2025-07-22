@@ -233,14 +233,14 @@ export default function PixxelPage() {
                 "/ClubPages/Pixxel/1000125976.jpg",
                 "/ClubPages/Pixxel/1000126585.jpg",
                 "/ClubPages/Pixxel/1000145976.jpg",
-                "/ClubPages/Pixxel/IMG_0228.jpg",
+                "/ClubPages/Pixxel/IMG_0228.JPG",
                 "/ClubPages/Pixxel/IMG_20241213_154530.jpg",
                 "/ClubPages/Pixxel/IMG_20250129_164756.jpg",
                 "/ClubPages/Pixxel/IMG_20250327_023518.jpg",
                 "/ClubPages/Pixxel/IMG-20240907-WA0008.jpg",
                 "/ClubPages/Pixxel/IMG-20241213-WA0008.jpg",
                 "/ClubPages/Pixxel/IMG-20241213-WA0015.jpg",
-                "/ClubPages/Pixxel/IMG_0238.jpg",
+                "/ClubPages/Pixxel/IMG_0238.JPG",
                 "/ClubPages/Pixxel/SAVE_20250327_023318.jpg",
               ]}
               className="max-w-4xl mx-auto"

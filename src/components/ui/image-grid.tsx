@@ -43,7 +43,6 @@ export const ImageGrid = ({
     <div className={cn("w-full bg-white rounded-xl p-6 shadow-lg", className)}>
       <h2 className="text-2xl font-bold text-neutral-700 mb-6">Gallery</h2>
 
-      {/* 2x2 Grid View */}
       <div className="grid grid-cols-2 gap-4 mb-4">
         {images.slice(currentIndex, currentIndex + 4).map((image, index) => (
           <div
@@ -58,13 +57,13 @@ export const ImageGrid = ({
               src={image}
               alt={`Gallery image ${currentIndex + index + 1}`}
               fill
+              loading="lazy"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>
         ))}
       </div>
 
-      {/* Navigation Buttons */}
       <div className="flex justify-center items-center gap-4 mt-4">
         <button
           onClick={handlePrevious}
@@ -83,7 +82,6 @@ export const ImageGrid = ({
         </button>
       </div>
 
-      {/* Full Screen Slider */}
       <AnimatePresence>
         {showFullSlider && (
           <motion.div
@@ -106,10 +104,10 @@ export const ImageGrid = ({
 
               <motion.div
                 key={currentIndex}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.3 }}
+                initial={{ opacity: 0.5 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0.5 }}
+                transition={{ duration: 0.15 }}
                 className="relative w-full h-[80vh] rounded-lg overflow-hidden"
               >
                 <Image
@@ -118,7 +116,27 @@ export const ImageGrid = ({
                   fill
                   className="object-contain"
                   sizes="(max-width: 768px) 100vw, 80vh"
+                  priority
                 />
+
+                {images.length > 1 && (
+                  <>
+                    <Image
+                      src={images[(currentIndex + 1) % images.length]}
+                      alt=""
+                      width={1}
+                      height={1}
+                      className="hidden"
+                    />
+                    <Image
+                      src={images[(currentIndex - 1 + images.length) % images.length]}
+                      alt=""
+                      width={1}
+                      height={1}
+                      className="hidden"
+                    />
+                  </>
+                )}
               </motion.div>
 
               <button

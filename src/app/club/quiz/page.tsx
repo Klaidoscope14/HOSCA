@@ -272,7 +272,7 @@ export default function QuizPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
             {QuizMembers.slice(3).map((member) => (
-              <Suspense fallback={<div>Loading...</div>}>
+              <Suspense key={member.id} fallback={<div>Loading...</div>}>
                 {renderMemberCard(member)}
               </Suspense>
             ))}

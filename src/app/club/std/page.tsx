@@ -2,7 +2,7 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram , FaYoutube } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
@@ -254,6 +254,15 @@ Join the StandUp Club—where crying turns into comedy, and oversharing is an ar
             <FaInstagram className="w-6 h-6" />
           </a>
 
+          <a
+            href="https://www.instagram.com/standup_club.iitp/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-gray-100 hover:bg-[#E1306C] hover:text-white transition-colors duration-300"
+            aria-label="Instagram"
+          >
+            <FaYoutube className="w-6 h-6" />
+          </a>
         </div>
       </div>
     </div>

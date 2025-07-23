@@ -3,12 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-
-const VideoText = React.lazy(() =>
-  import('@/components/magicui/video-text').then((module) => ({
-    default: module.VideoText,
-  }))
-);
+import { VideoText } from '@/components/magicui/video-text';
 
 const FlipText = React.lazy(() =>
   import('@/components/magicui/flip-text').then((module) => ({

@@ -1,4 +1,4 @@
-"use client";
+export const dynamic = 'force-static';
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
@@ -6,6 +6,7 @@ import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
+import React, { Suspense } from "react";
 
 interface ClubMember {
   id: number;
@@ -102,8 +103,8 @@ export default function QuizPage() {
               <Image
                 src={member.imageUrl}
                 alt={member.name}
-                width={500} 
-                height={500}
+                width={144}
+                height={144}
                 className="w-full h-full object-cover"
               />
             ) : (
@@ -270,7 +271,11 @@ export default function QuizPage() {
             Sub Coordinators
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {QuizMembers.slice(3).map((member) => renderMemberCard(member))}
+            {QuizMembers.slice(3).map((member) => (
+              <Suspense fallback={<div>Loading...</div>}>
+                {renderMemberCard(member)}
+              </Suspense>
+            ))}
           </div>
         </section>
         <div className="flex justify-center gap-6 mt-12">

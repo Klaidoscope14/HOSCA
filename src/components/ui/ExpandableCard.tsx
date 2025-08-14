@@ -390,6 +390,20 @@ const cards = [
   },
   {
     description: "4.",
+    title: "STD",
+    src: "/ClubLogo/std.png",
+    ctaText: "Learn More",
+    ctaLink: "/club/std",
+    facebookLink: "https://www.instagram.com/standup_club.iitp/",
+    instagramLink: "https://www.instagram.com/standup_club.iitp/",
+    content: () => (
+      <p>
+        Got jokes? STD&apos;s the stage. IITP&apos;s unofficial therapy session where students turn awkwardness, engineering pain, and hostel horrors into stand-up gold. Laughter guaranteed.
+      </p>
+    ),
+  },
+  {
+    description: "5.",
     title: "Pixxel",
     src: "/ClubLogo/Pixxel.jpeg",
     ctaText: "Learn More",
@@ -403,7 +417,7 @@ const cards = [
     ),
   },
   {
-    description: "5.",
+    description: "6.",
     title: "HOOT",
     src: "/ClubLogo/hoot.jpg",
     ctaText: "Learn More",
@@ -417,7 +431,7 @@ const cards = [
     ),
   },
   {
-    description: "6.",
+    description: "7.",
     title: "Quiz Club",
     src: "/ClubLogo/quiz.jpg",
     ctaText: "Learn More",
@@ -431,7 +445,7 @@ const cards = [
     ),
   },
   {
-    description: "7.",
+    description: "8.",
     title: "Syahi",
     src: "/ClubLogo/syahi.jpg",
     ctaText: "Learn More",
@@ -445,7 +459,7 @@ const cards = [
     ),
   },
   {
-    description: "8.",
+    description: "9.",
     title: "Epicurean",
     src: "/ClubLogo/epicurean.png",
     ctaText: "Learn More",
@@ -459,7 +473,7 @@ const cards = [
     ),
   },
   {
-    description: "9.",
+    description: "10.",
     title: "HexaChrome",
     src: "/ClubLogo/Hexachrome.jpg",
     ctaText: "Learn More",
@@ -473,7 +487,7 @@ const cards = [
     ),
   },
   {
-    description: "10.",
+    description: "11.",
     title: "Vincetroke",
     src: "/ClubLogo/Vincetroke.jpg",
     ctaText: "Learn More",
@@ -487,7 +501,7 @@ const cards = [
     ),
   },
   {
-    description: "11.",
+    description: "12.",
     title: "Anime Club",
     src: "/ClubLogo/anime.png",
     ctaText: "Learn More",
@@ -501,7 +515,7 @@ const cards = [
     ),
   },
   {
-    description: "12.",
+    description: "13.",
     title: "Ikkatt",
     src: "/ClubLogo/ikkatt.png",
     ctaText: "Learn More",
@@ -511,20 +525,6 @@ const cards = [
     content: () => (
       <p>
         Style isn&apos;t just worn—it&apos;s designed. Ikkatt gives you the ramp and the sketchpad. From fashion shows to DIY workshops, this club turns creativity into couture.
-      </p>
-    ),
-  },
-  {
-    description: "13.",
-    title: "STD",
-    src: "/ClubLogo/std.png",
-    ctaText: "Learn More",
-    ctaLink: "/club/std",
-    facebookLink: "https://www.instagram.com/standup_club.iitp/",
-    instagramLink: "https://www.instagram.com/standup_club.iitp/",
-    content: () => (
-      <p>
-        Got jokes? STD&apos;s the stage. IITP&apos;s unofficial therapy session where students turn awkwardness, engineering pain, and hostel horrors into stand-up gold. Laughter guaranteed.
       </p>
     ),
   },

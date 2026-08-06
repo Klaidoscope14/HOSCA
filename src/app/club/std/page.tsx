@@ -2,8 +2,7 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaInstagram , FaYoutube } from "react-icons/fa";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaInstagram, FaYoutube } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
 
@@ -19,52 +18,32 @@ interface ClubMember {
 const StdMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Abhitesh Shukla',
+    name: 'Pratyush Chandra',
     position: 'Coordinator',
-    email: 'abhitesh_2301ee52@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/abhitesh-shukla-bb8053294/',
-    imageUrl: '/Coordinators/STD/Abhitesh.jpg',
+    imageUrl: '/Coordinators/Standup_Den/Pratyush_Chandra.jpg',
   },
   {
     id: 2,
-    name: 'Archita Shuchi',
+    name: 'Shiva Gupta',
     position: 'Coordinator',
-    email: 'archita_2301ce06@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/archita-shuchi-a88143326/',
-    imageUrl: '/Coordinators/STD/Archita.jpeg',
   },
   {
     id: 3,
-    name: 'Shiva Gupta',
+    name: 'Onik Chouhan',
     position: 'Sub-Coordinator',
-    email: 'amit.mech@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/shiva-gupta-iit-patna/',
-    imageUrl: '/SubCords/STD/Shiva.jpeg',
+    imageUrl: '/SubCords/Standup_Den/Onik_chouhan.jpg',
   },
   {
     id: 4,
-    name: 'Pratyush Chandra',
+    name: 'Ashutosh Kumar',
     position: 'Sub-Coordinator',
-    email: 'sneha.ee@iitp.ac.in',
-    linkedinUrl: 'https://in.linkedin.com/in/pratyush-chandra-',
-    imageUrl: '/SubCords/STD/Pratyush.jpg',
+    imageUrl: '/SubCords/Standup_Den/Ashutosh_Kumar.jpg',
   },
   {
     id: 5,
-    name: 'Vaibhav Shrivastava ',
+    name: 'Shaurya Bhardwaj',
     position: 'Sub-Coordinator',
-    email: 'arjun.chem@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/vaibhav-srivastava-13737a321/',
-    imageUrl: '/SubCords/STD/Vaibhav.jpg',
   },
-  {
-    id: 6,
-    name: 'Monika Poonia',
-    position: 'Sub-Coordinator',
-    email: 'kavya.bt@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/monika-poonia-b52025324',
-    imageUrl: '/SubCords/STD/monika.jpg',
-  }
 ];
 
 export default function AnimePage() {
@@ -102,6 +81,7 @@ export default function AnimePage() {
           </div>
 
           <div className="flex justify-center gap-3 mt-4">
+            {/*
             {member.email && (
               <CardItem
                 translateZ={20}
@@ -113,6 +93,8 @@ export default function AnimePage() {
                 <FaEnvelope className="w-4 h-4" />
               </CardItem>
             )}
+            */}
+            {/*
             {member.linkedinUrl && (
               <CardItem
                 translateZ={20}
@@ -126,6 +108,7 @@ export default function AnimePage() {
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
+            */}
            
           </div>
         </CardBody>

@@ -3,7 +3,6 @@
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
 
@@ -19,76 +18,57 @@ interface ClubMember {
 const PixxelMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Kondaveti Koushik',
+    name: 'Yashwanth Varma',
     position: 'Coordinator',
-    email: 'koushik_2301me25@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/kondaveti-koushik-83631a285/',
-    imageUrl: '/Coordinators/Pixxel/koushik.jpg',
+    imageUrl: '/Coordinators/Pixxel/Yashwanth_Varma.jpg',
   },
   {
     id: 2,
-    name: 'Shreyash M',
+    name: 'Hemanth Goud',
     position: 'Coordinator',
-    email: 'shreyash_2301mm16@iitp.ac.in',
-    linkedinUrl: '#',
-    imageUrl: '/Coordinators/Pixxel/Shreyash.jpg',
+    imageUrl: '/Coordinators/Pixxel/Hemanth_Goud.jpg',
   },
   {
     id: 3,
-    name: 'Lochan Bhaskaruni',
+    name: 'Kalpit Chaudhary',
     position: 'Coordinator',
-    email: 'lochan_2301me28@iitp.ac.in',
-    linkedinUrl: 'http://www.linkedin.com/in/lochan-bhaskaruni-10176b283',
-    imageUrl: '/Coordinators/Pixxel/Lochan.jpg',
   },
   {
     id: 4,
-    name: 'Charan Ravipati',
+    name: 'Sanket Jadhav',
     position: 'Sub-Coordinator',
-    email: 'pixxel_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/charan-ravipati-421982332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Pixxel/Charan.png',
+    imageUrl: '/SubCords/Pixxel/Sanket_Jadhav.jpg',
   },
   {
     id: 5,
-    name: 'Kalpit Chaudhary',
+    name: 'Aditi Shivdas',
     position: 'Sub-Coordinator',
-    email: 'pixxel_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/kalpit-chaudhary-946b10271?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Pixxel/KalpitChaudhary.jpg',
+    imageUrl: '/SubCords/Pixxel/Aditi_Shivdas.png',
   },
   {
     id: 6,
-    name: 'K Yashwanth Varma',
+    name: 'Veesam Srivastav',
     position: 'Sub-Coordinator',
-    email: 'pixxel_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/k-yashwanth-varma-50a54a320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Pixxel/KYashwanthVarma.jpg',
+    imageUrl: '/SubCords/Pixxel/Veesam_Srivastav.jpg',
   },
   {
     id: 7,
-    name: 'Cheella Keerthana',
+    name: 'Shivam Gupta',
     position: 'Sub-Coordinator',
-    email: 'pixxel_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/keerthana-cheella-27a114333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Pixxel/CheellaKeerthana.jpg',
+    imageUrl: '/SubCords/Pixxel/Shivam_Gupta.jpg',
   },
   {
     id: 8,
-    name: 'Priyanshu Sharma',
+    name: 'Risita Bharti',
     position: 'Sub-Coordinator',
-    email: 'pixxel_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/priyanshu-sharma-999740348?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Pixxel/PriyanshuSharma.jpg',
+    imageUrl: '/SubCords/Pixxel/Risita_Bharti.jpg',
   },
   {
     id: 9,
-    name: 'Vuyyala Sai Hemanth Goud',
+    name: 'J Sathwik Kumar',
     position: 'Sub-Coordinator',
-    email: 'pixxel_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/sai-hemanth-vuyyala-579b4536a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
-    imageUrl: '/SubCords/Pixxel/Vuyyala.JPG',
-  }
+    imageUrl: '/SubCords/Pixxel/J_Sathwik_kumar.jpg',
+  },
 ];
 
 export default function PixxelPage() {
@@ -126,6 +106,7 @@ export default function PixxelPage() {
           </div>
 
           <div className="flex justify-center gap-3 mt-4">
+            {/*
             {member.email && (
               <CardItem
                 translateZ={20}
@@ -137,6 +118,8 @@ export default function PixxelPage() {
                 <FaEnvelope className="w-4 h-4" />
               </CardItem>
             )}
+            */}
+            {/*
             {member.linkedinUrl && (
               <CardItem
                 translateZ={20}
@@ -150,6 +133,7 @@ export default function PixxelPage() {
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
+            */}
           </div>
         </CardBody>
       </CardContainer>

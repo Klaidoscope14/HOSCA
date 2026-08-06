@@ -2,7 +2,7 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
 
@@ -18,68 +18,58 @@ interface ClubMember {
 const ExousiaMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Vibhuti Gupta',
+    name: 'Surili Pathak',
     position: 'Coordinator',
-    email: 'vibhuti_2301mm18@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/vibhuti-gupta-186776262?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/Coordinators/Exousia/Vibhuti.jpg',
+    imageUrl: '/Coordinators/Exousia/Surili_Pathak.jpg',
   },
   {
     id: 2,
-    name: 'Ghanishth Attrey',
+    name: 'J. Karan',
     position: 'Coordinator',
-    email: 'ghanishth_2301ce12@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/ghanishth-attrey-364930351?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/Coordinators/Exousia/Ghanisth.jpg',
+    imageUrl: '/Coordinators/Exousia/J.KARAN.jpg',
   },
   {
     id: 3,
-    name: 'Antriksha Aman',
-    position: 'Sub-Coordinator',
-    email: 'danceclub@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/antriksha-aman-320383327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Exousia/Antariksha.jpg',
+    name: 'G. Gagana Sadrush',
+    position: 'Coordinator',
+    imageUrl: '/Coordinators/Exousia/G._Gagana_Sadrush.jpg',
   },
   {
     id: 4,
-    name: 'Karan Jarupala',
+    name: 'Soumya Pathak',
     position: 'Sub-Coordinator',
-    email: 'danceclub@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/karan-jarupulavath-6546212a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Exousia/karan.jpg',
+    imageUrl: '/SubCords/Exousia/Soumya_Pathak.jpg',
   },
   {
     id: 5,
-    name: 'Gaganasadrush G',
+    name: 'Kashvi Mehta',
     position: 'Sub-Coordinator',
-    email: 'danceclub@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/gaganasadrush-g-1199b9332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Exousia/Gagan.jpg',
+    imageUrl: '/SubCords/Exousia/Kashvi_Mehta.jpg',
   },
   {
     id: 6,
-    name: 'Vennela Jangiti',
+    name: 'Angel Mahi Sharma',
     position: 'Sub-Coordinator',
-    email: 'danceclub@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/vennela-jangiti-492264352?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Exousia/Venella.jpg',
+    imageUrl: '/SubCords/Exousia/Angel_Mahi_Sharma.jpg',
   },
   {
     id: 7,
-    name: 'Tanvi Begari',
+    name: 'Srishti Khargonkar',
     position: 'Sub-Coordinator',
-    email: 'danceclub@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/tanvi-begari-30ab1036a/',
-    imageUrl: '/SubCords/Exousia/TanviBegari.jpg',
+    imageUrl: '/SubCords/Exousia/Srishti_Khargonkar.jpg',
   },
   {
     id: 8,
-    name: 'Chathurya',
+    name: 'Hymavathi',
     position: 'Sub-Coordinator',
-    email: 'danceclub@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/chathurya0311',
-    imageUrl: '/SubCords/Exousia/Chaturya.png',
-  }
+    imageUrl: '/SubCords/Exousia/Hymavathi.webp',
+  },
+  {
+    id: 9,
+    name: 'Rupansh Dawer',
+    position: 'Sub-Coordinator',
+    imageUrl: '/SubCords/Exousia/Rupansh_Dawer.jpg',
+  },
 ];
 
 export default function ExousiaPage() {
@@ -117,6 +107,7 @@ export default function ExousiaPage() {
           </div>
 
           <div className="flex justify-center gap-3 mt-4">
+            {/*
             {member.email && (
               <CardItem
                 translateZ={20}
@@ -128,6 +119,8 @@ export default function ExousiaPage() {
                 <FaEnvelope className="w-4 h-4" />
               </CardItem>
             )}
+            */}
+            {/*
             {member.linkedinUrl && (
               <CardItem
                 translateZ={20}
@@ -141,6 +134,7 @@ export default function ExousiaPage() {
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
+            */}
             {/* {member.instagramUrl && (
               <CardItem
                 translateZ={20}
@@ -266,8 +260,8 @@ export default function ExousiaPage() {
           <h2 className="text-3xl font-semibold text-center mb-6 text-[#4169E1] px-2 md:px-0">
             Coordinators
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
-            {ExousiaMembers.slice(0, 2).map((member) =>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            {ExousiaMembers.slice(0, 3).map((member) =>
               renderMemberCard(member)
             )}
           </div>
@@ -275,7 +269,7 @@ export default function ExousiaPage() {
             Sub Coordinators
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {ExousiaMembers.slice(2).map((member) => renderMemberCard(member))}
+            {ExousiaMembers.slice(3).map((member) => renderMemberCard(member))}
           </div>
         </section>
 

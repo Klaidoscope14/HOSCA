@@ -3,7 +3,6 @@
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaInstagram } from "react-icons/fa";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
 
@@ -19,76 +18,51 @@ interface ClubMember {
 const IkkattMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Meghna Kumari',
+    name: 'Aditi Lohiya',
     position: 'Coordinator',
-    email: 'meghna_2301ce18@iitp.ac.in',
-    linkedinUrl: 'http://linkedin.com/in/meghna-kumari-00a431298',
-    imageUrl: '/Coordinators/Ikkat/Meghna.jpeg',
+    imageUrl: '/Coordinators/Ikkatt/Aditi_Lohiya.jpg',
   },
   {
     id: 2,
-    name: 'Sanskar',
+    name: 'Prince',
     position: 'Coordinator',
-    email: 'sanskar_2301mm31@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/sanskar-sahu-58a81b289/',
-    imageUrl: '/Coordinators/Ikkat/sanskar.jpg',
+    imageUrl: '/Coordinators/Ikkatt/Prince.jpg',
   },
   {
     id: 3,
-    name: 'Amaan Ali',
-    position: 'Coordinator',
-    email: 'amaan_2302gt06@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/amaan-ali-94830b291/',
-    imageUrl: '/Coordinators/Ikkat/Amaan.jpeg',
+    name: 'Anshika Sharma',
+    position: 'Sub-Coordinator',
+    imageUrl: '/SubCords/Ikkatt/Anshika_Sharma.jpg',
   },
   {
     id: 4,
-    name: 'Mohima Baidya',
+    name: 'Eklavya Kumar',
     position: 'Sub-Coordinator',
-    email: 'culturalaffairs@iitp.ac.in',
-    linkedinUrl: 'http://www.linkedin.com/in/mohima-baidya/',
-    imageUrl: '/SubCords/Ikkat/Mohima.jpg',
   },
   {
     id: 5,
-    name: 'Aanushka Saha',
+    name: 'Oshi Malviya',
     position: 'Sub-Coordinator',
-    email: 'culturalaffairs@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/aanushka-saha-a2b78a322/',
-    imageUrl: '/SubCords/Ikkat/aanushka.jpg',
+    imageUrl: '/SubCords/Ikkatt/Oshi_Malviya.jpg',
   },
   {
     id: 6,
-    name: 'Aditi Lohiya',
+    name: 'Kartik Vijaywergiya',
     position: 'Sub-Coordinator',
-    email: 'culturalaffairs@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/aditi-lohiya-395532321/',
-    imageUrl: '/SubCords/Ikkat/Aditi_ikkat.jpg',
+    imageUrl: '/SubCords/Ikkatt/Kartik_Vijaywergiya.jpg',
   },
   {
     id: 7,
-    name: 'Prince',
+    name: 'Sai Subrat Jena',
     position: 'Sub-Coordinator',
-    email: 'culturalaffairs@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/prince-narayan-173b0a36a/',
-    imageUrl: '/SubCords/Ikkat/prince.jpg',
+    imageUrl: '/SubCords/Ikkatt/Sai_Subrat_Jena.jpg',
   },
   {
     id: 8,
-    name: 'Ankit Basu',
+    name: 'Ragul Raagav',
     position: 'Sub-Coordinator',
-    email: 'culturalaffairs@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/ankit-basu-32295931a/',
-    imageUrl: '/SubCords/Ikkat/AnkitBasu.jpg',
+    imageUrl: '/SubCords/Ikkatt/Ragul_Raagav.jpg',
   },
-  {
-    id: 9,
-    name: 'Tanishq Sangwan',
-    position: 'Sub-Coordinator',
-    email: 'culturalaffairs@iitp.ac.in',
-    linkedinUrl: 'www.linkedin.com/in/tanishq-sangwan/',
-    imageUrl: '/SubCords/Ikkat/Tanishq.jpg',
-  }
 ];
 
 export default function AnimePage() {
@@ -126,6 +100,7 @@ export default function AnimePage() {
           </div>
 
           <div className="flex justify-center gap-3 mt-4">
+            {/*
             {member.email && (
               <CardItem
                 translateZ={20}
@@ -137,6 +112,8 @@ export default function AnimePage() {
                 <FaEnvelope className="w-4 h-4" />
               </CardItem>
             )}
+            */}
+            {/*
             {member.linkedinUrl && (
               <CardItem
                 translateZ={20}
@@ -150,6 +127,7 @@ export default function AnimePage() {
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
+            */}
             {/* {member.instagramUrl && (
               <CardItem
                 translateZ={20}
@@ -268,13 +246,13 @@ export default function AnimePage() {
             Coordinators
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {IkkattMembers.slice(0, 3).map((member) => renderMemberCard(member))}
+            {IkkattMembers.slice(0, 2).map((member) => renderMemberCard(member))}
           </div>
           <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-[#191970] px-4 md:px-0">
             Sub Coordinators
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {IkkattMembers.slice(3).map((member) => renderMemberCard(member))}
+            {IkkattMembers.slice(2).map((member) => renderMemberCard(member))}
           </div>
         </section>
         

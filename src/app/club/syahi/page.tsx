@@ -2,7 +2,7 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
 
@@ -18,68 +18,51 @@ interface ClubMember {
 const SyahiMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Devanshu Kumar',
+    name: 'Tanushkumar Yadav',
     position: 'Coordinator',
-    email: 'devanshu_2301ct22@iitp.ac.in',
-    linkedinUrl: 'https://linkedin.com/in/devanshu-kumar-08139b298',
-    imageUrl: '/Coordinators/Syahi/DevanshuKumar.jpeg',
+    imageUrl: '/Coordinators/Syahi/Tanushkumar_Yadav.jpg',
   },
   {
     id: 2,
-    name: 'Kaustuv Anand',
+    name: 'Choudhary Lucky',
     position: 'Coordinator',
-    email: 'kaustuv_2301ce44@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/kaustuv-anand-1981982a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/Coordinators/Syahi/Kaustuv.jpg',
+    imageUrl: '/Coordinators/Syahi/Choudhary_Lucky.jpg',
   },
   {
     id: 3,
-    name: 'Huzaim Zaoraiz',
+    name: 'Rajnandani Singh',
     position: 'Sub-Coordinator',
-    email: 'literary_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/huzaim-zaoraiz-a03216335?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Syahi/huzaimZaoraiz.JPG',
+    imageUrl: '/SubCords/Syahi/Rajnandani_Singh.jpg',
   },
   {
     id: 4,
-    name: 'Choudhary Lucky',
+    name: 'Shorya Pratap Singh',
     position: 'Sub-Coordinator',
-    email: 'literary_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/choudhary-lucky-139484330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Syahi/choudharyLucky.jpg',
+    imageUrl: '/SubCords/Syahi/Shorya_Pratap_Singh.jpg',
   },
   {
     id: 5,
-    name: 'Tanush Kumar',
+    name: 'Rudransh Mittal',
     position: 'Sub-Coordinator',
-    email: 'literary_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/tanushkumar-yadav-9126812b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Syahi/tanush.jpg',
+    imageUrl: '/SubCords/Syahi/Rudransh_Mittal.webp',
   },
   {
     id: 6,
-    name: 'Shatadrumi Dey',
+    name: 'Lohitha Kotra',
     position: 'Sub-Coordinator',
-    email: 'literary_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/shatadrumi-dey-07933031a/',
-    imageUrl: '/SubCords/Syahi/shatadrumiDey.jpg',
+    imageUrl: '/SubCords/Syahi/Lohitha_Kotra.jpg',
   },
   {
     id: 7,
-    name: 'Anshika Singh',
+    name: 'Sameer Kumar',
     position: 'Sub-Coordinator',
-    email: 'literary_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/anshika-singh-764830365',
-    imageUrl: '/SubCords/Syahi/anshikaSingh.jpg',
+    imageUrl: '/SubCords/Syahi/Sameer_Kumar.jpg',
   },
   {
     id: 8,
-    name: 'Anand Kumar',
+    name: 'Sankalp Singh',
     position: 'Sub-Coordinator',
-    email: 'literary_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/anand-kumar-563523342?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Syahi/anand.jpg',
-  }
+  },
 ];
 
 export default function SyahiPage() {
@@ -117,6 +100,7 @@ export default function SyahiPage() {
           </div>
 
           <div className="flex justify-center gap-3 mt-4">
+            {/*
             {member.email && (
               <CardItem
                 translateZ={20}
@@ -128,6 +112,8 @@ export default function SyahiPage() {
                 <FaEnvelope className="w-4 h-4" />
               </CardItem>
             )}
+            */}
+            {/*
             {member.linkedinUrl && (
               <CardItem
                 translateZ={20}
@@ -141,6 +127,7 @@ export default function SyahiPage() {
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
+            */}
             {/* {member.instagramUrl && (
               <CardItem
                 translateZ={20}

@@ -3,7 +3,6 @@
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaInstagram } from "react-icons/fa";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
 
@@ -19,68 +18,51 @@ interface ClubMember {
 const EpicureanMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Ananya Maldyar',
+    name: 'Devesh Yadav',
     position: 'Coordinator',
-    email: 'ananya_2301ee06@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/ananya-maldyar-132505298/',
-    imageUrl: '/Coordinators/Epicurean/ananya.jpg',
+    imageUrl: '/Coordinators/Epicurean/Devesh_Yadav.jpg',
   },
   {
     id: 2,
-    name: 'Shibanshu Soubhagya Das',
+    name: 'Shashank Mishra',
     position: 'Coordinator',
-    email: 'shibanshu_2302gt08@iitp.ac.in',
-    linkedinUrl: 'https://in.linkedin.com/in/shibanshu-soubhagya-das-46a5342b5',
-    imageUrl: '/Coordinators/Epicurean/Shibhanshu.png',
   },
   {
     id: 3,
-    name: 'Aditi Lohiya',
+    name: 'Aditi Yadav',
     position: 'Sub-Coordinator',
-    email: 'culinary_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/aditi-lohiya-395532321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Epicurean/AditiLohiya.jpg',
+    imageUrl: '/SubCords/Epicurean/Aditi_Yadav.jpg',
   },
   {
     id: 4,
-    name: 'Avi Bharti',
+    name: 'Varnika Srivastava',
     position: 'Sub-Coordinator',
-    email: 'culinary_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/avi-bharti-029b1833b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
-    imageUrl: '/SubCords/Epicurean/Avi.JPG',
+    imageUrl: '/SubCords/Epicurean/Varnika_Srivastava.jpg',
   },
   {
     id: 5,
-    name: 'Shailja Brijendra Mathuria',
+    name: 'Aryan Dev',
     position: 'Sub-Coordinator',
-    email: 'culinary_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/shailja-mathuria-739834312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/CndSubcords/Shailja.jpeg',
+    imageUrl: '/SubCords/Epicurean/Aryan_Dev.jpg',
   },
   {
     id: 6,
-    name: 'Krittika Das',
+    name: 'Yash Jhamb',
     position: 'Sub-Coordinator',
-    email: 'culinary_club@iitp.ac.in',
-    linkedinUrl: 'https://in.linkedin.com/in/krittika-das-4704b2327',
-    imageUrl: '/SubCords/Epicurean/Kritika.jpg',
+    imageUrl: '/SubCords/Epicurean/Yash_Jhamb.jpg',
   },
   {
     id: 7,
-    name: 'Kumari Shikha',
+    name: 'Yashvardhan Shaktawat',
     position: 'Sub-Coordinator',
-    email: 'culinary_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/kumari-shikha-a1506a327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Epicurean/KumariShikha.jpg',
+    imageUrl: '/SubCords/Epicurean/Yashvardhan_Shaktawat.jpg',
   },
   {
     id: 8,
-    name: 'Shashank Mishra',
+    name: 'Emin Philip Saji',
     position: 'Sub-Coordinator',
-    email: 'culinary_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/shashank-mishra-72b495326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Epicurean/Shashank.jpg',
-  }
+    imageUrl: '/SubCords/Epicurean/Emin_Philip_Saji.jpg',
+  },
 ];
 
 export default function EpicureanPage() {
@@ -118,6 +100,7 @@ export default function EpicureanPage() {
           </div>
 
           <div className="flex justify-center gap-3 mt-4">
+            {/*
             {member.email && (
               <CardItem
                 translateZ={20}
@@ -129,6 +112,8 @@ export default function EpicureanPage() {
                 <FaEnvelope className="w-4 h-4" />
               </CardItem>
             )}
+            */}
+            {/*
             {member.linkedinUrl && (
               <CardItem
                 translateZ={20}
@@ -142,6 +127,7 @@ export default function EpicureanPage() {
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
+            */}
           </div>
         </CardBody>
       </CardContainer>

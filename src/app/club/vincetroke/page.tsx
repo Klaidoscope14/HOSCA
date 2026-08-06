@@ -3,7 +3,6 @@
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
 
@@ -19,68 +18,56 @@ interface ClubMember {
 const VincetrokeMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Chiranjeeb Debata',
+    name: 'Riddhesh Dalal',
     position: 'Coordinator',
-    email: 'chiranjeeb_2303me04@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/chiranjeeb-debata-a1a891295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/Coordinators/VinceTroke/Chiranjeeb.jpg',
   },
   {
     id: 2,
-    name: 'Ishika Khanagwal',
+    name: 'Richa Chaudhary',
     position: 'Coordinator',
-    email: 'ishika_2301mc09@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/ishika-khanagwal-362432297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/Coordinators/VinceTroke/Ishika.jpg',
+    imageUrl: '/Coordinators/VinceTroke/Richa_Chaudhary.jpg',
   },
   {
     id: 3,
-    name: 'Tanvi Vasoya',
+    name: 'Anand Kumar',
     position: 'Coordinator',
-    email: 'tanvi_2301ce30@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/tanvi-vasoya-32732b298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/Coordinators/VinceTroke/Tanvi.jpg',
+    imageUrl: '/Coordinators/VinceTroke/Anand_Kumar.jpg',
   },
   {
     id: 4,
-    name: 'Aditi Lohiya',
+    name: 'Rashi Ranjan',
     position: 'Sub-Coordinator',
-    email: 'vincetroke_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/aditi-lohiya-395532321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Vincetroke/Aditi_Vincetroke.jpg',
   },
   {
     id: 5,
-    name: 'Riddhesh Dalal',
+    name: 'Samarth Kushe',
     position: 'Sub-Coordinator',
-    email: 'vincetroke_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/riddhesh-dalal-704664317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Vincetroke/Riddhesh.jpg',
+    imageUrl: '/SubCords/Vincetroke/Samarth_Kushe.jpg',
   },
   {
     id: 6,
-    name: 'Anand Kumar',
+    name: 'Aahan Nayak',
     position: 'Sub-Coordinator',
-    email: 'vincetroke_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/anand-kumar-563523342?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Vincetroke/Anand.jpg',
+    imageUrl: '/SubCords/Vincetroke/Aahan_Nayak.jpg',
   },
   {
     id: 7,
-    name: 'Aviral Pratap Singh',
+    name: 'Soni Pal',
     position: 'Sub-Coordinator',
-    email: 'vincetroke_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/aviral-pratap-singh-a88977319/',
-    imageUrl: '/SubCords/Vincetroke/Aviral.jpg',
+    imageUrl: '/SubCords/Vincetroke/Soni_Pal.jpg',
   },
   {
     id: 8,
-    name: 'Richa Chaudhary',
+    name: 'Chetla Pawan Kumar',
     position: 'Sub-Coordinator',
-    email: 'vincetroke_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/richa-chaudhary-9a2877349?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Vincetroke/Richa.jpg',
-  }
+    imageUrl: '/SubCords/Vincetroke/Chetla_Pawan_Kumar.jpg',
+  },
+  {
+    id: 9,
+    name: 'Lohitha Kotra',
+    position: 'Sub-Coordinator',
+    imageUrl: '/SubCords/Vincetroke/Lohitha_Kotra.jpg',
+  },
 ];
 
 export default function VincetrokePage() {
@@ -117,6 +104,7 @@ export default function VincetrokePage() {
           </div>
 
           <div className="flex justify-center gap-3 mt-4">
+            {/*
             {member.email && (
               <CardItem
                 translateZ={20}
@@ -128,6 +116,8 @@ export default function VincetrokePage() {
                 <FaEnvelope className="w-4 h-4" />
               </CardItem>
             )}
+            */}
+            {/*
             {member.linkedinUrl && (
               <CardItem
                 translateZ={20}
@@ -141,6 +131,7 @@ export default function VincetrokePage() {
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
+            */}
            
           </div>
         </CardBody>
@@ -275,7 +266,7 @@ export default function VincetrokePage() {
             )}
           </div>
           <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto ">
-            {VincetrokeMembers.slice(6).map((member) =>
+            {VincetrokeMembers.slice(3).map((member) =>
               renderMemberCard(member)
             )}
           </div>

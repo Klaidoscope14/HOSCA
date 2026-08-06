@@ -3,7 +3,6 @@ export const dynamic = 'force-static';
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
 import React, { Suspense } from "react";
@@ -20,76 +19,56 @@ interface ClubMember {
 const QuizMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Shibanshu Soubhagya Das',
+    name: 'Joven Sony',
     position: 'Coordinator',
-    email: 'shibanshu_2302gt08@iitp.ac.in',
-    linkedinUrl: 'https://in.linkedin.com/in/shibanshu-soubhagya-das-46a5342b5',
-    imageUrl: '/Coordinators/QuizClub/Shibhanshu.png',
   },
   {
     id: 2,
-    name: 'Amal Biju',
+    name: 'Sarthak Poddar',
     position: 'Coordinator',
-    email: 'quizclub@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/amal-biju-5ab486300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/Coordinators/QuizClub/Amal.jpg',
+    imageUrl: '/Coordinators/Quiz_Club/Sarthak_Poddar.jpg',
   },
   {
     id: 3,
-    name: 'Ashmit Verma',
+    name: 'Heet',
     position: 'Coordinator',
-    email: 'ashmit_2301ph07@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/ashmit-verma-412076299',
-    imageUrl: '/Coordinators/QuizClub/Ashmit.jpg',
+    imageUrl: '/Coordinators/Quiz_Club/Heet.jpg',
   },
   {
     id: 4,
-    name: 'Leon Joel Shaji',
+    name: 'Divya Thakur',
     position: 'Sub-Coordinator',
-    email: 'quizclub@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/leon-joel-shaji-723012324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/QuizClub/leonJoel.jpg',
+    imageUrl: '/SubCords/Quiz_Club/Divya_Thakur.jpg',
   },
   {
     id: 5,
-    name: 'Sarthak Poddar',
+    name: 'Pranay Bansal',
     position: 'Sub-Coordinator',
-    email: 'quizclub@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/sarthak-poddar-66038b305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/QuizClub/SarthakPoddar.jpg',
+    imageUrl: '/SubCords/Quiz_Club/Pranay_Bansal.jpg',
   },
   {
     id: 6,
-    name: 'Harshit Singh',
+    name: 'Ansh Sharma',
     position: 'Sub-Coordinator',
-    email: 'quizclub@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/harshit-singh-1158b1367/',
-    imageUrl: '/SubCords/QuizClub/harshit_singh.jpg',
+    imageUrl: '/SubCords/Quiz_Club/Ansh_Sharma.png',
   },
   {
     id: 7,
-    name: 'Joven Sony',
+    name: 'Mahi Garg',
     position: 'Sub-Coordinator',
-    email: 'quizclub@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/joven-sony-aa0862224?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/QuizClub/Joven.jpg',
+    imageUrl: '/SubCords/Quiz_Club/Mahi_Garg.jpg',
   },
   {
     id: 8,
-    name: 'Abhiram Parupudi',
+    name: 'Poojan Dave',
     position: 'Sub-Coordinator',
-    email: 'quizclub@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/abhiram-p-432a43319?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/QuizClub/abhiramParupudi.jpg',
   },
   {
     id: 9,
-    name: 'Heet Joshi',
+    name: 'Bhaskar Gangopadhyay',
     position: 'Sub-Coordinator',
-    email: 'quizclub@iitp.ac.in',
-    linkedinUrl: '#',
-    imageUrl: '/SubCords/QuizClub/HeetJoshi.jpeg',
-  }
+    imageUrl: '/SubCords/Quiz_Club/Bhaskar_Gangopadhyay.jpg',
+  },
 ];
 
 export default function QuizPage() {
@@ -127,6 +106,7 @@ export default function QuizPage() {
           </div>
 
           <div className="flex justify-center gap-3 mt-4">
+            {/*
             {member.email && (
               <CardItem
                 translateZ={20}
@@ -138,6 +118,8 @@ export default function QuizPage() {
                 <FaEnvelope className="w-4 h-4" />
               </CardItem>
             )}
+            */}
+            {/*
             {member.linkedinUrl && (
               <CardItem
                 translateZ={20}
@@ -151,6 +133,7 @@ export default function QuizPage() {
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
+            */}
           </div>
         </CardBody>
       </CardContainer>

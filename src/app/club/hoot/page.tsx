@@ -2,7 +2,7 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaFacebook, FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
 
@@ -18,68 +18,52 @@ interface ClubMember {
 const HootMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Aviral Awasthi',
+    name: 'Ankit Basu',
     position: 'Coordinator',
-    email: 'aviral_2301mm29@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/aviral-awasthi-86943528a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/Coordinators/HOOT/Aviral.jpg',
+    imageUrl: '/Coordinators/HOOT/Ankit_Basu.jpg',
   },
   {
     id: 2,
-    name: 'Venkatesh Mishra',
+    name: 'Shreyas Das',
     position: 'Coordinator',
-    email: 'venkatesh_2301me66@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/venkatesh-mishra-399317288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
-    imageUrl: '/Coordinators/HOOT/Venkatesh.jpg',
+    imageUrl: '/Coordinators/HOOT/Shreyas_Das.jpg',
   },
   {
     id: 3,
-    name: 'Aanushka Saha',
+    name: 'Gaurav Choudhury',
     position: 'Sub-Coordinator',
-    email: 'hoot@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/aanushka-saha-a2b78a322/',
-    imageUrl: '/SubCords/HOOT/aanushka_hoot.jpg',
+    imageUrl: '/SubCords/HOOT/Gaurav_Choudhury.jpg',
   },
   {
     id: 4,
-    name: 'Shashwat Tiwari',
+    name: 'Chitra Sandilya',
     position: 'Sub-Coordinator',
-    email: 'hoot@iitp.ac.in',
-    linkedinUrl: 'hhttps://www.linkedin.com/in/shashwat-tiwari-2920852bb?utm_source=share&utm_campaign=share_via&utm_co',
-    imageUrl: '/SubCords/HOOT/Shashwat.jpg',
+    imageUrl: '/SubCords/HOOT/Chitra_Sandilya.jpg',
   },
   {
     id: 5,
-    name: 'Ankit Basu',
+    name: 'Vaarunya Tomer',
     position: 'Sub-Coordinator',
-    email: 'hoot@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/ankit-basu-32295931a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
-    imageUrl: '/SubCords/HOOT/AnkitBasu.jpg',
+    imageUrl: '/SubCords/HOOT/Vaarunya_Tomer.jpg',
   },
   {
     id: 6,
-    name: 'Shreyas Das',
+    name: 'Aditi Yadav',
     position: 'Sub-Coordinator',
-    email: 'hoot@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/shreyas-das-3a979b316/',
-    imageUrl: '/SubCords/HOOT/ShreyasDas.jpg',
+    imageUrl: '/SubCords/HOOT/Aditi_Yadav.jpg',
   },
   {
     id: 7,
-    name: 'Nirmit Chaurasia',
+    name: 'Pratyaksha Prasad',
     position: 'Sub-Coordinator',
-    email: 'hoot@iitp.ac.in',
-    linkedinUrl: 'https://in.linkedin.com/in/nirmit-chaurasia-678781191',
-    imageUrl: '/SubCords/HOOT/nirmitphoto.png',
+    imageUrl: '/SubCords/HOOT/Pratyaksha_Prasad.jpg',
   },
   {
     id: 8,
-    name: 'Gopal Ramanathan',
+    name: 'Kirti Chandra',
     position: 'Sub-Coordinator',
-    email: 'hoot@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/gopal-ramanathan-76173b306/',
-    imageUrl: '/SubCords/HOOT/Gopal.jpg',
-  }
+    imageUrl: '/SubCords/HOOT/Kirti_Chandra.jpg',
+  },
 ];
 
 export default function HootPage() {
@@ -117,6 +101,7 @@ export default function HootPage() {
           </div>
 
           <div className="flex justify-center gap-3 mt-4">
+            {/*
             {member.email && (
               <CardItem
                 translateZ={20}
@@ -128,6 +113,8 @@ export default function HootPage() {
                 <FaEnvelope className="w-4 h-4" />
               </CardItem>
             )}
+            */}
+            {/*
             {member.linkedinUrl && (
               <CardItem
                 translateZ={20}
@@ -141,6 +128,7 @@ export default function HootPage() {
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
+            */}
             {/* {member.instagramUrl && (
               <CardItem
                 translateZ={20}

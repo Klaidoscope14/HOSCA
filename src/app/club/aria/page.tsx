@@ -2,7 +2,7 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
 
@@ -18,68 +18,55 @@ interface ClubMember {
 const AriaMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Aarsh Sanghavi',
+    name: 'Dhairya Garg',
     position: 'Coordinator',
-    email: 'aarsh_2301cs01@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/aarsh-sanghavi-b61552280/',
-    imageUrl: '/Coordinators/Aria/aarsh.jpg',
+    imageUrl: '/Coordinators/Aria/Dhairya_Garg.jpg',
   },
   {
     id: 2,
-    name: 'Rithvik Konidena',
+    name: 'Sankhanil Chakraborty',
     position: 'Coordinator',
-    email: 'rithvik_2302cs09@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/rithvik-konidena-01a637317/',
-    imageUrl: '/Coordinators/Aria/Rithvik.jpeg',
+    imageUrl: '/Coordinators/Aria/Sankhanil_Chakraborty.jpg',
   },
   {
     id: 3,
-    name: 'Dhairya Garg',
-    position: 'Sub-Coordinator',
-    email: 'music_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/dhairya-garg-32656024b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Aria/Dhairya.jpg',
+    name: 'Shorya Pratap Singh',
+    position: 'Coordinator',
+    imageUrl: '/Coordinators/Aria/Shorya_Pratap_Singh.jpg',
   },
   {
     id: 4,
-    name: 'Sejal Goel',
+    name: 'Anvesh Shekhar',
     position: 'Sub-Coordinator',
-    email: 'music_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/sejal-goel-6ab186314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Aria/Sejal.jpg',
   },
   {
     id: 5,
-    name: 'Sankhanil Chakraborty',
+    name: 'Chaitanya Savarn',
     position: 'Sub-Coordinator',
-    email: 'music_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/sankhanil-chakraborty-9377a032a/',
-    imageUrl: '/SubCords/Aria/Sankhanil.jpg',
   },
   {
     id: 6,
-    name: 'Shorya Pratap Singh',
+    name: 'Manasi S',
     position: 'Sub-Coordinator',
-    email: 'music_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/shorya-pratap-singh-7aa29b320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Aria/SHORYA.jpg',
+    imageUrl: '/SubCords/Aria/Manasi_S.jpg',
   },
   {
     id: 7,
-    name: 'Abhinav Datta',
+    name: 'Nilesh Mazumdar',
     position: 'Sub-Coordinator',
-    email: 'music_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/abhinav-datta-54795131a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Aria/AbhinavDatta.jpg',
   },
   {
     id: 8,
-    name: 'Joven Sony',
+    name: 'Shiven Dutt Mishra',
     position: 'Sub-Coordinator',
-    email: 'music_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/joven-sony-aa0862224?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Aria/Joven.jpg',
-  }
+    imageUrl: '/SubCords/Aria/Shiven_Dutt_Mishra.jpg',
+  },
+  {
+    id: 9,
+    name: 'Snehardra Das',
+    position: 'Sub-Coordinator',
+    imageUrl: '/SubCords/Aria/Snehardra_Das.jpg',
+  },
 ];
 
 export default function AriaPage() {
@@ -117,6 +104,7 @@ export default function AriaPage() {
           </div>
 
           <div className="flex justify-center gap-3 mt-4">
+            {/*
             {member.email && (
               <CardItem
                 translateZ={20}
@@ -128,6 +116,8 @@ export default function AriaPage() {
                 <FaEnvelope className="w-4 h-4" />
               </CardItem>
             )}
+            */}
+            {/*
             {member.linkedinUrl && (
               <CardItem
                 translateZ={20}
@@ -141,6 +131,7 @@ export default function AriaPage() {
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
+            */}
             {/* {member.instagramUrl && (
               <CardItem
                 translateZ={20}
@@ -261,14 +252,14 @@ export default function AriaPage() {
           <h2 className="text-3xl font-semibold text-center mb-6 text-[#4169E1] px-2 md:px-0">
             Coordinators
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
-            {AriaMembers.slice(0, 2).map((member) => renderMemberCard(member))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            {AriaMembers.slice(0, 3).map((member) => renderMemberCard(member))}
           </div>
           <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-[#4169E1] px-4 md:px-0">
             Sub Coordinators
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {AriaMembers.slice(2).map((member) => renderMemberCard(member))}
+            {AriaMembers.slice(3).map((member) => renderMemberCard(member))}
           </div>
         </section>
 

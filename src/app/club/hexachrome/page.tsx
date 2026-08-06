@@ -3,7 +3,6 @@
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaInstagram } from "react-icons/fa";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
 
@@ -19,60 +18,58 @@ interface ClubMember {
 const HexachromeMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Chahat Mahajan',
+    name: 'K. Anantha Akash',
     position: 'Coordinator',
-    email: 'chahat_2301ai49@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/chahat-mahajan-b80767298/',
-    imageUrl: '/Coordinators/HexaChrome/Chahat.jpg',
+    imageUrl: '/Coordinators/HexaChrome/K._Anantha_Akash.jpg',
   },
   {
     id: 2,
-    name: 'Keshav Mahansaria',
+    name: 'Lavanya Bhadani',
     position: 'Coordinator',
-    email: 'keshav_2301cs23@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/keshav-mahansaria-66979229a',
-    imageUrl: '/Coordinators/HexaChrome/Keshav.jpg',
+    imageUrl: '/Coordinators/HexaChrome/Lavanya_Bhadani.jpg',
   },
   {
     id: 3,
-    name: 'Aryan Patil',
-    position: 'Sub-Coordinator',
-    email: 'hexachrome@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/aryan-patil-58393736a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/HexaChrome/AryanPatil.jpeg',
+    name: 'Vaibhav Dalmia',
+    position: 'Coordinator',
+    imageUrl: '/Coordinators/HexaChrome/Vaibhav_Dalmia.jpg',
   },
   {
     id: 4,
-    name: 'Akash Kota',
+    name: 'Pachava Shalini',
     position: 'Sub-Coordinator',
-    email: 'hexachrome@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/akash-kota-a3538a323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/HexaChrome/Akash.jpg',
+    imageUrl: '/SubCords/HexaChrome/Pachava_Shalini.jpg',
   },
   {
     id: 5,
-    name: 'Hrijoy Sikdar',
+    name: 'Thanmayi Potanapalli',
     position: 'Sub-Coordinator',
-    email: 'hexachrome@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/hrijoy-sikdar-780a28311',
-    imageUrl: '/SubCords/HexaChrome/HrijoySikdar.webp',
+    imageUrl: '/SubCords/HexaChrome/Thanmayi_Potanapalli.jpg',
   },
   {
     id: 6,
-    name: 'Lavanya Bhadani',
+    name: 'Shivani Parmar',
     position: 'Sub-Coordinator',
-    email: 'hexachrome@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/lavanya-bhadani-1834b1313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/HexaChrome/lavanya.jpg',
+    imageUrl: '/SubCords/HexaChrome/Shivani_Parmar.jpg',
   },
   {
     id: 7,
-    name: 'Vaibhav Dalmia',
+    name: 'Patel Arya Prakashbhai',
     position: 'Sub-Coordinator',
-    email: '',
-    linkedinUrl: 'http://www.linkedin.com/in/vaibhav-dalmia-2b1b84325',
-    imageUrl: '/SubCords/HexaChrome/VaibhavDalmia.jpg',
-  }
+    imageUrl: '/SubCords/HexaChrome/Patel_arya_prakashbhai.jpg',
+  },
+  {
+    id: 8,
+    name: 'Aritro Ghosh',
+    position: 'Sub-Coordinator',
+    imageUrl: '/SubCords/HexaChrome/ARITRO_GHOSH.jpg',
+  },
+  {
+    id: 9,
+    name: 'Guda Manaswini',
+    position: 'Sub-Coordinator',
+    imageUrl: '/SubCords/HexaChrome/Guda_Manaswini.png',
+  },
 ];
 
 export default function HexaChromePage() {
@@ -110,6 +107,7 @@ export default function HexaChromePage() {
           </div>
 
           <div className="flex justify-center gap-3 mt-4">
+            {/*
             {member.email && (
               <CardItem
                 translateZ={20}
@@ -121,6 +119,8 @@ export default function HexaChromePage() {
                 <FaEnvelope className="w-4 h-4" />
               </CardItem>
             )}
+            */}
+            {/*
             {member.linkedinUrl && (
               <CardItem
                 translateZ={20}
@@ -134,6 +134,7 @@ export default function HexaChromePage() {
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
+            */}
           </div>
         </CardBody>
       </CardContainer>
@@ -248,37 +249,16 @@ export default function HexaChromePage() {
           <h2 className="text-3xl font-semibold text-center mb-6 text-[#4169E1] px-2 md:px-0">
             Coordinators
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
-            {HexachromeMembers.slice(0, 2).map((member) =>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            {HexachromeMembers.slice(0, 3).map((member) =>
               renderMemberCard(member)
             )}
           </div>
           <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-[#4169E1] px-4 md:px-0">
             Sub Coordinators
           </h2>
-          <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {HexachromeMembers.slice(2,5).map((member) =>
-              renderMemberCard(member)
-            )}
-          </div>
-          <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto ">
-            {HexachromeMembers.slice(5).map((member) =>
-              renderMemberCard(member)
-            )}
-          </div>
-            
-            <div className="hidden sm:grid sm:grid-cols-2 lg:hidden gap-10 max-w-6xl mx-auto">
-            {HexachromeMembers.slice(2,4).map((member) =>
-              renderMemberCard(member)
-            )}
-          </div>
-          <div className="hidden sm:grid sm:grid-cols-2 lg:hidden gap-10 max-w-6xl mx-auto ">
-            {HexachromeMembers.slice(4,6).map((member) =>
-              renderMemberCard(member)
-            )}
-          </div>
-          <div className="hidden sm:grid sm:grid-cols-1 lg:hidden gap-10 max-w-6xl mx-auto ">
-            {HexachromeMembers.slice(6).map((member) =>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            {HexachromeMembers.slice(3).map((member) =>
               renderMemberCard(member)
             )}
           </div>

@@ -3,7 +3,6 @@
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaInstagram } from "react-icons/fa";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
 
@@ -18,67 +17,49 @@ interface ClubMember {
 const AnimeMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Chandra Shekhar Azad',
-    email: 'chandra_2301ec09@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/tejavath-chandrashekarazad-7363ab298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/Coordinators/AnimeClub/CSA.jpg',
+    name: 'Soyam Bais',
+    imageUrl: '/Coordinators/Anime_Club/Soyam_Bais.jpg',
   },
   {
     id: 2,
-    name: 'Dikshant K.',
-    email: 'dikshant_2302st02@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/dikshant-khobragade-1b166727b/',
-    imageUrl: '/Coordinators/AnimeClub/dikshantsk01.jpg',
+    name: 'Adil Khan',
+    imageUrl: '/Coordinators/Anime_Club/Adil_Khan.jpg',
   },
   {
     id: 3,
-    name: 'Akshat',
-    email: 'akshat_2301ce02@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/akshat-kumar-singh-7400b2178?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/Coordinators/AnimeClub/akshat.jpg',
+    name: 'Satyam Sinha',
+    imageUrl: '/Coordinators/Anime_Club/Satyam_Sinha.jpg',
   },
   {
     id: 4,
-    name: 'Tejash Agrawal ',
-    email: 'anime_club@iitp.ac.in',
-    linkedinUrl: '#',
-    imageUrl: '/SubCords/AnimeClub/Tejash.jpg',
+    name: 'Ansh Sharma',
+    imageUrl: '/SubCords/Anime_Club/Ansh_Sharma.png',
   },
   {
     id: 5,
-    name: 'Ranveer Gupta',
-    email: 'anime_club@iitp.ac.in',
-    linkedinUrl: 'www.linkedin.com/in/ranveer-g-7544a4232',
-    imageUrl: '/SubCords/AnimeClub/Ranveer.jpeg',
+    name: 'Sai Subrat Jena',
+    imageUrl: '/SubCords/Anime_Club/Sai_Subrat_Jena.jpg',
   },
   {
     id: 6,
-    name: 'Adil Khan',
-    email: 'anime_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/adil-khan-98501a31a/',
-    imageUrl: '/SubCords/AnimeClub/AdilKhan.jpg',
+    name: 'Angel Mahi Sharma',
+    imageUrl: '/SubCords/Anime_Club/Angel_Mahi_Sharma.jpg',
   },
   {
     id: 7,
-    name: 'Satyam Sinha',
-    email: 'anime_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/satyam-sinha-733801325/',
-    imageUrl: '/SubCords/AnimeClub/SatyamSinha.jpg',
+    name: 'Daksh Mittal',
+    imageUrl: '/SubCords/Anime_Club/Daksh_Mittal.jpg',
   },
   {
     id: 8,
-    name: 'Raghav',
-    email: 'anime_club@iitp.ac.in',
-    linkedinUrl: 'www.linkedin.com/in/raghav-singla-885bb0325',
-    imageUrl: '/SubCords/AnimeClub/Raghav.png',
+    name: 'Bhanu Kiran',
+    imageUrl: '/SubCords/Anime_Club/Bhanu_Kiran.jpg',
   },
   {
     id: 9,
-    name: 'Soyam Bais ',
-    email: 'anime_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/soyam-bais-58b024329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/AnimeClub/SoyamBais.jpg',
-  }
+    name: 'Chayan Sharma',
+    imageUrl: '/SubCords/Anime_Club/Chayan_Sharma.jpg',
+  },
 ];
 
 export default function AnimePage() {
@@ -115,6 +96,7 @@ export default function AnimePage() {
           </div>
 
           <div className="flex justify-center gap-3 mt-4">
+            {/*
             {member.email && (
               <CardItem
                 translateZ={20}
@@ -126,6 +108,8 @@ export default function AnimePage() {
                 <FaEnvelope className="w-4 h-4" />
               </CardItem>
             )}
+            */}
+            {/*
             {member.linkedinUrl && (
               <CardItem
                 translateZ={20}
@@ -139,6 +123,7 @@ export default function AnimePage() {
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
+            */}
           </div>
         </CardBody>
       </CardContainer>

@@ -3,7 +3,6 @@
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
 
@@ -19,68 +18,52 @@ interface ClubMember {
 const YavanikaMembers: ClubMember[] = [
   {
     id: 1,
-    name: 'Viraj Kulkarni ',
+    name: 'Vidhi Patel',
     position: 'Coordinator',
-    email: 'viraj_2301mm25@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/viraj-kulkarni-097869312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
-    imageUrl: '/Coordinators/Yavanika/Viraj.JPG',
+    imageUrl: '/Coordinators/Yavanika/Vidhi_Patel.jpg',
   },
   {
     id: 2,
-    name: 'Kumari Nisha',
+    name: 'Ayush Kumar Gupta',
     position: 'Coordinator',
-    email: 'kumari_2301ct13@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/kumari-nisha-3209b02a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/Coordinators/Yavanika/Nisha.jpeg',
+    imageUrl: '/Coordinators/Yavanika/Ayush_Kumar_Gupta.png',
   },
   {
     id: 3,
-    name: 'Lalit Sen',
+    name: 'Priyadeep Jaiswal',
     position: 'Coordinator',
-    email: 'lalit_2301ec59@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/Lalit-sen-73a2392a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
-    imageUrl: '/Coordinators/Yavanika/Lalit.jpg',
+    imageUrl: '/Coordinators/Yavanika/Priyadeep_Jaiswal.jpg',
   },
   {
     id: 4,
-    name: 'Yahya Dawoodi',
+    name: 'Shatakshi Singh',
     position: 'Sub-Coordinator',
-    email: 'drama_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/yahya-dawoodi-119dd39239/',
-    imageUrl: '/SubCords/Yavanika/Yahya.jpg',
+    imageUrl: '/SubCords/Yavanika/Shatakshi_Singh.jpg',
   },
   {
     id: 5,
-    name: 'Ayush Kumar Gupta',
+    name: 'Ankush Raj',
     position: 'Sub-Coordinator',
-    email: 'drama_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/ayush-gupta-675549320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Yavanika/Ayush.png',
+    imageUrl: '/SubCords/Yavanika/Ankush_Raj.webp',
   },
   {
     id: 6,
-    name: 'Priyadeep Jaiswal',
+    name: 'Krishna Chaurasia',
     position: 'Sub-Coordinator',
-    email: 'drama_club@iitp.ac.in',
-    linkedinUrl: 'http://www.linkedin.com/in/priyadeep-jaiswal-39ab001b5',
-    imageUrl: '/SubCords/Yavanika/Priyadeep.jpg',
+    imageUrl: '/SubCords/Yavanika/Krishna_Chaurasia.jpg',
   },
   {
     id: 7,
-    name: 'Vishmith Shetty',
+    name: 'Abhishek Bansal',
     position: 'Sub-Coordinator',
-    email: 'drama_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/vishmith-shetty-a16873313/',
-    imageUrl: '/SubCords/Yavanika/Vishmith.jpg',
+    imageUrl: '/SubCords/Yavanika/Abhishek_Bansal.jpg',
   },
   {
     id: 8,
-    name: 'Vidhi Patel',
+    name: 'Ojasvee Vatsa',
     position: 'Sub-Coordinator',
-    email: 'drama_club@iitp.ac.in',
-    linkedinUrl: 'https://www.linkedin.com/in/vidhi-patel-5a1893310?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    imageUrl: '/SubCords/Yavanika/vidhiPatel.jpg',
-  }
+    imageUrl: '/SubCords/Yavanika/Ojasvee_Vatsa.jpg',
+  },
 ];
 
 export default function YavanikaPage() {
@@ -116,6 +99,7 @@ export default function YavanikaPage() {
           </div>
 
           <div className="flex justify-center gap-3 mt-4">
+            {/*
             {member.email && (
               <CardItem
                 translateZ={20}
@@ -127,6 +111,8 @@ export default function YavanikaPage() {
                 <FaEnvelope className="w-4 h-4" />
               </CardItem>
             )}
+            */}
+            {/*
             {member.linkedinUrl && (
               <CardItem
                 translateZ={20}
@@ -140,6 +126,7 @@ export default function YavanikaPage() {
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
+            */}
            
           </div>
         </CardBody>
@@ -246,7 +233,6 @@ export default function YavanikaPage() {
           </div>
         </div>
 
-
         <section className="space-y-12">
           <h2 className="text-4xl font-bold text-center mb-12 text-black">
             Our Team
@@ -278,7 +264,7 @@ export default function YavanikaPage() {
             )}
           </div>
           <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto ">
-            {YavanikaMembers.slice(6).map((member) =>
+            {YavanikaMembers.slice(3).map((member) =>
               renderMemberCard(member)
             )}
           </div>

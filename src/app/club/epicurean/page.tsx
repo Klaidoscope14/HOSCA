@@ -26,6 +26,7 @@ const EpicureanMembers: ClubMember[] = [
     id: 2,
     name: 'Shashank Mishra',
     position: 'Coordinator',
+    imageUrl: '/Coordinators/Epicurean/Shashank_mishra.png',
   },
   {
     id: 3,

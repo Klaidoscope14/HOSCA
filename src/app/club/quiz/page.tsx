@@ -21,6 +21,7 @@ const QuizMembers: ClubMember[] = [
     id: 1,
     name: 'Joven Sony',
     position: 'Coordinator',
+    imageUrl: '/Coordinators/Quiz_Club/Joven_Sony.jpg',
   },
   {
     id: 2,
@@ -62,6 +63,7 @@ const QuizMembers: ClubMember[] = [
     id: 8,
     name: 'Poojan Dave',
     position: 'Sub-Coordinator',
+    imageUrl: '/SubCords/Quiz_Club/Poojan_Dave.jpeg',
   },
   {
     id: 9,

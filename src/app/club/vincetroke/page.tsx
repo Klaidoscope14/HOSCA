@@ -20,6 +20,7 @@ const VincetrokeMembers: ClubMember[] = [
     id: 1,
     name: 'Riddhesh Dalal',
     position: 'Coordinator',
+    imageUrl: '/Coordinators/VinceTroke/Riddhesh_Dalal.jpg',
   },
   {
     id: 2,
@@ -37,6 +38,7 @@ const VincetrokeMembers: ClubMember[] = [
     id: 4,
     name: 'Rashi Ranjan',
     position: 'Sub-Coordinator',
+    imageUrl: '/SubCords/Vincetroke/Rashi_Rajan.jpg',
   },
   {
     id: 5,

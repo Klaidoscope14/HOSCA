@@ -62,6 +62,7 @@ const SyahiMembers: ClubMember[] = [
     id: 8,
     name: 'Sankalp Singh',
     position: 'Sub-Coordinator',
+    imageUrl: '/SubCords/Syahi/Sankalp_Singh.jpg',
   },
 ];
 

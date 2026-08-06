@@ -38,11 +38,13 @@ const AriaMembers: ClubMember[] = [
     id: 4,
     name: 'Anvesh Shekhar',
     position: 'Sub-Coordinator',
+    imageUrl: '/SubCords/Aria/Anvesh_Shekhar.jpg',
   },
   {
     id: 5,
     name: 'Chaitanya Savarn',
     position: 'Sub-Coordinator',
+    imageUrl: '/SubCords/Aria/Chaitanya_Savarn.png',
   },
   {
     id: 6,

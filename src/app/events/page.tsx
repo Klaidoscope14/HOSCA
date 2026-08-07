@@ -111,10 +111,6 @@ function EventCard({ event }: { event: Event }) {
 
   const contentSection = (
     <div className="flex w-full flex-1 flex-col justify-center p-6 md:w-[52%] md:p-10">
-      <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/8 px-4 py-1.5 text-xs uppercase tracking-[0.28em] text-slate-300">
-        <Sparkles className="h-3.5 w-3.5" />
-        HOSCA Event
-      </div>
       <h2 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
         {event.title}
       </h2>

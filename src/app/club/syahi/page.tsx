@@ -50,7 +50,6 @@ const SyahiMembers: ClubMember[] = [
     id: 6,
     name: 'Lohitha Kotra',
     position: 'Sub-Coordinator',
-    imageUrl: '/SubCords/Syahi/Lohitha_Kotra.jpg',
   },
   {
     id: 7,

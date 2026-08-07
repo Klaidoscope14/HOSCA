@@ -20,7 +20,7 @@ const HootMembers: ClubMember[] = [
     id: 1,
     name: 'Ankit Basu',
     position: 'Coordinator',
-    imageUrl: '/Coordinators/HOOT/Ankit_Basu.jpg',
+    imageUrl: '/Coordinators/HOOT/Ankit_Basu.jpeg',
   },
   {
     id: 2,
@@ -62,7 +62,7 @@ const HootMembers: ClubMember[] = [
     id: 8,
     name: 'Kirti Chandra',
     position: 'Sub-Coordinator',
-    imageUrl: '/SubCords/HOOT/Kirti_Chandra.jpg',
+    imageUrl: '/SubCords/HOOT/Kirti_Chandra.jpeg',
   },
 ];
 

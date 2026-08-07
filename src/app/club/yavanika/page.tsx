@@ -68,20 +68,22 @@ const YavanikaMembers: ClubMember[] = [
 
 export default function YavanikaPage() {
   const renderMemberCard = (member: ClubMember) => (
-    <div key={member.id} className="flex justify-center w-full">
+    <div key={member.id} className="flex w-full max-w-[320px] justify-center sm:w-[320px]">
       <CardContainer className="w-[320px] h-[320px]">
-        <CardBody className="bg-[#f8f8f8] relative group/card border-black/[0.1] w-[280px] h-[320px] rounded-xl p-6 border flex flex-col justify-between">          <CardItem translateZ="100" className="w-full mt-4">
-            <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-2 border-yellow-500 flex-shrink-0">
+        <CardBody className="bg-[#f8f8f8] relative group/card border-black/[0.1] w-[280px] h-[320px] rounded-xl p-6 border flex flex-col justify-between">
+          <CardItem translateZ="100" className="w-full mt-4">
+            <div className="relative mx-auto mb-4 h-36 w-36 flex-shrink-0 overflow-hidden rounded-full border-2 border-yellow-500">
               {member.imageUrl ? (
                 <Image
                   src={member.imageUrl}
                   alt={member.name}
                   fill
-                  className="w-full h-full object-cover"
+                  sizes="144px"
+                  className="object-cover"
                 />
               ) : (
-                <div className="w-full h-full bg-white flex items-center justify-center">
-                  <span className="text-3xl font-bold text-orange-500 text-center px-2">
+                <div className="flex h-full w-full items-center justify-center bg-white">
+                  <span className="px-2 text-center text-3xl font-bold text-orange-500">
                     {member.name.charAt(0)}
                   </span>
                 </div>
@@ -240,51 +242,20 @@ export default function YavanikaPage() {
           <h2 className="text-3xl font-semibold text-center mb-6 text-yellow-300 px-2 md:px-0">
             Coordinators
           </h2>
-          <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
             {YavanikaMembers.slice(0, 3).map((member) =>
-              renderMemberCard(member)
-            )}
-          </div>
-          <div className="hidden sm:grid sm:grid-cols-2 lg:hidden gap-10 max-w-6xl mx-auto">
-            {YavanikaMembers.slice(0, 2).map((member) =>
-              renderMemberCard(member)
-            )}
-          </div>
-          <div className="hidden sm:grid sm:grid-cols-1 lg:hidden gap-10 max-w-6xl mx-auto">
-            {YavanikaMembers.slice(2,3).map((member) =>
               renderMemberCard(member)
             )}
           </div>
           <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-[#4169E1] px-4 md:px-0">
             Sub Coordinators
           </h2>
-          <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {YavanikaMembers.slice(3,6).map((member) =>
-              renderMemberCard(member)
-            )}
-          </div>
-          <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto ">
+          <div className="flex flex-wrap justify-center gap-10 max-w-6xl mx-auto">
             {YavanikaMembers.slice(3).map((member) =>
               renderMemberCard(member)
             )}
           </div>
-            
-            <div className="hidden sm:grid sm:grid-cols-2 lg:hidden gap-10 max-w-6xl mx-auto">
-            {YavanikaMembers.slice(3,5).map((member) =>
-              renderMemberCard(member)
-            )}
-          </div>
-          <div className="hidden sm:grid sm:grid-cols-2 lg:hidden gap-10 max-w-6xl mx-auto ">
-            {YavanikaMembers.slice(5,7).map((member) =>
-              renderMemberCard(member)
-            )}
-          </div>
-          <div className="hidden sm:grid sm:grid-cols-1 lg:hidden gap-10 max-w-6xl mx-auto ">
-            {YavanikaMembers.slice(7).map((member) =>
-              renderMemberCard(member)
-            )}
-          </div>
-        </section> 
+        </section>
 
         {/* Social Media Links */}
         <div className="flex justify-center gap-6 mt-12">

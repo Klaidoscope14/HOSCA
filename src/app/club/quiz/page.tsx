@@ -33,7 +33,6 @@ const QuizMembers: ClubMember[] = [
     id: 3,
     name: 'Heet',
     position: 'Coordinator',
-    imageUrl: '/Coordinators/Quiz_Club/Heet.jpg',
   },
   {
     id: 4,

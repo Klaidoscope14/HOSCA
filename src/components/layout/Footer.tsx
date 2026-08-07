@@ -18,9 +18,24 @@ const Footer = () => {
 
   const socialLinks = {
     hosca: [
-      { icon: FaFacebook, href: 'https://www.facebook.com/hosca.iitp', label: 'HOSCA Facebook' },
-      { icon: FaInstagram, href: 'https://www.instagram.com/iitpatna_hosca/', label: 'HOSCA Instagram' },
-      { icon: FaYoutube, href: 'https://www.youtube.com/user/CULTatIITP', label: 'HOSCA YouTube' },
+      {
+        icon: FaFacebook,
+        href: 'https://www.facebook.com/hosca.iitp',
+        label: 'HOSCA Facebook',
+        hoverClass: 'hover:text-[#1877F2]',
+      },
+      {
+        icon: FaInstagram,
+        href: 'https://www.instagram.com/iitpatna_hosca/',
+        label: 'HOSCA Instagram',
+        hoverClass: 'hover:text-[#E1306C]',
+      },
+      {
+        icon: FaYoutube,
+        href: 'https://www.youtube.com/user/CULTatIITP',
+        label: 'HOSCA YouTube',
+        hoverClass: 'hover:text-[#FF0000]',
+      },
     ],
   };
 
@@ -40,12 +55,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-4">
-              <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full bg-zinc-900/80 ring-2 ring-white/15">
+              <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full bg-white ring-2 ring-white/15">
                 <Image
                   src="/home/hosca.png"
                   alt="HOSCA Logo"
                   fill
-                  className="object-contain p-1"
+                  sizes="64px"
+                  className="rounded-full object-cover"
                   priority
                 />
               </div>
@@ -60,7 +76,7 @@ const Footer = () => {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-500 transition-colors duration-200 hover:text-sky-400"
+                  className={`text-zinc-500 transition-colors duration-200 ${link.hoverClass}`}
                   aria-label={link.label}
                 >
                   <link.icon className="h-6 w-6" />

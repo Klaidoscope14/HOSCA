@@ -67,22 +67,22 @@ const IkkattMembers: ClubMember[] = [
 
 export default function AnimePage() {
   const renderMemberCard = (member: ClubMember) => (
-    <div key={member.id} className="flex justify-center w-full">
+    <div key={member.id} className="flex w-full max-w-[320px] justify-center sm:w-[320px]">
       <CardContainer className="w-[320px] h-[520px]">
         <CardBody className="bg-[#F5D7A1] text-black border-white border w-[280px] h-[450px] rounded-xl p-6 flex flex-col justify-between">
           <CardItem translateZ="100" className="w-full mt-4">
-            <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-2 border-red-500 bg-white flex items-center justify-center">
+            <div className="relative mx-auto mb-4 flex h-36 w-36 flex-shrink-0 items-center justify-center overflow-hidden rounded-full border-2 border-red-500 bg-white">
             {member.imageUrl ? (
               <Image
                 src={member.imageUrl}
                 alt={member.name}
                 width={500} 
                 height={500}
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover"
               />
             ) : (
-              <div className="w-full h-full bg-white flex items-center justify-center">
-                <span className="text-3xl font-bold text-orange-500 text-center px-2">
+              <div className="flex h-full w-full items-center justify-center bg-white">
+                <span className="px-2 text-center text-3xl font-bold text-orange-500">
                   {member.name.charAt(0)}
                 </span>
               </div>
@@ -93,7 +93,7 @@ export default function AnimePage() {
           <div className="flex justify-center gap-5 mt-4">
             <CardItem
               translateZ="50"
-              className="flex items-center justify-center text-xl font-bold text-neutral-600 dark:text-white text-center"
+              className="flex items-center justify-center text-center text-xl font-bold text-zinc-900"
             >
               {member.name}
             </CardItem>
@@ -245,13 +245,13 @@ export default function AnimePage() {
           <h2 className="text-3xl font-semibold text-center mb-6 text-[#191970] px-2 md:px-0">
             Coordinators
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+          <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-10">
             {IkkattMembers.slice(0, 2).map((member) => renderMemberCard(member))}
           </div>
           <h2 className="text-3xl font-semibold text-center mt-12 mb-6 text-[#191970] px-4 md:px-0">
             Sub Coordinators
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+          <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-10">
             {IkkattMembers.slice(2).map((member) => renderMemberCard(member))}
           </div>
         </section>

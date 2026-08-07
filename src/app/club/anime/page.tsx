@@ -89,7 +89,7 @@ export default function AnimePage() {
           <div className="flex justify-center gap-5 mt-4">
             <CardItem
               translateZ="50"
-              className="flex items-center justify-center text-xl font-bold text-neutral-600 dark:text-white text-center"
+              className="flex items-center justify-center text-xl font-bold text-zinc-900 text-center"
             >
               {member.name}
             </CardItem>
@@ -164,11 +164,11 @@ export default function AnimePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <div className="w-full">
-            <div className="bg-white border-white relative group/card shadow-lg w-full h-auto rounded-xl p-8">
-              <h2 className="text-2xl font-bold text-neutral-700 dark:text-white mb-4">
+            <div className="bg-white border-white relative group/card shadow-lg w-full h-auto rounded-xl p-8 text-zinc-900">
+              <h2 className="mb-4 text-2xl font-bold text-zinc-900">
                 About Anime Club
               </h2>
-              <p className="text-neutral-600 dark:text-neutral-300">
+              <p className="text-zinc-700">
                 Anime Club is a hub for everyone from veteran weebs to
                 budding enthusiasts and provides a unique platform for people to
                 get together, engage in active discussions and showcase their
@@ -176,10 +176,10 @@ export default function AnimePage() {
                 world
               </p>
               <div className="mt-6">
-                <h3 className="text-xl font-semibold text-neutral-700 dark:text-white mb-3">
+                <h3 className="mb-3 text-xl font-semibold text-zinc-900">
                   What We Do
                 </h3>
-                <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
+                <ul className="list-inside list-disc space-y-2 text-zinc-700">
                   <li>Regular watch sessions</li>
                   <li>Animeme showcase</li>
                   <li>Gaming Arcade and Merch stalls</li>
@@ -188,10 +188,10 @@ export default function AnimePage() {
                 </ul>
               </div>
               <div className="mt-6">
-                <h3 className="text-xl font-semibold text-neutral-700 dark:text-white mb-3">
+                <h3 className="mb-3 text-xl font-semibold text-zinc-900">
                   Our Events
                 </h3>
-                <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
+                <ul className="list-inside list-disc space-y-2 text-zinc-700">
                   <li>Animecon</li>
                   <li>Hunter x Hunter</li>
                   <li>Dalgona candy challenge</li>

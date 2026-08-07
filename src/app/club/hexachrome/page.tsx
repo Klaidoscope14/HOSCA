@@ -20,7 +20,6 @@ const HexachromeMembers: ClubMember[] = [
     id: 1,
     name: 'K. Anantha Akash',
     position: 'Coordinator',
-    imageUrl: '/Coordinators/HexaChrome/K._Anantha_Akash.jpg',
   },
   {
     id: 2,

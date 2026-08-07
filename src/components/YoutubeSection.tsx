@@ -48,7 +48,7 @@ const YoutubeSection: React.FC<YoutubeSectionProps> = ({ videoId, title }) => {
           rel="noopener noreferrer"
           className="mt-10"
         >
-          <InteractiveHoverButton className="border-white/30 bg-white/5 text-zinc-200 hover:border-white/50 hover:bg-white/10">
+          <InteractiveHoverButton className="border-white/30 bg-white/5 text-zinc-200 hover:border-[#FF0000] hover:bg-[#FF0000] hover:text-white">
             Watch on YouTube
           </InteractiveHoverButton>
         </a>

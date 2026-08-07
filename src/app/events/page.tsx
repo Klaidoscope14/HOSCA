@@ -1,7 +1,7 @@
 "use client";
 
 import { Suspense } from "react";
-import { CalendarDays, MapPin, Sparkles } from "lucide-react";
+import { CalendarDays, MapPin } from "lucide-react";
 import { Cover } from "@/components/ui/cover";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { OptimizedImagesSlider } from "@/components/ui/images-slider-optimized";

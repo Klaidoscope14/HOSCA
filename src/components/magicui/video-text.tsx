@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import React, { ElementType, ReactNode, useEffect, useState } from "react";
+import React, { ElementType, ReactNode } from "react";
 
 export interface VideoTextProps {
   /**
@@ -81,21 +81,11 @@ export function VideoText({
   as: Component = "div",
   style = {},
 }: VideoTextProps) {
-  const [svgMask, setSvgMask] = useState("");
   const content = React.Children.toArray(children).join("");
 
-  useEffect(() => {
-    const updateSvgMask = () => {
-      const responsiveFontSize =
-        typeof fontSize === "number" ? `${fontSize}vw` : fontSize;
-      const newSvgMask = `<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'><text x='50%' y='50%' font-size='${responsiveFontSize}' font-weight='${fontWeight}' text-anchor='${textAnchor}' dominant-baseline='${dominantBaseline}' font-family='${fontFamily}'>${content}</text></svg>`;
-      setSvgMask(newSvgMask);
-    };
-
-    updateSvgMask();
-    window.addEventListener("resize", updateSvgMask);
-    return () => window.removeEventListener("resize", updateSvgMask);
-  }, [content, fontSize, fontWeight, textAnchor, dominantBaseline, fontFamily]);
+  const responsiveFontSize =
+    typeof fontSize === "number" ? `${fontSize}vw` : fontSize;
+  const svgMask = `<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'><text x='50%' y='50%' font-size='${responsiveFontSize}' font-weight='${fontWeight}' text-anchor='${textAnchor}' dominant-baseline='${dominantBaseline}' font-family='${fontFamily}'>${content}</text></svg>`;
 
   const dataUrlMask = `url("data:image/svg+xml,${encodeURIComponent(svgMask)}")`;
 

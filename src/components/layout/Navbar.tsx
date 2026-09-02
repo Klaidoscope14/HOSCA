@@ -54,7 +54,7 @@ const Navbar = () => {
       </Suspense>
       <div className="relative z-10 mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <Image src="/home/hosca.png" width={48} height={48} alt="HOSCA IIT Patna logo" className="h-12 w-auto object-contain rounded-full"/>
+          <Image src="/home/hosca.png" width={48} height={48} priority alt="HOSCA IIT Patna logo" className="h-12 w-auto object-contain rounded-full"/>
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">HOSCA</span>
         </Link>
 

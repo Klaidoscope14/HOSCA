@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
-import About from "@/components/About";
-import YoutubeSection from "@/components/YoutubeSection";
+import dynamic from "next/dynamic";
+
+const About = dynamic(() => import("@/components/About"));
+const YoutubeSection = dynamic(() => import("@/components/YoutubeSection"));
 import HomePageLayout from "@/components/HomePageLayout";
 import { createPageMetadata, siteConfig } from "@/lib/seo";
 

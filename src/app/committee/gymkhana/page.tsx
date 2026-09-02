@@ -1,6 +1,5 @@
 "use client";
 
-import type { ReactNode } from "react";
 import Image from "next/image";
 import { FaEnvelope, FaLinkedin } from "react-icons/fa";
 import { StarrySkyBackdrop } from "@/components/StarrySkyBackdrop";

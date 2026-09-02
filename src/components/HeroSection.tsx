@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { VideoText } from "@/components/magicui/video-text";
@@ -11,16 +11,6 @@ const FlipText = React.lazy(() =>
 );
 
 export default function HeroSection() {
-  const [showEnhancements, setShowEnhancements] = useState(false);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setShowEnhancements(true);
-    }, 500);
-
-    return () => clearTimeout(timeout);
-  }, []);
-
   return (
     <section className="relative w-full min-h-screen overflow-hidden text-white">
       <div
@@ -31,37 +21,43 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-20 flex min-h-screen flex-col items-center justify-center space-y-8 px-4 py-24">
-        <div className="flex w-full max-w-[90vw] items-center justify-center">
-          {showEnhancements && (
-            <div className="hero-hosca-glow-static w-full">
-              <React.Suspense fallback={null}>
-                <VideoText
-                  className="h-[160px] w-full font-bold text-transparent sm:h-[200px] md:h-[250px] lg:h-[350px]"
-                  src="/video/huscabg-vid.mp4"
-                  fontSize="clamp(30px, 25vw, 350px)"
-                  style={{
-                    WebkitTextStroke: "1px rgba(255,255,255,0.85)",
-                  }}
-                >
-                  HOSCA
-                </VideoText>
-              </React.Suspense>
-            </div>
-          )}
-        </div>
-
-        <div className="space-y-2 overflow-hidden px-4 text-center leading-tight sm:px-6 md:px-8">
-          {showEnhancements && (
-            <React.Suspense fallback={null}>
-              <FlipText className="animate-gradient-x-slow bg-gradient-to-r from-zinc-300 via-white to-zinc-300 bg-clip-text text-sm font-medium tracking-tight text-transparent sm:text-xl md:text-2xl lg:text-3xl">
-                The House Of Socio-Cultural
-              </FlipText>
-              <FlipText className="animate-gradient-x-slow bg-gradient-to-r from-zinc-300 via-white to-zinc-300 bg-clip-text text-sm font-medium tracking-tight text-transparent sm:text-xl md:text-2xl lg:text-3xl">
-                Affairs
-              </FlipText>
+        <motion.div 
+          className="flex w-full max-w-[90vw] items-center justify-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+        >
+          <div className="hero-hosca-glow-static w-full">
+            <React.Suspense fallback={<div className="h-[160px] sm:h-[200px] md:h-[250px] lg:h-[350px]" />}>
+              <VideoText
+                className="h-[160px] w-full font-bold text-transparent sm:h-[200px] md:h-[250px] lg:h-[350px]"
+                src="/video/huscabg-vid.mp4"
+                fontSize="clamp(30px, 25vw, 350px)"
+                style={{
+                  WebkitTextStroke: "1px rgba(255,255,255,0.85)",
+                }}
+              >
+                HOSCA
+              </VideoText>
             </React.Suspense>
-          )}
-        </div>
+          </div>
+        </motion.div>
+
+        <motion.div 
+          className="space-y-2 overflow-hidden px-4 text-center leading-tight sm:px-6 md:px-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.4 }}
+        >
+          <React.Suspense fallback={<div className="h-16" />}>
+            <FlipText className="animate-gradient-x-slow bg-gradient-to-r from-zinc-300 via-white to-zinc-300 bg-clip-text text-sm font-medium tracking-tight text-transparent sm:text-xl md:text-2xl lg:text-3xl">
+              The House Of Socio-Cultural
+            </FlipText>
+            <FlipText className="animate-gradient-x-slow bg-gradient-to-r from-zinc-300 via-white to-zinc-300 bg-clip-text text-sm font-medium tracking-tight text-transparent sm:text-xl md:text-2xl lg:text-3xl">
+              Affairs
+            </FlipText>
+          </React.Suspense>
+        </motion.div>
 
         <motion.div
           className="flex flex-col justify-center gap-4 sm:flex-row sm:flex-wrap"

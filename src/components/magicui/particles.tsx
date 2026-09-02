@@ -5,35 +5,9 @@ import React, {
   ComponentPropsWithoutRef,
   useEffect,
   useRef,
-  useState,
   useCallback,
 } from "react";
 
-interface MousePosition {
-  x: number;
-  y: number;
-}
-
-function MousePosition(): MousePosition {
-  const [mousePosition, setMousePosition] = useState<MousePosition>({
-    x: 0,
-    y: 0,
-  });
-
-  useEffect(() => {
-    const handleMouseMove = (event: MouseEvent) => {
-      setMousePosition({ x: event.clientX, y: event.clientY });
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
-
-  return mousePosition;
-}
 
 interface ParticlesProps extends ComponentPropsWithoutRef<"div"> {
   className?: string;
@@ -93,26 +67,32 @@ export const Particles: React.FC<ParticlesProps> = ({
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const context = useRef<CanvasRenderingContext2D | null>(null);
   const circles = useRef<Circle[]>([]);
-  const mousePosition = MousePosition();
   const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
   const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
   const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1;
   const rafID = useRef<number | null>(null);
   const resizeTimeout = useRef<NodeJS.Timeout | null>(null);
 
-  const onMouseMove = useCallback(() => {
-    if (canvasRef.current) {
-      const rect = canvasRef.current.getBoundingClientRect();
-      const { w, h } = canvasSize.current;
-      const x = mousePosition.x - rect.left - w / 2;
-      const y = mousePosition.y - rect.top - h / 2;
-      const inside = x < w / 2 && x > -w / 2 && y < h / 2 && y > -h / 2;
-      if (inside) {
-        mouse.current.x = x;
-        mouse.current.y = y;
+  useEffect(() => {
+    const handleMouseMove = (event: MouseEvent) => {
+      if (canvasRef.current) {
+        const rect = canvasRef.current.getBoundingClientRect();
+        const { w, h } = canvasSize.current;
+        const x = event.clientX - rect.left - w / 2;
+        const y = event.clientY - rect.top - h / 2;
+        const inside = x < w / 2 && x > -w / 2 && y < h / 2 && y > -h / 2;
+        if (inside) {
+          mouse.current.x = x;
+          mouse.current.y = y;
+        }
       }
-    }
-  }, [mousePosition]);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   const circleParams = useCallback((): Circle => {
     const x = Math.floor(Math.random() * canvasSize.current.w);
@@ -285,10 +265,6 @@ export const Particles: React.FC<ParticlesProps> = ({
       window.removeEventListener("resize", handleResize);
     };
   }, [color, animate, initCanvas]);
-
-  useEffect(() => {
-    onMouseMove();
-  }, [mousePosition, onMouseMove]);
 
   useEffect(() => {
     initCanvas();

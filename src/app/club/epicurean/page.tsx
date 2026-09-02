@@ -197,16 +197,7 @@ export default function EpicureanPage() {
 
           <div className="mb-16">
             <ImageGrid
-              images={[
-                "/ClubPages/Epicurean/IMG-20250126-WA0040.jpg",
-                "/ClubPages/Epicurean/IMG-20250126-WA0042.jpg",
-                "/ClubPages/Epicurean/IMG-20250126-WA0045.jpg",
-                "/ClubPages/Epicurean/IMG-20250126-WA0046.jpg",
-                "/ClubPages/Epicurean/IMG-20250126-WA0047.jpg",
-                "/ClubPages/Epicurean/IMG-20250126-WA0049.jpg",
-                "/ClubPages/Epicurean/IMG-20250126-WA0050.jpg",
-                "/ClubPages/Epicurean/IMG-20250126-WA0051.jpg",
-              ]}
+              images={[]}
               className="max-w-4xl mx-auto"
             />
           </div>

@@ -226,20 +226,13 @@ export default function HootPage() {
           <div className="mb-16">
             <ImageGrid
               images={[
-                "/ClubPages/HOOT/HOOT1.jpg",
-                "/ClubPages/HOOT/HOOT2.jpg",
-                "/ClubPages/HOOT/HOOT3.jpg",
-                "/ClubPages/HOOT/HOOT4.jpg",
-                "/ClubPages/HOOT/HOOT5.jpg",
-                "/ClubPages/HOOT/HOOT6.jpg",
-                "/ClubPages/HOOT/HOOT7.jpg",
-                "/ClubPages/HOOT/HOOT8.jpg",
-                "/ClubPages/HOOT/HOOT9.jpg",
-                "/ClubPages/HOOT/HOOT10.jpg",
-                "/ClubPages/HOOT/HOOT11.jpg",
-                "/ClubPages/HOOT/HOOT12.jpg",
-                "/ClubPages/HOOT/HOOT13.jpg",
-              ]}
+  "/ClubPages/Hoot/Hoot_5.jpeg",
+  "/ClubPages/Hoot/Hoot_6.jpeg",
+  "/ClubPages/Hoot/Hoot_7.jpeg",
+  "/ClubPages/Hoot/Hoot_8.jpeg",
+  "/ClubPages/Hoot/Hoot_9.jpeg",
+  "/ClubPages/Hoot/Hoot_10.jpeg"
+]}
               className="max-w-4xl mx-auto"
             />
           </div>

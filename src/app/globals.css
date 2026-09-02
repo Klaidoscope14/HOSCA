@@ -343,3 +343,15 @@ main {
     }
   }
 }
+
+@keyframes scroll-ltr {
+  from { transform: translateX(0%); }
+  to { transform: translateX(50%); }
+}
+.animate-scroll-ltr {
+  animation: scroll-ltr 20s linear infinite;
+}
+
+.pause-on-hover:hover .animate-scroll-ltr {
+  animation-play-state: paused !important;
+}

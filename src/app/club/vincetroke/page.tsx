@@ -221,15 +221,12 @@ export default function VincetrokePage() {
           <div className="mb-16">
             <ImageGrid
               images={[
-                "/ClubPages/Vincetroke/im 1.jpg",
-                "/ClubPages/Vincetroke/im 2.jpg",
-                "/ClubPages/Vincetroke/im 3.jpg",
-                "/ClubPages/Vincetroke/im 4.jpg",
-                "/ClubPages/Vincetroke/im 5.jpg",
-                "/ClubPages/Vincetroke/im 6.jpg",
-                "/ClubPages/Vincetroke/im 7.jpg",
-                "/ClubPages/Vincetroke/im 8.jpg",
-              ]}
+  "/ClubPages/Vincetroke /Vincetroke_5.jpg",
+  "/ClubPages/Vincetroke /Vincetroke_6.jpg",
+  "/ClubPages/Vincetroke /Vincetroke_7.jpg",
+  "/ClubPages/Vincetroke /Vincetroke_8.jpg",
+  "/ClubPages/Vincetroke /Vincetroke_9.jpg"
+]}
               className="max-w-4xl mx-auto"
             />
           </div>

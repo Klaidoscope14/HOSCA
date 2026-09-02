@@ -229,27 +229,8 @@ export default function ExousiaPage() {
 
           <div className="mb-16">
           <ImageGrid images={[
-            "/ClubPages/Exousia/IMG-20250613-WA0026.jpg",
-            "/ClubPages/Exousia/IMG-20250613-WA0027.jpg",
-            "/ClubPages/Exousia/IMG-20250613-WA0029.jpg",
-            "/ClubPages/Exousia/IMG-20250613-WA0030.jpg",
-            "/ClubPages/Exousia/IMG-20250613-WA0031.jpg",
-            "/ClubPages/Exousia/IMG-20250613-WA0032.jpg",
-            "/ClubPages/Exousia/IMG-20250613-WA0033.jpg",
-            "/ClubPages/Exousia/IMG-20250613-WA0034.jpg",
-            "/ClubPages/Exousia/IMG-20250613-WA0035.jpg",
-            "/ClubPages/Exousia/IMG-20250613-WA0036.jpg",
-            "/ClubPages/Exousia/IMG-20250613-WA0037.jpg",
-            "/ClubPages/Exousia/IMG-20250613-WA0038.jpg",
-            "/ClubPages/Exousia/IMG-20250613-WA0039.jpg",
-            "/ClubPages/Exousia/IMG-20250613-WA0040.jpg",
-            "/ClubPages/Exousia/IMG-20250613-WA0041.jpg",
-            "/ClubPages/Exousia/IMG-20250613-WA0042.jpg",
-            "/ClubPages/Exousia/IMG-20250613-WA0043.jpg",
-            "/ClubPages/Exousia/IMG-20250613-WA0044.jpg",
-            "/ClubPages/Exousia/IMG-20250613-WA0045.jpg",
-            "/ClubPages/Exousia/IMG-20250613-WA0046.jpg",
-            ]} className="max-w-4xl mx-auto"/>
+  "/ClubPages/Exousia /Exousia_9.jpeg"
+]} className="max-w-4xl mx-auto"/>
           </div>
         </div>
 

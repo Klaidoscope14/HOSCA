@@ -205,20 +205,13 @@ export default function AnimePage() {
           <div className="mb-16">
             <ImageGrid
               images={[
-                "/ClubPages/Anime-club/1.jpg",
-                "/ClubPages/Anime-club/2.jpg",
-                "/ClubPages/Anime-club/3.jpg",
-                "/ClubPages/Anime-club/4.jpg",
-                "/ClubPages/Anime-club/5.jpg",
-                "/ClubPages/Anime-club/6.jpg",
-                "/ClubPages/Anime-club/7.jpg",
-                "/ClubPages/Anime-club/8.jpg",
-                "/ClubPages/Anime-club/9.jpg",
-                "/ClubPages/Anime-club/10.jpg",
-                "/ClubPages/Anime-club/11.jpg",
-                "/ClubPages/Anime-club/12.jpg",
-                "/ClubPages/Anime-club/13.jpg",
-              ]}
+  "/ClubPages/Anime club/Anime_club_5.jpg",
+  "/ClubPages/Anime club/Anime_club_6.jpg",
+  "/ClubPages/Anime club/Anime_club_7.jpg",
+  "/ClubPages/Anime club/Anime_club_8.jpg",
+  "/ClubPages/Anime club/Anime_club_9.jpg",
+  "/ClubPages/Anime club/Anime_club_10.jpg"
+]}
               className="max-w-4xl mx-auto"
             />
           </div>

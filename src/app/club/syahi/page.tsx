@@ -223,15 +223,10 @@ export default function SyahiPage() {
           <div className="mb-16">
             <ImageGrid
               images={[
-                "/ClubPages/Syahi/Syahi-1.JPG",
-                "/ClubPages/Syahi/Syahi-2.JPG",
-                "/ClubPages/Syahi/Syahi-3.JPG",
-                "/ClubPages/Syahi/Syahi-4.JPG",
-                "/ClubPages/Syahi/Syahi-5.jpg",
-                "/ClubPages/Syahi/Syahi-6.jpg",
-                "/ClubPages/Syahi/Syahi-7.jpg",
-                "/ClubPages/Syahi/Syahi-8.jpg",
-              ]}
+  "/ClubPages/Syahi/Syahi_5.jpg",
+  "/ClubPages/Syahi/Syahi_6.jpg",
+  "/ClubPages/Syahi/Syahi_7.jpg"
+]}
               className="max-w-4xl mx-auto"
             />
           </div>

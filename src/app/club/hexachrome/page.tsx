@@ -214,28 +214,7 @@ export default function HexaChromePage() {
 
           <div className="mb-16">
             <ImageGrid
-              images={[
-                "/ClubPages/Hexachrome/IMG-20241028-WA0001.jpg",
-                "/ClubPages/Hexachrome/IMG-20241028-WA0002.jpg",
-                "/ClubPages/Hexachrome/IMG-20241028-WA0003.jpg",
-                "/ClubPages/Hexachrome/IMG-20241028-WA0004.jpg",
-                "/ClubPages/Hexachrome/IMG-20241028-WA0005.jpg",
-                "/ClubPages/Hexachrome/IMG-20241028-WA0006.jpg",
-                "/ClubPages/Hexachrome/IMG-20241028-WA0007.jpg",
-                "/ClubPages/Hexachrome/IMG-20241028-WA0008.jpg",
-                "/ClubPages/Hexachrome/IMG-20241028-WA0009.jpg",
-                "/ClubPages/Hexachrome/IMG-20241028-WA0010.jpg",
-                "/ClubPages/Hexachrome/IMG-20241028-WA0011.jpg",
-                "/ClubPages/Hexachrome/IMG-20241019-WA0013.jpg",
-                "/ClubPages/Hexachrome/IMG-20241018-WA0058.jpg",
-                "/ClubPages/Hexachrome/IMG-20241018-WA0060.jpg",
-                "/ClubPages/Hexachrome/IMG-20241018-WA0062.jpg",
-                "/ClubPages/Hexachrome/IMG-20241018-WA0069.jpg",
-                "/ClubPages/Hexachrome/IMG-20241018-WA0071.jpg",
-                "/ClubPages/Hexachrome/IMG-20241018-WA0073.jpg",
-                "/ClubPages/Hexachrome/IMG-20241018-WA0075.jpg",
-                "/ClubPages/Hexachrome/IMG-20241018-WA0077.jpg",
-              ]}
+              images={[]}
               className="max-w-4xl mx-auto"
             />
           </div>

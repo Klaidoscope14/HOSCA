@@ -192,16 +192,12 @@ Join the StandUp Club—where crying turns into comedy, and oversharing is an ar
               <div className="mb-16">
                <ImageGrid
                             images={[
-                              "/ClubPages/STD/IMG_20250614_162431.jpg",
-                              "/ClubPages/STD/IMG_20250614_163131.jpg",
-                              "/ClubPages/STD/IMG-20240810-WA0024.jpg",
-                              "/ClubPages/STD/IMG-20250614-WA0006.jpg",
-                              "/ClubPages/STD/IMG-20250614-WA0011.jpg",
-                              "/ClubPages/STD/IMG-20250614-WA0014.jpg",
-                              "/ClubLogo/std.png",
-                              "/ClubLogo/std.png",
-                            
-                            ]}
+  "/ClubPages/STD/STD_6.jpg",
+  "/ClubPages/STD/STD_7.jpg",
+  "/ClubPages/STD/STD_8.jpg",
+  "/ClubPages/STD/STD_9.jpg",
+  "/ClubPages/STD/STD_10.jpg"
+]}
                             className="max-w-4xl mx-auto"
                           />
 

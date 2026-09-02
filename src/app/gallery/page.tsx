@@ -4,13 +4,14 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
-import { X } from "lucide-react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Cover } from "@/components/ui/cover";
 import { StarrySkyBackdrop } from "@/components/StarrySkyBackdrop";
 
 type GalleryItem = {
   title: string;
-  src: string;
+  src?: string;
+  images?: string[];
   href?: string;
 };
 
@@ -24,19 +25,69 @@ const featuredMoments: GalleryItem[] = [
 ];
 
 const clubHighlights: GalleryItem[] = [
-  { title: "Yavanika", src: "/ClubPages/Yavanika/Picture1.jpg", href: "/club/yavanika" },
-  { title: "Exousia", src: "/ClubPages/Exousia/IMG-20250613-WA0029.jpg", href: "/club/exousia" },
-  { title: "Aria", src: "/ClubPages/Aria/IMG-20250614-WA0108.jpg", href: "/club/aria" },
-  { title: "Pixxel", src: "/ClubPages/Pixxel/1000062866.jpg", href: "/club/pixxel" },
-  { title: "HOOT", src: "/ClubPages/HOOT/HOOT2.jpg", href: "/club/hoot" },
-  { title: "Quiz Club", src: "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.06.01.jpeg", href: "/club/quiz" },
-  { title: "Epicurean", src: "/ClubPages/Epicurean/IMG-20250126-WA0042.jpg", href: "/club/epicurean" },
-  { title: "Vincetroke", src: "/ClubPages/Vincetroke/im 2.jpg", href: "/club/vincetroke" },
-  { title: "Ikkatt", src: "/ClubPages/Ikkatt/ikkat2.jpg", href: "/club/ikkatt" },
+  { title: "Yavanika", images: ["/ClubPages/Yavanika/Yavanika_1.jpg","/ClubPages/Yavanika/Yavanika_2.jpg","/ClubPages/Yavanika/Yavanika_3.jpg","/ClubPages/Yavanika/Yavanika_4.jpg"], href: "/club/yavanika" },
+  { title: "Exousia", images: ["/ClubPages/Exousia /Exousia_5.jpg","/ClubPages/Exousia /Exousia_6.jpg","/ClubPages/Exousia /Exousia_7.jpg","/ClubPages/Exousia /Exousia_8.jpg"], href: "/club/exousia" },
+  { title: "Aria", images: ["/ClubPages/Aria/Aria_1.jpg","/ClubPages/Aria/Aria_2.jpg","/ClubPages/Aria/Aria_3.jpg","/ClubPages/Aria/Aria_4.jpg"], href: "/club/aria" },
+  { title: "Pixxel", images: ["/ClubPages/Pixxel/Pixxel_1.jpg","/ClubPages/Pixxel/Pixxel_2.jpg","/ClubPages/Pixxel/Pixxel_3.jpg","/ClubPages/Pixxel/Pixxel_4.jpg"], href: "/club/pixxel" },
+  { title: "HOOT", images: ["/ClubPages/Hoot/Hoot_1.jpeg","/ClubPages/Hoot/Hoot_2.jpeg","/ClubPages/Hoot/Hoot_3.jpeg","/ClubPages/Hoot/Hoot_4.jpeg"], href: "/club/hoot" },
+  { title: "Quiz Club", images: ["/ClubPages/QC/QC_2.jpg","/ClubPages/QC/QC_3.jpg","/ClubPages/QC/QC_4.jpg","/ClubPages/QC/QC_5.jpg"], href: "/club/quiz" },
+  { title: "Epicurean", images: ["/ClubPages/Epicurean /Epicurean_1.jpg","/ClubPages/Epicurean /Epicurean_3.jpg","/ClubPages/Epicurean /Epicurean_1.jpg","/ClubPages/Epicurean /Epicurean_3.jpg"], href: "/club/epicurean" },
+  { title: "Vincetroke", images: ["/ClubPages/Vincetroke /Vincetroke_1.jpg","/ClubPages/Vincetroke /Vincetroke_2.jpg","/ClubPages/Vincetroke /Vincetroke_3.jpg","/ClubPages/Vincetroke /Vincetroke_4.jpg"], href: "/club/vincetroke" },
+  { title: "Ikkatt", images: ["/ClubPages/Ikkatt/Ikkatt_1.jpg","/ClubPages/Ikkatt/Ikkatt_2.jpg","/ClubPages/Ikkatt/Ikkatt_3.jpg","/ClubPages/Ikkatt/Ikkatt_4.jpg"], href: "/club/ikkatt" },
 ];
 
+function CardCarousel({ item, onEnlarge }: { item: GalleryItem, onEnlarge: (item: GalleryItem, index: number) => void }) {
+  const images = item.images || (item.src ? [item.src] : []);
+
+  return (
+    <div 
+      className="group relative block overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 text-left h-[300px] cursor-pointer"
+      onClick={() => onEnlarge(item, 0)}
+    >
+      <Image
+        src={images[0]}
+        alt={`${item.title}`}
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none" />
+
+      <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-5 pointer-events-none">
+        <div>
+          <p className="text-xs uppercase tracking-[0.3em] text-slate-300">Club Spotlight</p>
+          <h3 className="mt-2 text-2xl font-semibold text-white">{item.title}</h3>
+        </div>
+        <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-sm text-white opacity-0 transition-all duration-300 group-hover:opacity-100 pointer-events-auto">
+          Enlarge
+        </span>
+      </div>
+    </div>
+  );
+}
+
 export default function GalleryPage() {
-  const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
+  const [selectedImage, setSelectedImage] = useState<{ images: string[], currentIndex: number, title: string, href?: string } | null>(null);
+
+  const nextModalImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (selectedImage) {
+      setSelectedImage({
+        ...selectedImage,
+        currentIndex: (selectedImage.currentIndex + 1) % selectedImage.images.length
+      });
+    }
+  };
+
+  const prevModalImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (selectedImage) {
+      setSelectedImage({
+        ...selectedImage,
+        currentIndex: (selectedImage.currentIndex - 1 + selectedImage.images.length) % selectedImage.images.length
+      });
+    }
+  };
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -85,11 +136,11 @@ export default function GalleryPage() {
               <button
                 key={item.title}
                 type="button"
-                onClick={() => setSelectedImage(item)}
+                onClick={() => setSelectedImage({ images: [item.src!], currentIndex: 0, title: item.title, href: item.href })}
                 className={`group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 text-left shadow-[0_18px_60px_-28px_rgba(0,0,0,0.82)] ${index === 0 ? "md:col-span-2 md:row-span-2" : ""}`}
               >
                 <Image
-                  src={item.src}
+                  src={item.src!}
                   alt={item.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
@@ -119,32 +170,11 @@ export default function GalleryPage() {
           </div>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {clubHighlights.map((item) => (
-              <button
-                key={item.title}
-                type="button"
-                onClick={() => setSelectedImage(item)}
-                className="group relative block overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 text-left"
-              >
-                <div className="relative h-[300px]">
-                  <Image
-                    src={item.src}
-                    alt={item.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                  <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-5">
-                    <div>
-                      <p className="text-xs uppercase tracking-[0.3em] text-slate-300">Club Spotlight</p>
-                      <h3 className="mt-2 text-2xl font-semibold text-white">{item.title}</h3>
-                    </div>
-                    <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-sm text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
-                      Enlarge
-                    </span>
-                  </div>
-                </div>
-              </button>
+              <CardCarousel 
+                key={item.title} 
+                item={item} 
+                onEnlarge={(item, idx) => setSelectedImage({ images: item.images || [item.src!], currentIndex: idx, title: item.title, href: item.href })} 
+              />
             ))}
           </div>
         </section>
@@ -176,14 +206,33 @@ export default function GalleryPage() {
                 <X className="h-5 w-5" />
               </button>
 
-              <div className="relative aspect-[16/10] w-full">
+              <div className="relative h-[60vh] max-h-[600px] w-full group">
                 <Image
-                  src={selectedImage.src}
-                  alt={selectedImage.title}
+                  src={selectedImage.images[selectedImage.currentIndex]}
+                  alt={`${selectedImage.title} ${selectedImage.currentIndex + 1}`}
                   fill
                   sizes="100vw"
                   className="object-contain"
                 />
+                
+                {selectedImage.images.length > 1 && (
+                  <>
+                    <button 
+                      onClick={prevModalImage}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-black/50 text-white opacity-0 transition-all duration-300 hover:bg-white/20 group-hover:opacity-100 z-10"
+                      aria-label="Previous image"
+                    >
+                      <ChevronLeft className="h-6 w-6" />
+                    </button>
+                    <button 
+                      onClick={nextModalImage}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-black/50 text-white opacity-0 transition-all duration-300 hover:bg-white/20 group-hover:opacity-100 z-10"
+                      aria-label="Next image"
+                    >
+                      <ChevronRight className="h-6 w-6" />
+                    </button>
+                  </>
+                )}
               </div>
 
               <div className="flex flex-col gap-4 border-t border-white/10 px-6 py-5 md:flex-row md:items-center md:justify-between">

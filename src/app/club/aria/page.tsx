@@ -227,21 +227,11 @@ export default function AriaPage() {
           <div className="mb-16">
             <ImageGrid
               images={[
-                "/ClubPages/Aria/IMG-20250614-WA0146.jpg",
-                "/ClubPages/Aria/IMG-20250614-WA0142.jpg",
-                "/ClubPages/Aria/IMG-20250614-WA0140.jpg",
-                "/ClubPages/Aria/IMG-20250614-WA0136.jpg",
-                "/ClubPages/Aria/IMG-20250614-WA0134.jpg",
-                "/ClubPages/Aria/IMG-20250614-WA0125.jpg",
-                "/ClubPages/Aria/IMG-20250614-WA0119.jpg",
-                "/ClubPages/Aria/IMG-20250614-WA0115.jpg",
-                "/ClubPages/Aria/IMG-20250614-WA0114.jpg",
-                "/ClubPages/Aria/IMG-20250614-WA0113.jpg",
-                "/ClubPages/Aria/IMG-20250614-WA0109.jpg",
-                "/ClubPages/Aria/IMG-20250614-WA0108.jpg",
-                "/ClubPages/Aria/IMG-20250614-WA0107.jpg",
-                "/ClubPages/Aria/IMG-20250210-WA0018.jpg",
-              ]}
+  "/ClubPages/Aria/Aria_5.jpg",
+  "/ClubPages/Aria/Aria_6.jpg",
+  "/ClubPages/Aria/Aria_7.jpg",
+  "/ClubPages/Aria/Aria_8.jpg"
+]}
               className="max-w-4xl mx-auto"
             />
           </div>

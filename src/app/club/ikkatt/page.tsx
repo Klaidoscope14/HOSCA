@@ -224,15 +224,13 @@ export default function AnimePage() {
           <div className="mb-16">
             <ImageGrid
               images={[
-                "/ClubPages/Ikkatt/ikkat1.jpg",
-                "/ClubPages/Ikkatt/ikkat2.jpg",
-                "/ClubPages/Ikkatt/ikkat3.jpg",
-                "/ClubPages/Ikkatt/ikkat4.jpg",
-                "/ClubPages/Ikkatt/ikkat5.jpg",
-                "/ClubPages/Ikkatt/ikkat6.jpg",
-                "/ClubPages/Ikkatt/ikkat9.jpg",
-                "/ClubPages/Ikkatt/ikkat8.jpg"
-              ]}
+  "/ClubPages/Ikkatt/Ikkatt_5.jpg",
+  "/ClubPages/Ikkatt/Ikkatt_6.jpg",
+  "/ClubPages/Ikkatt/Ikkatt_7.jpg",
+  "/ClubPages/Ikkatt/Ikkatt_8.jpg",
+  "/ClubPages/Ikkatt/Ikkatt_9.jpg",
+  "/ClubPages/Ikkatt/Ikkatt_10.jpg"
+]}
               className="max-w-4xl mx-auto"
             />
           </div>

@@ -209,27 +209,13 @@ export default function YavanikaPage() {
           <div className="mb-16">
             <ImageGrid
               images={[
-                "/ClubPages/Yavanika/Picture1.jpg",
-                "/ClubPages/Yavanika/Picture3.jpg",
-                "/ClubPages/Yavanika/Picture5.jpg",
-                "/ClubPages/Yavanika/Picture8.jpg",
-                "/ClubPages/Yavanika/Picture10.jpg",
-                "/ClubPages/Yavanika/Picture11.jpg",
-                "/ClubPages/Yavanika/Picture13.png",
-                "/ClubPages/Yavanika/Picture14.png",
-                "/ClubPages/Yavanika/Picture15.png",
-                "/ClubPages/Yavanika/Picture16.jpg",
-                "/ClubPages/Yavanika/Picture17.jpg",
-                "/ClubPages/Yavanika/Picture18.jpg",
-                "/ClubPages/Yavanika/Picture19.jpg",
-                "/ClubPages/Yavanika/Picture20.jpg",
-                "/ClubPages/Yavanika/Picture21.jpg",
-                "/ClubPages/Yavanika/Picture22.jpg",
-                "/ClubPages/Yavanika/WhatsApp Image 2025-06-13 at 21.13.25_a7e3e9e4.jpg",
-                "/ClubPages/Yavanika/WhatsApp Image 2025-06-13 at 21.13.24_f47aabd2.jpg",
-                "/ClubPages/Yavanika/WhatsApp Image 2025-06-13 at 21.13.24_545c13a3.jpg",
-                "/ClubPages/Yavanika/WhatsApp Image 2025-06-13 at 21.13.23_50f5c902.jpg",
-              ]}
+  "/ClubPages/Yavanika/Yavanika_5.jpg",
+  "/ClubPages/Yavanika/Yavanika_6.jpg",
+  "/ClubPages/Yavanika/Yavanika_7.jpg",
+  "/ClubPages/Yavanika/Yavanika_8.jpg",
+  "/ClubPages/Yavanika/Yavanika_9.jpg",
+  "/ClubPages/Yavanika/Yavanika_10.jpg"
+]}
               className="max-w-4xl mx-auto"
             />
           </div>

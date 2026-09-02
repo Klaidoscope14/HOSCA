@@ -215,27 +215,12 @@ export default function QuizPage() {
           <div className="mb-16">
             <ImageGrid
               images={[
-                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.08.jpeg",
-                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.07.jpeg",
-                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.07 (2).jpeg",
-                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.06.jpeg",
-                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.31.06 (2).jpeg",
-                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.18.07.jpeg",
-                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.18.06.jpeg",
-                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.19.jpeg",
-                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.18.jpeg",
-                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.17.jpeg",
-                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.16.jpeg",
-                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.15.jpeg",
-                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.14.jpeg",
-                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.13.jpeg",
-                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.12.jpeg",
-                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.11.jpeg",
-                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.17.10.jpeg",
-                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.08.13.jpeg",
-                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.06.01.jpeg",
-                "/ClubPages/QC/WhatsApp Image 2025-06-14 at 16.06.00.jpeg",
-              ]}
+  "/ClubPages/QC/QC_6.jpg",
+  "/ClubPages/QC/QC_7.jpg",
+  "/ClubPages/QC/QC_8.jpg",
+  "/ClubPages/QC/QC_9.jpg",
+  "/ClubPages/QC/QC_10.jpg"
+]}
               className="max-w-4xl mx-auto"
             />
           </div>

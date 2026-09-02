@@ -2,7 +2,7 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaEnvelope, FaLinkedin } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
 
@@ -21,48 +21,63 @@ const EpicureanMembers: ClubMember[] = [
     name: 'Devesh Yadav',
     position: 'Coordinator',
     imageUrl: '/Coordinators/Epicurean/Devesh_Yadav.jpg',
+    email: "devesh_2401ec08@iitp.ac.in",
   },
   {
     id: 2,
     name: 'Shashank Mishra',
     position: 'Coordinator',
     imageUrl: '/Coordinators/Epicurean/Shashank_mishra.png',
+    email: "shashank_2401ec36@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/shashank-mishra-72b495326?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     id: 3,
     name: 'Aditi Yadav',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Epicurean/Aditi_Yadav.jpg',
+    email: "aditi_2501mc30@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/aditi-yadav-ba8097381?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     id: 4,
     name: 'Varnika Srivastava',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Epicurean/Varnika_Srivastava.jpg',
+    email: "varnika_2501ce13@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/varnika-srivastava-055280372?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
   },
   {
     id: 5,
     name: 'Aryan Dev',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Epicurean/Aryan_Dev.jpg',
+    email: "aryan_2501cb26@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/aryan-dev-3a7617273?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     id: 6,
     name: 'Yash Jhamb',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Epicurean/Yash_Jhamb.jpg',
+    email: "2501es06@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/yash-jhamb-b01146380?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     id: 7,
     name: 'Yashvardhan Shaktawat',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Epicurean/Yashvardhan_Shaktawat.jpg',
+    email: "yashvardhan_2501es12@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/yashvardhan-shaktawat?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
   },
   {
     id: 8,
     name: 'Emin Philip Saji',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Epicurean/Emin_Philip_Saji.jpg',
+    email: "emin_2501cb04@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/emin-philip-saji-ab420a30b",
   },
 ];
 
@@ -100,21 +115,18 @@ export default function EpicureanPage() {
             </CardItem>
           </div>
 
-          <div className="flex justify-center gap-3 mt-4">
-            {/*
+                                        <div className="flex justify-center gap-4 mt-4 pb-4">
             {member.email && (
               <CardItem
                 translateZ={20}
                 as="a"
                 href={`mailto:${member.email}`}
-                className="p-2 rounded-full bg-white text-black hover:bg-red-500 hover:text-white transition-colors duration-300"
+                className="p-2.5 rounded-full bg-white/90 text-black shadow-sm border border-black/10 hover:bg-red-500 hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300"
                 aria-label="Email"
               >
                 <FaEnvelope className="w-4 h-4" />
               </CardItem>
             )}
-            */}
-            {/*
             {member.linkedinUrl && (
               <CardItem
                 translateZ={20}
@@ -122,13 +134,12 @@ export default function EpicureanPage() {
                 href={member.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white text-black hover:bg-[#0077B5] hover:text-white transition-colors duration-300"
+                className="p-2.5 rounded-full bg-white/90 text-black shadow-sm border border-black/10 hover:bg-[#0077B5] hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
-            */}
           </div>
         </CardBody>
       </CardContainer>

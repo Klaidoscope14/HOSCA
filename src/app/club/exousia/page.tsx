@@ -2,7 +2,7 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaYoutube, FaEnvelope, FaLinkedin } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
 
@@ -21,12 +21,16 @@ const ExousiaMembers: ClubMember[] = [
     name: 'Surili Pathak',
     position: 'Coordinator',
     imageUrl: '/Coordinators/Exousia/Surili_Pathak.jpg',
+    email: "surili_2401mc25@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/surili-pathak-4867bb31a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     id: 2,
     name: 'J. Karan',
     position: 'Coordinator',
     imageUrl: '/Coordinators/Exousia/J.KARAN.jpg',
+    email: "jarupulavath_2401ee18@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/karan-jarupulavath-6546212a8",
   },
   {
     id: 3,
@@ -39,36 +43,47 @@ const ExousiaMembers: ClubMember[] = [
     name: 'Soumya Pathak',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Exousia/Soumya_Pathak.jpg',
+    email: "soumya_2501ai12@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/soumya-pathak-0b7006257/",
   },
   {
     id: 5,
     name: 'Kashvi Mehta',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Exousia/Kashvi_Mehta.jpg',
+    email: "kashvi_2501ph32@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/kashvi-mehta-6250853b6",
   },
   {
     id: 6,
     name: 'Angel Mahi Sharma',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Exousia/Angel_Mahi_Sharma.jpg',
+    email: "angel_2501cs59@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/angel-mahi-sharma-2b7b0b411?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     id: 7,
     name: 'Srishti Khargonkar',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Exousia/Srishti_Khargonkar.jpg',
+    email: "srishti_2503me13@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/srishti-khargonkar?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     id: 8,
     name: 'Hymavathi',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Exousia/Hymavathi.webp',
+    email: "pola_2501cs29@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/hymavathi-pola-4177243ba?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     id: 9,
     name: 'Rupansh Dawer',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Exousia/Rupansh_Dawer.jpg',
+    email: "rupansh_2501ce10@iitp.ac.in",
   },
 ];
 
@@ -106,21 +121,18 @@ export default function ExousiaPage() {
             </CardItem>
           </div>
 
-          <div className="flex justify-center gap-3 mt-4">
-            {/*
+                                        <div className="flex justify-center gap-4 mt-4 pb-4">
             {member.email && (
               <CardItem
                 translateZ={20}
                 as="a"
                 href={`mailto:${member.email}`}
-                className="p-2 rounded-full bg-white text-black hover:bg-red-500 hover:text-white transition-colors duration-300"
+                className="p-2.5 rounded-full bg-white/90 text-black shadow-sm border border-black/10 hover:bg-red-500 hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300"
                 aria-label="Email"
               >
                 <FaEnvelope className="w-4 h-4" />
               </CardItem>
             )}
-            */}
-            {/*
             {member.linkedinUrl && (
               <CardItem
                 translateZ={20}
@@ -128,26 +140,12 @@ export default function ExousiaPage() {
                 href={member.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white text-black hover:bg-[#0077B5] hover:text-white transition-colors duration-300"
+                className="p-2.5 rounded-full bg-white/90 text-black shadow-sm border border-black/10 hover:bg-[#0077B5] hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
-            */}
-            {/* {member.instagramUrl && (
-              <CardItem
-                translateZ={20}
-                as="a"
-                href={member.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white text-black hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white transition-colors duration-300"
-                aria-label="Instagram"
-              >
-                <FaInstagram className="w-4 h-4" />
-              </CardItem>
-            )} */}
           </div>
         </CardBody>
       </CardContainer>

@@ -2,7 +2,7 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaYoutube, FaEnvelope, FaLinkedin } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
 
@@ -21,48 +21,63 @@ const YavanikaMembers: ClubMember[] = [
     name: 'Vidhi Patel',
     position: 'Coordinator',
     imageUrl: '/Coordinators/Yavanika/Vidhi_Patel.jpg',
+    email: "patel_2401mc02@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/vidhi-patel-5a1893310?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     id: 2,
     name: 'Ayush Kumar Gupta',
     position: 'Coordinator',
     imageUrl: '/Coordinators/Yavanika/Ayush_Kumar_Gupta.png',
+    email: "ayush_2401ce28@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/ayush-gupta-675549320?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     id: 3,
     name: 'Priyadeep Jaiswal',
     position: 'Coordinator',
     imageUrl: '/Coordinators/Yavanika/Priyadeep_Jaiswal.jpg',
+    email: "priyadeep_2401ec10@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/priyadeep-jaiswal-39ab001b5/",
   },
   {
     id: 4,
     name: 'Shatakshi Singh',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Yavanika/Shatakshi_Singh.jpg',
+    email: "shatakshi_2502gt04@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/shatakshi-singh-221a09428",
   },
   {
     id: 5,
     name: 'Ankush Raj',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Yavanika/Ankush_Raj.webp',
+    email: "ankush_2501ct04@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/ankush-raj-653a8436a",
   },
   {
     id: 6,
     name: 'Krishna Chaurasia',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Yavanika/Krishna_Chaurasia.jpg',
+    email: "krishna_2501ce61@iitp.ac.in",
   },
   {
     id: 7,
     name: 'Abhishek Bansal',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Yavanika/Abhishek_Bansal.jpg',
+    email: "abhishek_2501cb33@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/abhi280107",
   },
   {
     id: 8,
     name: 'Ojasvee Vatsa',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Yavanika/Ojasvee_Vatsa.jpg',
+    email: "Ojasvee_2501cs51@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/ojasvee-vatsa-a95126382/",
   },
 ];
 
@@ -100,21 +115,18 @@ export default function YavanikaPage() {
             </CardItem>
           </div>
 
-          <div className="flex justify-center gap-3 mt-4">
-            {/*
+                                        <div className="flex justify-center gap-4 mt-4 pb-4">
             {member.email && (
               <CardItem
                 translateZ={20}
                 as="a"
                 href={`mailto:${member.email}`}
-                className="p-2 rounded-full bg-white text-black hover:bg-red-500 hover:text-white transition-colors duration-300"
+                className="p-2.5 rounded-full bg-white/90 text-black shadow-sm border border-black/10 hover:bg-red-500 hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300"
                 aria-label="Email"
               >
                 <FaEnvelope className="w-4 h-4" />
               </CardItem>
             )}
-            */}
-            {/*
             {member.linkedinUrl && (
               <CardItem
                 translateZ={20}
@@ -122,14 +134,12 @@ export default function YavanikaPage() {
                 href={member.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white text-black hover:bg-[#0077B5] hover:text-white transition-colors duration-300"
+                className="p-2.5 rounded-full bg-white/90 text-black shadow-sm border border-black/10 hover:bg-[#0077B5] hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
-            */}
-           
           </div>
         </CardBody>
       </CardContainer>
@@ -249,7 +259,7 @@ export default function YavanikaPage() {
             href="https://www.facebook.com/yavanika.iitp/"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-full bg-gray-100 text-black hover:bg-gray-300 transition-colors duration-300"            aria-label="Facebook"
+            className="p-3 rounded-full bg-gray-100 text-black hover:bg-[#1877F2] hover:text-white transition-colors duration-300"            aria-label="Facebook"
           >
             <FaFacebook className="w-6 h-6" />
           </a>

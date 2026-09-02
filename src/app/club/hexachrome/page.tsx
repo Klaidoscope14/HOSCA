@@ -2,7 +2,7 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaEnvelope, FaLinkedin } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
 
@@ -20,42 +20,55 @@ const HexachromeMembers: ClubMember[] = [
     id: 1,
     name: 'K. Anantha Akash',
     position: 'Coordinator',
+    email: "kota_2401ph23@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/akash-kota-a3538a323?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     id: 2,
     name: 'Lavanya Bhadani',
     position: 'Coordinator',
     imageUrl: '/Coordinators/HexaChrome/Lavanya_Bhadani.jpg',
+    email: "lavanya_2401ai31@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/lavanya-bhadani-1834b1313/",
   },
   {
     id: 3,
     name: 'Vaibhav Dalmia',
     position: 'Coordinator',
     imageUrl: '/Coordinators/HexaChrome/Vaibhav_Dalmia.jpg',
+    email: "vaibhav_2402cs06@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/vaibhav-dalmia-2b1b84325/",
   },
   {
     id: 4,
     name: 'Pachava Shalini',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/HexaChrome/Pachava_Shalini.jpg',
+    email: "pachava_2501mm24@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/shalini-pachava-495ba0375",
   },
   {
     id: 5,
     name: 'Thanmayi Potanapalli',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/HexaChrome/Thanmayi_Potanapalli.jpg',
+    email: "potanapalli_2503me08@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/thanmayi-potanapalli-b61005397?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     id: 6,
     name: 'Shivani Parmar',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/HexaChrome/Shivani_Parmar.jpg',
+    email: "shivani_2501CE50@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/shivani-parmar-809ba237a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     id: 7,
     name: 'Patel Arya Prakashbhai',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/HexaChrome/Patel_arya_prakashbhai.jpg',
+    email: "patel_2503me14@iitp.ac.in",
   },
   {
     id: 8,
@@ -68,6 +81,8 @@ const HexachromeMembers: ClubMember[] = [
     name: 'Guda Manaswini',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/HexaChrome/Guda_Manaswini.png',
+    email: "guda_2501ct09@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/manaswini-reddy-guda-5b85a93b2?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
 ];
 
@@ -105,21 +120,18 @@ export default function HexaChromePage() {
             </CardItem>
           </div>
 
-          <div className="flex justify-center gap-3 mt-4">
-            {/*
+                                        <div className="flex justify-center gap-4 mt-4 pb-4">
             {member.email && (
               <CardItem
                 translateZ={20}
                 as="a"
                 href={`mailto:${member.email}`}
-                className="p-2 rounded-full bg-white text-black hover:bg-red-500 hover:text-white transition-colors duration-300"
+                className="p-2.5 rounded-full bg-white/90 text-black shadow-sm border border-black/10 hover:bg-red-500 hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300"
                 aria-label="Email"
               >
                 <FaEnvelope className="w-4 h-4" />
               </CardItem>
             )}
-            */}
-            {/*
             {member.linkedinUrl && (
               <CardItem
                 translateZ={20}
@@ -127,13 +139,12 @@ export default function HexaChromePage() {
                 href={member.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white text-black hover:bg-[#0077B5] hover:text-white transition-colors duration-300"
+                className="p-2.5 rounded-full bg-white/90 text-black shadow-sm border border-black/10 hover:bg-[#0077B5] hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
-            */}
           </div>
         </CardBody>
       </CardContainer>

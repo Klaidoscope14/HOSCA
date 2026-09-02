@@ -2,7 +2,7 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaYoutube, FaEnvelope, FaLinkedin } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
 
@@ -21,23 +21,30 @@ const StdMembers: ClubMember[] = [
     name: 'Pratyush Chandra',
     position: 'Coordinator',
     imageUrl: '/Coordinators/Standup_Den/Pratyush_Chandra.jpg',
+    email: "pratyush_2401cs31@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/pratyush-chandra-",
   },
   {
     id: 2,
     name: 'Shiva Gupta',
     position: 'Coordinator',
+    email: "shiva_2401mc42@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/shiva-gupta-iit-patna/",
   },
   {
     id: 3,
     name: 'Onik Chouhan',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Standup_Den/Onik_chouhan.jpg',
+    email: "onik_2503mc05@iitp.ac.in",
   },
   {
     id: 4,
     name: 'Ashutosh Kumar',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Standup_Den/Ashutosh_Kumar.jpg',
+    email: "ashutosh_2501ee01@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/ashutosh-kumar1010/",
   },
   {
     id: 5,
@@ -81,21 +88,18 @@ export default function AnimePage() {
             </CardItem>
           </div>
 
-          <div className="flex justify-center gap-3 mt-4">
-            {/*
+                                        <div className="flex justify-center gap-4 mt-4 pb-4">
             {member.email && (
               <CardItem
                 translateZ={20}
                 as="a"
                 href={`mailto:${member.email}`}
-                className="p-2 rounded-full bg-white text-black hover:bg-red-500 hover:text-white transition-colors duration-300"
+                className="p-2.5 rounded-full bg-white/90 text-black shadow-sm border border-black/10 hover:bg-red-500 hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300"
                 aria-label="Email"
               >
                 <FaEnvelope className="w-4 h-4" />
               </CardItem>
             )}
-            */}
-            {/*
             {member.linkedinUrl && (
               <CardItem
                 translateZ={20}
@@ -103,14 +107,12 @@ export default function AnimePage() {
                 href={member.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white text-black hover:bg-[#0077B5] hover:text-white transition-colors duration-300"
+                className="p-2.5 rounded-full bg-white/90 text-black shadow-sm border border-black/10 hover:bg-[#0077B5] hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
-            */}
-           
           </div>
         </CardBody>
       </CardContainer>

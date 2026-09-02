@@ -2,7 +2,7 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaEnvelope, FaLinkedin } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
 
@@ -21,30 +21,40 @@ const VincetrokeMembers: ClubMember[] = [
     name: 'Riddhesh Dalal',
     position: 'Coordinator',
     imageUrl: '/Coordinators/VinceTroke/Riddhesh_Dalal.jpg',
+    email: "riddhesh_2401ct18@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/riddhesh-dalal",
   },
   {
     id: 2,
     name: 'Richa Chaudhary',
     position: 'Coordinator',
     imageUrl: '/Coordinators/VinceTroke/Richa_Chaudhary.jpg',
+    email: "richa_2401ce22@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/richa-chaudhary-9a2877349?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     id: 3,
     name: 'Anand Kumar',
     position: 'Coordinator',
     imageUrl: '/Coordinators/VinceTroke/Anand_Kumar.jpg',
+    email: "anand_2401mm29@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/anand-kumar-563523342?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     id: 4,
     name: 'Rashi Ranjan',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Vincetroke/Rashi_Rajan.jpg',
+    email: "rashi_2502pc03@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/rashi-ranjan-049501362?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     id: 5,
     name: 'Samarth Kushe',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Vincetroke/Samarth_Kushe.jpg',
+    email: "kushe_2501ee17@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/samarth-kushe-a51054354/",
   },
   {
     id: 6,
@@ -56,17 +66,22 @@ const VincetrokeMembers: ClubMember[] = [
     name: 'Soni Pal',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Vincetroke/Soni_Pal.jpg',
+    email: "pal_2501mm31@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/soni-pal-854300420?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     id: 8,
     name: 'Chetla Pawan Kumar',
     position: 'Sub-Coordinator',
     imageUrl: '/SubCords/Vincetroke/Chetla_Pawan_Kumar.jpg',
+    email: "chetla_2501ce21@iitp.ac.in",
   },
   {
     id: 9,
     name: 'Lohitha Kotra',
     position: 'Sub-Coordinator',
+    email: "kotra_2052cm06@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/lohitha-kotra-2ba566407?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
 ];
 
@@ -104,21 +119,18 @@ export default function VincetrokePage() {
             </CardItem>
           </div>
 
-          <div className="flex justify-center gap-3 mt-4">
-            {/*
+                                        <div className="flex justify-center gap-4 mt-4 pb-4">
             {member.email && (
               <CardItem
                 translateZ={20}
                 as="a"
                 href={`mailto:${member.email}`}
-                className="p-2 rounded-full bg-white text-black hover:bg-red-500 hover:text-white transition-colors duration-300"
+                className="p-2.5 rounded-full bg-white/90 text-black shadow-sm border border-black/10 hover:bg-red-500 hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300"
                 aria-label="Email"
               >
                 <FaEnvelope className="w-4 h-4" />
               </CardItem>
             )}
-            */}
-            {/*
             {member.linkedinUrl && (
               <CardItem
                 translateZ={20}
@@ -126,14 +138,12 @@ export default function VincetrokePage() {
                 href={member.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white text-black hover:bg-[#0077B5] hover:text-white transition-colors duration-300"
+                className="p-2.5 rounded-full bg-white/90 text-black shadow-sm border border-black/10 hover:bg-[#0077B5] hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
-            */}
-           
           </div>
         </CardBody>
       </CardContainer>

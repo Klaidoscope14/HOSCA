@@ -2,7 +2,7 @@
 
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaEnvelope, FaLinkedin } from "react-icons/fa";
 import { ImageGrid } from "@/components/ui/image-grid";
 import Image from "next/image";
 
@@ -19,46 +19,64 @@ const AnimeMembers: ClubMember[] = [
     id: 1,
     name: 'Soyam Bais',
     imageUrl: '/Coordinators/Anime_Club/Soyam_Bais.jpg',
+    email: "soyam_2401ec41@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/soyambais?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     id: 2,
     name: 'Adil Khan',
     imageUrl: '/Coordinators/Anime_Club/Adil_Khan.jpg',
+    email: "adil_2401ec02@iitp.ac.in",
+    linkedinUrl: "https://linkedin.com/in/adil-khan-emu",
   },
   {
     id: 3,
     name: 'Satyam Sinha',
     imageUrl: '/Coordinators/Anime_Club/Satyam_Sinha.jpg',
+    email: "satyam_2401ph21@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/satyam-sinha-733801325",
   },
   {
     id: 4,
     name: 'Ansh Sharma',
     imageUrl: '/SubCords/Anime_Club/Ansh_Sharma.png',
+    email: "ansh_2501ai11@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/ansh-sharma-435851400/",
   },
   {
     id: 5,
     name: 'Sai Subrat Jena',
     imageUrl: '/SubCords/Anime_Club/Sai_Subrat_Jena.jpg',
+    email: "sai_2501cb38@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/sai-subrat-jena-7b160b419?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     id: 6,
     name: 'Angel Mahi Sharma',
     imageUrl: '/SubCords/Anime_Club/Angel_Mahi_Sharma.jpg',
+    email: "angel_2501cs59@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/angel-mahi-sharma-2b7b0b411?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     id: 7,
     name: 'Daksh Mittal',
     imageUrl: '/SubCords/Anime_Club/Daksh_Mittal.jpg',
+    email: "daksh_2502cs05@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/daksh-mittal-227b87310/",
   },
   {
     id: 8,
     name: 'Bhanu Kiran',
     imageUrl: '/SubCords/Anime_Club/Bhanu_Kiran.jpg',
+    email: "bhanu_2501ph31@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/bhanu-kiran-a4b000366?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     id: 9,
     name: 'Chayan Sharma',
     imageUrl: '/SubCords/Anime_Club/Chayan_Sharma.jpg',
+    email: "chayan_2502mt04@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/chayan-sharma-ab5081384/",
   },
 ];
 
@@ -95,21 +113,18 @@ export default function AnimePage() {
             </CardItem>
           </div>
 
-          <div className="flex justify-center gap-3 mt-4">
-            {/*
+                                        <div className="flex justify-center gap-4 mt-4 pb-4">
             {member.email && (
               <CardItem
                 translateZ={20}
                 as="a"
                 href={`mailto:${member.email}`}
-                className="p-2 rounded-full bg-white text-black hover:bg-red-500 hover:text-white transition-colors duration-300"
+                className="p-2.5 rounded-full bg-white/90 text-black shadow-sm border border-black/10 hover:bg-red-500 hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300"
                 aria-label="Email"
               >
                 <FaEnvelope className="w-4 h-4" />
               </CardItem>
             )}
-            */}
-            {/*
             {member.linkedinUrl && (
               <CardItem
                 translateZ={20}
@@ -117,13 +132,12 @@ export default function AnimePage() {
                 href={member.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white text-black hover:bg-[#0077B5] hover:text-white transition-colors duration-300"
+                className="p-2.5 rounded-full bg-white/90 text-black shadow-sm border border-black/10 hover:bg-[#0077B5] hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin className="w-4 h-4" />
               </CardItem>
             )}
-            */}
           </div>
         </CardBody>
       </CardContainer>

@@ -42,6 +42,7 @@ const committeeMembers: CommitteeMember[] = [
     id: 4,
     name: "Shivansh Srivashtava",
     position: "Sophomore Year Secretary",
+    imageUrl: "/HoscaaCore/Shivansh.jpeg",
     email: "shivansh_2501ce20@iitp.ac.in",
     linkedinUrl: "https://www.linkedin.com/in/shivansh-srivastava-893a93368/",
   },
@@ -100,22 +101,26 @@ export default function GymkhanaCommitteePage() {
                 </p>
               </div>
 
-              <div className="mt-5 flex justify-center gap-3 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+              <div className="mt-5 flex justify-center gap-4">
                 {member.email && (
-                  <ProfileAction
+                  <a
                     href={`mailto:${member.email}`}
-                    label={`Email ${member.name}`}
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/35 hover:bg-sky-400/15 hover:text-white"
+                    aria-label={`Email ${member.name}`}
                   >
                     <FaEnvelope className="h-4 w-4" />
-                  </ProfileAction>
+                  </a>
                 )}
                 {member.linkedinUrl && (
-                  <ProfileAction
+                  <a
                     href={member.linkedinUrl}
-                    label={`LinkedIn ${member.name}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/35 hover:bg-sky-400/15 hover:text-white"
+                    aria-label={`LinkedIn ${member.name}`}
                   >
                     <FaLinkedin className="h-4 w-4" />
-                  </ProfileAction>
+                  </a>
                 )}
               </div>
             </article>
@@ -126,32 +131,3 @@ export default function GymkhanaCommitteePage() {
   );
 }
 
-function ProfileAction({
-  href,
-  label,
-  children,
-}: {
-  href: string;
-  label: string;
-  children: ReactNode;
-}) {
-  const normalizedHref =
-    href.startsWith("mailto:") || href.startsWith("http")
-      ? href
-      : href.includes("@")
-        ? `mailto:${href}`
-        : href;
-  const isEmail = normalizedHref.startsWith("mailto:");
-
-  return (
-    <a
-      href={normalizedHref}
-      target={isEmail ? undefined : "_blank"}
-      rel={isEmail ? undefined : "noopener noreferrer"}
-      aria-label={label}
-      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-black/25 text-slate-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/35 hover:bg-sky-400/15 hover:text-white"
-    >
-      {children}
-    </a>
-  );
-}

@@ -184,13 +184,13 @@ export default function DevelopersPage() {
             </CardItem>
           )}
           
-          <div className="flex justify-center gap-4 mt-4">
+                                        <div className="flex justify-center gap-4 mt-4 pb-4">
             {member.email && (
               <CardItem
                 translateZ={20}
                 as="a"
                 href={`mailto:${member.email}`}
-                className="p-2 rounded-full bg-zinc-600 text-zinc-200 border border-zinc-500/50 hover:bg-red-500 hover:text-white hover:border-red-400/50 transition-colors duration-300"
+                className="p-2.5 rounded-full bg-white/90 text-black shadow-sm border border-black/10 hover:bg-red-500 hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300"
                 aria-label="Email"
               >
                 <FaEnvelope className="w-4 h-4" />
@@ -203,7 +203,7 @@ export default function DevelopersPage() {
                 href={member.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full bg-zinc-600 text-zinc-200 border border-zinc-500/50 hover:bg-[#0077B5] hover:text-white hover:border-[#0077B5]/60 transition-colors duration-300"
+                className="p-2.5 rounded-full bg-white/90 text-black shadow-sm border border-black/10 hover:bg-[#0077B5] hover:text-white hover:border-transparent hover:-translate-y-1 transition-all duration-300"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin className="w-4 h-4" />

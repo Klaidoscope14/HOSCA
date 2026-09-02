@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
+import { motion, useScroll, useTransform, useMotionValueEvent, MotionValue } from "framer-motion";
 import { StarrySkyBackdrop } from "@/components/StarrySkyBackdrop";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 
@@ -215,97 +215,15 @@ export default function ClubsPage() {
 
           {/* The Wheel Pivot */}
           <div className="absolute left-[-32vw] top-1/2 w-0 h-0 hidden md:block">
-            {clubs.map((club, i) => {
-              // Minimal spacing: just enough for a square box + gap. 
-              const angleStep = 9; // Degrees between each club
-              
-              // Rotate the "arm" of the wheel
-              const rotate = useTransform(smoothIndex, (current) => (i - current) * angleStep);
-              
-              // Counter-rotate the card so it stays upright
-              const counterRotate = useTransform(rotate, (r) => -r);
-              
-              // Text fade based on distance from active
-              const textOpacity = useTransform(smoothIndex, [i - 1, i, i + 1], [0, 1, 0]);
-              const lineOpacity = useTransform(smoothIndex, [i - 2, i, i + 2], [0, 0.8, 0]);
-              const isActive = activeIndex === i;
-
-              return (
-                <motion.div
-                  key={club.slug}
-                  className="absolute top-0 left-0 w-0 h-0 flex items-center justify-center"
-                  style={{ rotate }}
-                >
-                  {/* Square Logo Box */}
-                  <motion.div
-                    className="absolute z-20 flex items-center justify-center"
-                    style={{ 
-                      x: "50vw", // Placed exactly between inner (41vw) and outer (59vw) boundaries
-                      rotate: counterRotate 
-                    }}
-                  >
-                    <WheelSquareCard club={club} isActive={isActive} />
-                  </motion.div>
-                  
-                  {/* Radial Line */}
-                  <motion.div 
-                    className="absolute left-[54vw] h-[1px] bg-gradient-to-r from-white/30 to-transparent" 
-                    style={{ width: "8vw", opacity: lineOpacity }}
-                  />
-
-                  {/* Club Info Text Box (Counter-rotated to stay upright) */}
-                  <motion.div
-                    className="absolute left-[64vw] w-96 flex flex-col justify-center"
-                    style={{ 
-                      rotate: counterRotate,
-                      opacity: textOpacity,
-                      pointerEvents: isActive ? "auto" : "none"
-                    }}
-                  >
-                    <h2 
-                      className="text-4xl font-bold text-white mb-3 tracking-tight" 
-                      style={{ textShadow: `0 2px 20px ${club.glow}` }}
-                    >
-                      {club.name}
-                    </h2>
-                    <p className="text-sm text-slate-300 mb-5 leading-relaxed">
-                      {club.description}
-                    </p>
-                    
-                    <div className="flex gap-3">
-                      {club.instagram && (
-                        <SocialIcon 
-                          href={club.instagram} 
-                          label={`${club.name} Instagram`}
-                          hoverColorClass="hover:border-pink-500 hover:text-pink-500 hover:bg-pink-500/20"
-                        >
-                          <FaInstagram className="h-4 w-4" />
-                        </SocialIcon>
-                      )}
-                      {club.facebook && (
-                        <SocialIcon 
-                          href={club.facebook} 
-                          label={`${club.name} Facebook`}
-                          hoverColorClass="hover:border-blue-500 hover:text-blue-500 hover:bg-blue-500/20"
-                        >
-                          <FaFacebookF className="h-4 w-4" />
-                        </SocialIcon>
-                      )}
-                      {club.youtube && (
-                        <SocialIcon 
-                          href={club.youtube} 
-                          label={`${club.name} YouTube`}
-                          hoverColorClass="hover:border-red-500 hover:text-red-500 hover:bg-red-500/20"
-                        >
-                          <FaYoutube className="h-4 w-4" />
-                        </SocialIcon>
-                      )}
-                    </div>
-                  </motion.div>
-
-                </motion.div>
-              );
-            })}
+            {clubs.map((club, i) => (
+              <ClubWheelItem 
+                key={club.slug} 
+                club={club} 
+                i={i} 
+                activeIndex={activeIndex} 
+                smoothIndex={smoothIndex} 
+              />
+            ))}
           </div>
 
           {/* Mobile Fallback */}
@@ -325,70 +243,169 @@ export default function ClubsPage() {
 
         {/* Right Section: The Syncing Carousel */}
         <div className="relative w-full md:w-[40%] h-[50vh] md:h-full z-10 overflow-hidden border-t md:border-t-0 md:border-l border-white/10 pause-on-hover flex flex-col bg-black/40">
-          {clubs.map((club, i) => {
-            const opacity = useTransform(smoothIndex, [i - 1, i, i + 1], [0, 1, 0]);
-            const scale = useTransform(smoothIndex, [i - 1, i, i + 1], [1.05, 1, 1.05]);
-            
-            // To animate left-to-right properly, we reverse the images and start halfway through the duplicated array
-            const reversedImages = [...(club.images || [])].reverse();
-            const trackImages = [...reversedImages, ...reversedImages];
-
-            // Use the original (non-reversed) array for the bottom track.
-            // This elegantly solves the "duplicate images above each other" issue 
-            // especially for clubs like Epicurean that have an [A, B, A, B] pattern.
-            const bottomBase = [...(club.images || [])];
-            const bottomTrackImages = [...bottomBase, ...bottomBase];
-
-            return (
-              <motion.div
-                key={club.slug}
-                className="absolute inset-0 flex flex-col"
-                style={{ opacity, scale, zIndex: activeIndex === i ? 10 : 1 }}
-              >
-                 {/* Top Track */}
-                 <div className="relative w-full h-1/2 overflow-hidden">
-                    <div 
-                        className="flex h-full w-[800%] absolute top-0 left-[-700%] animate-scroll-ltr"
-                    >
-                        {trackImages.map((img, idx) => (
-                           <div key={`t1-${idx}`} className="relative w-[12.5%] h-full flex-shrink-0">
-                               <Image 
-                                 src={img} 
-                                 alt={`${club.name} ${idx}`} 
-                                 fill 
-                                 className="object-contain p-4"
-                                 priority={i === 0 && idx > 3}
-                               />
-                           </div>
-                        ))}
-                    </div>
-                 </div>
-
-                 {/* Bottom Track */}
-                 <div className="relative w-full h-1/2 overflow-hidden">
-                    <div 
-                        className="flex h-full w-[800%] absolute top-0 left-[-700%] animate-scroll-ltr"
-                    >
-                        {bottomTrackImages.map((img, idx) => (
-                           <div key={`t2-${idx}`} className="relative w-[12.5%] h-full flex-shrink-0">
-                               <Image 
-                                 src={img} 
-                                 alt={`${club.name} bottom ${idx}`} 
-                                 fill 
-                                 className="object-contain p-4"
-                               />
-                           </div>
-                        ))}
-                    </div>
-                 </div>
-                 
-                 <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#02040a]/80 pointer-events-none" />
-              </motion.div>
-            );
-          })}
+          {clubs.map((club, i) => (
+            <ClubCarouselItem
+              key={club.slug}
+              club={club}
+              i={i}
+              activeIndex={activeIndex}
+              smoothIndex={smoothIndex}
+            />
+          ))}
         </div>
       </div>
     </div>
+  );
+}
+
+function ClubWheelItem({ club, i, activeIndex, smoothIndex }: { club: ClubCard; i: number; activeIndex: number; smoothIndex: MotionValue<number> }) {
+  // Minimal spacing: just enough for a square box + gap. 
+  const angleStep = 9; // Degrees between each club
+  
+  // Rotate the "arm" of the wheel
+  const rotate = useTransform(smoothIndex, (current) => (i - current) * angleStep);
+  
+  // Counter-rotate the card so it stays upright
+  const counterRotate = useTransform(rotate, (r) => -r);
+  
+  // Text fade based on distance from active
+  const textOpacity = useTransform(smoothIndex, [i - 1, i, i + 1], [0, 1, 0]);
+  const lineOpacity = useTransform(smoothIndex, [i - 2, i, i + 2], [0, 0.8, 0]);
+  const isActive = activeIndex === i;
+
+  return (
+    <motion.div
+      className="absolute top-0 left-0 w-0 h-0 flex items-center justify-center"
+      style={{ rotate }}
+    >
+      {/* Square Logo Box */}
+      <motion.div
+        className="absolute z-20 flex items-center justify-center"
+        style={{ 
+          x: "50vw", // Placed exactly between inner (41vw) and outer (59vw) boundaries
+          rotate: counterRotate 
+        }}
+      >
+        <WheelSquareCard club={club} isActive={isActive} />
+      </motion.div>
+      
+      {/* Radial Line */}
+      <motion.div 
+        className="absolute left-[54vw] h-[1px] bg-gradient-to-r from-white/30 to-transparent" 
+        style={{ width: "8vw", opacity: lineOpacity }}
+      />
+
+      {/* Club Info Text Box (Counter-rotated to stay upright) */}
+      <motion.div
+        className="absolute left-[64vw] w-96 flex flex-col justify-center"
+        style={{ 
+          rotate: counterRotate,
+          opacity: textOpacity,
+          pointerEvents: isActive ? "auto" : "none"
+        }}
+      >
+        <h2 
+          className="text-4xl font-bold text-white mb-3 tracking-tight" 
+          style={{ textShadow: `0 2px 20px ${club.glow}` }}
+        >
+          {club.name}
+        </h2>
+        <p className="text-sm text-slate-300 mb-5 leading-relaxed">
+          {club.description}
+        </p>
+        
+        <div className="flex gap-3">
+          {club.instagram && (
+            <SocialIcon 
+              href={club.instagram} 
+              label={`${club.name} Instagram`}
+              hoverColorClass="hover:border-pink-500 hover:text-pink-500 hover:bg-pink-500/20"
+            >
+              <FaInstagram className="h-4 w-4" />
+            </SocialIcon>
+          )}
+          {club.facebook && (
+            <SocialIcon 
+              href={club.facebook} 
+              label={`${club.name} Facebook`}
+              hoverColorClass="hover:border-blue-500 hover:text-blue-500 hover:bg-blue-500/20"
+            >
+              <FaFacebookF className="h-4 w-4" />
+            </SocialIcon>
+          )}
+          {club.youtube && (
+            <SocialIcon 
+              href={club.youtube} 
+              label={`${club.name} YouTube`}
+              hoverColorClass="hover:border-red-500 hover:text-red-500 hover:bg-red-500/20"
+            >
+              <FaYoutube className="h-4 w-4" />
+            </SocialIcon>
+          )}
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+function ClubCarouselItem({ club, i, activeIndex, smoothIndex }: { club: ClubCard; i: number; activeIndex: number; smoothIndex: MotionValue<number> }) {
+  const opacity = useTransform(smoothIndex, [i - 1, i, i + 1], [0, 1, 0]);
+  const scale = useTransform(smoothIndex, [i - 1, i, i + 1], [1.05, 1, 1.05]);
+  
+  // To animate left-to-right properly, we reverse the images and start halfway through the duplicated array
+  const reversedImages = [...(club.images || [])].reverse();
+  const trackImages = [...reversedImages, ...reversedImages];
+
+  // Use the original (non-reversed) array for the bottom track.
+  // This elegantly solves the "duplicate images above each other" issue 
+  // especially for clubs like Epicurean that have an [A, B, A, B] pattern.
+  const bottomBase = [...(club.images || [])];
+  const bottomTrackImages = [...bottomBase, ...bottomBase];
+
+  return (
+    <motion.div
+      className="absolute inset-0 flex flex-col"
+      style={{ opacity, scale, zIndex: activeIndex === i ? 10 : 1 }}
+    >
+       {/* Top Track */}
+       <div className="relative w-full h-1/2 overflow-hidden">
+          <div 
+              className="flex h-full w-[800%] absolute top-0 left-[-700%] animate-scroll-ltr"
+          >
+              {trackImages.map((img, idx) => (
+                 <div key={`t1-${idx}`} className="relative w-[12.5%] h-full flex-shrink-0">
+                     <Image 
+                       src={img} 
+                       alt={`${club.name} ${idx}`} 
+                       fill 
+                       className="object-contain p-4"
+                       priority={i === 0 && idx > 3}
+                     />
+                 </div>
+              ))}
+          </div>
+       </div>
+
+       {/* Bottom Track */}
+       <div className="relative w-full h-1/2 overflow-hidden">
+          <div 
+              className="flex h-full w-[800%] absolute top-0 left-[-700%] animate-scroll-ltr"
+          >
+              {bottomTrackImages.map((img, idx) => (
+                 <div key={`t2-${idx}`} className="relative w-[12.5%] h-full flex-shrink-0">
+                     <Image 
+                       src={img} 
+                       alt={`${club.name} bottom ${idx}`} 
+                       fill 
+                       className="object-contain p-4"
+                     />
+                 </div>
+              ))}
+          </div>
+       </div>
+       
+       <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#02040a]/80 pointer-events-none" />
+    </motion.div>
   );
 }
 

@@ -30,56 +30,56 @@ const mainDevelopers: Developer[] = [
     id: 1,
     name: "Chaitanya Saagar",
     email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/HoscaaCoords/ChaitanyaSaagar.jpeg",
+    imageUrl: "/HoscaaCoords/ChaitanyaSaagar.webp",
     linkedinUrl: "https://www.linkedin.com/in/chaitanya-saagar-476b562a2/",
   },
   {
     id: 2,
     name: "Saubhagya Laxman Mamgain",
     email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/HoscaaCoords/Saubhagya.PNG",
+    imageUrl: "/HoscaaCoords/Saubhagya.webp",
     linkedinUrl: "https://www.linkedin.com/in/saubhagya-laxman-mamgain-14492b27b/",
   },
   {
     id: 3,
     name: "Shaurya Aggarwal",
     email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/HoscaaCoords/shaurya.jpg",
+    imageUrl: "/HoscaaCoords/shaurya.webp",
     linkedinUrl: "https://www.linkedin.com/in/shaurya-aggarwal-iitp/",
   },
   {
     id: 4,
     name: "Aarav Shyam",
     email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/HoscaaCoords/Aarav.jpeg",
+    imageUrl: "/HoscaaCoords/Aarav.webp",
     linkedinUrl: "https://www.linkedin.com/in/aarav-shyam-21aba2285/",
   },
   {
     id: 5,
     name: "Mihika Saxena",
     email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/HoscaaCoords/Mihika.jpg",
+    imageUrl: "/HoscaaCoords/Mihika.webp",
     linkedinUrl: "https://www.linkedin.com/in/mihika-saxena-b5bb8a28b/",
   },
   {
     id: 6,
     name: "Kshitij Vasule",
     email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/HoscaaCoords/Kshitij.JPG",
+    imageUrl: "/HoscaaCoords/Kshitij.webp",
     linkedinUrl: "https://www.linkedin.com/in/kshitij-vasule-36a19a294/",
   },
   {
     id: 7,
     name: "Abhinandan Pandey",
     email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/HoscaaCoords/Abhinandan.jpeg",
+    imageUrl: "/HoscaaCoords/Abhinandan.webp",
     linkedinUrl: "https://www.linkedin.com/in/abhinandan-pandey-828775298/",
   },
   {
     id: 8,
     name: "Chaitanya Kotipalli",
     email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/HoscaaCoords/Chaitanya.jpg",
+    imageUrl: "/HoscaaCoords/Chaitanya.webp",
     linkedinUrl: "https://www.linkedin.com/in/chaitanya-kotipalli-6234a6317/",
   },
 ];
@@ -96,21 +96,21 @@ const contributors: Developer[] = [
     id: 11,
     name: "Aayan Tejani",
     email: "aayan_2401cs58@iitp.ac.in",
-    imageUrl: "/HoscaaSubcoords/Aayan.jpg",
+    imageUrl: "/HoscaaSubcoords/Aayan.webp",
     linkedinUrl: "https://www.linkedin.com/in/aayan-tejani-7022b9240/",
   },
   {
     id: 12,
     name: "Anmol Agrawal",
     email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/HoscaaSubcoords/Anmol.jpg",
+    imageUrl: "/HoscaaSubcoords/Anmol.webp",
     linkedinUrl: "https://www.linkedin.com/in/anmol-agarwal-175503327/",
   },
   {
     id: 13,
     name: "Amar kumar",
     email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/HoscaaSubcoords/Amar.jpg",
+    imageUrl: "/HoscaaSubcoords/Amar.webp",
     linkedinUrl: "https://www.linkedin.com/in/amar-kumar-860b17312/",
   },
 ];
@@ -118,50 +118,28 @@ const contributors: Developer[] = [
 const CndCords: Cnd[] = [
   {
     id: 1,
-    name: "Ansh Singh",
-    email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/CnDCords/Ansh.jpeg",
-    linkedinUrl: "https://www.linkedin.com/in/anshnvm",
-  }
-];
-
-const CndSubcords: Cnd[] = [
-  {
-    id: 2,
-    name: "Saubhagya Ji Jaiswal",
-    email: "saubhagya_2401me72@iitp.ac.in",
-    imageUrl: "/CndSubcords/SJJ.jpg",
-    linkedinUrl: "https://www.linkedin.com/in/saubhagya-ji-jaiswal-33b2a2289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-  },
-  {
-    id: 3,
     name: "Shailja Brijendra Mathuria ",
     email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/CndSubcords/Shailja.jpeg",
+    imageUrl: "/CndCords/Shailja.webp",
     linkedinUrl: "https://www.linkedin.com/in/shailja-mathuria-739834312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
-    id: 4,
-    name: "Sahil",
-    email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/CndSubcords/Sahil.jpg",
-    linkedinUrl: "https://www.linkedin.com/in/sahil-72019a360?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-  },
-  {
-    id: 5,
+    id: 2,
     name: "Swarnava Ghosh",
     email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/CndSubcords/Swarnava.jpeg",
+    imageUrl: "/CndCords/Swarnava.webp",
     linkedinUrl: "https://www.linkedin.com/in/swarnava-ghosh-b074a1326/",
   },
   {
-    id: 6,
+    id: 3,
     name: "D. Sravan Kumar",
     email: "culturalaffairs@iitp.ac.in",
-    imageUrl: "/CndSubcords/Sravan.jpg",
+    imageUrl: "/CndCords/Sravan.webp",
     linkedinUrl: "https://www.linkedin.com/in/d-sravan-kumar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   }
 ];
+
+const CndSubcords: Cnd[] = [];
 
 export default function DevelopersPage() {
   const renderMemberCard = (member: Developer) => (
@@ -252,27 +230,10 @@ export default function DevelopersPage() {
           </p>
         </section>
 
-        <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-center text-white mb-8">Coordinators</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
-            {mainDevelopers.slice(0, 2).map(developer => (
+        <section className="mb-16 mt-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            {[...mainDevelopers, ...contributors].map(developer => (
               <div key={developer.id}>{renderMemberCard(developer)}</div>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {mainDevelopers.slice(2).map(developer => (
-              <div key={developer.id}>{renderMemberCard(developer)}</div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-center text-white mb-8">Sub Coordinators</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {contributors.map(contributor => (
-              <div key={contributor.id}>{renderMemberCard(contributor)}</div>
             ))}
           </div>
         </section>
@@ -287,27 +248,9 @@ export default function DevelopersPage() {
           </p>
         </section>
 
-        <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-center text-white mb-8">Coordinators</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-4xl mx-auto mb-8">
-            {CndCords.map(cnd => (
-              <div key={cnd.id}>{renderMemberCard(cnd)}</div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-center text-white mb-8">Sub Coordinators</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
-            {CndSubcords.slice(0, 2).map(cnd => (
-              <div key={cnd.id}>{renderMemberCard(cnd)}</div>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {CndSubcords.slice(2).map(cnd => (
+        <section className="mb-16 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[...CndCords, ...CndSubcords].map(cnd => (
               <div key={cnd.id}>{renderMemberCard(cnd)}</div>
             ))}
           </div>

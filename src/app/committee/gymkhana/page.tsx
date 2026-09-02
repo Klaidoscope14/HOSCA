@@ -17,38 +17,33 @@ interface CommitteeMember {
 const committeeMembers: CommitteeMember[] = [
   {
     id: 1,
-    name: "Dr. Ayash Kanto Mukherjee",
+    name: "Dr. Chandra Shekhar Prajapati",
     position: "PIC Cultural",
+    imageUrl: "/HoscaaCore/CSP.jpeg",
     email: "pic_cultural@iitp.ac.in",
-    imageUrl: "/HoscaaCore/Ayash.jpg",
-    linkedinUrl: "akm@iitp.ac.in",
   },
   {
     id: 2,
-    name: "Kashika Aggarwal",
+    name: "Viraj Kulkarni",
     position: "General Secretary Cultural",
-    email: "kashika_2201cs35@iitp.ac.in",
-    imageUrl: "/HoscaaCore/kashika.jpg",
-    linkedinUrl:
-      "https://www.linkedin.com/in/kashika-aggarwal-15b0bb259/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    imageUrl: "/HoscaaCore/Viraj.jpeg",
+    email: "gensec_cult@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/viraj-kulkarni-097869312/",
   },
   {
     id: 3,
-    name: "Nikhil Pandey",
+    name: "Ashwin Chowdary",
     position: "Junior Year Secretary",
-    email: "nikhil_2301cb30@iitp.ac.in",
-    imageUrl: "/HoscaaCore/Nikhil.jpeg",
-    linkedinUrl:
-      "https://www.linkedin.com/in/nikhil-pandey-319b05368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    imageUrl: "/HoscaaCore/Ashwin_Chowdary.jpg",
+    email: "singu_2401mm09@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/ashwin-chowdary-b5306034a/",
   },
   {
     id: 4,
-    name: "Singu Ashwin Manikanta Chowdary",
+    name: "Shivansh Srivashtava",
     position: "Sophomore Year Secretary",
-    email: "singu_2401mm09@iitp.ac.in",
-    imageUrl: "/HoscaaCore/ashwin.jpg",
-    linkedinUrl:
-      "https://www.linkedin.com/in/ashwin-chowdary-b5306034a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    email: "shivansh_2501ce20@iitp.ac.in",
+    linkedinUrl: "https://www.linkedin.com/in/shivansh-srivastava-893a93368/",
   },
 ];
 

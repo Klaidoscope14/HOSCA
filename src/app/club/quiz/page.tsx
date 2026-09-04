@@ -178,7 +178,7 @@ export default function QuizPage() {
             </h1>
             <p className="text-lg md:text-xl text-white max-w-2xl mx-auto lg:mx-0">
               One doesn&apos;t need to mug up random nerdy facts to attend quizzes,
-              all one needs is a keen eye for the things that surround us
+              all one needs is a keen eye for the things that surround us.
             </p>
           </div>
         </div>

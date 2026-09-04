@@ -100,6 +100,12 @@ export const CardItem = ({
   as: Tag = "div",
   children,
   className,
+  translateX = 0,
+  translateY = 0,
+  translateZ = 75,
+  rotateX = 0,
+  rotateY = 0,
+  rotateZ = 0,
   ...rest
 }: {
   as?: React.ElementType;
@@ -147,7 +153,7 @@ export const CardItem = ({
       ref={ref}
       className={`w-fit transition duration-200 ease-out ${className}`}
       style={{
-        transform: "translateZ(75px)",
+        transform: `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`,
         transformStyle: "preserve-3d",
       }}
       {...rest}

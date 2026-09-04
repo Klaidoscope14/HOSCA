@@ -179,7 +179,7 @@ export default function VincetrokePage() {
               Vincetroke
             </h1>
             <p className="text-lg md:text-xl text-white max-w-2xl mx-auto lg:mx-0">
-              Let their imagination run wild and provides them with the sight to
+              Letting imagination run wild and giving members the sight to
               see things in a different way.
             </p>
           </div>

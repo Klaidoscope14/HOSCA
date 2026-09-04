@@ -103,7 +103,7 @@ const SocialLinks = React.memo(
           className={`text-2xl text-zinc-500 transition-colors duration-300 ${
             social.label === "Facebook"
               ? "hover:text-sky-400"
-              : social.label === "Youtube"
+              : social.label === "YouTube"
                 ? "hover:text-red-400"
                 : "hover:text-pink-400"
           }`}
@@ -128,7 +128,7 @@ const About = () => {
     {
       icon: FaYoutube,
       url: "https://www.youtube.com/user/CULTatIITP",
-      label: "Youtube",
+      label: "YouTube",
     },
     {
       icon: FaInstagram,

@@ -162,7 +162,7 @@ export default function HexaChromePage() {
             <div className="relative">
               <Image
                 src="/ClubLogo/Hexachrome.jpg"
-                alt="Hexachrome"
+                alt="HexaChrome"
                 width={384}
                 height={384}
                 className="object-cover rounded-2xl shadow-2xl border border-white/10"
@@ -190,7 +190,7 @@ export default function HexaChromePage() {
                 About HexaChrome
               </h2>
               <p className="text-neutral-600 dark:text-neutral-300">
-                The Hexachrome Club aims to provide a platform for students to
+                The HexaChrome Club aims to provide a platform for students to
                 learn and improve in solving puzzles such as Rubik&apos;s Cube,
                 Cryptograms, Crosswords, Scrabble. It fosters a problem-solving
                 mindset and builds a community of puzzle enthusiasts driven by

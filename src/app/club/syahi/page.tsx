@@ -188,9 +188,9 @@ export default function SyahiPage() {
               <p className="text-neutral-600 dark:text-neutral-300">
                 Syahi is the literary club of IIT Patna. Syahi aims to provide a
                 platform to nurture the writing talents of people and help them
-                to grown in their journies.It organizes various on-campus as
-                well as inter-college Compitions for people to connect through
-                their writing talents with a major audience.
+                grow in their journeys. It organizes various on-campus as
+                well as inter-college competitions for people to connect through
+                their writing talents with a wider audience.
               </p>
               <div className="mt-6">
                 <h3 className="text-xl font-semibold text-neutral-700 dark:text-white mb-3">

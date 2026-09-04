@@ -212,7 +212,7 @@ export default function PixxelPage() {
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
                   <li>Tasveer</li>
                   <li>Shutter Island</li>
-                  <li>Battle of keyframes </li>
+                  <li>Battle of keyframes</li>
                   <li>The Prestige cut</li>
                   <li>Behind the shutter</li>
                 </ul>

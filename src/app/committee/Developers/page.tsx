@@ -108,7 +108,7 @@ const contributors: Developer[] = [
   },
   {
     id: 13,
-    name: "Amar kumar",
+    name: "Amar Kumar",
     email: "culturalaffairs@iitp.ac.in",
     imageUrl: "/HoscaaSubcoords/Amar.webp",
     linkedinUrl: "https://www.linkedin.com/in/amar-kumar-860b17312/",
@@ -118,7 +118,7 @@ const contributors: Developer[] = [
 const CndCords: Cnd[] = [
   {
     id: 1,
-    name: "Shailja Brijendra Mathuria ",
+    name: "Shailja Brijendra Mathuria",
     email: "culturalaffairs@iitp.ac.in",
     imageUrl: "/CndCords/Shailja.webp",
     linkedinUrl: "https://www.linkedin.com/in/shailja-mathuria-739834312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -269,7 +269,7 @@ export default function DevelopersPage() {
               href="/club"
               className="group relative px-8 py-2 my-1 rounded-full overflow-hidden bg-gradient-to-r from-red-600 to-red-800 text-white text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
-              <span className="relative z-10 flex justify-center">Click Me</span>
+              <span className="relative z-10 flex justify-center">Explore Our Clubs</span>
             </Link>
           </div>
         </section>

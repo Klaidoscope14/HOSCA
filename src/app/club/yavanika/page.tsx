@@ -169,7 +169,7 @@ export default function YavanikaPage() {
               Yavanika
             </h1>
             <p className="text-lg md:text-xl text-black max-w-2xl mx-auto lg:mx-0">
-              The Dramatics Society of IIT Patna -Where talent meets passion and
+              The Dramatics Society of IIT Patna — Where talent meets passion and
               stories come alive on stage.
             </p>
           </div>
@@ -185,8 +185,8 @@ export default function YavanikaPage() {
       </h2>
       <p className="text-black">
         Yavanika is the dramatics society and one of the oldest clubs of
-        IIT Patna. With talent and feeling like of a movie actor, it makes the journey
-        superexcited and memorable. From stage plays to street performances, Yavanika brings stories to life and fuels the dramatic spirit of the campus.
+        IIT Patna. With the talent and feeling of a movie actor, it makes the journey
+        thrilling and memorable. From stage plays to street performances, Yavanika brings stories to life and fuels the dramatic spirit of the campus.
       </p>
       <div className="mt-6">
         <h3 className="text-xl font-semibold text-black mb-3">

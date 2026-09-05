@@ -171,7 +171,7 @@ export default function AnimePage() {
               Anime Club
             </h1>
             <p className="text-lg md:text-xl text-white max-w-2xl mx-auto lg:mx-0">
-              Whether you&apos;re a seasoned otaku or just getting started with your first series, Anime club welcomes all with open arms.
+              Whether you&apos;re a seasoned otaku or just getting started with your first series, Anime Club welcomes all with open arms.
             </p>
           </div>
         </div>
@@ -187,7 +187,7 @@ export default function AnimePage() {
                 budding enthusiasts and provides a unique platform for people to
                 get together, engage in active discussions and showcase their
                 emotions and creativity about anything related to the animanga
-                world
+                world.
               </p>
               <div className="mt-6">
                 <h3 className="mb-3 text-xl font-semibold text-zinc-900">
@@ -209,8 +209,8 @@ export default function AnimePage() {
                   <li>Animecon</li>
                   <li>Hunter x Hunter</li>
                   <li>Dalgona candy challenge</li>
-                  <li>Animake </li>
-                  <li>Ramen Rangers.in</li>
+                  <li>Animake</li>
+                  <li>Ramen Rangers</li>
                 </ul>
               </div>
             </div>

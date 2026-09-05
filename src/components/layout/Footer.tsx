@@ -133,7 +133,7 @@ const Footer = () => {
 
       <div className="relative z-10 border-t border-white/5 bg-black/40 py-4 backdrop-blur-sm">
         <div className="mx-auto max-w-7xl px-4 text-center text-sm text-zinc-500">
-          © {new Date().getFullYear()} Hosca IIT Patna. All rights reserved.
+          © {new Date().getFullYear()} HOSCA IIT Patna. All rights reserved.
         </div>
       </div>
     </footer>

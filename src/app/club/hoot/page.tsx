@@ -201,7 +201,7 @@ export default function HootPage() {
         </h3>
         <ul className="list-disc list-inside text-black space-y-2">
           <li>Debate competitions</li>
-          <li>Improv Battles</li>
+          <li>Improv battles</li>
           <li>Just A Minute (JAM) sessions</li>
           <li>Public speaking workshops</li>
           <li>Group discussions</li>

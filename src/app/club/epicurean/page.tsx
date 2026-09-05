@@ -169,7 +169,7 @@ export default function EpicureanPage() {
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#b5c902] mb-6">Epicurean</h1>
             <p className="text-lg md:text-xl text-white max-w-2xl mx-auto lg:mx-0">
-              The art of articulation and this is where team bonding is celebrated.
+              The art of flavor and the joy of togetherness — where team bonding is celebrated.
             </p>
           </div>
         </div>

@@ -198,10 +198,10 @@ export default function AnimePage() {
                   What We Do
                 </h3>
                 <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
-                  <li>Conduct fashion and makeup workshop</li>
+                  <li>Fashion and makeup workshops</li>
                   <li>Rampwalks</li>
                   <li>Upcycling and thrifting clothes</li>
-                  <li>Online / Offline photoshoot and modelling workshop</li>
+                  <li>Online / offline photoshoot and modelling workshops</li>
                   <li>Performances at college fests</li>
                 </ul>
               </div>
